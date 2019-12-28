@@ -12,12 +12,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
- * @property \DateTime $StartTime
+ * @property string $Category2ID
+ * @property string $CategoryID
  * @property \DateTime $EndTime
  * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
- * @property string $CategoryID
- * @property string $Category2ID
+ * @property string $ItemID
+ * @property \DateTime $StartTime
  */
 class AddItemFromSellingManagerTemplateResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -25,17 +25,17 @@ class AddItemFromSellingManagerTemplateResponseType extends \DTS\eBaySDK\Trading
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
+        'Category2ID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ItemID'
+            'elementName' => 'Category2ID'
         ],
-        'StartTime' => [
-            'type' => 'DateTime',
+        'CategoryID' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'StartTime'
+            'elementName' => 'CategoryID'
         ],
         'EndTime' => [
             'type' => 'DateTime',
@@ -49,20 +49,20 @@ class AddItemFromSellingManagerTemplateResponseType extends \DTS\eBaySDK\Trading
             'attribute' => false,
             'elementName' => 'Fees'
         ],
-        'CategoryID' => [
+        'ItemID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'CategoryID'
+            'elementName' => 'ItemID'
         ],
-        'Category2ID' => [
-            'type' => 'string',
+        'StartTime' => [
+            'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Category2ID'
+            'elementName' => 'StartTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -79,7 +79,7 @@ class AddItemFromSellingManagerTemplateResponseType extends \DTS\eBaySDK\Trading
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

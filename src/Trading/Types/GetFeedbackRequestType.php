@@ -12,14 +12,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $UserID
- * @property string $FeedbackID
- * @property string $ItemID
- * @property string $TransactionID
  * @property \DTS\eBaySDK\Trading\Enums\CommentTypeCodeType[] $CommentType
+ * @property string $FeedbackID
  * @property \DTS\eBaySDK\Trading\Enums\FeedbackTypeCodeType $FeedbackType
- * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
+ * @property string $ItemID
  * @property string $OrderLineItemID
+ * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
+ * @property string $TransactionID
+ * @property string $UserID
  */
 class GetFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -27,11 +27,11 @@ class GetFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'UserID' => [
+        'CommentType' => [
             'type' => 'string',
-            'repeatable' => false,
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'UserID'
+            'elementName' => 'CommentType'
         ],
         'FeedbackID' => [
             'type' => 'string',
@@ -39,29 +39,23 @@ class GetFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
             'attribute' => false,
             'elementName' => 'FeedbackID'
         ],
+        'FeedbackType' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'FeedbackType'
+        ],
         'ItemID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
-        'TransactionID' => [
+        'OrderLineItemID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'TransactionID'
-        ],
-        'CommentType' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'CommentType'
-        ],
-        'FeedbackType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FeedbackType'
+            'elementName' => 'OrderLineItemID'
         ],
         'Pagination' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
@@ -69,14 +63,20 @@ class GetFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
             'attribute' => false,
             'elementName' => 'Pagination'
         ],
-        'OrderLineItemID' => [
+        'TransactionID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'OrderLineItemID'
+            'elementName' => 'TransactionID'
+        ],
+        'UserID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UserID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -93,7 +93,7 @@ class GetFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetFeedbackRequest';
         }

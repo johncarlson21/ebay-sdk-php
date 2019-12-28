@@ -12,14 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ImportCharge
  * @property string $ShippingService
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingServiceCost
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingServiceAdditionalCost
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingServiceCost
+ * @property \DateTime $ShippingServiceCutOffTime
  * @property integer $ShippingServicePriority
  * @property string[] $ShipToLocation
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingInsuranceCost
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ImportCharge
- * @property \DateTime $ShippingServiceCutOffTime
  */
 class InternationalShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -27,11 +26,23 @@ class InternationalShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseTyp
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'ImportCharge' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ImportCharge'
+        ],
         'ShippingService' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingService'
+        ],
+        'ShippingServiceAdditionalCost' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingServiceAdditionalCost'
         ],
         'ShippingServiceCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -39,11 +50,11 @@ class InternationalShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseTyp
             'attribute' => false,
             'elementName' => 'ShippingServiceCost'
         ],
-        'ShippingServiceAdditionalCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+        'ShippingServiceCutOffTime' => [
+            'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ShippingServiceAdditionalCost'
+            'elementName' => 'ShippingServiceCutOffTime'
         ],
         'ShippingServicePriority' => [
             'type' => 'integer',
@@ -56,27 +67,9 @@ class InternationalShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseTyp
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ShipToLocation'
-        ],
-        'ShippingInsuranceCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingInsuranceCost'
-        ],
-        'ImportCharge' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ImportCharge'
-        ],
-        'ShippingServiceCutOffTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingServiceCutOffTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -93,7 +86,7 @@ class InternationalShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseTyp
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

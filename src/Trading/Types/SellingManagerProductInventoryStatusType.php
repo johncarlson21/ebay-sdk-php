@@ -12,12 +12,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $QuantityScheduled
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $AverageSellingPrice
  * @property integer $QuantityActive
+ * @property integer $QuantityScheduled
  * @property integer $QuantitySold
  * @property integer $QuantityUnsold
  * @property double $SuccessPercent
- * @property \DTS\eBaySDK\Trading\Types\AmountType $AverageSellingPrice
  */
 class SellingManagerProductInventoryStatusType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -25,17 +25,23 @@ class SellingManagerProductInventoryStatusType extends \DTS\eBaySDK\Types\BaseTy
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'QuantityScheduled' => [
-            'type' => 'integer',
+        'AverageSellingPrice' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'QuantityScheduled'
+            'elementName' => 'AverageSellingPrice'
         ],
         'QuantityActive' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QuantityActive'
+        ],
+        'QuantityScheduled' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'QuantityScheduled'
         ],
         'QuantitySold' => [
             'type' => 'integer',
@@ -54,15 +60,9 @@ class SellingManagerProductInventoryStatusType extends \DTS\eBaySDK\Types\BaseTy
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SuccessPercent'
-        ],
-        'AverageSellingPrice' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AverageSellingPrice'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -79,7 +79,7 @@ class SellingManagerProductInventoryStatusType extends \DTS\eBaySDK\Types\BaseTy
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

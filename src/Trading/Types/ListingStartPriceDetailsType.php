@@ -13,11 +13,11 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $Description
- * @property \DTS\eBaySDK\Trading\Enums\ListingTypeCodeType $ListingType
- * @property \DTS\eBaySDK\Trading\Types\AmountType $StartPrice
  * @property string $DetailVersion
- * @property \DateTime $UpdateTime
+ * @property \DTS\eBaySDK\Trading\Enums\ListingTypeCodeType $ListingType
  * @property double $MinBuyItNowPricePercent
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $StartPrice
+ * @property \DateTime $UpdateTime
  */
 class ListingStartPriceDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -31,11 +31,23 @@ class ListingStartPriceDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Description'
         ],
+        'DetailVersion' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DetailVersion'
+        ],
         'ListingType' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ListingType'
+        ],
+        'MinBuyItNowPricePercent' => [
+            'type' => 'double',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MinBuyItNowPricePercent'
         ],
         'StartPrice' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -43,26 +55,14 @@ class ListingStartPriceDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'StartPrice'
         ],
-        'DetailVersion' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DetailVersion'
-        ],
         'UpdateTime' => [
             'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UpdateTime'
-        ],
-        'MinBuyItNowPricePercent' => [
-            'type' => 'double',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MinBuyItNowPricePercent'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -79,7 +79,7 @@ class ListingStartPriceDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

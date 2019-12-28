@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property integer $EntriesPerPage
  * @property \DTS\eBaySDK\Trading\Types\FeedbackDetailArrayType $FeedbackDetailArray
  * @property integer $FeedbackDetailItemTotal
- * @property \DTS\eBaySDK\Trading\Types\FeedbackSummaryType $FeedbackSummary
  * @property integer $FeedbackScore
- * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
- * @property integer $EntriesPerPage
+ * @property \DTS\eBaySDK\Trading\Types\FeedbackSummaryType $FeedbackSummary
  * @property integer $PageNumber
+ * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
  */
 class GetFeedbackResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -26,6 +26,12 @@ class GetFeedbackResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespons
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'EntriesPerPage' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'EntriesPerPage'
+        ],
         'FeedbackDetailArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FeedbackDetailArrayType',
             'repeatable' => false,
@@ -38,38 +44,32 @@ class GetFeedbackResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespons
             'attribute' => false,
             'elementName' => 'FeedbackDetailItemTotal'
         ],
-        'FeedbackSummary' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\FeedbackSummaryType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FeedbackSummary'
-        ],
         'FeedbackScore' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeedbackScore'
         ],
-        'PaginationResult' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
+        'FeedbackSummary' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\FeedbackSummaryType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'PaginationResult'
-        ],
-        'EntriesPerPage' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'EntriesPerPage'
+            'elementName' => 'FeedbackSummary'
         ],
         'PageNumber' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PageNumber'
+        ],
+        'PaginationResult' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PaginationResult'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class GetFeedbackResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespons
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

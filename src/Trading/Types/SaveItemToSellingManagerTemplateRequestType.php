@@ -41,7 +41,7 @@ class SaveItemToSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\T
             'elementName' => 'TemplateName'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class SaveItemToSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\T
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'SaveItemToSellingManagerTemplateRequest';
         }

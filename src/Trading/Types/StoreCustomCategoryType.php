@@ -13,9 +13,9 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property integer $CategoryID
+ * @property \DTS\eBaySDK\Trading\Types\StoreCustomCategoryType[] $ChildCategory
  * @property string $Name
  * @property integer $Order
- * @property \DTS\eBaySDK\Trading\Types\StoreCustomCategoryType[] $ChildCategory
  */
 class StoreCustomCategoryType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -29,6 +29,12 @@ class StoreCustomCategoryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CategoryID'
         ],
+        'ChildCategory' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomCategoryType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'ChildCategory'
+        ],
         'Name' => [
             'type' => 'string',
             'repeatable' => false,
@@ -40,15 +46,9 @@ class StoreCustomCategoryType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Order'
-        ],
-        'ChildCategory' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomCategoryType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'ChildCategory'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class StoreCustomCategoryType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

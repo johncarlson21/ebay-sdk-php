@@ -13,131 +13,127 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $ApplicationData
+ * @property \DTS\eBaySDK\Trading\Types\BuyerProtectionDetailsType $ApplyBuyerProtection
  * @property boolean $AutoPay
- * @property \DTS\eBaySDK\Trading\Types\PaymentDetailsType $PaymentDetails
+ * @property boolean $AvailableForPickupDropOff
+ * @property \DTS\eBaySDK\Trading\Types\BestOfferDetailsType $BestOfferDetails
  * @property \DTS\eBaySDK\Trading\Types\BiddingDetailsType $BiddingDetails
- * @property boolean $MotorsGermanySearchable
+ * @property \DTS\eBaySDK\Trading\Types\BusinessSellerDetailsType $BusinessSellerDetails
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $BuyerGuaranteePrice
  * @property \DTS\eBaySDK\Trading\Enums\BuyerProtectionCodeType $BuyerProtection
+ * @property \DTS\eBaySDK\Trading\Types\BuyerRequirementDetailsType $BuyerRequirementDetails
+ * @property boolean $BuyerResponsibleForShipping
  * @property \DTS\eBaySDK\Trading\Types\AmountType $BuyItNowPrice
  * @property boolean $CategoryMappingAllowed
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $CeilingPrice
  * @property \DTS\eBaySDK\Trading\Types\CharityType $Charity
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ClassifiedAdPayPerLeadFee
+ * @property string $ConditionDefinition
+ * @property string $ConditionDescription
+ * @property string $ConditionDisplayName
+ * @property integer $ConditionID
  * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType $Country
+ * @property string[] $CrossBorderTrade
  * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $Currency
  * @property string $Description
  * @property \DTS\eBaySDK\Trading\Enums\DescriptionReviseModeCodeType $DescriptionReviseMode
+ * @property \DTS\eBaySDK\Trading\Types\DigitalGoodInfoType $DigitalGoodInfo
+ * @property boolean $DisableBuyerRequirements
+ * @property \DTS\eBaySDK\Trading\Types\DiscountPriceInfoType $DiscountPriceInfo
+ * @property integer $DispatchTimeMax
+ * @property string $eBayNotes
+ * @property boolean $eBayPlus
+ * @property boolean $eBayPlusEligible
+ * @property boolean $EligibleForPickupDropOff
+ * @property boolean $eMailDeliveryAvailable
+ * @property \DTS\eBaySDK\Trading\Types\ExtendedContactDetailsType $ExtendedSellerContactDetails
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $FloorPrice
+ * @property \DTS\eBaySDK\Trading\Types\CategoryType $FreeAddedCategory
+ * @property boolean $HideFromSearch
+ * @property integer $HitCount
  * @property \DTS\eBaySDK\Trading\Enums\HitCounterCodeType $HitCounter
+ * @property boolean $IgnoreQuantity
+ * @property boolean $IncludeRecommendations
+ * @property boolean $IntegratedMerchantCreditCardEnabled
+ * @property \DTS\eBaySDK\Trading\Enums\InventoryTrackingMethodCodeType $InventoryTrackingMethod
+ * @property boolean $IsIntermediatedShippingEligible
+ * @property boolean $IsSecureDescription
+ * @property integer $ItemCompatibilityCount
+ * @property \DTS\eBaySDK\Trading\Types\ItemCompatibilityListType $ItemCompatibilityList
  * @property string $ItemID
- * @property \DTS\eBaySDK\Trading\Types\ListingDetailsType $ListingDetails
+ * @property \DTS\eBaySDK\Trading\Types\ItemPolicyViolationType $ItemPolicyViolation
+ * @property \DTS\eBaySDK\Trading\Types\NameValueListArrayType $ItemSpecifics
+ * @property integer $LeadCount
  * @property \DTS\eBaySDK\Trading\Types\ListingDesignerType $ListingDesigner
+ * @property \DTS\eBaySDK\Trading\Types\ListingDetailsType $ListingDetails
  * @property string $ListingDuration
  * @property \DTS\eBaySDK\Trading\Enums\ListingEnhancementsCodeType[] $ListingEnhancement
+ * @property \DTS\eBaySDK\Trading\Enums\ListingSubtypeCodeType $ListingSubtype2
  * @property \DTS\eBaySDK\Trading\Enums\ListingTypeCodeType $ListingType
  * @property string $Location
+ * @property boolean $LocationDefaulted
  * @property integer $LotSize
+ * @property boolean $MechanicalCheckAccepted
+ * @property integer $NewLeadCount
+ * @property \DTS\eBaySDK\Trading\Enums\SiteCodeType[] $PaymentAllowedSite
+ * @property \DTS\eBaySDK\Trading\Types\PaymentDetailsType $PaymentDetails
  * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentMethodCodeType[] $PaymentMethods
  * @property string $PayPalEmailAddress
+ * @property \DTS\eBaySDK\Trading\Types\PickupInStoreDetailsType $PickupInStoreDetails
+ * @property \DTS\eBaySDK\Trading\Types\PictureDetailsType $PictureDetails
+ * @property string $PostalCode
  * @property \DTS\eBaySDK\Trading\Types\CategoryType $PrimaryCategory
- * @property \DTS\eBaySDK\Trading\Types\ProductListingDetailsType $ProductListingDetails
- * @property integer $Quantity
+ * @property boolean $PrivateListing
  * @property string $PrivateNotes
+ * @property \DTS\eBaySDK\Trading\Types\ProductListingDetailsType $ProductListingDetails
+ * @property boolean $ProxyItem
+ * @property integer $Quantity
+ * @property integer $QuantityAvailable
+ * @property \DTS\eBaySDK\Trading\Enums\QuantityAvailableHintCodeType $QuantityAvailableHint
+ * @property \DTS\eBaySDK\Trading\Types\QuantityInfoType $QuantityInfo
+ * @property \DTS\eBaySDK\Trading\Types\QuantityRestrictionPerBuyerInfoType $QuantityRestrictionPerBuyer
+ * @property integer $QuantityThreshold
+ * @property integer $QuestionCount
+ * @property \DTS\eBaySDK\Trading\Enums\ReasonHideFromSearchCodeType $ReasonHideFromSearch
+ * @property boolean $Relisted
  * @property boolean $RelistLink
+ * @property integer $RelistParentID
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ReservePrice
+ * @property \DTS\eBaySDK\Trading\Types\ReturnPolicyType $ReturnPolicy
  * @property \DTS\eBaySDK\Trading\Types\ReviseStatusType $ReviseStatus
  * @property \DateTime $ScheduleTime
  * @property \DTS\eBaySDK\Trading\Types\CategoryType $SecondaryCategory
- * @property \DTS\eBaySDK\Trading\Types\CategoryType $FreeAddedCategory
  * @property \DTS\eBaySDK\Trading\Types\UserType $Seller
+ * @property \DTS\eBaySDK\Trading\Types\AddressType $SellerContactDetails
+ * @property \DTS\eBaySDK\Trading\Types\SellerProfilesType $SellerProfiles
+ * @property string $SellerProvidedTitle
+ * @property string $SellerVacationNote
  * @property \DTS\eBaySDK\Trading\Types\SellingStatusType $SellingStatus
  * @property \DTS\eBaySDK\Trading\Types\ShippingDetailsType $ShippingDetails
+ * @property \DTS\eBaySDK\Trading\Types\ShipPackageDetailsType $ShippingPackageDetails
+ * @property \DTS\eBaySDK\Trading\Types\ShippingServiceCostOverrideListType $ShippingServiceCostOverrideList
  * @property string[] $ShipToLocations
  * @property \DTS\eBaySDK\Trading\Enums\SiteCodeType $Site
+ * @property integer $SiteId
+ * @property string $SKU
  * @property \DTS\eBaySDK\Trading\Types\AmountType $StartPrice
  * @property \DTS\eBaySDK\Trading\Types\StorefrontType $Storefront
  * @property string $SubTitle
+ * @property string $TaxCategory
  * @property string $TimeLeft
  * @property string $Title
- * @property string $UUID
- * @property \DTS\eBaySDK\Trading\Types\VATDetailsType $VATDetails
- * @property string $SellerVacationNote
- * @property integer $WatchCount
- * @property integer $HitCount
- * @property boolean $DisableBuyerRequirements
- * @property \DTS\eBaySDK\Trading\Types\BestOfferDetailsType $BestOfferDetails
- * @property boolean $LocationDefaulted
- * @property boolean $UseTaxTable
- * @property boolean $BuyerResponsibleForShipping
- * @property string $eBayNotes
- * @property integer $QuestionCount
- * @property boolean $Relisted
- * @property integer $QuantityAvailable
- * @property string $SKU
- * @property boolean $CategoryBasedAttributesPrefill
- * @property string $PostalCode
- * @property boolean $ShippingTermsInDescription
- * @property \DTS\eBaySDK\Trading\Types\PictureDetailsType $PictureDetails
- * @property integer $DispatchTimeMax
- * @property \DTS\eBaySDK\Trading\Types\AddressType $SellerContactDetails
+ * @property boolean $TopRatedListing
  * @property integer $TotalQuestionCount
- * @property boolean $ProxyItem
- * @property \DTS\eBaySDK\Trading\Types\ExtendedContactDetailsType $ExtendedSellerContactDetails
- * @property integer $LeadCount
- * @property integer $NewLeadCount
- * @property \DTS\eBaySDK\Trading\Types\NameValueListArrayType $ItemSpecifics
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ClassifiedAdPayPerLeadFee
- * @property \DTS\eBaySDK\Trading\Types\BuyerProtectionDetailsType $ApplyBuyerProtection
- * @property \DTS\eBaySDK\Trading\Enums\ListingSubtypeCodeType $ListingSubtype2
- * @property boolean $MechanicalCheckAccepted
- * @property boolean $UpdateSellerInfo
+ * @property \DTS\eBaySDK\Trading\Types\UnitInfoType $UnitInfo
  * @property boolean $UpdateReturnPolicy
- * @property \DTS\eBaySDK\Trading\Types\ItemPolicyViolationType $ItemPolicyViolation
- * @property string[] $CrossBorderTrade
- * @property \DTS\eBaySDK\Trading\Types\BusinessSellerDetailsType $BusinessSellerDetails
- * @property \DTS\eBaySDK\Trading\Types\AmountType $BuyerGuaranteePrice
- * @property \DTS\eBaySDK\Trading\Types\BuyerRequirementDetailsType $BuyerRequirementDetails
- * @property \DTS\eBaySDK\Trading\Types\ReturnPolicyType $ReturnPolicy
- * @property \DTS\eBaySDK\Trading\Enums\SiteCodeType[] $PaymentAllowedSite
- * @property \DTS\eBaySDK\Trading\Enums\InventoryTrackingMethodCodeType $InventoryTrackingMethod
- * @property boolean $IntegratedMerchantCreditCardEnabled
+ * @property boolean $UpdateSellerInfo
+ * @property boolean $UseTaxTable
+ * @property string $UUID
  * @property \DTS\eBaySDK\Trading\Types\VariationsType $Variations
- * @property \DTS\eBaySDK\Trading\Types\ItemCompatibilityListType $ItemCompatibilityList
- * @property integer $ItemCompatibilityCount
- * @property integer $ConditionID
- * @property string $ConditionDescription
- * @property string $ConditionDisplayName
- * @property string $TaxCategory
- * @property \DTS\eBaySDK\Trading\Enums\QuantityAvailableHintCodeType $QuantityAvailableHint
- * @property integer $QuantityThreshold
- * @property \DTS\eBaySDK\Trading\Types\DiscountPriceInfoType $DiscountPriceInfo
- * @property string $SellerProvidedTitle
+ * @property \DTS\eBaySDK\Trading\Types\VATDetailsType $VATDetails
  * @property string $VIN
  * @property string $VRM
- * @property \DTS\eBaySDK\Trading\Types\QuantityInfoType $QuantityInfo
- * @property \DTS\eBaySDK\Trading\Types\SellerProfilesType $SellerProfiles
- * @property \DTS\eBaySDK\Trading\Types\ShippingServiceCostOverrideListType $ShippingServiceCostOverrideList
- * @property \DTS\eBaySDK\Trading\Types\ShipPackageDetailsType $ShippingPackageDetails
- * @property boolean $TopRatedListing
- * @property \DTS\eBaySDK\Trading\Types\QuantityRestrictionPerBuyerInfoType $QuantityRestrictionPerBuyer
- * @property \DTS\eBaySDK\Trading\Types\AmountType $FloorPrice
- * @property \DTS\eBaySDK\Trading\Types\AmountType $CeilingPrice
- * @property boolean $IsIntermediatedShippingEligible
- * @property \DTS\eBaySDK\Trading\Types\UnitInfoType $UnitInfo
- * @property integer $RelistParentID
- * @property string $ConditionDefinition
- * @property boolean $HideFromSearch
- * @property \DTS\eBaySDK\Trading\Enums\ReasonHideFromSearchCodeType $ReasonHideFromSearch
- * @property boolean $IncludeRecommendations
- * @property \DTS\eBaySDK\Trading\Types\PickupInStoreDetailsType $PickupInStoreDetails
- * @property boolean $eBayNowEligible
- * @property boolean $eBayNowAvailable
- * @property boolean $IgnoreQuantity
- * @property boolean $AvailableForPickupDropOff
- * @property boolean $EligibleForPickupDropOff
- * @property boolean $LiveAuction
- * @property \DTS\eBaySDK\Trading\Types\DigitalGoodInfoType $DigitalGoodInfo
- * @property boolean $eBayPlus
- * @property boolean $eBayPlusEligible
- * @property boolean $eMailDeliveryAvailable
- * @property boolean $IsSecureDescription
+ * @property integer $WatchCount
  */
 class ItemType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -151,17 +147,29 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ApplicationData'
         ],
+        'ApplyBuyerProtection' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\BuyerProtectionDetailsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ApplyBuyerProtection'
+        ],
         'AutoPay' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AutoPay'
         ],
-        'PaymentDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaymentDetailsType',
+        'AvailableForPickupDropOff' => [
+            'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'PaymentDetails'
+            'elementName' => 'AvailableForPickupDropOff'
+        ],
+        'BestOfferDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\BestOfferDetailsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BestOfferDetails'
         ],
         'BiddingDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\BiddingDetailsType',
@@ -169,17 +177,35 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'BiddingDetails'
         ],
-        'MotorsGermanySearchable' => [
-            'type' => 'boolean',
+        'BusinessSellerDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\BusinessSellerDetailsType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'MotorsGermanySearchable'
+            'elementName' => 'BusinessSellerDetails'
+        ],
+        'BuyerGuaranteePrice' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BuyerGuaranteePrice'
         ],
         'BuyerProtection' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BuyerProtection'
+        ],
+        'BuyerRequirementDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\BuyerRequirementDetailsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BuyerRequirementDetails'
+        ],
+        'BuyerResponsibleForShipping' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BuyerResponsibleForShipping'
         ],
         'BuyItNowPrice' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -193,17 +219,59 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CategoryMappingAllowed'
         ],
+        'CeilingPrice' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CeilingPrice'
+        ],
         'Charity' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CharityType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Charity'
         ],
+        'ClassifiedAdPayPerLeadFee' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ClassifiedAdPayPerLeadFee'
+        ],
+        'ConditionDefinition' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ConditionDefinition'
+        ],
+        'ConditionDescription' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ConditionDescription'
+        ],
+        'ConditionDisplayName' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ConditionDisplayName'
+        ],
+        'ConditionID' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ConditionID'
+        ],
         'Country' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Country'
+        ],
+        'CrossBorderTrade' => [
+            'type' => 'string',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'CrossBorderTrade'
         ],
         'Currency' => [
             'type' => 'string',
@@ -223,11 +291,143 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DescriptionReviseMode'
         ],
+        'DigitalGoodInfo' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\DigitalGoodInfoType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DigitalGoodInfo'
+        ],
+        'DisableBuyerRequirements' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DisableBuyerRequirements'
+        ],
+        'DiscountPriceInfo' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\DiscountPriceInfoType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DiscountPriceInfo'
+        ],
+        'DispatchTimeMax' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DispatchTimeMax'
+        ],
+        'eBayNotes' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'eBayNotes'
+        ],
+        'eBayPlus' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'eBayPlus'
+        ],
+        'eBayPlusEligible' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'eBayPlusEligible'
+        ],
+        'EligibleForPickupDropOff' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'EligibleForPickupDropOff'
+        ],
+        'eMailDeliveryAvailable' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'eMailDeliveryAvailable'
+        ],
+        'ExtendedSellerContactDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ExtendedContactDetailsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ExtendedSellerContactDetails'
+        ],
+        'FloorPrice' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'FloorPrice'
+        ],
+        'FreeAddedCategory' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\CategoryType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'FreeAddedCategory'
+        ],
+        'HideFromSearch' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'HideFromSearch'
+        ],
+        'HitCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'HitCount'
+        ],
         'HitCounter' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'HitCounter'
+        ],
+        'IgnoreQuantity' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IgnoreQuantity'
+        ],
+        'IncludeRecommendations' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeRecommendations'
+        ],
+        'IntegratedMerchantCreditCardEnabled' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IntegratedMerchantCreditCardEnabled'
+        ],
+        'InventoryTrackingMethod' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'InventoryTrackingMethod'
+        ],
+        'IsIntermediatedShippingEligible' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IsIntermediatedShippingEligible'
+        ],
+        'IsSecureDescription' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IsSecureDescription'
+        ],
+        'ItemCompatibilityCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemCompatibilityCount'
+        ],
+        'ItemCompatibilityList' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemCompatibilityListType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemCompatibilityList'
         ],
         'ItemID' => [
             'type' => 'string',
@@ -235,17 +435,35 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
-        'ListingDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ListingDetailsType',
+        'ItemPolicyViolation' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemPolicyViolationType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ListingDetails'
+            'elementName' => 'ItemPolicyViolation'
+        ],
+        'ItemSpecifics' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\NameValueListArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemSpecifics'
+        ],
+        'LeadCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'LeadCount'
         ],
         'ListingDesigner' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ListingDesignerType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ListingDesigner'
+        ],
+        'ListingDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ListingDetailsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ListingDetails'
         ],
         'ListingDuration' => [
             'type' => 'string',
@@ -259,6 +477,12 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ListingEnhancement'
         ],
+        'ListingSubtype2' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ListingSubtype2'
+        ],
         'ListingType' => [
             'type' => 'string',
             'repeatable' => false,
@@ -271,11 +495,41 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Location'
         ],
+        'LocationDefaulted' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'LocationDefaulted'
+        ],
         'LotSize' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LotSize'
+        ],
+        'MechanicalCheckAccepted' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MechanicalCheckAccepted'
+        ],
+        'NewLeadCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'NewLeadCount'
+        ],
+        'PaymentAllowedSite' => [
+            'type' => 'string',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'PaymentAllowedSite'
+        ],
+        'PaymentDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaymentDetailsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PaymentDetails'
         ],
         'PaymentMethods' => [
             'type' => 'string',
@@ -289,23 +543,35 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PayPalEmailAddress'
         ],
+        'PickupInStoreDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PickupInStoreDetailsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PickupInStoreDetails'
+        ],
+        'PictureDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PictureDetailsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PictureDetails'
+        ],
+        'PostalCode' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PostalCode'
+        ],
         'PrimaryCategory' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CategoryType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PrimaryCategory'
         ],
-        'ProductListingDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ProductListingDetailsType',
+        'PrivateListing' => [
+            'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ProductListingDetails'
-        ],
-        'Quantity' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Quantity'
+            'elementName' => 'PrivateListing'
         ],
         'PrivateNotes' => [
             'type' => 'string',
@@ -313,17 +579,95 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PrivateNotes'
         ],
+        'ProductListingDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ProductListingDetailsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ProductListingDetails'
+        ],
+        'ProxyItem' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ProxyItem'
+        ],
+        'Quantity' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Quantity'
+        ],
+        'QuantityAvailable' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'QuantityAvailable'
+        ],
+        'QuantityAvailableHint' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'QuantityAvailableHint'
+        ],
+        'QuantityInfo' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\QuantityInfoType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'QuantityInfo'
+        ],
+        'QuantityRestrictionPerBuyer' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\QuantityRestrictionPerBuyerInfoType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'QuantityRestrictionPerBuyer'
+        ],
+        'QuantityThreshold' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'QuantityThreshold'
+        ],
+        'QuestionCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'QuestionCount'
+        ],
+        'ReasonHideFromSearch' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ReasonHideFromSearch'
+        ],
+        'Relisted' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Relisted'
+        ],
         'RelistLink' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RelistLink'
         ],
+        'RelistParentID' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'RelistParentID'
+        ],
         'ReservePrice' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReservePrice'
+        ],
+        'ReturnPolicy' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ReturnPolicyType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ReturnPolicy'
         ],
         'ReviseStatus' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ReviseStatusType',
@@ -343,17 +687,35 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SecondaryCategory'
         ],
-        'FreeAddedCategory' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\CategoryType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FreeAddedCategory'
-        ],
         'Seller' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UserType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Seller'
+        ],
+        'SellerContactDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SellerContactDetails'
+        ],
+        'SellerProfiles' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SellerProfilesType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SellerProfiles'
+        ],
+        'SellerProvidedTitle' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SellerProvidedTitle'
+        ],
+        'SellerVacationNote' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SellerVacationNote'
         ],
         'SellingStatus' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingStatusType',
@@ -367,6 +729,18 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingDetails'
         ],
+        'ShippingPackageDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ShipPackageDetailsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingPackageDetails'
+        ],
+        'ShippingServiceCostOverrideList' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ShippingServiceCostOverrideListType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingServiceCostOverrideList'
+        ],
         'ShipToLocations' => [
             'type' => 'string',
             'repeatable' => true,
@@ -378,6 +752,18 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Site'
+        ],
+        'SiteId' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SiteId'
+        ],
+        'SKU' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SKU'
         ],
         'StartPrice' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -397,6 +783,12 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SubTitle'
         ],
+        'TaxCategory' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TaxCategory'
+        ],
         'TimeLeft' => [
             'type' => 'string',
             'repeatable' => false,
@@ -409,131 +801,11 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Title'
         ],
-        'UUID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UUID'
-        ],
-        'VATDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\VATDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'VATDetails'
-        ],
-        'SellerVacationNote' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellerVacationNote'
-        ],
-        'WatchCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'WatchCount'
-        ],
-        'HitCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'HitCount'
-        ],
-        'DisableBuyerRequirements' => [
+        'TopRatedListing' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'DisableBuyerRequirements'
-        ],
-        'BestOfferDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\BestOfferDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BestOfferDetails'
-        ],
-        'LocationDefaulted' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'LocationDefaulted'
-        ],
-        'UseTaxTable' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UseTaxTable'
-        ],
-        'BuyerResponsibleForShipping' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BuyerResponsibleForShipping'
-        ],
-        'eBayNotes' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'eBayNotes'
-        ],
-        'QuestionCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'QuestionCount'
-        ],
-        'Relisted' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Relisted'
-        ],
-        'QuantityAvailable' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'QuantityAvailable'
-        ],
-        'SKU' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SKU'
-        ],
-        'CategoryBasedAttributesPrefill' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CategoryBasedAttributesPrefill'
-        ],
-        'PostalCode' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PostalCode'
-        ],
-        'ShippingTermsInDescription' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingTermsInDescription'
-        ],
-        'PictureDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PictureDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PictureDetails'
-        ],
-        'DispatchTimeMax' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DispatchTimeMax'
-        ],
-        'SellerContactDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellerContactDetails'
+            'elementName' => 'TopRatedListing'
         ],
         'TotalQuestionCount' => [
             'type' => 'integer',
@@ -541,65 +813,11 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'TotalQuestionCount'
         ],
-        'ProxyItem' => [
-            'type' => 'boolean',
+        'UnitInfo' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\UnitInfoType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ProxyItem'
-        ],
-        'ExtendedSellerContactDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ExtendedContactDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ExtendedSellerContactDetails'
-        ],
-        'LeadCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'LeadCount'
-        ],
-        'NewLeadCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'NewLeadCount'
-        ],
-        'ItemSpecifics' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\NameValueListArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemSpecifics'
-        ],
-        'ClassifiedAdPayPerLeadFee' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ClassifiedAdPayPerLeadFee'
-        ],
-        'ApplyBuyerProtection' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\BuyerProtectionDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ApplyBuyerProtection'
-        ],
-        'ListingSubtype2' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ListingSubtype2'
-        ],
-        'MechanicalCheckAccepted' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MechanicalCheckAccepted'
-        ],
-        'UpdateSellerInfo' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UpdateSellerInfo'
+            'elementName' => 'UnitInfo'
         ],
         'UpdateReturnPolicy' => [
             'type' => 'boolean',
@@ -607,59 +825,23 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'UpdateReturnPolicy'
         ],
-        'ItemPolicyViolation' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemPolicyViolationType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemPolicyViolation'
-        ],
-        'CrossBorderTrade' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'CrossBorderTrade'
-        ],
-        'BusinessSellerDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\BusinessSellerDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BusinessSellerDetails'
-        ],
-        'BuyerGuaranteePrice' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BuyerGuaranteePrice'
-        ],
-        'BuyerRequirementDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\BuyerRequirementDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BuyerRequirementDetails'
-        ],
-        'ReturnPolicy' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ReturnPolicyType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ReturnPolicy'
-        ],
-        'PaymentAllowedSite' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'PaymentAllowedSite'
-        ],
-        'InventoryTrackingMethod' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'InventoryTrackingMethod'
-        ],
-        'IntegratedMerchantCreditCardEnabled' => [
+        'UpdateSellerInfo' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'IntegratedMerchantCreditCardEnabled'
+            'elementName' => 'UpdateSellerInfo'
+        ],
+        'UseTaxTable' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UseTaxTable'
+        ],
+        'UUID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UUID'
         ],
         'Variations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\VariationsType',
@@ -667,65 +849,11 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Variations'
         ],
-        'ItemCompatibilityList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemCompatibilityListType',
+        'VATDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\VATDetailsType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ItemCompatibilityList'
-        ],
-        'ItemCompatibilityCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemCompatibilityCount'
-        ],
-        'ConditionID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ConditionID'
-        ],
-        'ConditionDescription' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ConditionDescription'
-        ],
-        'ConditionDisplayName' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ConditionDisplayName'
-        ],
-        'TaxCategory' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TaxCategory'
-        ],
-        'QuantityAvailableHint' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'QuantityAvailableHint'
-        ],
-        'QuantityThreshold' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'QuantityThreshold'
-        ],
-        'DiscountPriceInfo' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\DiscountPriceInfoType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DiscountPriceInfo'
-        ],
-        'SellerProvidedTitle' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellerProvidedTitle'
+            'elementName' => 'VATDetails'
         ],
         'VIN' => [
             'type' => 'string',
@@ -739,170 +867,14 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'VRM'
         ],
-        'QuantityInfo' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\QuantityInfoType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'QuantityInfo'
-        ],
-        'SellerProfiles' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellerProfilesType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellerProfiles'
-        ],
-        'ShippingServiceCostOverrideList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShippingServiceCostOverrideListType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingServiceCostOverrideList'
-        ],
-        'ShippingPackageDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShipPackageDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingPackageDetails'
-        ],
-        'TopRatedListing' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TopRatedListing'
-        ],
-        'QuantityRestrictionPerBuyer' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\QuantityRestrictionPerBuyerInfoType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'QuantityRestrictionPerBuyer'
-        ],
-        'FloorPrice' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FloorPrice'
-        ],
-        'CeilingPrice' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CeilingPrice'
-        ],
-        'IsIntermediatedShippingEligible' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IsIntermediatedShippingEligible'
-        ],
-        'UnitInfo' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\UnitInfoType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UnitInfo'
-        ],
-        'RelistParentID' => [
+        'WatchCount' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'RelistParentID'
-        ],
-        'ConditionDefinition' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ConditionDefinition'
-        ],
-        'HideFromSearch' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'HideFromSearch'
-        ],
-        'ReasonHideFromSearch' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ReasonHideFromSearch'
-        ],
-        'IncludeRecommendations' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeRecommendations'
-        ],
-        'PickupInStoreDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PickupInStoreDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PickupInStoreDetails'
-        ],
-        'eBayNowEligible' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'eBayNowEligible'
-        ],
-        'eBayNowAvailable' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'eBayNowAvailable'
-        ],
-        'IgnoreQuantity' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IgnoreQuantity'
-        ],
-        'AvailableForPickupDropOff' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AvailableForPickupDropOff'
-        ],
-        'EligibleForPickupDropOff' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'EligibleForPickupDropOff'
-        ],
-        'LiveAuction' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'LiveAuction'
-        ],
-        'DigitalGoodInfo' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\DigitalGoodInfoType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DigitalGoodInfo'
-        ],
-        'eBayPlus' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'eBayPlus'
-        ],
-        'eBayPlusEligible' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'eBayPlusEligible'
-        ],
-        'eMailDeliveryAvailable' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'eMailDeliveryAvailable'
-        ],
-        'IsSecureDescription' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IsSecureDescription'
+            'elementName' => 'WatchCount'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -919,7 +891,7 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

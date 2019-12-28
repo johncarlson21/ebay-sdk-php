@@ -12,23 +12,15 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Name
- * @property boolean $ListingNPEmailNotifPref
- * @property string $ListingNPEmail
- * @property string $ListingNPContactName
- * @property string $Mission
- * @property string $LogoURL
- * @property integer $CharityRegion
  * @property integer[] $CharityDomain
- * @property string $LogoURLSelling
- * @property boolean $DisplayLogoSelling
+ * @property integer $CharityRegion
  * @property string $Description
+ * @property boolean $DisplayLogoSelling
  * @property string $ExternalID
- * @property integer $PopularityIndex
- * @property string $EIN
- * @property string $NonProfitSecondName
- * @property \DTS\eBaySDK\Trading\Types\NonProfitAddressType[] $NonProfitAddress
- * @property \DTS\eBaySDK\Trading\Types\NonProfitSocialAddressType[] $NonProfitSocialAddress
+ * @property string $LogoURL
+ * @property string $LogoURLSelling
+ * @property string $Mission
+ * @property string $Name
  * @property string $id
  */
 class CharityInfoType extends \DTS\eBaySDK\Types\BaseType
@@ -37,41 +29,11 @@ class CharityInfoType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Name' => [
-            'type' => 'string',
-            'repeatable' => false,
+        'CharityDomain' => [
+            'type' => 'integer',
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'Name'
-        ],
-        'ListingNPEmailNotifPref' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ListingNPEmailNotifPref'
-        ],
-        'ListingNPEmail' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ListingNPEmail'
-        ],
-        'ListingNPContactName' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ListingNPContactName'
-        ],
-        'Mission' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Mission'
-        ],
-        'LogoURL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'LogoURL'
+            'elementName' => 'CharityDomain'
         ],
         'CharityRegion' => [
             'type' => 'integer',
@@ -79,17 +41,11 @@ class CharityInfoType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CharityRegion'
         ],
-        'CharityDomain' => [
-            'type' => 'integer',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'CharityDomain'
-        ],
-        'LogoURLSelling' => [
+        'Description' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'LogoURLSelling'
+            'elementName' => 'Description'
         ],
         'DisplayLogoSelling' => [
             'type' => 'boolean',
@@ -97,47 +53,35 @@ class CharityInfoType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DisplayLogoSelling'
         ],
-        'Description' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Description'
-        ],
         'ExternalID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ExternalID'
         ],
-        'PopularityIndex' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PopularityIndex'
-        ],
-        'EIN' => [
+        'LogoURL' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'EIN'
+            'elementName' => 'LogoURL'
         ],
-        'NonProfitSecondName' => [
+        'LogoURLSelling' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'NonProfitSecondName'
+            'elementName' => 'LogoURLSelling'
         ],
-        'NonProfitAddress' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\NonProfitAddressType',
-            'repeatable' => true,
+        'Mission' => [
+            'type' => 'string',
+            'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'NonProfitAddress'
+            'elementName' => 'Mission'
         ],
-        'NonProfitSocialAddress' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\NonProfitSocialAddressType',
-            'repeatable' => true,
+        'Name' => [
+            'type' => 'string',
+            'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'NonProfitSocialAddress'
+            'elementName' => 'Name'
         ],
         'id' => [
             'type' => 'string',
@@ -146,7 +90,7 @@ class CharityInfoType extends \DTS\eBaySDK\Types\BaseType
             'attributeName' => 'id'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -163,7 +107,7 @@ class CharityInfoType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

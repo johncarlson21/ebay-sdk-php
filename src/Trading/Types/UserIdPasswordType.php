@@ -12,11 +12,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $AppId
- * @property string $DevId
- * @property string $AuthCert
- * @property string $Username
- * @property string $Password
  */
 class UserIdPasswordType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -24,38 +19,9 @@ class UserIdPasswordType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'AppId' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AppId'
-        ],
-        'DevId' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DevId'
-        ],
-        'AuthCert' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AuthCert'
-        ],
-        'Username' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Username'
-        ],
-        'Password' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Password'
-        ]
-    ];
 
+    ];
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +38,7 @@ class UserIdPasswordType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

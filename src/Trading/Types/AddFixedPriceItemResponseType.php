@@ -12,16 +12,16 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
- * @property string $SKU
- * @property \DateTime $StartTime
+ * @property string $Category2ID
+ * @property string $CategoryID
+ * @property \DTS\eBaySDK\Trading\Enums\DiscountReasonCodeType[] $DiscountReason
  * @property \DateTime $EndTime
  * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
- * @property string $CategoryID
- * @property string $Category2ID
- * @property \DTS\eBaySDK\Trading\Enums\DiscountReasonCodeType[] $DiscountReason
- * @property \DTS\eBaySDK\Trading\Types\ProductSuggestionsType $ProductSuggestions
+ * @property string $ItemID
  * @property \DTS\eBaySDK\Trading\Types\ListingRecommendationsType $ListingRecommendations
+ * @property \DTS\eBaySDK\Trading\Types\ProductSuggestionsType $ProductSuggestions
+ * @property string $SKU
+ * @property \DateTime $StartTime
  */
 class AddFixedPriceItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -29,23 +29,23 @@ class AddFixedPriceItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractR
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
+        'Category2ID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ItemID'
+            'elementName' => 'Category2ID'
         ],
-        'SKU' => [
+        'CategoryID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'SKU'
+            'elementName' => 'CategoryID'
         ],
-        'StartTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
+        'DiscountReason' => [
+            'type' => 'string',
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'StartTime'
+            'elementName' => 'DiscountReason'
         ],
         'EndTime' => [
             'type' => 'DateTime',
@@ -59,23 +59,17 @@ class AddFixedPriceItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'attribute' => false,
             'elementName' => 'Fees'
         ],
-        'CategoryID' => [
+        'ItemID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'CategoryID'
+            'elementName' => 'ItemID'
         ],
-        'Category2ID' => [
-            'type' => 'string',
+        'ListingRecommendations' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ListingRecommendationsType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Category2ID'
-        ],
-        'DiscountReason' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'DiscountReason'
+            'elementName' => 'ListingRecommendations'
         ],
         'ProductSuggestions' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ProductSuggestionsType',
@@ -83,14 +77,20 @@ class AddFixedPriceItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'attribute' => false,
             'elementName' => 'ProductSuggestions'
         ],
-        'ListingRecommendations' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ListingRecommendationsType',
+        'SKU' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ListingRecommendations'
+            'elementName' => 'SKU'
+        ],
+        'StartTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'StartTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -107,7 +107,7 @@ class AddFixedPriceItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractR
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

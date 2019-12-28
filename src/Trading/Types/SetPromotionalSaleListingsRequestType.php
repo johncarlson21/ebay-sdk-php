@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $PromotionalSaleID
  * @property \DTS\eBaySDK\Trading\Enums\ModifyActionCodeType $Action
+ * @property boolean $AllAuctionItems
+ * @property boolean $AllFixedPriceItems
+ * @property integer $CategoryID
+ * @property integer $PromotionalSaleID
  * @property \DTS\eBaySDK\Trading\Types\ItemIDArrayType $PromotionalSaleItemIDArray
  * @property integer $StoreCategoryID
- * @property integer $CategoryID
- * @property boolean $AllFixedPriceItems
- * @property boolean $AllAuctionItems
  */
 class SetPromotionalSaleListingsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -26,17 +26,35 @@ class SetPromotionalSaleListingsRequestType extends \DTS\eBaySDK\Trading\Types\A
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'PromotionalSaleID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PromotionalSaleID'
-        ],
         'Action' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Action'
+        ],
+        'AllAuctionItems' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'AllAuctionItems'
+        ],
+        'AllFixedPriceItems' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'AllFixedPriceItems'
+        ],
+        'CategoryID' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CategoryID'
+        ],
+        'PromotionalSaleID' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PromotionalSaleID'
         ],
         'PromotionalSaleItemIDArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemIDArrayType',
@@ -49,27 +67,9 @@ class SetPromotionalSaleListingsRequestType extends \DTS\eBaySDK\Trading\Types\A
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'StoreCategoryID'
-        ],
-        'CategoryID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CategoryID'
-        ],
-        'AllFixedPriceItems' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AllFixedPriceItems'
-        ],
-        'AllAuctionItems' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AllAuctionItems'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class SetPromotionalSaleListingsRequestType extends \DTS\eBaySDK\Trading\Types\A
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'SetPromotionalSaleListingsRequest';
         }

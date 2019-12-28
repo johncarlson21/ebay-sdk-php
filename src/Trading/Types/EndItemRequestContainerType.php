@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
  * @property \DTS\eBaySDK\Trading\Enums\EndReasonCodeType $EndingReason
+ * @property string $ItemID
  * @property string $MessageID
  */
 class EndItemRequestContainerType extends \DTS\eBaySDK\Types\BaseType
@@ -22,17 +22,17 @@ class EndItemRequestContainerType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
-        ],
         'EndingReason' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EndingReason'
+        ],
+        'ItemID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
         ],
         'MessageID' => [
             'type' => 'string',
@@ -41,7 +41,7 @@ class EndItemRequestContainerType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'MessageID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class EndItemRequestContainerType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

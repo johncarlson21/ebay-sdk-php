@@ -12,12 +12,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
- * @property string[] $BestOfferID
  * @property \DTS\eBaySDK\Trading\Enums\BestOfferActionCodeType $Action
- * @property string $SellerResponse
+ * @property string[] $BestOfferID
  * @property \DTS\eBaySDK\Trading\Types\AmountType $CounterOfferPrice
  * @property integer $CounterOfferQuantity
+ * @property string $ItemID
+ * @property string $SellerResponse
  */
 class RespondToBestOfferRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -25,29 +25,17 @@ class RespondToBestOfferRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
-        ],
-        'BestOfferID' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'BestOfferID'
-        ],
         'Action' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Action'
         ],
-        'SellerResponse' => [
+        'BestOfferID' => [
             'type' => 'string',
-            'repeatable' => false,
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'SellerResponse'
+            'elementName' => 'BestOfferID'
         ],
         'CounterOfferPrice' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -60,9 +48,21 @@ class RespondToBestOfferRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CounterOfferQuantity'
+        ],
+        'ItemID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
+        ],
+        'SellerResponse' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SellerResponse'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -79,7 +79,7 @@ class RespondToBestOfferRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'RespondToBestOfferRequest';
         }

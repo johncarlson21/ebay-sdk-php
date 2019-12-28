@@ -12,17 +12,16 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property boolean $IncludeContainingOrder
+ * @property boolean $IncludeFinalValueFee
+ * @property boolean $IncludeVariations
  * @property string $ItemID
  * @property \DateTime $ModTimeFrom
  * @property \DateTime $ModTimeTo
- * @property string $TransactionID
- * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
- * @property boolean $IncludeFinalValueFee
- * @property boolean $IncludeContainingOrder
- * @property \DTS\eBaySDK\Trading\Enums\TransactionPlatformCodeType $Platform
  * @property integer $NumberOfDays
- * @property boolean $IncludeVariations
  * @property string $OrderLineItemID
+ * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
+ * @property string $TransactionID
  */
 class GetItemTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -30,6 +29,24 @@ class GetItemTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'IncludeContainingOrder' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeContainingOrder'
+        ],
+        'IncludeFinalValueFee' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeFinalValueFee'
+        ],
+        'IncludeVariations' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeVariations'
+        ],
         'ItemID' => [
             'type' => 'string',
             'repeatable' => false,
@@ -48,11 +65,17 @@ class GetItemTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
             'attribute' => false,
             'elementName' => 'ModTimeTo'
         ],
-        'TransactionID' => [
+        'NumberOfDays' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'NumberOfDays'
+        ],
+        'OrderLineItemID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'TransactionID'
+            'elementName' => 'OrderLineItemID'
         ],
         'Pagination' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
@@ -60,44 +83,14 @@ class GetItemTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
             'attribute' => false,
             'elementName' => 'Pagination'
         ],
-        'IncludeFinalValueFee' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeFinalValueFee'
-        ],
-        'IncludeContainingOrder' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeContainingOrder'
-        ],
-        'Platform' => [
+        'TransactionID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Platform'
-        ],
-        'NumberOfDays' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'NumberOfDays'
-        ],
-        'IncludeVariations' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeVariations'
-        ],
-        'OrderLineItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'OrderLineItemID'
+            'elementName' => 'TransactionID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -114,7 +107,7 @@ class GetItemTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetItemTransactionsRequest';
         }

@@ -12,14 +12,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\SellingManagerSearchType $Search
- * @property integer $StoreCategoryID
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerSoldListingsPropertyTypeCodeType[] $Filter
  * @property boolean $Archived
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerSoldListingsSortTypeCodeType $Sort
- * @property \DTS\eBaySDK\Trading\Enums\SortOrderCodeType $SortOrder
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerSoldListingsPropertyTypeCodeType[] $Filter
  * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
  * @property \DTS\eBaySDK\Trading\Types\TimeRangeType $SaleDateRange
+ * @property \DTS\eBaySDK\Trading\Types\SellingManagerSearchType $Search
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerSoldListingsSortTypeCodeType $Sort
+ * @property \DTS\eBaySDK\Trading\Enums\SortOrderCodeType $SortOrder
+ * @property integer $StoreCategoryID
  */
 class GetSellingManagerSoldListingsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -27,17 +27,11 @@ class GetSellingManagerSoldListingsRequestType extends \DTS\eBaySDK\Trading\Type
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Search' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerSearchType',
+        'Archived' => [
+            'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Search'
-        ],
-        'StoreCategoryID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'StoreCategoryID'
+            'elementName' => 'Archived'
         ],
         'Filter' => [
             'type' => 'string',
@@ -45,11 +39,23 @@ class GetSellingManagerSoldListingsRequestType extends \DTS\eBaySDK\Trading\Type
             'attribute' => false,
             'elementName' => 'Filter'
         ],
-        'Archived' => [
-            'type' => 'boolean',
+        'Pagination' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Archived'
+            'elementName' => 'Pagination'
+        ],
+        'SaleDateRange' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\TimeRangeType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SaleDateRange'
+        ],
+        'Search' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerSearchType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Search'
         ],
         'Sort' => [
             'type' => 'string',
@@ -63,20 +69,14 @@ class GetSellingManagerSoldListingsRequestType extends \DTS\eBaySDK\Trading\Type
             'attribute' => false,
             'elementName' => 'SortOrder'
         ],
-        'Pagination' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
+        'StoreCategoryID' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Pagination'
-        ],
-        'SaleDateRange' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\TimeRangeType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SaleDateRange'
+            'elementName' => 'StoreCategoryID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -93,7 +93,7 @@ class GetSellingManagerSoldListingsRequestType extends \DTS\eBaySDK\Trading\Type
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetSellingManagerSoldListingsRequest';
         }

@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\StoreThemeType[] $Theme
  * @property \DTS\eBaySDK\Trading\Types\StoreColorSchemeArrayType $GenericColorSchemeArray
+ * @property \DTS\eBaySDK\Trading\Types\StoreThemeType[] $Theme
  */
 class StoreThemeArrayType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -21,20 +21,20 @@ class StoreThemeArrayType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Theme' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\StoreThemeType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'Theme'
-        ],
         'GenericColorSchemeArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreColorSchemeArrayType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'GenericColorSchemeArray'
+        ],
+        'Theme' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\StoreThemeType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'Theme'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class StoreThemeArrayType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

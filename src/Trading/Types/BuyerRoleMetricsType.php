@@ -12,10 +12,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $PositiveFeedbackLeftCount
+ * @property double $FeedbackLeftPercent
  * @property integer $NegativeFeedbackLeftCount
  * @property integer $NeutralFeedbackLeftCount
- * @property double $FeedbackLeftPercent
+ * @property integer $PositiveFeedbackLeftCount
  */
 class BuyerRoleMetricsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -23,11 +23,11 @@ class BuyerRoleMetricsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'PositiveFeedbackLeftCount' => [
-            'type' => 'integer',
+        'FeedbackLeftPercent' => [
+            'type' => 'double',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'PositiveFeedbackLeftCount'
+            'elementName' => 'FeedbackLeftPercent'
         ],
         'NegativeFeedbackLeftCount' => [
             'type' => 'integer',
@@ -41,14 +41,14 @@ class BuyerRoleMetricsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'NeutralFeedbackLeftCount'
         ],
-        'FeedbackLeftPercent' => [
-            'type' => 'double',
+        'PositiveFeedbackLeftCount' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'FeedbackLeftPercent'
+            'elementName' => 'PositiveFeedbackLeftCount'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class BuyerRoleMetricsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

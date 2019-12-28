@@ -12,14 +12,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
  * @property boolean $HasMoreTransactions
- * @property integer $TransactionsPerPage
- * @property integer $PageNumber
- * @property integer $ReturnedTransactionCountActual
  * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
- * @property \DTS\eBaySDK\Trading\Types\TransactionArrayType $TransactionArray
+ * @property integer $PageNumber
+ * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
  * @property boolean $PayPalPreferred
+ * @property integer $ReturnedTransactionCountActual
+ * @property \DTS\eBaySDK\Trading\Types\TransactionArrayType $TransactionArray
+ * @property integer $TransactionsPerPage
  */
 class GetItemTransactionsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -27,35 +27,11 @@ class GetItemTransactionsResponseType extends \DTS\eBaySDK\Trading\Types\Abstrac
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'PaginationResult' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PaginationResult'
-        ],
         'HasMoreTransactions' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'HasMoreTransactions'
-        ],
-        'TransactionsPerPage' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TransactionsPerPage'
-        ],
-        'PageNumber' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PageNumber'
-        ],
-        'ReturnedTransactionCountActual' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ReturnedTransactionCountActual'
         ],
         'Item' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
@@ -63,20 +39,44 @@ class GetItemTransactionsResponseType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'attribute' => false,
             'elementName' => 'Item'
         ],
-        'TransactionArray' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\TransactionArrayType',
+        'PageNumber' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'TransactionArray'
+            'elementName' => 'PageNumber'
+        ],
+        'PaginationResult' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PaginationResult'
         ],
         'PayPalPreferred' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PayPalPreferred'
+        ],
+        'ReturnedTransactionCountActual' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ReturnedTransactionCountActual'
+        ],
+        'TransactionArray' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\TransactionArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TransactionArray'
+        ],
+        'TransactionsPerPage' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TransactionsPerPage'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -93,7 +93,7 @@ class GetItemTransactionsResponseType extends \DTS\eBaySDK\Trading\Types\Abstrac
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

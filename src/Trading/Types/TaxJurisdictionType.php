@@ -12,11 +12,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $DetailVersion
  * @property string $JurisdictionID
+ * @property string $JurisdictionName
  * @property double $SalesTaxPercent
  * @property boolean $ShippingIncludedInTax
- * @property string $JurisdictionName
- * @property string $DetailVersion
  * @property \DateTime $UpdateTime
  */
 class TaxJurisdictionType extends \DTS\eBaySDK\Types\BaseType
@@ -25,11 +25,23 @@ class TaxJurisdictionType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'DetailVersion' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DetailVersion'
+        ],
         'JurisdictionID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'JurisdictionID'
+        ],
+        'JurisdictionName' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'JurisdictionName'
         ],
         'SalesTaxPercent' => [
             'type' => 'double',
@@ -43,18 +55,6 @@ class TaxJurisdictionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingIncludedInTax'
         ],
-        'JurisdictionName' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'JurisdictionName'
-        ],
-        'DetailVersion' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DetailVersion'
-        ],
         'UpdateTime' => [
             'type' => 'DateTime',
             'repeatable' => false,
@@ -62,7 +62,7 @@ class TaxJurisdictionType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'UpdateTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -79,7 +79,7 @@ class TaxJurisdictionType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

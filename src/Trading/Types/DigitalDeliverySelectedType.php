@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Types\DeliveryDetailsType $DeliveryDetails
  * @property string $DeliveryMethod
  * @property \DTS\eBaySDK\Trading\Types\DeliveryStatusType $DeliveryStatus
- * @property \DTS\eBaySDK\Trading\Types\DeliveryDetailsType $DeliveryDetails
  */
 class DigitalDeliverySelectedType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -22,6 +22,12 @@ class DigitalDeliverySelectedType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'DeliveryDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\DeliveryDetailsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DeliveryDetails'
+        ],
         'DeliveryMethod' => [
             'type' => 'string',
             'repeatable' => false,
@@ -33,15 +39,9 @@ class DigitalDeliverySelectedType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DeliveryStatus'
-        ],
-        'DeliveryDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\DeliveryDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DeliveryDetails'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class DigitalDeliverySelectedType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

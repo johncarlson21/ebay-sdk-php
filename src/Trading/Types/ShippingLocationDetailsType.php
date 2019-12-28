@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ShippingLocation
  * @property string $Description
  * @property string $DetailVersion
+ * @property string $ShippingLocation
  * @property \DateTime $UpdateTime
  */
 class ShippingLocationDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -23,12 +23,6 @@ class ShippingLocationDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ShippingLocation' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingLocation'
-        ],
         'Description' => [
             'type' => 'string',
             'repeatable' => false,
@@ -41,6 +35,12 @@ class ShippingLocationDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DetailVersion'
         ],
+        'ShippingLocation' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingLocation'
+        ],
         'UpdateTime' => [
             'type' => 'DateTime',
             'repeatable' => false,
@@ -48,7 +48,7 @@ class ShippingLocationDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'UpdateTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class ShippingLocationDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

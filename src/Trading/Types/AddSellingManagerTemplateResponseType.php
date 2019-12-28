@@ -12,12 +12,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $CategoryID
  * @property integer $Category2ID
+ * @property integer $CategoryID
+ * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
  * @property integer $SaleTemplateID
  * @property string $SaleTemplateName
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType $SellingManagerProductDetails
- * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
  */
 class AddSellingManagerTemplateResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -25,17 +25,23 @@ class AddSellingManagerTemplateResponseType extends \DTS\eBaySDK\Trading\Types\A
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'Category2ID' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Category2ID'
+        ],
         'CategoryID' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
         ],
-        'Category2ID' => [
-            'type' => 'integer',
+        'Fees' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\FeesType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Category2ID'
+            'elementName' => 'Fees'
         ],
         'SaleTemplateID' => [
             'type' => 'integer',
@@ -54,15 +60,9 @@ class AddSellingManagerTemplateResponseType extends \DTS\eBaySDK\Trading\Types\A
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellingManagerProductDetails'
-        ],
-        'Fees' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\FeesType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Fees'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -79,7 +79,7 @@ class AddSellingManagerTemplateResponseType extends \DTS\eBaySDK\Trading\Types\A
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

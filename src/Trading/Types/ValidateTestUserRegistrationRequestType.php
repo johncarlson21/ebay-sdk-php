@@ -14,8 +14,6 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property integer $FeedbackScore
  * @property \DateTime $RegistrationDate
- * @property boolean $SubscribeSA
- * @property boolean $SubscribeSAPro
  * @property boolean $SubscribeSM
  * @property boolean $SubscribeSMPro
  */
@@ -37,18 +35,6 @@ class ValidateTestUserRegistrationRequestType extends \DTS\eBaySDK\Trading\Types
             'attribute' => false,
             'elementName' => 'RegistrationDate'
         ],
-        'SubscribeSA' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SubscribeSA'
-        ],
-        'SubscribeSAPro' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SubscribeSAPro'
-        ],
         'SubscribeSM' => [
             'type' => 'boolean',
             'repeatable' => false,
@@ -62,7 +48,7 @@ class ValidateTestUserRegistrationRequestType extends \DTS\eBaySDK\Trading\Types
             'elementName' => 'SubscribeSMPro'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -79,7 +65,7 @@ class ValidateTestUserRegistrationRequestType extends \DTS\eBaySDK\Trading\Types
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'ValidateTestUserRegistrationRequest';
         }

@@ -27,7 +27,7 @@ class GetSessionIDResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespon
             'elementName' => 'SessionID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -44,7 +44,7 @@ class GetSessionIDResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespon
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

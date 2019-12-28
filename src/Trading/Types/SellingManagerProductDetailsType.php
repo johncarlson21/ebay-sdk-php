@@ -12,16 +12,16 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ProductName
- * @property integer $ProductID
  * @property string $CustomLabel
- * @property integer $QuantityAvailable
- * @property \DTS\eBaySDK\Trading\Types\AmountType $UnitCost
  * @property integer $FolderID
+ * @property string $Note
+ * @property integer $ProductID
+ * @property string $ProductName
+ * @property integer $QuantityAvailable
  * @property boolean $RestockAlert
  * @property integer $RestockThreshold
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $UnitCost
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerVendorDetailsType $VendorInfo
- * @property string $Note
  */
 class SellingManagerProductDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -29,11 +29,23 @@ class SellingManagerProductDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ProductName' => [
+        'CustomLabel' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ProductName'
+            'elementName' => 'CustomLabel'
+        ],
+        'FolderID' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'FolderID'
+        ],
+        'Note' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Note'
         ],
         'ProductID' => [
             'type' => 'integer',
@@ -41,29 +53,17 @@ class SellingManagerProductDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ProductID'
         ],
-        'CustomLabel' => [
+        'ProductName' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'CustomLabel'
+            'elementName' => 'ProductName'
         ],
         'QuantityAvailable' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QuantityAvailable'
-        ],
-        'UnitCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UnitCost'
-        ],
-        'FolderID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FolderID'
         ],
         'RestockAlert' => [
             'type' => 'boolean',
@@ -77,20 +77,20 @@ class SellingManagerProductDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'RestockThreshold'
         ],
+        'UnitCost' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UnitCost'
+        ],
         'VendorInfo' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerVendorDetailsType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VendorInfo'
-        ],
-        'Note' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Note'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -107,7 +107,7 @@ class SellingManagerProductDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

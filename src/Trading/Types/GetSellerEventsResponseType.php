@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DateTime $TimeTo
  * @property \DTS\eBaySDK\Trading\Types\ItemArrayType $ItemArray
+ * @property \DateTime $TimeTo
  */
 class GetSellerEventsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -21,20 +21,20 @@ class GetSellerEventsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'TimeTo' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TimeTo'
-        ],
         'ItemArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemArrayType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemArray'
+        ],
+        'TimeTo' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TimeTo'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class GetSellerEventsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

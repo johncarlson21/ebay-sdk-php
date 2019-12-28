@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $URL
- * @property string $Encoding
  * @property string[] $CategoryID
+ * @property string $Encoding
+ * @property string $URL
  */
 class GetContextualKeywordsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -22,11 +22,11 @@ class GetContextualKeywordsRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'URL' => [
+        'CategoryID' => [
             'type' => 'string',
-            'repeatable' => false,
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'URL'
+            'elementName' => 'CategoryID'
         ],
         'Encoding' => [
             'type' => 'string',
@@ -34,14 +34,14 @@ class GetContextualKeywordsRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
             'attribute' => false,
             'elementName' => 'Encoding'
         ],
-        'CategoryID' => [
+        'URL' => [
             'type' => 'string',
-            'repeatable' => true,
+            'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'CategoryID'
+            'elementName' => 'URL'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class GetContextualKeywordsRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetContextualKeywordsRequest';
         }

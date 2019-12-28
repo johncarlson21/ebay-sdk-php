@@ -13,8 +13,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $ItemID
- * @property \DTS\eBaySDK\Trading\Enums\VeROItemStatusCodeType $ItemStatus
  * @property string $ItemReasonForFailure
+ * @property \DTS\eBaySDK\Trading\Enums\VeROItemStatusCodeType $ItemStatus
  */
 class VeROReportedItemType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -28,20 +28,20 @@ class VeROReportedItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
-        'ItemStatus' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemStatus'
-        ],
         'ItemReasonForFailure' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemReasonForFailure'
+        ],
+        'ItemStatus' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemStatus'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class VeROReportedItemType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

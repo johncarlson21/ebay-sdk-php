@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $BiddingCount
- * @property integer $WinningCount
- * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalWinningCost
- * @property integer $WonCount
- * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalWonCost
- * @property integer $WonDurationInDays
  * @property integer $BestOfferCount
+ * @property integer $BiddingCount
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalWinningCost
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalWonCost
+ * @property integer $WinningCount
+ * @property integer $WonCount
+ * @property integer $WonDurationInDays
  */
 class BuyingSummaryType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -26,17 +26,17 @@ class BuyingSummaryType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'BestOfferCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BestOfferCount'
+        ],
         'BiddingCount' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BiddingCount'
-        ],
-        'WinningCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'WinningCount'
         ],
         'TotalWinningCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -44,32 +44,32 @@ class BuyingSummaryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'TotalWinningCost'
         ],
-        'WonCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'WonCount'
-        ],
         'TotalWonCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalWonCost'
         ],
+        'WinningCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'WinningCount'
+        ],
+        'WonCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'WonCount'
+        ],
         'WonDurationInDays' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'WonDurationInDays'
-        ],
-        'BestOfferCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BestOfferCount'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class BuyingSummaryType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

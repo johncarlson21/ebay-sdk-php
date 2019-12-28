@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $FolderID
- * @property integer $ParentFolderID
- * @property integer $FolderLevel
- * @property string $FolderName
- * @property string $FolderComment
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerFolderDetailsType[] $ChildFolder
  * @property \DateTime $CreationTime
+ * @property string $FolderComment
+ * @property integer $FolderID
+ * @property integer $FolderLevel
+ * @property string $FolderName
+ * @property integer $ParentFolderID
  */
 class SellingManagerFolderDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -26,17 +26,29 @@ class SellingManagerFolderDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'ChildFolder' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerFolderDetailsType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'ChildFolder'
+        ],
+        'CreationTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CreationTime'
+        ],
+        'FolderComment' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'FolderComment'
+        ],
         'FolderID' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FolderID'
-        ],
-        'ParentFolderID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ParentFolderID'
         ],
         'FolderLevel' => [
             'type' => 'integer',
@@ -50,26 +62,14 @@ class SellingManagerFolderDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'FolderName'
         ],
-        'FolderComment' => [
-            'type' => 'string',
+        'ParentFolderID' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'FolderComment'
-        ],
-        'ChildFolder' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerFolderDetailsType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'ChildFolder'
-        ],
-        'CreationTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CreationTime'
+            'elementName' => 'ParentFolderID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class SellingManagerFolderDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

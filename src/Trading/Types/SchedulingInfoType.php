@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property integer $MaxScheduledItems
  * @property integer $MaxScheduledMinutes
  * @property integer $MinScheduledMinutes
- * @property integer $MaxScheduledItems
  */
 class SchedulingInfoType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -22,6 +22,12 @@ class SchedulingInfoType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'MaxScheduledItems' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MaxScheduledItems'
+        ],
         'MaxScheduledMinutes' => [
             'type' => 'integer',
             'repeatable' => false,
@@ -33,15 +39,9 @@ class SchedulingInfoType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MinScheduledMinutes'
-        ],
-        'MaxScheduledItems' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MaxScheduledItems'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class SchedulingInfoType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

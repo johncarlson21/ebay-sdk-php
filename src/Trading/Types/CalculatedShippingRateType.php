@@ -12,11 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $OriginatingPostalCode
- * @property \DTS\eBaySDK\Trading\Enums\MeasurementSystemCodeType $MeasurementUnit
- * @property \DTS\eBaySDK\Trading\Types\AmountType $PackagingHandlingCosts
- * @property boolean $ShippingIrregular
  * @property \DTS\eBaySDK\Trading\Types\AmountType $InternationalPackagingHandlingCosts
+ * @property string $OriginatingPostalCode
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $PackagingHandlingCosts
  */
 class CalculatedShippingRateType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -24,38 +22,26 @@ class CalculatedShippingRateType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'InternationalPackagingHandlingCosts' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'InternationalPackagingHandlingCosts'
+        ],
         'OriginatingPostalCode' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OriginatingPostalCode'
         ],
-        'MeasurementUnit' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MeasurementUnit'
-        ],
         'PackagingHandlingCosts' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PackagingHandlingCosts'
-        ],
-        'ShippingIrregular' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingIrregular'
-        ],
-        'InternationalPackagingHandlingCosts' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'InternationalPackagingHandlingCosts'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +58,7 @@ class CalculatedShippingRateType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

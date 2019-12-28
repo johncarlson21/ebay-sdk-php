@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DateTime $MessageCreationTime
  * @property integer $MessageID
  * @property \DTS\eBaySDK\Trading\Enums\DisputeMessageSourceCodeType $MessageSource
- * @property \DateTime $MessageCreationTime
  * @property string $MessageText
  */
 class DisputeMessageType extends \DTS\eBaySDK\Types\BaseType
@@ -23,6 +23,12 @@ class DisputeMessageType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'MessageCreationTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MessageCreationTime'
+        ],
         'MessageID' => [
             'type' => 'integer',
             'repeatable' => false,
@@ -35,12 +41,6 @@ class DisputeMessageType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'MessageSource'
         ],
-        'MessageCreationTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MessageCreationTime'
-        ],
         'MessageText' => [
             'type' => 'string',
             'repeatable' => false,
@@ -48,7 +48,7 @@ class DisputeMessageType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'MessageText'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class DisputeMessageType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

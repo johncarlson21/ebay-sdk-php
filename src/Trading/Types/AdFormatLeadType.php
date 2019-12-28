@@ -14,22 +14,22 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property string $AdditionalInformation
  * @property \DTS\eBaySDK\Trading\Types\AddressType $Address
- * @property string $BestTimeToCall
- * @property string $Email
- * @property \DateTime $SubmittedTime
- * @property string $ItemID
- * @property string $ItemTitle
- * @property string $UserID
- * @property \DTS\eBaySDK\Trading\Types\MemberMessageExchangeArrayType $MemberMessage
- * @property \DTS\eBaySDK\Trading\Enums\AdFormatLeadStatusCodeType $Status
- * @property string $ExternalEmail
- * @property string $PurchaseTimeFrame
- * @property string $TradeInYear
- * @property string $TradeInMake
- * @property string $TradeInModel
- * @property boolean $FinancingAnswer
  * @property boolean $Answer1
  * @property boolean $Answer2
+ * @property string $BestTimeToCall
+ * @property string $Email
+ * @property string $ExternalEmail
+ * @property boolean $FinancingAnswer
+ * @property string $ItemID
+ * @property string $ItemTitle
+ * @property \DTS\eBaySDK\Trading\Types\MemberMessageExchangeArrayType $MemberMessage
+ * @property string $PurchaseTimeFrame
+ * @property \DTS\eBaySDK\Trading\Enums\AdFormatLeadStatusCodeType $Status
+ * @property \DateTime $SubmittedTime
+ * @property string $TradeInMake
+ * @property string $TradeInModel
+ * @property string $TradeInYear
+ * @property string $UserID
  */
 class AdFormatLeadType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -49,6 +49,18 @@ class AdFormatLeadType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Address'
         ],
+        'Answer1' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Answer1'
+        ],
+        'Answer2' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Answer2'
+        ],
         'BestTimeToCall' => [
             'type' => 'string',
             'repeatable' => false,
@@ -61,11 +73,17 @@ class AdFormatLeadType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Email'
         ],
-        'SubmittedTime' => [
-            'type' => 'DateTime',
+        'ExternalEmail' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'SubmittedTime'
+            'elementName' => 'ExternalEmail'
+        ],
+        'FinancingAnswer' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'FinancingAnswer'
         ],
         'ItemID' => [
             'type' => 'string',
@@ -79,29 +97,11 @@ class AdFormatLeadType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ItemTitle'
         ],
-        'UserID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UserID'
-        ],
         'MemberMessage' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MemberMessageExchangeArrayType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MemberMessage'
-        ],
-        'Status' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Status'
-        ],
-        'ExternalEmail' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ExternalEmail'
         ],
         'PurchaseTimeFrame' => [
             'type' => 'string',
@@ -109,11 +109,17 @@ class AdFormatLeadType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PurchaseTimeFrame'
         ],
-        'TradeInYear' => [
+        'Status' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'TradeInYear'
+            'elementName' => 'Status'
+        ],
+        'SubmittedTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SubmittedTime'
         ],
         'TradeInMake' => [
             'type' => 'string',
@@ -127,26 +133,20 @@ class AdFormatLeadType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'TradeInModel'
         ],
-        'FinancingAnswer' => [
-            'type' => 'boolean',
+        'TradeInYear' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'FinancingAnswer'
+            'elementName' => 'TradeInYear'
         ],
-        'Answer1' => [
-            'type' => 'boolean',
+        'UserID' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Answer1'
-        ],
-        'Answer2' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Answer2'
+            'elementName' => 'UserID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -163,7 +163,7 @@ class AdFormatLeadType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

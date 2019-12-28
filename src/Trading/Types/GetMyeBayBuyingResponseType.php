@@ -12,18 +12,18 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\BuyingSummaryType $BuyingSummary
- * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $WatchList
- * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $BidList
  * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $BestOfferList
- * @property \DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType $WonList
- * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $LostList
+ * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $BidList
+ * @property \DTS\eBaySDK\Trading\Types\BuyingSummaryType $BuyingSummary
+ * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $DeletedFromLostList
+ * @property \DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType $DeletedFromWonList
  * @property \DTS\eBaySDK\Trading\Types\MyeBayFavoriteSearchListType $FavoriteSearches
  * @property \DTS\eBaySDK\Trading\Types\MyeBayFavoriteSellerListType $FavoriteSellers
+ * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $LostList
  * @property \DTS\eBaySDK\Trading\Types\ItemType[] $SecondChanceOffer
- * @property \DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType $DeletedFromWonList
- * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $DeletedFromLostList
  * @property \DTS\eBaySDK\Trading\Types\UserDefinedListType[] $UserDefinedList
+ * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $WatchList
+ * @property \DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType $WonList
  */
 class GetMyeBayBuyingResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -31,17 +31,11 @@ class GetMyeBayBuyingResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'BuyingSummary' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\BuyingSummaryType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BuyingSummary'
-        ],
-        'WatchList' => [
+        'BestOfferList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'WatchList'
+            'elementName' => 'BestOfferList'
         ],
         'BidList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
@@ -49,23 +43,23 @@ class GetMyeBayBuyingResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
             'attribute' => false,
             'elementName' => 'BidList'
         ],
-        'BestOfferList' => [
+        'BuyingSummary' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\BuyingSummaryType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BuyingSummary'
+        ],
+        'DeletedFromLostList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'BestOfferList'
+            'elementName' => 'DeletedFromLostList'
         ],
-        'WonList' => [
+        'DeletedFromWonList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'WonList'
-        ],
-        'LostList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'LostList'
+            'elementName' => 'DeletedFromWonList'
         ],
         'FavoriteSearches' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyeBayFavoriteSearchListType',
@@ -79,32 +73,38 @@ class GetMyeBayBuyingResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
             'attribute' => false,
             'elementName' => 'FavoriteSellers'
         ],
+        'LostList' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'LostList'
+        ],
         'SecondChanceOffer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'SecondChanceOffer'
         ],
-        'DeletedFromWonList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DeletedFromWonList'
-        ],
-        'DeletedFromLostList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DeletedFromLostList'
-        ],
         'UserDefinedList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UserDefinedListType',
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'UserDefinedList'
+        ],
+        'WatchList' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'WatchList'
+        ],
+        'WonList' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'WonList'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -121,7 +121,7 @@ class GetMyeBayBuyingResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

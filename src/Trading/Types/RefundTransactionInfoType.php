@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\PaymentTransactionStatusCodeType $RefundStatus
- * @property \DTS\eBaySDK\Trading\Enums\RefundSourceTypeCodeType $RefundType
- * @property \DTS\eBaySDK\Trading\Types\UserIdentityType $RefundTo
- * @property \DateTime $RefundTime
- * @property \DTS\eBaySDK\Trading\Types\AmountType $RefundAmount
- * @property \DTS\eBaySDK\Trading\Types\TransactionReferenceType $ReferenceID
  * @property \DTS\eBaySDK\Trading\Types\AmountType $FeeOrCreditAmount
+ * @property \DTS\eBaySDK\Trading\Types\TransactionReferenceType $ReferenceID
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $RefundAmount
+ * @property \DTS\eBaySDK\Trading\Enums\PaymentTransactionStatusCodeType $RefundStatus
+ * @property \DateTime $RefundTime
+ * @property \DTS\eBaySDK\Trading\Types\UserIdentityType $RefundTo
+ * @property \DTS\eBaySDK\Trading\Enums\RefundSourceTypeCodeType $RefundType
  */
 class RefundTransactionInfoType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -26,35 +26,11 @@ class RefundTransactionInfoType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'RefundStatus' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'RefundStatus'
-        ],
-        'RefundType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'RefundType'
-        ],
-        'RefundTo' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\UserIdentityType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'RefundTo'
-        ],
-        'RefundTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'RefundTime'
-        ],
-        'RefundAmount' => [
+        'FeeOrCreditAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'RefundAmount'
+            'elementName' => 'FeeOrCreditAmount'
         ],
         'ReferenceID' => [
             'type' => 'DTS\eBaySDK\Trading\Types\TransactionReferenceType',
@@ -62,14 +38,38 @@ class RefundTransactionInfoType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ReferenceID'
         ],
-        'FeeOrCreditAmount' => [
+        'RefundAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'FeeOrCreditAmount'
+            'elementName' => 'RefundAmount'
+        ],
+        'RefundStatus' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'RefundStatus'
+        ],
+        'RefundTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'RefundTime'
+        ],
+        'RefundTo' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\UserIdentityType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'RefundTo'
+        ],
+        'RefundType' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'RefundType'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class RefundTransactionInfoType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

@@ -12,10 +12,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\SellingStatusType $SellingStatus
- * @property string $TransactionID
  * @property \DTS\eBaySDK\Trading\Types\BestOfferType $BestOffer
  * @property string $OrderLineItemID
+ * @property \DTS\eBaySDK\Trading\Types\SellingStatusType $SellingStatus
+ * @property string $TransactionID
  */
 class PlaceOfferResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -23,18 +23,6 @@ class PlaceOfferResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'SellingStatus' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellingStatusType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellingStatus'
-        ],
-        'TransactionID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TransactionID'
-        ],
         'BestOffer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\BestOfferType',
             'repeatable' => false,
@@ -46,9 +34,21 @@ class PlaceOfferResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
+        ],
+        'SellingStatus' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SellingStatusType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SellingStatus'
+        ],
+        'TransactionID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TransactionID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class PlaceOfferResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

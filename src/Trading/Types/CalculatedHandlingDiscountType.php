@@ -13,10 +13,10 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Enums\HandlingNameCodeType $DiscountName
- * @property \DTS\eBaySDK\Trading\Types\AmountType $OrderHandlingAmount
  * @property \DTS\eBaySDK\Trading\Types\AmountType $EachAdditionalAmount
  * @property \DTS\eBaySDK\Trading\Types\AmountType $EachAdditionalOffAmount
  * @property double $EachAdditionalPercentOff
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $OrderHandlingAmount
  */
 class CalculatedHandlingDiscountType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -29,12 +29,6 @@ class CalculatedHandlingDiscountType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DiscountName'
-        ],
-        'OrderHandlingAmount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'OrderHandlingAmount'
         ],
         'EachAdditionalAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -53,9 +47,15 @@ class CalculatedHandlingDiscountType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EachAdditionalPercentOff'
+        ],
+        'OrderHandlingAmount' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'OrderHandlingAmount'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class CalculatedHandlingDiscountType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

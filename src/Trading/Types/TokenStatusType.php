@@ -12,10 +12,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\TokenStatusCodeType $Status
  * @property string $EIASToken
  * @property \DateTime $ExpirationTime
  * @property \DateTime $RevocationTime
+ * @property \DTS\eBaySDK\Trading\Enums\TokenStatusCodeType $Status
  */
 class TokenStatusType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -23,12 +23,6 @@ class TokenStatusType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Status' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Status'
-        ],
         'EIASToken' => [
             'type' => 'string',
             'repeatable' => false,
@@ -46,9 +40,15 @@ class TokenStatusType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RevocationTime'
+        ],
+        'Status' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Status'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class TokenStatusType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

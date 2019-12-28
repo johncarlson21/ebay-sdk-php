@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ApplicationURL
- * @property \DTS\eBaySDK\Trading\Enums\EnableCodeType $ApplicationEnable
  * @property string $AlertEmail
  * @property \DTS\eBaySDK\Trading\Enums\EnableCodeType $AlertEnable
+ * @property \DTS\eBaySDK\Trading\Enums\EnableCodeType $ApplicationEnable
+ * @property string $ApplicationURL
+ * @property \DTS\eBaySDK\Trading\Types\DeliveryURLDetailType[] $DeliveryURLDetails
  * @property \DTS\eBaySDK\Trading\Enums\DeviceTypeCodeType $DeviceType
  * @property string $PayloadVersion
- * @property \DTS\eBaySDK\Trading\Types\DeliveryURLDetailType[] $DeliveryURLDetails
  */
 class ApplicationDeliveryPreferencesType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -26,18 +26,6 @@ class ApplicationDeliveryPreferencesType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ApplicationURL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ApplicationURL'
-        ],
-        'ApplicationEnable' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ApplicationEnable'
-        ],
         'AlertEmail' => [
             'type' => 'string',
             'repeatable' => false,
@@ -50,6 +38,24 @@ class ApplicationDeliveryPreferencesType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'AlertEnable'
         ],
+        'ApplicationEnable' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ApplicationEnable'
+        ],
+        'ApplicationURL' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ApplicationURL'
+        ],
+        'DeliveryURLDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\DeliveryURLDetailType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'DeliveryURLDetails'
+        ],
         'DeviceType' => [
             'type' => 'string',
             'repeatable' => false,
@@ -61,15 +67,9 @@ class ApplicationDeliveryPreferencesType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PayloadVersion'
-        ],
-        'DeliveryURLDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\DeliveryURLDetailType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'DeliveryURLDetails'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class ApplicationDeliveryPreferencesType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

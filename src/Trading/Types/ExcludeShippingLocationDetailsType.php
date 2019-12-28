@@ -13,9 +13,9 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $Description
+ * @property string $DetailVersion
  * @property string $Location
  * @property string $Region
- * @property string $DetailVersion
  * @property \DateTime $UpdateTime
  */
 class ExcludeShippingLocationDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -30,6 +30,12 @@ class ExcludeShippingLocationDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Description'
         ],
+        'DetailVersion' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DetailVersion'
+        ],
         'Location' => [
             'type' => 'string',
             'repeatable' => false,
@@ -42,12 +48,6 @@ class ExcludeShippingLocationDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Region'
         ],
-        'DetailVersion' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DetailVersion'
-        ],
         'UpdateTime' => [
             'type' => 'DateTime',
             'repeatable' => false,
@@ -55,7 +55,7 @@ class ExcludeShippingLocationDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'UpdateTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class ExcludeShippingLocationDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

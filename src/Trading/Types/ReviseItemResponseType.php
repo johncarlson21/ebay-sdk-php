@@ -12,16 +12,16 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
- * @property \DateTime $StartTime
+ * @property string $Category2ID
+ * @property string $CategoryID
+ * @property \DTS\eBaySDK\Trading\Enums\DiscountReasonCodeType[] $DiscountReason
  * @property \DateTime $EndTime
  * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
- * @property string $CategoryID
- * @property string $Category2ID
- * @property boolean $VerifyOnly
- * @property \DTS\eBaySDK\Trading\Enums\DiscountReasonCodeType[] $DiscountReason
- * @property \DTS\eBaySDK\Trading\Types\ProductSuggestionsType $ProductSuggestions
+ * @property string $ItemID
  * @property \DTS\eBaySDK\Trading\Types\ListingRecommendationsType $ListingRecommendations
+ * @property \DTS\eBaySDK\Trading\Types\ProductSuggestionsType $ProductSuggestions
+ * @property \DateTime $StartTime
+ * @property boolean $VerifyOnly
  */
 class ReviseItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -29,17 +29,23 @@ class ReviseItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
+        'Category2ID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ItemID'
+            'elementName' => 'Category2ID'
         ],
-        'StartTime' => [
-            'type' => 'DateTime',
+        'CategoryID' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'StartTime'
+            'elementName' => 'CategoryID'
+        ],
+        'DiscountReason' => [
+            'type' => 'string',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'DiscountReason'
         ],
         'EndTime' => [
             'type' => 'DateTime',
@@ -53,29 +59,17 @@ class ReviseItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
             'attribute' => false,
             'elementName' => 'Fees'
         ],
-        'CategoryID' => [
+        'ItemID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'CategoryID'
+            'elementName' => 'ItemID'
         ],
-        'Category2ID' => [
-            'type' => 'string',
+        'ListingRecommendations' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ListingRecommendationsType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Category2ID'
-        ],
-        'VerifyOnly' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'VerifyOnly'
-        ],
-        'DiscountReason' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'DiscountReason'
+            'elementName' => 'ListingRecommendations'
         ],
         'ProductSuggestions' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ProductSuggestionsType',
@@ -83,14 +77,20 @@ class ReviseItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
             'attribute' => false,
             'elementName' => 'ProductSuggestions'
         ],
-        'ListingRecommendations' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ListingRecommendationsType',
+        'StartTime' => [
+            'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ListingRecommendations'
+            'elementName' => 'StartTime'
+        ],
+        'VerifyOnly' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'VerifyOnly'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -107,7 +107,7 @@ class ReviseItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

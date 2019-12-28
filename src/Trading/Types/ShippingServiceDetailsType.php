@@ -12,29 +12,28 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property boolean $CODService
+ * @property string $CostGroupFlat
+ * @property \DTS\eBaySDK\Trading\Types\AnnouncementMessageType[] $DeprecationDetails
  * @property string $Description
+ * @property string $DetailVersion
+ * @property boolean $DimensionsRequired
  * @property boolean $ExpeditedService
  * @property boolean $InternationalService
+ * @property integer $MappedToShippingServiceID
+ * @property \DTS\eBaySDK\Trading\Enums\ShippingTypeCodeType[] $ServiceType
+ * @property \DTS\eBaySDK\Trading\Enums\ShippingCarrierCodeType[] $ShippingCarrier
+ * @property string $ShippingCategory
+ * @property \DTS\eBaySDK\Trading\Enums\ShippingPackageCodeType[] $ShippingPackage
  * @property string $ShippingService
  * @property integer $ShippingServiceID
+ * @property \DTS\eBaySDK\Trading\Types\ShippingServicePackageDetailsType[] $ShippingServicePackageDetails
  * @property integer $ShippingTimeMax
  * @property integer $ShippingTimeMin
- * @property \DTS\eBaySDK\Trading\Enums\ShippingServiceCodeType $ShippingServiceCode
- * @property \DTS\eBaySDK\Trading\Enums\ShippingTypeCodeType[] $ServiceType
- * @property \DTS\eBaySDK\Trading\Enums\ShippingPackageCodeType[] $ShippingPackage
- * @property boolean $DimensionsRequired
- * @property boolean $ValidForSellingFlow
  * @property boolean $SurchargeApplicable
- * @property \DTS\eBaySDK\Trading\Enums\ShippingCarrierCodeType[] $ShippingCarrier
- * @property boolean $CODService
- * @property \DTS\eBaySDK\Trading\Types\AnnouncementMessageType[] $DeprecationDetails
- * @property integer $MappedToShippingServiceID
- * @property string $CostGroupFlat
- * @property \DTS\eBaySDK\Trading\Types\ShippingServicePackageDetailsType[] $ShippingServicePackageDetails
- * @property boolean $WeightRequired
- * @property string $DetailVersion
  * @property \DateTime $UpdateTime
- * @property string $ShippingCategory
+ * @property boolean $ValidForSellingFlow
+ * @property boolean $WeightRequired
  */
 class ShippingServiceDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -42,11 +41,41 @@ class ShippingServiceDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'CODService' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CODService'
+        ],
+        'CostGroupFlat' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CostGroupFlat'
+        ],
+        'DeprecationDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AnnouncementMessageType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'DeprecationDetails'
+        ],
         'Description' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Description'
+        ],
+        'DetailVersion' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DetailVersion'
+        ],
+        'DimensionsRequired' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DimensionsRequired'
         ],
         'ExpeditedService' => [
             'type' => 'boolean',
@@ -60,6 +89,36 @@ class ShippingServiceDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'InternationalService'
         ],
+        'MappedToShippingServiceID' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MappedToShippingServiceID'
+        ],
+        'ServiceType' => [
+            'type' => 'string',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'ServiceType'
+        ],
+        'ShippingCarrier' => [
+            'type' => 'string',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'ShippingCarrier'
+        ],
+        'ShippingCategory' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingCategory'
+        ],
+        'ShippingPackage' => [
+            'type' => 'string',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'ShippingPackage'
+        ],
         'ShippingService' => [
             'type' => 'string',
             'repeatable' => false,
@@ -71,6 +130,12 @@ class ShippingServiceDetailsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceID'
+        ],
+        'ShippingServicePackageDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ShippingServicePackageDetailsType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'ShippingServicePackageDetails'
         ],
         'ShippingTimeMax' => [
             'type' => 'integer',
@@ -84,89 +149,11 @@ class ShippingServiceDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingTimeMin'
         ],
-        'ShippingServiceCode' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingServiceCode'
-        ],
-        'ServiceType' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'ServiceType'
-        ],
-        'ShippingPackage' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'ShippingPackage'
-        ],
-        'DimensionsRequired' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DimensionsRequired'
-        ],
-        'ValidForSellingFlow' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ValidForSellingFlow'
-        ],
         'SurchargeApplicable' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SurchargeApplicable'
-        ],
-        'ShippingCarrier' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'ShippingCarrier'
-        ],
-        'CODService' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CODService'
-        ],
-        'DeprecationDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AnnouncementMessageType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'DeprecationDetails'
-        ],
-        'MappedToShippingServiceID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MappedToShippingServiceID'
-        ],
-        'CostGroupFlat' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CostGroupFlat'
-        ],
-        'ShippingServicePackageDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShippingServicePackageDetailsType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'ShippingServicePackageDetails'
-        ],
-        'WeightRequired' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'WeightRequired'
-        ],
-        'DetailVersion' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DetailVersion'
         ],
         'UpdateTime' => [
             'type' => 'DateTime',
@@ -174,14 +161,20 @@ class ShippingServiceDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'UpdateTime'
         ],
-        'ShippingCategory' => [
-            'type' => 'string',
+        'ValidForSellingFlow' => [
+            'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ShippingCategory'
+            'elementName' => 'ValidForSellingFlow'
+        ],
+        'WeightRequired' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'WeightRequired'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -198,7 +191,7 @@ class ShippingServiceDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

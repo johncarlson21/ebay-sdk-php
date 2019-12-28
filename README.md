@@ -2,10 +2,16 @@
 
 [![Build Status](https://travis-ci.org/davidtsadler/ebay-sdk-php.svg?branch=master)](https://travis-ci.org/davidtsadler/ebay-sdk-php)
 
-This project enables PHP developers to use the [eBay API](https://go.developer.ebay.com/api-documentation) in their PHP code, and build software using services such as [Finding](http://developer.ebay.com/Devzone/finding/Concepts/FindingAPIGuide.html), [Trading](http://developer.ebay.com/DevZone/guides/ebayfeatures/index.html), [Shopping](http://developer.ebay.com/Devzone/shopping/docs/Concepts/ShoppingAPIGuide.html), etc. You can get started by [installing the SDK via Composer](http://devbay.net/sdk/guides/getting-started/installation.html) and by following the [Basic Usage Guide](http://devbay.net/sdk/guides/getting-started/basic-usage.html).
+### NOTICE:
 
-This is a personal project that has been developed by me, [David T. Sadler](http://twitter.com/davidtsadler). I decided to create this project to make up for the lack of an official SDK for PHP. It is in no way endorsed, sponsored or maintained by eBay.
+This project build on [davidtsadler/ebay-sdk-php](https://github.com/davidtsadler/ebay-sdk-php) .Because the original project is dead,so I create this new project.This project is not compatible with original project.
 
+## What is different with the original project
+
+   - Support eBay Notifications
+   - Trading API Enum Types Extends php-enum, You can use Enum types more convenient
+   - Trading API upgrade to version 1131
+ 
 ## Features
 
   - Compatible with PHP 5.5 or greater.

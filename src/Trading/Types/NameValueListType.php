@@ -13,8 +13,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $Name
- * @property string[] $Value
  * @property \DTS\eBaySDK\Trading\Enums\ItemSpecificSourceCodeType $Source
+ * @property string[] $Value
  */
 class NameValueListType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -28,20 +28,20 @@ class NameValueListType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Name'
         ],
-        'Value' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'Value'
-        ],
         'Source' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Source'
+        ],
+        'Value' => [
+            'type' => 'string',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'Value'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class NameValueListType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

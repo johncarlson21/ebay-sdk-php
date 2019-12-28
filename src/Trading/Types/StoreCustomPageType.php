@@ -12,15 +12,15 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Name
- * @property integer $PageID
- * @property string $URLPath
- * @property string $URL
- * @property \DTS\eBaySDK\Trading\Enums\StoreCustomPageStatusCodeType $Status
  * @property string $Content
  * @property boolean $LeftNav
- * @property boolean $PreviewEnabled
+ * @property string $Name
  * @property integer $Order
+ * @property integer $PageID
+ * @property boolean $PreviewEnabled
+ * @property \DTS\eBaySDK\Trading\Enums\StoreCustomPageStatusCodeType $Status
+ * @property string $URL
+ * @property string $URLPath
  */
 class StoreCustomPageType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -28,36 +28,6 @@ class StoreCustomPageType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Name' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Name'
-        ],
-        'PageID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PageID'
-        ],
-        'URLPath' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'URLPath'
-        ],
-        'URL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'URL'
-        ],
-        'Status' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Status'
-        ],
         'Content' => [
             'type' => 'string',
             'repeatable' => false,
@@ -70,20 +40,50 @@ class StoreCustomPageType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'LeftNav'
         ],
-        'PreviewEnabled' => [
-            'type' => 'boolean',
+        'Name' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'PreviewEnabled'
+            'elementName' => 'Name'
         ],
         'Order' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Order'
+        ],
+        'PageID' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PageID'
+        ],
+        'PreviewEnabled' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PreviewEnabled'
+        ],
+        'Status' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Status'
+        ],
+        'URL' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'URL'
+        ],
+        'URLPath' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'URLPath'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -100,7 +100,7 @@ class StoreCustomPageType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

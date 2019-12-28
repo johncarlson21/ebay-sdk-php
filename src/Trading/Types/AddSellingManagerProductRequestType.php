@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType $SellingManagerProductDetails
  * @property integer $FolderID
+ * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType $SellingManagerProductDetails
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductSpecificsType $SellingManagerProductSpecifics
  */
 class AddSellingManagerProductRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -22,17 +22,17 @@ class AddSellingManagerProductRequestType extends \DTS\eBaySDK\Trading\Types\Abs
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'SellingManagerProductDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellingManagerProductDetails'
-        ],
         'FolderID' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FolderID'
+        ],
+        'SellingManagerProductDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SellingManagerProductDetails'
         ],
         'SellingManagerProductSpecifics' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductSpecificsType',
@@ -41,7 +41,7 @@ class AddSellingManagerProductRequestType extends \DTS\eBaySDK\Trading\Types\Abs
             'elementName' => 'SellingManagerProductSpecifics'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class AddSellingManagerProductRequestType extends \DTS\eBaySDK\Trading\Types\Abs
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'AddSellingManagerProductRequest';
         }

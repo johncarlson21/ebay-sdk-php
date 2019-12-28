@@ -12,10 +12,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $AffiliateUserID
+ * @property \DTS\eBaySDK\Trading\Enums\ApplicationDeviceTypeCodeType $ApplicationDeviceType
  * @property string $TrackingID
  * @property string $TrackingPartnerCode
- * @property \DTS\eBaySDK\Trading\Enums\ApplicationDeviceTypeCodeType $ApplicationDeviceType
- * @property string $AffiliateUserID
  */
 class AffiliateTrackingDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -23,6 +23,18 @@ class AffiliateTrackingDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'AffiliateUserID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'AffiliateUserID'
+        ],
+        'ApplicationDeviceType' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ApplicationDeviceType'
+        ],
         'TrackingID' => [
             'type' => 'string',
             'repeatable' => false,
@@ -34,21 +46,9 @@ class AffiliateTrackingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TrackingPartnerCode'
-        ],
-        'ApplicationDeviceType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ApplicationDeviceType'
-        ],
-        'AffiliateUserID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AffiliateUserID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class AffiliateTrackingDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

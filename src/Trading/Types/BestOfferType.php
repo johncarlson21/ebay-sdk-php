@@ -12,16 +12,16 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $BestOfferID
- * @property \DateTime $ExpirationTime
- * @property \DTS\eBaySDK\Trading\Types\UserType $Buyer
- * @property \DTS\eBaySDK\Trading\Types\AmountType $Price
- * @property \DTS\eBaySDK\Trading\Enums\BestOfferStatusCodeType $Status
- * @property integer $Quantity
- * @property string $BuyerMessage
- * @property string $SellerMessage
  * @property \DTS\eBaySDK\Trading\Enums\BestOfferTypeCodeType $BestOfferCodeType
+ * @property string $BestOfferID
+ * @property \DTS\eBaySDK\Trading\Types\UserType $Buyer
+ * @property string $BuyerMessage
  * @property string $CallStatus
+ * @property \DateTime $ExpirationTime
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $Price
+ * @property integer $Quantity
+ * @property string $SellerMessage
+ * @property \DTS\eBaySDK\Trading\Enums\BestOfferStatusCodeType $Status
  */
 class BestOfferType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -29,17 +29,17 @@ class BestOfferType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'BestOfferCodeType' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BestOfferCodeType'
+        ],
         'BestOfferID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BestOfferID'
-        ],
-        'ExpirationTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ExpirationTime'
         ],
         'Buyer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UserType',
@@ -47,17 +47,29 @@ class BestOfferType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Buyer'
         ],
+        'BuyerMessage' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BuyerMessage'
+        ],
+        'CallStatus' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CallStatus'
+        ],
+        'ExpirationTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ExpirationTime'
+        ],
         'Price' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Price'
-        ],
-        'Status' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Status'
         ],
         'Quantity' => [
             'type' => 'integer',
@@ -65,32 +77,20 @@ class BestOfferType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Quantity'
         ],
-        'BuyerMessage' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BuyerMessage'
-        ],
         'SellerMessage' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerMessage'
         ],
-        'BestOfferCodeType' => [
+        'Status' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'BestOfferCodeType'
-        ],
-        'CallStatus' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CallStatus'
+            'elementName' => 'Status'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -107,7 +107,7 @@ class BestOfferType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

@@ -12,16 +12,16 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $StoreID
- * @property string $ShippingTrackingEvent
- * @property \DateTime $ScheduledDeliveryTimeMin
- * @property \DateTime $ScheduledDeliveryTimeMax
  * @property \DateTime $ActualDeliveryTime
- * @property \DateTime $EstimatedDeliveryTimeMin
  * @property \DateTime $EstimatedDeliveryTimeMax
+ * @property \DateTime $EstimatedDeliveryTimeMin
  * @property \DateTime $HandleByTime
- * @property \DateTime $MinNativeEstimatedDeliveryTime
  * @property \DateTime $MaxNativeEstimatedDeliveryTime
+ * @property \DateTime $MinNativeEstimatedDeliveryTime
+ * @property \DateTime $ScheduledDeliveryTimeMax
+ * @property \DateTime $ScheduledDeliveryTimeMin
+ * @property string $ShippingTrackingEvent
+ * @property string $StoreID
  */
 class ShippingPackageInfoType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -29,41 +29,11 @@ class ShippingPackageInfoType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'StoreID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'StoreID'
-        ],
-        'ShippingTrackingEvent' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingTrackingEvent'
-        ],
-        'ScheduledDeliveryTimeMin' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ScheduledDeliveryTimeMin'
-        ],
-        'ScheduledDeliveryTimeMax' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ScheduledDeliveryTimeMax'
-        ],
         'ActualDeliveryTime' => [
             'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ActualDeliveryTime'
-        ],
-        'EstimatedDeliveryTimeMin' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'EstimatedDeliveryTimeMin'
         ],
         'EstimatedDeliveryTimeMax' => [
             'type' => 'DateTime',
@@ -71,11 +41,23 @@ class ShippingPackageInfoType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'EstimatedDeliveryTimeMax'
         ],
+        'EstimatedDeliveryTimeMin' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'EstimatedDeliveryTimeMin'
+        ],
         'HandleByTime' => [
             'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'HandleByTime'
+        ],
+        'MaxNativeEstimatedDeliveryTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MaxNativeEstimatedDeliveryTime'
         ],
         'MinNativeEstimatedDeliveryTime' => [
             'type' => 'DateTime',
@@ -83,14 +65,32 @@ class ShippingPackageInfoType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'MinNativeEstimatedDeliveryTime'
         ],
-        'MaxNativeEstimatedDeliveryTime' => [
+        'ScheduledDeliveryTimeMax' => [
             'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'MaxNativeEstimatedDeliveryTime'
+            'elementName' => 'ScheduledDeliveryTimeMax'
+        ],
+        'ScheduledDeliveryTimeMin' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ScheduledDeliveryTimeMin'
+        ],
+        'ShippingTrackingEvent' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingTrackingEvent'
+        ],
+        'StoreID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'StoreID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -107,7 +107,7 @@ class ShippingPackageInfoType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

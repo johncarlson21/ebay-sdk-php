@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $TotalNumberOfPages
  * @property integer $TotalNumberOfEntries
+ * @property integer $TotalNumberOfPages
  */
 class PaginationResultType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -21,20 +21,20 @@ class PaginationResultType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'TotalNumberOfPages' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TotalNumberOfPages'
-        ],
         'TotalNumberOfEntries' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalNumberOfEntries'
+        ],
+        'TotalNumberOfPages' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TotalNumberOfPages'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class PaginationResultType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

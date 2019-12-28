@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ShortMessage
- * @property string $LongMessage
- * @property string $ErrorCode
- * @property boolean $UserDisplayHint
- * @property \DTS\eBaySDK\Trading\Enums\SeverityCodeType $SeverityCode
- * @property \DTS\eBaySDK\Trading\Types\ErrorParameterType[] $ErrorParameters
  * @property \DTS\eBaySDK\Trading\Enums\ErrorClassificationCodeType $ErrorClassification
+ * @property string $ErrorCode
+ * @property \DTS\eBaySDK\Trading\Types\ErrorParameterType[] $ErrorParameters
+ * @property string $LongMessage
+ * @property \DTS\eBaySDK\Trading\Enums\SeverityCodeType $SeverityCode
+ * @property string $ShortMessage
+ * @property boolean $UserDisplayHint
  */
 class ErrorType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -26,17 +26,11 @@ class ErrorType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ShortMessage' => [
+        'ErrorClassification' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ShortMessage'
-        ],
-        'LongMessage' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'LongMessage'
+            'elementName' => 'ErrorClassification'
         ],
         'ErrorCode' => [
             'type' => 'string',
@@ -44,11 +38,17 @@ class ErrorType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ErrorCode'
         ],
-        'UserDisplayHint' => [
-            'type' => 'boolean',
+        'ErrorParameters' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ErrorParameterType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'ErrorParameters'
+        ],
+        'LongMessage' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'UserDisplayHint'
+            'elementName' => 'LongMessage'
         ],
         'SeverityCode' => [
             'type' => 'string',
@@ -56,20 +56,20 @@ class ErrorType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SeverityCode'
         ],
-        'ErrorParameters' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ErrorParameterType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'ErrorParameters'
-        ],
-        'ErrorClassification' => [
+        'ShortMessage' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ErrorClassification'
+            'elementName' => 'ShortMessage'
+        ],
+        'UserDisplayHint' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UserDisplayHint'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class ErrorType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

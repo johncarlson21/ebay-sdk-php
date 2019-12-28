@@ -12,10 +12,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\VariationType[] $Variation
- * @property \DTS\eBaySDK\Trading\Types\PicturesType[] $Pictures
- * @property \DTS\eBaySDK\Trading\Types\NameValueListArrayType $VariationSpecificsSet
  * @property \DTS\eBaySDK\Trading\Types\ModifyNameArrayType $ModifyNameList
+ * @property \DTS\eBaySDK\Trading\Types\PicturesType[] $Pictures
+ * @property \DTS\eBaySDK\Trading\Types\VariationType[] $Variation
+ * @property \DTS\eBaySDK\Trading\Types\NameValueListArrayType $VariationSpecificsSet
  */
 class VariationsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -23,11 +23,11 @@ class VariationsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Variation' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\VariationType',
-            'repeatable' => true,
+        'ModifyNameList' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ModifyNameArrayType',
+            'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Variation'
+            'elementName' => 'ModifyNameList'
         ],
         'Pictures' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PicturesType',
@@ -35,20 +35,20 @@ class VariationsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Pictures'
         ],
+        'Variation' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\VariationType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'Variation'
+        ],
         'VariationSpecificsSet' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NameValueListArrayType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VariationSpecificsSet'
-        ],
-        'ModifyNameList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ModifyNameArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ModifyNameList'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class VariationsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

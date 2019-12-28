@@ -13,14 +13,14 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string[] $CategoryID
+ * @property \DTS\eBaySDK\Trading\Types\CategoryItemSpecificsType[] $CategorySpecific
+ * @property boolean $CategorySpecificsFileInfo
+ * @property boolean $ExcludeRelationships
+ * @property boolean $IncludeConfidence
  * @property \DateTime $LastUpdateTime
  * @property integer $MaxNames
  * @property integer $MaxValuesPerName
  * @property string $Name
- * @property \DTS\eBaySDK\Trading\Types\CategoryItemSpecificsType[] $CategorySpecific
- * @property boolean $ExcludeRelationships
- * @property boolean $IncludeConfidence
- * @property boolean $CategorySpecificsFileInfo
  */
 class GetCategorySpecificsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -33,6 +33,30 @@ class GetCategorySpecificsRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'CategoryID'
+        ],
+        'CategorySpecific' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\CategoryItemSpecificsType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'CategorySpecific'
+        ],
+        'CategorySpecificsFileInfo' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CategorySpecificsFileInfo'
+        ],
+        'ExcludeRelationships' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ExcludeRelationships'
+        ],
+        'IncludeConfidence' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeConfidence'
         ],
         'LastUpdateTime' => [
             'type' => 'DateTime',
@@ -57,33 +81,9 @@ class GetCategorySpecificsRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Name'
-        ],
-        'CategorySpecific' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\CategoryItemSpecificsType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'CategorySpecific'
-        ],
-        'ExcludeRelationships' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ExcludeRelationships'
-        ],
-        'IncludeConfidence' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeConfidence'
-        ],
-        'CategorySpecificsFileInfo' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CategorySpecificsFileInfo'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -100,7 +100,7 @@ class GetCategorySpecificsRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetCategorySpecificsRequest';
         }

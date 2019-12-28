@@ -12,11 +12,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
- * @property \DTS\eBaySDK\Trading\Enums\MessageStatusTypeCodeType $Status
- * @property boolean $IncludeMemberMessages
- * @property \DateTime $StartCreationTime
  * @property \DateTime $EndCreationTime
+ * @property boolean $IncludeMemberMessages
+ * @property string $ItemID
+ * @property \DateTime $StartCreationTime
+ * @property \DTS\eBaySDK\Trading\Enums\MessageStatusTypeCodeType $Status
  */
 class GetAdFormatLeadsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -24,17 +24,11 @@ class GetAdFormatLeadsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
-            'type' => 'string',
+        'EndCreationTime' => [
+            'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ItemID'
-        ],
-        'Status' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Status'
+            'elementName' => 'EndCreationTime'
         ],
         'IncludeMemberMessages' => [
             'type' => 'boolean',
@@ -42,20 +36,26 @@ class GetAdFormatLeadsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
             'attribute' => false,
             'elementName' => 'IncludeMemberMessages'
         ],
+        'ItemID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
+        ],
         'StartCreationTime' => [
             'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'StartCreationTime'
         ],
-        'EndCreationTime' => [
-            'type' => 'DateTime',
+        'Status' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'EndCreationTime'
+            'elementName' => 'Status'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class GetAdFormatLeadsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetAdFormatLeadsRequest';
         }

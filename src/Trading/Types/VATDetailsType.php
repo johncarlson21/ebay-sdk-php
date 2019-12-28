@@ -14,9 +14,9 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property boolean $BusinessSeller
  * @property boolean $RestrictedToBusiness
+ * @property string $VATID
  * @property double $VATPercent
  * @property string $VATSite
- * @property string $VATID
  */
 class VATDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -36,6 +36,12 @@ class VATDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'RestrictedToBusiness'
         ],
+        'VATID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'VATID'
+        ],
         'VATPercent' => [
             'type' => 'double',
             'repeatable' => false,
@@ -47,15 +53,9 @@ class VATDetailsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VATSite'
-        ],
-        'VATID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'VATID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class VATDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

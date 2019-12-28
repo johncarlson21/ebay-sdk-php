@@ -12,14 +12,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Types\AccountEntriesType $AccountEntries
  * @property string $AccountID
  * @property \DTS\eBaySDK\Trading\Types\AccountSummaryType $AccountSummary
  * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $Currency
- * @property \DTS\eBaySDK\Trading\Types\AccountEntriesType $AccountEntries
- * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
- * @property boolean $HasMoreEntries
  * @property integer $EntriesPerPage
+ * @property boolean $HasMoreEntries
  * @property integer $PageNumber
+ * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
  */
 class GetAccountResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -27,6 +27,12 @@ class GetAccountResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'AccountEntries' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AccountEntriesType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'AccountEntries'
+        ],
         'AccountID' => [
             'type' => 'string',
             'repeatable' => false,
@@ -45,17 +51,11 @@ class GetAccountResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
             'attribute' => false,
             'elementName' => 'Currency'
         ],
-        'AccountEntries' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AccountEntriesType',
+        'EntriesPerPage' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'AccountEntries'
-        ],
-        'PaginationResult' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PaginationResult'
+            'elementName' => 'EntriesPerPage'
         ],
         'HasMoreEntries' => [
             'type' => 'boolean',
@@ -63,20 +63,20 @@ class GetAccountResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
             'attribute' => false,
             'elementName' => 'HasMoreEntries'
         ],
-        'EntriesPerPage' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'EntriesPerPage'
-        ],
         'PageNumber' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PageNumber'
+        ],
+        'PaginationResult' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PaginationResult'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -93,7 +93,7 @@ class GetAccountResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

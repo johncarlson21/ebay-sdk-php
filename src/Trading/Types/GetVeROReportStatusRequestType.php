@@ -12,12 +12,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $VeROReportPacketID
- * @property string $ItemID
  * @property boolean $IncludeReportedItemDetails
+ * @property string $ItemID
+ * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
  * @property \DateTime $TimeFrom
  * @property \DateTime $TimeTo
- * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
+ * @property integer $VeROReportPacketID
  */
 class GetVeROReportStatusRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -25,11 +25,11 @@ class GetVeROReportStatusRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'VeROReportPacketID' => [
-            'type' => 'integer',
+        'IncludeReportedItemDetails' => [
+            'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'VeROReportPacketID'
+            'elementName' => 'IncludeReportedItemDetails'
         ],
         'ItemID' => [
             'type' => 'string',
@@ -37,11 +37,11 @@ class GetVeROReportStatusRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
-        'IncludeReportedItemDetails' => [
-            'type' => 'boolean',
+        'Pagination' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'IncludeReportedItemDetails'
+            'elementName' => 'Pagination'
         ],
         'TimeFrom' => [
             'type' => 'DateTime',
@@ -55,14 +55,14 @@ class GetVeROReportStatusRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
             'attribute' => false,
             'elementName' => 'TimeTo'
         ],
-        'Pagination' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
+        'VeROReportPacketID' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Pagination'
+            'elementName' => 'VeROReportPacketID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -79,7 +79,7 @@ class GetVeROReportStatusRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetVeROReportStatusRequest';
         }

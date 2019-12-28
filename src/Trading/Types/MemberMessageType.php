@@ -12,18 +12,18 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\MessageTypeCodeType $MessageType
- * @property \DTS\eBaySDK\Trading\Enums\QuestionTypeCodeType $QuestionType
- * @property boolean $EmailCopyToSender
- * @property boolean $DisplayToPublic
- * @property string $SenderID
- * @property string $SenderEmail
- * @property string[] $RecipientID
- * @property string $Subject
  * @property string $Body
+ * @property boolean $DisplayToPublic
+ * @property boolean $EmailCopyToSender
  * @property string $MessageID
- * @property string $ParentMessageID
  * @property \DTS\eBaySDK\Trading\Types\MessageMediaType[] $MessageMedia
+ * @property \DTS\eBaySDK\Trading\Enums\MessageTypeCodeType $MessageType
+ * @property string $ParentMessageID
+ * @property \DTS\eBaySDK\Trading\Enums\QuestionTypeCodeType $QuestionType
+ * @property string[] $RecipientID
+ * @property string $SenderEmail
+ * @property string $SenderID
+ * @property string $Subject
  */
 class MemberMessageType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -31,23 +31,11 @@ class MemberMessageType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'MessageType' => [
+        'Body' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'MessageType'
-        ],
-        'QuestionType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'QuestionType'
-        ],
-        'EmailCopyToSender' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'EmailCopyToSender'
+            'elementName' => 'Body'
         ],
         'DisplayToPublic' => [
             'type' => 'boolean',
@@ -55,35 +43,11 @@ class MemberMessageType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DisplayToPublic'
         ],
-        'SenderID' => [
-            'type' => 'string',
+        'EmailCopyToSender' => [
+            'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'SenderID'
-        ],
-        'SenderEmail' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SenderEmail'
-        ],
-        'RecipientID' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'RecipientID'
-        ],
-        'Subject' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Subject'
-        ],
-        'Body' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Body'
+            'elementName' => 'EmailCopyToSender'
         ],
         'MessageID' => [
             'type' => 'string',
@@ -91,20 +55,56 @@ class MemberMessageType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'MessageID'
         ],
+        'MessageMedia' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\MessageMediaType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'MessageMedia'
+        ],
+        'MessageType' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MessageType'
+        ],
         'ParentMessageID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ParentMessageID'
         ],
-        'MessageMedia' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MessageMediaType',
+        'QuestionType' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'QuestionType'
+        ],
+        'RecipientID' => [
+            'type' => 'string',
             'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'MessageMedia'
+            'elementName' => 'RecipientID'
+        ],
+        'SenderEmail' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SenderEmail'
+        ],
+        'SenderID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SenderID'
+        ],
+        'Subject' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Subject'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -121,7 +121,7 @@ class MemberMessageType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

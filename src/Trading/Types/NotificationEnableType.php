@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\NotificationEventTypeCodeType $EventType
  * @property \DTS\eBaySDK\Trading\Enums\EnableCodeType $EventEnable
+ * @property \DTS\eBaySDK\Trading\Enums\NotificationEventTypeCodeType $EventType
  */
 class NotificationEnableType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -21,20 +21,20 @@ class NotificationEnableType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'EventType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'EventType'
-        ],
         'EventEnable' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EventEnable'
+        ],
+        'EventType' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'EventType'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class NotificationEnableType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

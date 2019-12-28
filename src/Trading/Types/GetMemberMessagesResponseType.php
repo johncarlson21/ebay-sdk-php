@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property boolean $HasMoreItems
  * @property \DTS\eBaySDK\Trading\Types\MemberMessageExchangeArrayType $MemberMessage
  * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
- * @property boolean $HasMoreItems
  */
 class GetMemberMessagesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -22,6 +22,12 @@ class GetMemberMessagesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractR
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'HasMoreItems' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'HasMoreItems'
+        ],
         'MemberMessage' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MemberMessageExchangeArrayType',
             'repeatable' => false,
@@ -33,15 +39,9 @@ class GetMemberMessagesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
-        ],
-        'HasMoreItems' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'HasMoreItems'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class GetMemberMessagesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractR
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

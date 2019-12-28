@@ -13,21 +13,21 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Enums\CheckoutStatusCodeType $CheckoutStatus
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerPaidStatusCodeType $PaidStatus
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerShippedStatusCodeType $ShippedStatus
  * @property \DTS\eBaySDK\Trading\Enums\PaymentStatusCodeType $eBayPaymentStatus
- * @property string $PayPalTransactionID
- * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentMethodCodeType $PaymentMethodUsed
  * @property \DTS\eBaySDK\Trading\Enums\CommentTypeCodeType $FeedbackReceived
  * @property boolean $FeedbackSent
- * @property integer $TotalEmailsSent
- * @property \DTS\eBaySDK\Trading\Enums\PaymentHoldStatusCodeType $PaymentHoldStatus
- * @property string $SellerInvoiceNumber
- * @property \DateTime $ShippedTime
- * @property \DateTime $PaidTime
- * @property \DateTime $LastEmailSentTime
- * @property \DateTime $SellerInvoiceTime
  * @property boolean $IntegratedMerchantCreditCardEnabled
+ * @property \DateTime $LastEmailSentTime
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerPaidStatusCodeType $PaidStatus
+ * @property \DateTime $PaidTime
+ * @property \DTS\eBaySDK\Trading\Enums\PaymentHoldStatusCodeType $PaymentHoldStatus
+ * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentMethodCodeType $PaymentMethodUsed
+ * @property string $PayPalTransactionID
+ * @property string $SellerInvoiceNumber
+ * @property \DateTime $SellerInvoiceTime
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerShippedStatusCodeType $ShippedStatus
+ * @property \DateTime $ShippedTime
+ * @property integer $TotalEmailsSent
  */
 class SellingManagerOrderStatusType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -41,35 +41,11 @@ class SellingManagerOrderStatusType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CheckoutStatus'
         ],
-        'PaidStatus' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PaidStatus'
-        ],
-        'ShippedStatus' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippedStatus'
-        ],
         'eBayPaymentStatus' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'eBayPaymentStatus'
-        ],
-        'PayPalTransactionID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PayPalTransactionID'
-        ],
-        'PaymentMethodUsed' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentMethodUsed'
         ],
         'FeedbackReceived' => [
             'type' => 'string',
@@ -83,35 +59,11 @@ class SellingManagerOrderStatusType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'FeedbackSent'
         ],
-        'TotalEmailsSent' => [
-            'type' => 'integer',
+        'IntegratedMerchantCreditCardEnabled' => [
+            'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'TotalEmailsSent'
-        ],
-        'PaymentHoldStatus' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentHoldStatus'
-        ],
-        'SellerInvoiceNumber' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellerInvoiceNumber'
-        ],
-        'ShippedTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippedTime'
-        ],
-        'PaidTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PaidTime'
+            'elementName' => 'IntegratedMerchantCreditCardEnabled'
         ],
         'LastEmailSentTime' => [
             'type' => 'DateTime',
@@ -119,20 +71,68 @@ class SellingManagerOrderStatusType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'LastEmailSentTime'
         ],
+        'PaidStatus' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PaidStatus'
+        ],
+        'PaidTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PaidTime'
+        ],
+        'PaymentHoldStatus' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PaymentHoldStatus'
+        ],
+        'PaymentMethodUsed' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PaymentMethodUsed'
+        ],
+        'PayPalTransactionID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PayPalTransactionID'
+        ],
+        'SellerInvoiceNumber' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SellerInvoiceNumber'
+        ],
         'SellerInvoiceTime' => [
             'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerInvoiceTime'
         ],
-        'IntegratedMerchantCreditCardEnabled' => [
-            'type' => 'boolean',
+        'ShippedStatus' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'IntegratedMerchantCreditCardEnabled'
+            'elementName' => 'ShippedStatus'
+        ],
+        'ShippedTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ShippedTime'
+        ],
+        'TotalEmailsSent' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TotalEmailsSent'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -149,7 +149,7 @@ class SellingManagerOrderStatusType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

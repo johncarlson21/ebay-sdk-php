@@ -14,11 +14,11 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property \DTS\eBaySDK\Trading\Types\CategoryArrayType $CategoryArray
  * @property integer $CategoryCount
- * @property \DateTime $UpdateTime
  * @property string $CategoryVersion
- * @property boolean $ReservePriceAllowed
  * @property double $MinimumReservePrice
  * @property boolean $ReduceReserveAllowed
+ * @property boolean $ReservePriceAllowed
+ * @property \DateTime $UpdateTime
  */
 class GetCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -38,23 +38,11 @@ class GetCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
             'attribute' => false,
             'elementName' => 'CategoryCount'
         ],
-        'UpdateTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UpdateTime'
-        ],
         'CategoryVersion' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CategoryVersion'
-        ],
-        'ReservePriceAllowed' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ReservePriceAllowed'
         ],
         'MinimumReservePrice' => [
             'type' => 'double',
@@ -67,9 +55,21 @@ class GetCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReduceReserveAllowed'
+        ],
+        'ReservePriceAllowed' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ReservePriceAllowed'
+        ],
+        'UpdateTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UpdateTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class GetCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $TimeZoneID
- * @property string $StandardLabel
- * @property string $StandardOffset
+ * @property boolean $DaylightSavingsInEffect
  * @property string $DaylightSavingsLabel
  * @property string $DaylightSavingsOffset
- * @property boolean $DaylightSavingsInEffect
  * @property string $DetailVersion
+ * @property string $StandardLabel
+ * @property string $StandardOffset
+ * @property string $TimeZoneID
  * @property \DateTime $UpdateTime
  */
 class TimeZoneDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -27,23 +27,11 @@ class TimeZoneDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'TimeZoneID' => [
-            'type' => 'string',
+        'DaylightSavingsInEffect' => [
+            'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'TimeZoneID'
-        ],
-        'StandardLabel' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'StandardLabel'
-        ],
-        'StandardOffset' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'StandardOffset'
+            'elementName' => 'DaylightSavingsInEffect'
         ],
         'DaylightSavingsLabel' => [
             'type' => 'string',
@@ -57,17 +45,29 @@ class TimeZoneDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DaylightSavingsOffset'
         ],
-        'DaylightSavingsInEffect' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DaylightSavingsInEffect'
-        ],
         'DetailVersion' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DetailVersion'
+        ],
+        'StandardLabel' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'StandardLabel'
+        ],
+        'StandardOffset' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'StandardOffset'
+        ],
+        'TimeZoneID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TimeZoneID'
         ],
         'UpdateTime' => [
             'type' => 'DateTime',
@@ -76,7 +76,7 @@ class TimeZoneDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'UpdateTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -93,7 +93,7 @@ class TimeZoneDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

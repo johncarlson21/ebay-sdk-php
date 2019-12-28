@@ -13,10 +13,10 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property integer $DeliveredCount
+ * @property integer $ErrorCount
+ * @property integer $ExpiredCount
  * @property integer $QueuedNewCount
  * @property integer $QueuedPendingCount
- * @property integer $ExpiredCount
- * @property integer $ErrorCount
  */
 class NotificationStatisticsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -30,6 +30,18 @@ class NotificationStatisticsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DeliveredCount'
         ],
+        'ErrorCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ErrorCount'
+        ],
+        'ExpiredCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ExpiredCount'
+        ],
         'QueuedNewCount' => [
             'type' => 'integer',
             'repeatable' => false,
@@ -41,21 +53,9 @@ class NotificationStatisticsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QueuedPendingCount'
-        ],
-        'ExpiredCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ExpiredCount'
-        ],
-        'ErrorCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ErrorCount'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class NotificationStatisticsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

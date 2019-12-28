@@ -12,17 +12,16 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $UserID
- * @property \DateTime $StartTimeFrom
- * @property \DateTime $StartTimeTo
  * @property \DateTime $EndTimeFrom
  * @property \DateTime $EndTimeTo
+ * @property boolean $HideVariations
+ * @property boolean $IncludeVariationSpecifics
+ * @property boolean $IncludeWatchCount
  * @property \DateTime $ModTimeFrom
  * @property \DateTime $ModTimeTo
  * @property boolean $NewItemFilter
- * @property boolean $IncludeWatchCount
- * @property boolean $IncludeVariationSpecifics
- * @property boolean $HideVariations
+ * @property \DateTime $StartTimeFrom
+ * @property \DateTime $StartTimeTo
  */
 class GetSellerEventsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -30,24 +29,6 @@ class GetSellerEventsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'UserID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UserID'
-        ],
-        'StartTimeFrom' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'StartTimeFrom'
-        ],
-        'StartTimeTo' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'StartTimeTo'
-        ],
         'EndTimeFrom' => [
             'type' => 'DateTime',
             'repeatable' => false,
@@ -59,6 +40,24 @@ class GetSellerEventsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EndTimeTo'
+        ],
+        'HideVariations' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'HideVariations'
+        ],
+        'IncludeVariationSpecifics' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeVariationSpecifics'
+        ],
+        'IncludeWatchCount' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeWatchCount'
         ],
         'ModTimeFrom' => [
             'type' => 'DateTime',
@@ -78,26 +77,20 @@ class GetSellerEventsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
             'attribute' => false,
             'elementName' => 'NewItemFilter'
         ],
-        'IncludeWatchCount' => [
-            'type' => 'boolean',
+        'StartTimeFrom' => [
+            'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'IncludeWatchCount'
+            'elementName' => 'StartTimeFrom'
         ],
-        'IncludeVariationSpecifics' => [
-            'type' => 'boolean',
+        'StartTimeTo' => [
+            'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'IncludeVariationSpecifics'
-        ],
-        'HideVariations' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'HideVariations'
+            'elementName' => 'StartTimeTo'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -114,7 +107,7 @@ class GetSellerEventsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetSellerEventsRequest';
         }

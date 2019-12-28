@@ -12,10 +12,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $VariationSpecificValue
- * @property string[] $PictureURL
- * @property string[] $ExternalPictureURL
  * @property \DTS\eBaySDK\Trading\Types\ExtendedPictureDetailsType $ExtendedPictureDetails
+ * @property string[] $ExternalPictureURL
+ * @property string[] $PictureURL
+ * @property string $VariationSpecificValue
  */
 class VariationSpecificPictureSetType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -23,17 +23,11 @@ class VariationSpecificPictureSetType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'VariationSpecificValue' => [
-            'type' => 'string',
+        'ExtendedPictureDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ExtendedPictureDetailsType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'VariationSpecificValue'
-        ],
-        'PictureURL' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'PictureURL'
+            'elementName' => 'ExtendedPictureDetails'
         ],
         'ExternalPictureURL' => [
             'type' => 'string',
@@ -41,14 +35,20 @@ class VariationSpecificPictureSetType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ExternalPictureURL'
         ],
-        'ExtendedPictureDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ExtendedPictureDetailsType',
+        'PictureURL' => [
+            'type' => 'string',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'PictureURL'
+        ],
+        'VariationSpecificValue' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ExtendedPictureDetails'
+            'elementName' => 'VariationSpecificValue'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class VariationSpecificPictureSetType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

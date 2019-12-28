@@ -12,22 +12,20 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
- * @property string $TransactionID
- * @property string $OrderID
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $AdjustmentAmount
+ * @property string $CheckoutInstructions
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $CODCost
+ * @property boolean $EmailCopyToSeller
  * @property \DTS\eBaySDK\Trading\Types\InternationalShippingServiceOptionsType[] $InternationalShippingServiceOptions
- * @property \DTS\eBaySDK\Trading\Types\ShippingServiceOptionsType[] $ShippingServiceOptions
- * @property \DTS\eBaySDK\Trading\Types\SalesTaxType $SalesTax
- * @property \DTS\eBaySDK\Trading\Enums\InsuranceOptionCodeType $InsuranceOption
- * @property \DTS\eBaySDK\Trading\Types\AmountType $InsuranceFee
+ * @property string $ItemID
+ * @property string $OrderID
+ * @property string $OrderLineItemID
  * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentMethodCodeType[] $PaymentMethods
  * @property string $PayPalEmailAddress
- * @property string $CheckoutInstructions
- * @property boolean $EmailCopyToSeller
- * @property \DTS\eBaySDK\Trading\Types\AmountType $CODCost
+ * @property \DTS\eBaySDK\Trading\Types\SalesTaxType $SalesTax
+ * @property \DTS\eBaySDK\Trading\Types\ShippingServiceOptionsType[] $ShippingServiceOptions
  * @property string $SKU
- * @property string $OrderLineItemID
- * @property \DTS\eBaySDK\Trading\Types\AmountType $AdjustmentAmount
+ * @property string $TransactionID
  */
 class SendInvoiceRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -35,23 +33,29 @@ class SendInvoiceRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
-            'type' => 'string',
+        'AdjustmentAmount' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ItemID'
+            'elementName' => 'AdjustmentAmount'
         ],
-        'TransactionID' => [
+        'CheckoutInstructions' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'TransactionID'
+            'elementName' => 'CheckoutInstructions'
         ],
-        'OrderID' => [
-            'type' => 'string',
+        'CODCost' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'OrderID'
+            'elementName' => 'CODCost'
+        ],
+        'EmailCopyToSeller' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'EmailCopyToSeller'
         ],
         'InternationalShippingServiceOptions' => [
             'type' => 'DTS\eBaySDK\Trading\Types\InternationalShippingServiceOptionsType',
@@ -59,29 +63,23 @@ class SendInvoiceRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
             'attribute' => false,
             'elementName' => 'InternationalShippingServiceOptions'
         ],
-        'ShippingServiceOptions' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShippingServiceOptionsType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'ShippingServiceOptions'
-        ],
-        'SalesTax' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SalesTaxType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SalesTax'
-        ],
-        'InsuranceOption' => [
+        'ItemID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'InsuranceOption'
+            'elementName' => 'ItemID'
         ],
-        'InsuranceFee' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+        'OrderID' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'InsuranceFee'
+            'elementName' => 'OrderID'
+        ],
+        'OrderLineItemID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'OrderLineItemID'
         ],
         'PaymentMethods' => [
             'type' => 'string',
@@ -95,23 +93,17 @@ class SendInvoiceRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
             'attribute' => false,
             'elementName' => 'PayPalEmailAddress'
         ],
-        'CheckoutInstructions' => [
-            'type' => 'string',
+        'SalesTax' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SalesTaxType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'CheckoutInstructions'
+            'elementName' => 'SalesTax'
         ],
-        'EmailCopyToSeller' => [
-            'type' => 'boolean',
-            'repeatable' => false,
+        'ShippingServiceOptions' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ShippingServiceOptionsType',
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'EmailCopyToSeller'
-        ],
-        'CODCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CODCost'
+            'elementName' => 'ShippingServiceOptions'
         ],
         'SKU' => [
             'type' => 'string',
@@ -119,20 +111,14 @@ class SendInvoiceRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
             'attribute' => false,
             'elementName' => 'SKU'
         ],
-        'OrderLineItemID' => [
+        'TransactionID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'OrderLineItemID'
-        ],
-        'AdjustmentAmount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AdjustmentAmount'
+            'elementName' => 'TransactionID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -149,7 +135,7 @@ class SendInvoiceRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'SendInvoiceRequest';
         }

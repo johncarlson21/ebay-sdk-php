@@ -12,11 +12,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $DispatchTimeMax
  * @property string $Description
  * @property string $DetailVersion
- * @property \DateTime $UpdateTime
+ * @property integer $DispatchTimeMax
  * @property boolean $ExtendedHandling
+ * @property \DateTime $UpdateTime
  */
 class DispatchTimeMaxDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -24,12 +24,6 @@ class DispatchTimeMaxDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'DispatchTimeMax' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DispatchTimeMax'
-        ],
         'Description' => [
             'type' => 'string',
             'repeatable' => false,
@@ -42,20 +36,26 @@ class DispatchTimeMaxDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DetailVersion'
         ],
-        'UpdateTime' => [
-            'type' => 'DateTime',
+        'DispatchTimeMax' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'UpdateTime'
+            'elementName' => 'DispatchTimeMax'
         ],
         'ExtendedHandling' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ExtendedHandling'
+        ],
+        'UpdateTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UpdateTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class DispatchTimeMaxDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

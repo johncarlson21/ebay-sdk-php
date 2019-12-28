@@ -12,12 +12,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\MyMessagesFolderSummaryType[] $FolderSummary
- * @property integer $NewMessageCount
  * @property integer $FlaggedMessageCount
- * @property integer $TotalMessageCount
+ * @property \DTS\eBaySDK\Trading\Types\MyMessagesFolderSummaryType[] $FolderSummary
  * @property integer $NewHighPriorityCount
+ * @property integer $NewMessageCount
  * @property integer $TotalHighPriorityCount
+ * @property integer $TotalMessageCount
  */
 class MyMessagesSummaryType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -25,29 +25,17 @@ class MyMessagesSummaryType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'FolderSummary' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesFolderSummaryType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'FolderSummary'
-        ],
-        'NewMessageCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'NewMessageCount'
-        ],
         'FlaggedMessageCount' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FlaggedMessageCount'
         ],
-        'TotalMessageCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
+        'FolderSummary' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesFolderSummaryType',
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'TotalMessageCount'
+            'elementName' => 'FolderSummary'
         ],
         'NewHighPriorityCount' => [
             'type' => 'integer',
@@ -55,14 +43,26 @@ class MyMessagesSummaryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'NewHighPriorityCount'
         ],
+        'NewMessageCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'NewMessageCount'
+        ],
         'TotalHighPriorityCount' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalHighPriorityCount'
+        ],
+        'TotalMessageCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TotalMessageCount'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -79,7 +79,7 @@ class MyMessagesSummaryType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

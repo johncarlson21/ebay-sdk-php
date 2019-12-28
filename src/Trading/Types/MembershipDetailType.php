@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DateTime $ExpiryDate
  * @property string $ProgramName
  * @property \DTS\eBaySDK\Trading\Enums\SiteCodeType $Site
- * @property \DateTime $ExpiryDate
  */
 class MembershipDetailType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -22,6 +22,12 @@ class MembershipDetailType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'ExpiryDate' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ExpiryDate'
+        ],
         'ProgramName' => [
             'type' => 'string',
             'repeatable' => false,
@@ -33,15 +39,9 @@ class MembershipDetailType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Site'
-        ],
-        'ExpiryDate' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ExpiryDate'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class MembershipDetailType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

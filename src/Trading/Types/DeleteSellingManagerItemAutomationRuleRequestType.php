@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
  * @property boolean $DeleteAutomatedRelistingRule
  * @property boolean $DeleteAutomatedSecondChanceOfferRule
+ * @property string $ItemID
  */
 class DeleteSellingManagerItemAutomationRuleRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -22,12 +22,6 @@ class DeleteSellingManagerItemAutomationRuleRequestType extends \DTS\eBaySDK\Tra
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
-        ],
         'DeleteAutomatedRelistingRule' => [
             'type' => 'boolean',
             'repeatable' => false,
@@ -39,9 +33,15 @@ class DeleteSellingManagerItemAutomationRuleRequestType extends \DTS\eBaySDK\Tra
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DeleteAutomatedSecondChanceOfferRule'
+        ],
+        'ItemID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class DeleteSellingManagerItemAutomationRuleRequestType extends \DTS\eBaySDK\Tra
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'DeleteSellingManagerItemAutomationRuleRequest';
         }

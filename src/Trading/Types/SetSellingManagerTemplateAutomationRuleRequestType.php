@@ -12,10 +12,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $SaleTemplateID
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerAutoListType $AutomatedListingRule
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerAutoRelistType $AutomatedRelistingRule
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerAutoSecondChanceOfferType $AutomatedSecondChanceOfferRule
+ * @property integer $SaleTemplateID
  */
 class SetSellingManagerTemplateAutomationRuleRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -23,12 +23,6 @@ class SetSellingManagerTemplateAutomationRuleRequestType extends \DTS\eBaySDK\Tr
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'SaleTemplateID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SaleTemplateID'
-        ],
         'AutomatedListingRule' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerAutoListType',
             'repeatable' => false,
@@ -46,9 +40,15 @@ class SetSellingManagerTemplateAutomationRuleRequestType extends \DTS\eBaySDK\Tr
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AutomatedSecondChanceOfferRule'
+        ],
+        'SaleTemplateID' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SaleTemplateID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class SetSellingManagerTemplateAutomationRuleRequestType extends \DTS\eBaySDK\Tr
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'SetSellingManagerTemplateAutomationRuleRequest';
         }

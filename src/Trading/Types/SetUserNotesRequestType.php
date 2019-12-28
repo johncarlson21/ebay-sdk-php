@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
  * @property \DTS\eBaySDK\Trading\Enums\SetUserNotesActionCodeType $Action
+ * @property string $ItemID
  * @property string $NoteText
+ * @property string $OrderLineItemID
+ * @property string $SKU
  * @property string $TransactionID
  * @property \DTS\eBaySDK\Trading\Types\NameValueListArrayType $VariationSpecifics
- * @property string $SKU
- * @property string $OrderLineItemID
  */
 class SetUserNotesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -26,23 +26,35 @@ class SetUserNotesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequest
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
-        ],
         'Action' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Action'
         ],
+        'ItemID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
+        ],
         'NoteText' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NoteText'
+        ],
+        'OrderLineItemID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'OrderLineItemID'
+        ],
+        'SKU' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SKU'
         ],
         'TransactionID' => [
             'type' => 'string',
@@ -55,21 +67,9 @@ class SetUserNotesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequest
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VariationSpecifics'
-        ],
-        'SKU' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SKU'
-        ],
-        'OrderLineItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'OrderLineItemID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class SetUserNotesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequest
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'SetUserNotesRequest';
         }

@@ -41,7 +41,7 @@ class FetchTokenResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
             'elementName' => 'RESTToken'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class FetchTokenResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

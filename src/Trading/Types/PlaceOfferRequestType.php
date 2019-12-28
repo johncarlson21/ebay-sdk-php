@@ -12,10 +12,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\OfferType $Offer
- * @property string $ItemID
- * @property boolean $BlockOnWarning
  * @property \DTS\eBaySDK\Trading\Types\AffiliateTrackingDetailsType $AffiliateTrackingDetails
+ * @property boolean $BlockOnWarning
+ * @property string $ItemID
+ * @property \DTS\eBaySDK\Trading\Types\OfferType $Offer
  * @property \DTS\eBaySDK\Trading\Types\NameValueListArrayType $VariationSpecifics
  */
 class PlaceOfferRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -24,17 +24,11 @@ class PlaceOfferRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTy
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Offer' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\OfferType',
+        'AffiliateTrackingDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AffiliateTrackingDetailsType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Offer'
-        ],
-        'ItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
+            'elementName' => 'AffiliateTrackingDetails'
         ],
         'BlockOnWarning' => [
             'type' => 'boolean',
@@ -42,11 +36,17 @@ class PlaceOfferRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTy
             'attribute' => false,
             'elementName' => 'BlockOnWarning'
         ],
-        'AffiliateTrackingDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AffiliateTrackingDetailsType',
+        'ItemID' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'AffiliateTrackingDetails'
+            'elementName' => 'ItemID'
+        ],
+        'Offer' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\OfferType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Offer'
         ],
         'VariationSpecifics' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NameValueListArrayType',
@@ -55,7 +55,7 @@ class PlaceOfferRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTy
             'elementName' => 'VariationSpecifics'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class PlaceOfferRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTy
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'PlaceOfferRequest';
         }

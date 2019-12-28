@@ -12,10 +12,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $ShippingCarrierID
  * @property string $Description
- * @property \DTS\eBaySDK\Trading\Enums\ShippingCarrierCodeType $ShippingCarrier
  * @property string $DetailVersion
+ * @property \DTS\eBaySDK\Trading\Enums\ShippingCarrierCodeType $ShippingCarrier
+ * @property integer $ShippingCarrierID
  * @property \DateTime $UpdateTime
  */
 class ShippingCarrierDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -24,17 +24,17 @@ class ShippingCarrierDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ShippingCarrierID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingCarrierID'
-        ],
         'Description' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Description'
+        ],
+        'DetailVersion' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DetailVersion'
         ],
         'ShippingCarrier' => [
             'type' => 'string',
@@ -42,11 +42,11 @@ class ShippingCarrierDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingCarrier'
         ],
-        'DetailVersion' => [
-            'type' => 'string',
+        'ShippingCarrierID' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'DetailVersion'
+            'elementName' => 'ShippingCarrierID'
         ],
         'UpdateTime' => [
             'type' => 'DateTime',
@@ -55,7 +55,7 @@ class ShippingCarrierDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'UpdateTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class ShippingCarrierDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

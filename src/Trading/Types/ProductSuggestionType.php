@@ -12,10 +12,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Title
  * @property string $EPID
- * @property string $StockPhoto
  * @property boolean $Recommended
+ * @property string $StockPhoto
+ * @property string $Title
  */
 class ProductSuggestionType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -23,17 +23,17 @@ class ProductSuggestionType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Title' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Title'
-        ],
         'EPID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EPID'
+        ],
+        'Recommended' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Recommended'
         ],
         'StockPhoto' => [
             'type' => 'string',
@@ -41,14 +41,14 @@ class ProductSuggestionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'StockPhoto'
         ],
-        'Recommended' => [
-            'type' => 'boolean',
+        'Title' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Recommended'
+            'elementName' => 'Title'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class ProductSuggestionType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

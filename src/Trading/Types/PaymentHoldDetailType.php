@@ -13,9 +13,9 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DateTime $ExpectedReleaseDate
- * @property \DTS\eBaySDK\Trading\Types\RequiredSellerActionArrayType $RequiredSellerActionArray
  * @property integer $NumOfReqSellerActions
  * @property \DTS\eBaySDK\Trading\Enums\PaymentHoldReasonCodeType $PaymentHoldReason
+ * @property \DTS\eBaySDK\Trading\Types\RequiredSellerActionArrayType $RequiredSellerActionArray
  */
 class PaymentHoldDetailType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -29,12 +29,6 @@ class PaymentHoldDetailType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ExpectedReleaseDate'
         ],
-        'RequiredSellerActionArray' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\RequiredSellerActionArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'RequiredSellerActionArray'
-        ],
         'NumOfReqSellerActions' => [
             'type' => 'integer',
             'repeatable' => false,
@@ -46,9 +40,15 @@ class PaymentHoldDetailType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaymentHoldReason'
+        ],
+        'RequiredSellerActionArray' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\RequiredSellerActionArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'RequiredSellerActionArray'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class PaymentHoldDetailType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

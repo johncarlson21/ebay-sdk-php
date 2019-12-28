@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $UnitType
  * @property double $UnitQuantity
+ * @property string $UnitType
  */
 class UnitInfoType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -21,20 +21,20 @@ class UnitInfoType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'UnitType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UnitType'
-        ],
         'UnitQuantity' => [
             'type' => 'double',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UnitQuantity'
+        ],
+        'UnitType' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UnitType'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class UnitInfoType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

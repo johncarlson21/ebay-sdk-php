@@ -13,9 +13,9 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Enums\DiscountNameCodeType $DiscountName
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingCost
- * @property \DTS\eBaySDK\Trading\Types\AmountType $OrderAmount
  * @property integer $ItemCount
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $OrderAmount
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingCost
  */
 class PromotionalShippingDiscountDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -29,11 +29,11 @@ class PromotionalShippingDiscountDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DiscountName'
         ],
-        'ShippingCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+        'ItemCount' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ShippingCost'
+            'elementName' => 'ItemCount'
         ],
         'OrderAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -41,14 +41,14 @@ class PromotionalShippingDiscountDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'OrderAmount'
         ],
-        'ItemCount' => [
-            'type' => 'integer',
+        'ShippingCost' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ItemCount'
+            'elementName' => 'ShippingCost'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class PromotionalShippingDiscountDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

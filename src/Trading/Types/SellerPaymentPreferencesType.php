@@ -13,13 +13,13 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property boolean $AlwaysUseThisPaymentAddress
- * @property \DTS\eBaySDK\Trading\Enums\DisplayPayNowButtonCodeType $DisplayPayNowButton
- * @property boolean $PayPalPreferred
  * @property string $DefaultPayPalEmailAddress
+ * @property \DTS\eBaySDK\Trading\Enums\DisplayPayNowButtonCodeType $DisplayPayNowButton
+ * @property \DTS\eBaySDK\Trading\Enums\FedExRateOptionCodeType $FedExRateOption
  * @property boolean $PayPalAlwaysOn
+ * @property boolean $PayPalPreferred
  * @property \DTS\eBaySDK\Trading\Types\AddressType $SellerPaymentAddress
  * @property \DTS\eBaySDK\Trading\Enums\UPSRateOptionCodeType $UPSRateOption
- * @property \DTS\eBaySDK\Trading\Enums\FedExRateOptionCodeType $FedExRateOption
  * @property \DTS\eBaySDK\Trading\Enums\USPSRateOptionCodeType $USPSRateOption
  */
 class SellerPaymentPreferencesType extends \DTS\eBaySDK\Types\BaseType
@@ -34,29 +34,35 @@ class SellerPaymentPreferencesType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'AlwaysUseThisPaymentAddress'
         ],
-        'DisplayPayNowButton' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DisplayPayNowButton'
-        ],
-        'PayPalPreferred' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PayPalPreferred'
-        ],
         'DefaultPayPalEmailAddress' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DefaultPayPalEmailAddress'
         ],
+        'DisplayPayNowButton' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DisplayPayNowButton'
+        ],
+        'FedExRateOption' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'FedExRateOption'
+        ],
         'PayPalAlwaysOn' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PayPalAlwaysOn'
+        ],
+        'PayPalPreferred' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PayPalPreferred'
         ],
         'SellerPaymentAddress' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
@@ -70,12 +76,6 @@ class SellerPaymentPreferencesType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'UPSRateOption'
         ],
-        'FedExRateOption' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FedExRateOption'
-        ],
         'USPSRateOption' => [
             'type' => 'string',
             'repeatable' => false,
@@ -83,7 +83,7 @@ class SellerPaymentPreferencesType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'USPSRateOption'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -100,7 +100,7 @@ class SellerPaymentPreferencesType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

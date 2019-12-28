@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
- * @property \DTS\eBaySDK\Trading\Types\MemberMessageType $Question
- * @property string[] $Response
- * @property \DTS\eBaySDK\Trading\Enums\MessageStatusTypeCodeType $MessageStatus
  * @property \DateTime $CreationDate
+ * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
  * @property \DateTime $LastModifiedDate
  * @property \DTS\eBaySDK\Trading\Types\MessageMediaType[] $MessageMedia
+ * @property \DTS\eBaySDK\Trading\Enums\MessageStatusTypeCodeType $MessageStatus
+ * @property \DTS\eBaySDK\Trading\Types\MemberMessageType $Question
+ * @property string[] $Response
  */
 class MemberMessageExchangeType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -26,35 +26,17 @@ class MemberMessageExchangeType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Item' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Item'
-        ],
-        'Question' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MemberMessageType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Question'
-        ],
-        'Response' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'Response'
-        ],
-        'MessageStatus' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MessageStatus'
-        ],
         'CreationDate' => [
             'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CreationDate'
+        ],
+        'Item' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Item'
         ],
         'LastModifiedDate' => [
             'type' => 'DateTime',
@@ -67,9 +49,27 @@ class MemberMessageExchangeType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'MessageMedia'
+        ],
+        'MessageStatus' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MessageStatus'
+        ],
+        'Question' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\MemberMessageType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Question'
+        ],
+        'Response' => [
+            'type' => 'string',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'Response'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class MemberMessageExchangeType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

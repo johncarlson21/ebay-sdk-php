@@ -12,15 +12,15 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $TimeZoneID
- * @property \DTS\eBaySDK\Trading\Enums\DaysCodeType $Hours1Days
  * @property boolean $Hours1AnyTime
+ * @property \DTS\eBaySDK\Trading\Enums\DaysCodeType $Hours1Days
  * @property string $Hours1From
  * @property string $Hours1To
- * @property \DTS\eBaySDK\Trading\Enums\DaysCodeType $Hours2Days
  * @property boolean $Hours2AnyTime
+ * @property \DTS\eBaySDK\Trading\Enums\DaysCodeType $Hours2Days
  * @property string $Hours2From
  * @property string $Hours2To
+ * @property string $TimeZoneID
  */
 class ContactHoursDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -28,23 +28,17 @@ class ContactHoursDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'TimeZoneID' => [
-            'type' => 'string',
+        'Hours1AnyTime' => [
+            'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'TimeZoneID'
+            'elementName' => 'Hours1AnyTime'
         ],
         'Hours1Days' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Hours1Days'
-        ],
-        'Hours1AnyTime' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Hours1AnyTime'
         ],
         'Hours1From' => [
             'type' => 'string',
@@ -58,17 +52,17 @@ class ContactHoursDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Hours1To'
         ],
-        'Hours2Days' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Hours2Days'
-        ],
         'Hours2AnyTime' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Hours2AnyTime'
+        ],
+        'Hours2Days' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Hours2Days'
         ],
         'Hours2From' => [
             'type' => 'string',
@@ -81,9 +75,15 @@ class ContactHoursDetailsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Hours2To'
+        ],
+        'TimeZoneID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TimeZoneID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -100,7 +100,7 @@ class ContactHoursDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

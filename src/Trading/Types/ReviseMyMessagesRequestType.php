@@ -12,10 +12,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\MyMessagesMessageIDArrayType $MessageIDs
- * @property boolean $Read
  * @property boolean $Flagged
  * @property integer $FolderID
+ * @property \DTS\eBaySDK\Trading\Types\MyMessagesMessageIDArrayType $MessageIDs
+ * @property boolean $Read
  */
 class ReviseMyMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -23,18 +23,6 @@ class ReviseMyMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'MessageIDs' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesMessageIDArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MessageIDs'
-        ],
-        'Read' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Read'
-        ],
         'Flagged' => [
             'type' => 'boolean',
             'repeatable' => false,
@@ -46,9 +34,21 @@ class ReviseMyMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FolderID'
+        ],
+        'MessageIDs' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesMessageIDArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MessageIDs'
+        ],
+        'Read' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Read'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class ReviseMyMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'ReviseMyMessagesRequest';
         }

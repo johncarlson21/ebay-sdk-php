@@ -13,8 +13,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $DuplicateInvocationID
- * @property \DTS\eBaySDK\Trading\Enums\InvocationStatusType $Status
  * @property string $InvocationTrackingID
+ * @property \DTS\eBaySDK\Trading\Enums\InvocationStatusType $Status
  */
 class DuplicateInvocationDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -28,20 +28,20 @@ class DuplicateInvocationDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DuplicateInvocationID'
         ],
-        'Status' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Status'
-        ],
         'InvocationTrackingID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InvocationTrackingID'
+        ],
+        'Status' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Status'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class DuplicateInvocationDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
- * @property \DateTime $StartTime
- * @property \DateTime $EndTime
- * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
- * @property string $CategoryID
  * @property string $Category2ID
+ * @property string $CategoryID
  * @property string $CorrelationID
- * @property \DTS\eBaySDK\Trading\Types\ErrorType[] $Errors
- * @property string $Message
  * @property \DTS\eBaySDK\Trading\Enums\DiscountReasonCodeType[] $DiscountReason
+ * @property \DateTime $EndTime
+ * @property \DTS\eBaySDK\Trading\Types\ErrorType[] $Errors
+ * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
+ * @property string $ItemID
  * @property \DTS\eBaySDK\Trading\Types\ListingRecommendationsType $ListingRecommendations
+ * @property string $Message
+ * @property \DateTime $StartTime
  */
 class AddItemResponseContainerType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -30,29 +30,11 @@ class AddItemResponseContainerType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
+        'Category2ID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ItemID'
-        ],
-        'StartTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'StartTime'
-        ],
-        'EndTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'EndTime'
-        ],
-        'Fees' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\FeesType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Fees'
+            'elementName' => 'Category2ID'
         ],
         'CategoryID' => [
             'type' => 'string',
@@ -60,29 +42,11 @@ class AddItemResponseContainerType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CategoryID'
         ],
-        'Category2ID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Category2ID'
-        ],
         'CorrelationID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CorrelationID'
-        ],
-        'Errors' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ErrorType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'Errors'
-        ],
-        'Message' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Message'
         ],
         'DiscountReason' => [
             'type' => 'string',
@@ -90,14 +54,50 @@ class AddItemResponseContainerType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DiscountReason'
         ],
+        'EndTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'EndTime'
+        ],
+        'Errors' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ErrorType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'Errors'
+        ],
+        'Fees' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\FeesType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Fees'
+        ],
+        'ItemID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
+        ],
         'ListingRecommendations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ListingRecommendationsType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ListingRecommendations'
+        ],
+        'Message' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Message'
+        ],
+        'StartTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'StartTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -114,7 +114,7 @@ class AddItemResponseContainerType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

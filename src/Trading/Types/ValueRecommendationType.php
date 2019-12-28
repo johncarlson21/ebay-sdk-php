@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Value
  * @property \DTS\eBaySDK\Trading\Types\RecommendationValidationRulesType $ValidationRules
+ * @property string $Value
  */
 class ValueRecommendationType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -21,20 +21,20 @@ class ValueRecommendationType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Value' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Value'
-        ],
         'ValidationRules' => [
             'type' => 'DTS\eBaySDK\Trading\Types\RecommendationValidationRulesType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ValidationRules'
+        ],
+        'Value' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Value'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class ValueRecommendationType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

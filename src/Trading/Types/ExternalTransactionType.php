@@ -13,10 +13,10 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $ExternalTransactionID
+ * @property \DTS\eBaySDK\Trading\Enums\PaymentTransactionStatusCodeType $ExternalTransactionStatus
  * @property \DateTime $ExternalTransactionTime
  * @property \DTS\eBaySDK\Trading\Types\AmountType $FeeOrCreditAmount
  * @property \DTS\eBaySDK\Trading\Types\AmountType $PaymentOrRefundAmount
- * @property \DTS\eBaySDK\Trading\Enums\PaymentTransactionStatusCodeType $ExternalTransactionStatus
  */
 class ExternalTransactionType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -29,6 +29,12 @@ class ExternalTransactionType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ExternalTransactionID'
+        ],
+        'ExternalTransactionStatus' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ExternalTransactionStatus'
         ],
         'ExternalTransactionTime' => [
             'type' => 'DateTime',
@@ -47,15 +53,9 @@ class ExternalTransactionType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaymentOrRefundAmount'
-        ],
-        'ExternalTransactionStatus' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ExternalTransactionStatus'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class ExternalTransactionType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

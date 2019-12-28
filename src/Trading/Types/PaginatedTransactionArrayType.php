@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\TransactionArrayType $TransactionArray
  * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
+ * @property \DTS\eBaySDK\Trading\Types\TransactionArrayType $TransactionArray
  */
 class PaginatedTransactionArrayType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -21,20 +21,20 @@ class PaginatedTransactionArrayType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'TransactionArray' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\TransactionArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TransactionArray'
-        ],
         'PaginationResult' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
+        ],
+        'TransactionArray' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\TransactionArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TransactionArray'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class PaginatedTransactionArrayType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

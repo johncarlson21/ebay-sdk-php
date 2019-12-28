@@ -12,33 +12,32 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $SearchName
- * @property string $SearchQuery
- * @property string $QueryKeywords
- * @property string $CategoryID
- * @property \DTS\eBaySDK\Trading\Enums\SimpleItemSortCodeType $ItemSort
- * @property \DTS\eBaySDK\Trading\Enums\SortOrderCodeType $SortOrder
- * @property \DateTime $EndTimeFrom
- * @property \DateTime $EndTimeTo
- * @property integer $MaxDistance
- * @property string $PostalCode
- * @property \DTS\eBaySDK\Trading\Enums\ItemTypeCodeType $ItemType
- * @property \DTS\eBaySDK\Trading\Types\AmountType $PriceMax
- * @property \DTS\eBaySDK\Trading\Types\AmountType $PriceMin
- * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $Currency
  * @property integer $BidCountMax
  * @property integer $BidCountMin
- * @property \DTS\eBaySDK\Trading\Enums\SearchFlagCodeType[] $SearchFlag
- * @property \DTS\eBaySDK\Trading\Enums\PaymentMethodSearchCodeType $PaymentMethod
- * @property \DTS\eBaySDK\Trading\Enums\PreferredLocationCodeType $PreferredLocation
- * @property string[] $SellerID
- * @property string[] $SellerIDExclude
+ * @property string $CategoryID
+ * @property \DTS\eBaySDK\Trading\Enums\ItemConditionCodeType $Condition
+ * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $Currency
+ * @property \DateTime $EndTimeFrom
+ * @property \DateTime $EndTimeTo
  * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType $ItemsAvailableTo
  * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType $ItemsLocatedIn
- * @property \DTS\eBaySDK\Trading\Enums\SellerBusinessCodeType $SellerBusinessType
- * @property \DTS\eBaySDK\Trading\Enums\ItemConditionCodeType $Condition
+ * @property \DTS\eBaySDK\Trading\Enums\SimpleItemSortCodeType $ItemSort
+ * @property \DTS\eBaySDK\Trading\Enums\ItemTypeCodeType $ItemType
+ * @property integer $MaxDistance
+ * @property string $PostalCode
+ * @property \DTS\eBaySDK\Trading\Enums\PreferredLocationCodeType $PreferredLocation
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $PriceMax
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $PriceMin
  * @property integer $Quantity
  * @property \DTS\eBaySDK\Trading\Enums\QuantityOperatorCodeType $QuantityOperator
+ * @property string $QueryKeywords
+ * @property \DTS\eBaySDK\Trading\Enums\SearchFlagCodeType[] $SearchFlag
+ * @property string $SearchName
+ * @property string $SearchQuery
+ * @property \DTS\eBaySDK\Trading\Enums\SellerBusinessCodeType $SellerBusinessType
+ * @property string[] $SellerID
+ * @property string[] $SellerIDExclude
+ * @property \DTS\eBaySDK\Trading\Enums\SortOrderCodeType $SortOrder
  */
 class MyeBayFavoriteSearchType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -46,23 +45,17 @@ class MyeBayFavoriteSearchType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'SearchName' => [
-            'type' => 'string',
+        'BidCountMax' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'SearchName'
+            'elementName' => 'BidCountMax'
         ],
-        'SearchQuery' => [
-            'type' => 'string',
+        'BidCountMin' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'SearchQuery'
-        ],
-        'QueryKeywords' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'QueryKeywords'
+            'elementName' => 'BidCountMin'
         ],
         'CategoryID' => [
             'type' => 'string',
@@ -70,17 +63,17 @@ class MyeBayFavoriteSearchType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CategoryID'
         ],
-        'ItemSort' => [
+        'Condition' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ItemSort'
+            'elementName' => 'Condition'
         ],
-        'SortOrder' => [
+        'Currency' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'SortOrder'
+            'elementName' => 'Currency'
         ],
         'EndTimeFrom' => [
             'type' => 'DateTime',
@@ -94,6 +87,30 @@ class MyeBayFavoriteSearchType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'EndTimeTo'
         ],
+        'ItemsAvailableTo' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemsAvailableTo'
+        ],
+        'ItemsLocatedIn' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemsLocatedIn'
+        ],
+        'ItemSort' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemSort'
+        ],
+        'ItemType' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemType'
+        ],
         'MaxDistance' => [
             'type' => 'integer',
             'repeatable' => false,
@@ -106,11 +123,11 @@ class MyeBayFavoriteSearchType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PostalCode'
         ],
-        'ItemType' => [
+        'PreferredLocation' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ItemType'
+            'elementName' => 'PreferredLocation'
         ],
         'PriceMax' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -124,23 +141,23 @@ class MyeBayFavoriteSearchType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PriceMin'
         ],
-        'Currency' => [
+        'Quantity' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Quantity'
+        ],
+        'QuantityOperator' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Currency'
+            'elementName' => 'QuantityOperator'
         ],
-        'BidCountMax' => [
-            'type' => 'integer',
+        'QueryKeywords' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'BidCountMax'
-        ],
-        'BidCountMin' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BidCountMin'
+            'elementName' => 'QueryKeywords'
         ],
         'SearchFlag' => [
             'type' => 'string',
@@ -148,17 +165,23 @@ class MyeBayFavoriteSearchType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SearchFlag'
         ],
-        'PaymentMethod' => [
+        'SearchName' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'PaymentMethod'
+            'elementName' => 'SearchName'
         ],
-        'PreferredLocation' => [
+        'SearchQuery' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'PreferredLocation'
+            'elementName' => 'SearchQuery'
+        ],
+        'SellerBusinessType' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SellerBusinessType'
         ],
         'SellerID' => [
             'type' => 'string',
@@ -172,44 +195,14 @@ class MyeBayFavoriteSearchType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SellerIDExclude'
         ],
-        'ItemsAvailableTo' => [
+        'SortOrder' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ItemsAvailableTo'
-        ],
-        'ItemsLocatedIn' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemsLocatedIn'
-        ],
-        'SellerBusinessType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellerBusinessType'
-        ],
-        'Condition' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Condition'
-        ],
-        'Quantity' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Quantity'
-        ],
-        'QuantityOperator' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'QuantityOperator'
+            'elementName' => 'SortOrder'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -226,7 +219,7 @@ class MyeBayFavoriteSearchType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

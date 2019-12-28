@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AddressType $ShippingAddress
  * @property \DTS\eBaySDK\Trading\Types\TaxIdentifierType[] $BuyerTaxIdentifier
+ * @property \DTS\eBaySDK\Trading\Types\AddressType $ShippingAddress
  */
 class BuyerType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -21,20 +21,20 @@ class BuyerType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ShippingAddress' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingAddress'
-        ],
         'BuyerTaxIdentifier' => [
             'type' => 'DTS\eBaySDK\Trading\Types\TaxIdentifierType',
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'BuyerTaxIdentifier'
+        ],
+        'ShippingAddress' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingAddress'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class BuyerType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

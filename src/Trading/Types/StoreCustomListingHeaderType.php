@@ -12,11 +12,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property boolean $AddToFavoriteStores
  * @property \DTS\eBaySDK\Trading\Enums\StoreCustomListingHeaderDisplayCodeType $DisplayType
+ * @property \DTS\eBaySDK\Trading\Types\StoreCustomListingHeaderLinkType[] $LinkToInclude
  * @property boolean $Logo
  * @property boolean $SearchBox
- * @property \DTS\eBaySDK\Trading\Types\StoreCustomListingHeaderLinkType[] $LinkToInclude
- * @property boolean $AddToFavoriteStores
  * @property boolean $SignUpForStoreNewsletter
  */
 class StoreCustomListingHeaderType extends \DTS\eBaySDK\Types\BaseType
@@ -25,11 +25,23 @@ class StoreCustomListingHeaderType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'AddToFavoriteStores' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'AddToFavoriteStores'
+        ],
         'DisplayType' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DisplayType'
+        ],
+        'LinkToInclude' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomListingHeaderLinkType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'LinkToInclude'
         ],
         'Logo' => [
             'type' => 'boolean',
@@ -43,18 +55,6 @@ class StoreCustomListingHeaderType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SearchBox'
         ],
-        'LinkToInclude' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomListingHeaderLinkType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'LinkToInclude'
-        ],
-        'AddToFavoriteStores' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AddToFavoriteStores'
-        ],
         'SignUpForStoreNewsletter' => [
             'type' => 'boolean',
             'repeatable' => false,
@@ -62,7 +62,7 @@ class StoreCustomListingHeaderType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'SignUpForStoreNewsletter'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -79,7 +79,7 @@ class StoreCustomListingHeaderType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

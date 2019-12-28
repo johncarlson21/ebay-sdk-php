@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $ThemeID
- * @property string $Name
  * @property \DTS\eBaySDK\Trading\Types\StoreColorSchemeType $ColorScheme
+ * @property string $Name
+ * @property integer $ThemeID
  */
 class StoreThemeType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -22,11 +22,11 @@ class StoreThemeType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ThemeID' => [
-            'type' => 'integer',
+        'ColorScheme' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\StoreColorSchemeType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ThemeID'
+            'elementName' => 'ColorScheme'
         ],
         'Name' => [
             'type' => 'string',
@@ -34,14 +34,14 @@ class StoreThemeType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Name'
         ],
-        'ColorScheme' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\StoreColorSchemeType',
+        'ThemeID' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ColorScheme'
+            'elementName' => 'ThemeID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class StoreThemeType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

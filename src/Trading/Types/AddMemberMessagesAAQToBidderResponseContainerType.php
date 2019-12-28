@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $CorrelationID
  * @property \DTS\eBaySDK\Trading\Enums\AckCodeType $Ack
+ * @property string $CorrelationID
  */
 class AddMemberMessagesAAQToBidderResponseContainerType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -21,20 +21,20 @@ class AddMemberMessagesAAQToBidderResponseContainerType extends \DTS\eBaySDK\Typ
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'CorrelationID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CorrelationID'
-        ],
         'Ack' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Ack'
+        ],
+        'CorrelationID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CorrelationID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class AddMemberMessagesAAQToBidderResponseContainerType extends \DTS\eBaySDK\Typ
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

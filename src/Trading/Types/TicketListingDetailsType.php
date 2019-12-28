@@ -13,9 +13,9 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $EventTitle
- * @property string $Venue
  * @property string $PrintedDate
  * @property string $PrintedTime
+ * @property string $Venue
  */
 class TicketListingDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -29,12 +29,6 @@ class TicketListingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'EventTitle'
         ],
-        'Venue' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Venue'
-        ],
         'PrintedDate' => [
             'type' => 'string',
             'repeatable' => false,
@@ -46,9 +40,15 @@ class TicketListingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PrintedTime'
+        ],
+        'Venue' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Venue'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class TicketListingDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

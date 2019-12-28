@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AmountType $OriginalRetailPrice
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $MadeForOutletComparisonPrice
  * @property \DTS\eBaySDK\Trading\Types\AmountType $MinimumAdvertisedPrice
  * @property \DTS\eBaySDK\Trading\Enums\MinimumAdvertisedPriceExposureCodeType $MinimumAdvertisedPriceExposure
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $OriginalRetailPrice
  * @property \DTS\eBaySDK\Trading\Enums\PricingTreatmentCodeType $PricingTreatment
- * @property boolean $SoldOneBay
  * @property boolean $SoldOffeBay
- * @property \DTS\eBaySDK\Trading\Types\AmountType $MadeForOutletComparisonPrice
+ * @property boolean $SoldOneBay
  */
 class DiscountPriceInfoType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -26,11 +26,11 @@ class DiscountPriceInfoType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'OriginalRetailPrice' => [
+        'MadeForOutletComparisonPrice' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'OriginalRetailPrice'
+            'elementName' => 'MadeForOutletComparisonPrice'
         ],
         'MinimumAdvertisedPrice' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -44,17 +44,17 @@ class DiscountPriceInfoType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'MinimumAdvertisedPriceExposure'
         ],
+        'OriginalRetailPrice' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'OriginalRetailPrice'
+        ],
         'PricingTreatment' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PricingTreatment'
-        ],
-        'SoldOneBay' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SoldOneBay'
         ],
         'SoldOffeBay' => [
             'type' => 'boolean',
@@ -62,14 +62,14 @@ class DiscountPriceInfoType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SoldOffeBay'
         ],
-        'MadeForOutletComparisonPrice' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+        'SoldOneBay' => [
+            'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'MadeForOutletComparisonPrice'
+            'elementName' => 'SoldOneBay'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class DiscountPriceInfoType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

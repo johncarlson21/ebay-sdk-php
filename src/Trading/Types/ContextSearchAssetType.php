@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Keyword
  * @property \DTS\eBaySDK\Trading\Types\CategoryType $Category
+ * @property string $Keyword
  * @property integer $Ranking
  */
 class ContextSearchAssetType extends \DTS\eBaySDK\Types\BaseType
@@ -22,17 +22,17 @@ class ContextSearchAssetType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Keyword' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Keyword'
-        ],
         'Category' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CategoryType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Category'
+        ],
+        'Keyword' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Keyword'
         ],
         'Ranking' => [
             'type' => 'integer',
@@ -41,7 +41,7 @@ class ContextSearchAssetType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'Ranking'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class ContextSearchAssetType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

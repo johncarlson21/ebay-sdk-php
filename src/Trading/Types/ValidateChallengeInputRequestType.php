@@ -13,8 +13,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $ChallengeToken
- * @property string $UserInput
  * @property boolean $KeepTokenValid
+ * @property string $UserInput
  */
 class ValidateChallengeInputRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -28,20 +28,20 @@ class ValidateChallengeInputRequestType extends \DTS\eBaySDK\Trading\Types\Abstr
             'attribute' => false,
             'elementName' => 'ChallengeToken'
         ],
-        'UserInput' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UserInput'
-        ],
         'KeepTokenValid' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'KeepTokenValid'
+        ],
+        'UserInput' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UserInput'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class ValidateChallengeInputRequestType extends \DTS\eBaySDK\Trading\Types\Abstr
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'ValidateChallengeInputRequest';
         }

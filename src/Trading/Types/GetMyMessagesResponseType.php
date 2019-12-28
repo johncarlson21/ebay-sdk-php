@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\MyMessagesSummaryType $Summary
  * @property \DTS\eBaySDK\Trading\Types\MyMessagesMessageArrayType $Messages
+ * @property \DTS\eBaySDK\Trading\Types\MyMessagesSummaryType $Summary
  */
 class GetMyMessagesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -21,20 +21,20 @@ class GetMyMessagesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Summary' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesSummaryType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Summary'
-        ],
         'Messages' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesMessageArrayType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Messages'
+        ],
+        'Summary' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesSummaryType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Summary'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class GetMyMessagesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

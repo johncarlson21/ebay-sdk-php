@@ -13,19 +13,19 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Enums\BidActionCodeType $Action
+ * @property string $BestOfferID
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ConvertedPrice
  * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $Currency
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $HighestBid
  * @property \DTS\eBaySDK\Trading\Types\AmountType $MaxBid
+ * @property string $Message
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $MyMaxBid
  * @property integer $Quantity
  * @property boolean $SecondChanceEnabled
  * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $SiteCurrency
  * @property \DateTime $TimeBid
- * @property \DTS\eBaySDK\Trading\Types\AmountType $HighestBid
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ConvertedPrice
  * @property \DTS\eBaySDK\Trading\Types\UserType $User
  * @property boolean $UserConsent
- * @property string $Message
- * @property string $BestOfferID
- * @property \DTS\eBaySDK\Trading\Types\AmountType $MyMaxBid
  */
 class OfferType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,17 +39,47 @@ class OfferType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Action'
         ],
+        'BestOfferID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BestOfferID'
+        ],
+        'ConvertedPrice' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ConvertedPrice'
+        ],
         'Currency' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Currency'
         ],
+        'HighestBid' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'HighestBid'
+        ],
         'MaxBid' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MaxBid'
+        ],
+        'Message' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Message'
+        ],
+        'MyMaxBid' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MyMaxBid'
         ],
         'Quantity' => [
             'type' => 'integer',
@@ -75,18 +105,6 @@ class OfferType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'TimeBid'
         ],
-        'HighestBid' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'HighestBid'
-        ],
-        'ConvertedPrice' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ConvertedPrice'
-        ],
         'User' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UserType',
             'repeatable' => false,
@@ -98,27 +116,9 @@ class OfferType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UserConsent'
-        ],
-        'Message' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Message'
-        ],
-        'BestOfferID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BestOfferID'
-        ],
-        'MyMaxBid' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MyMaxBid'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -135,7 +135,7 @@ class OfferType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

@@ -27,7 +27,7 @@ class SetTaxTableRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
             'elementName' => 'TaxTable'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -44,7 +44,7 @@ class SetTaxTableRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'SetTaxTableRequest';
         }

@@ -12,11 +12,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DateTime $CancelCompleteDate
+ * @property \DateTime $CancelIntiationDate
+ * @property string $CancelIntiator
  * @property string $CancelReason
  * @property string $CancelReasonDetails
- * @property string $CancelIntiator
- * @property \DateTime $CancelIntiationDate
- * @property \DateTime $CancelCompleteDate
  */
 class CancelDetailType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -24,6 +24,24 @@ class CancelDetailType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'CancelCompleteDate' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CancelCompleteDate'
+        ],
+        'CancelIntiationDate' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CancelIntiationDate'
+        ],
+        'CancelIntiator' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CancelIntiator'
+        ],
         'CancelReason' => [
             'type' => 'string',
             'repeatable' => false,
@@ -35,27 +53,9 @@ class CancelDetailType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CancelReasonDetails'
-        ],
-        'CancelIntiator' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CancelIntiator'
-        ],
-        'CancelIntiationDate' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CancelIntiationDate'
-        ],
-        'CancelCompleteDate' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CancelCompleteDate'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class CancelDetailType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

@@ -14,8 +14,8 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property string $SaleTemplateID
  * @property string $SaleTemplateName
- * @property double $SuccessPercent
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType $SellingManagerProductDetails
+ * @property double $SuccessPercent
  * @property \DTS\eBaySDK\Trading\Types\ItemType $Template
  */
 class SellingManagerTemplateDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -36,17 +36,17 @@ class SellingManagerTemplateDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SaleTemplateName'
         ],
-        'SuccessPercent' => [
-            'type' => 'double',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SuccessPercent'
-        ],
         'SellingManagerProductDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellingManagerProductDetails'
+        ],
+        'SuccessPercent' => [
+            'type' => 'double',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SuccessPercent'
         ],
         'Template' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
@@ -55,7 +55,7 @@ class SellingManagerTemplateDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'Template'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class SellingManagerTemplateDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

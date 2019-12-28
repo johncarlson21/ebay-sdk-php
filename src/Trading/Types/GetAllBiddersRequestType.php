@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
  * @property \DTS\eBaySDK\Trading\Enums\GetAllBiddersModeCodeType $CallMode
  * @property boolean $IncludeBiddingSummary
+ * @property string $ItemID
  */
 class GetAllBiddersRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -22,12 +22,6 @@ class GetAllBiddersRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
-        ],
         'CallMode' => [
             'type' => 'string',
             'repeatable' => false,
@@ -39,9 +33,15 @@ class GetAllBiddersRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'IncludeBiddingSummary'
+        ],
+        'ItemID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class GetAllBiddersRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetAllBiddersRequest';
         }

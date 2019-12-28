@@ -55,7 +55,7 @@ class GetBestOffersResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
             'elementName' => 'PaginationResult'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class GetBestOffersResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

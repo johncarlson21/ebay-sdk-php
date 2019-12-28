@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\InventoryStatusType[] $InventoryStatus
  * @property \DTS\eBaySDK\Trading\Types\InventoryFeesType[] $Fees
+ * @property \DTS\eBaySDK\Trading\Types\InventoryStatusType[] $InventoryStatus
  */
 class ReviseInventoryStatusResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -21,20 +21,20 @@ class ReviseInventoryStatusResponseType extends \DTS\eBaySDK\Trading\Types\Abstr
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'InventoryStatus' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\InventoryStatusType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'InventoryStatus'
-        ],
         'Fees' => [
             'type' => 'DTS\eBaySDK\Trading\Types\InventoryFeesType',
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Fees'
+        ],
+        'InventoryStatus' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\InventoryStatusType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'InventoryStatus'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class ReviseInventoryStatusResponseType extends \DTS\eBaySDK\Trading\Types\Abstr
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

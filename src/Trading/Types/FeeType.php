@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Name
  * @property \DTS\eBaySDK\Trading\Types\AmountType $Fee
+ * @property string $Name
  * @property \DTS\eBaySDK\Trading\Types\AmountType $PromotionalDiscount
  */
 class FeeType extends \DTS\eBaySDK\Types\BaseType
@@ -22,17 +22,17 @@ class FeeType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Name' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Name'
-        ],
         'Fee' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Fee'
+        ],
+        'Name' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Name'
         ],
         'PromotionalDiscount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -41,7 +41,7 @@ class FeeType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'PromotionalDiscount'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class FeeType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

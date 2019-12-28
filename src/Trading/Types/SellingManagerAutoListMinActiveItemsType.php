@@ -12,11 +12,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $MinActiveItemCount
+ * @property integer $ListingHoldInventoryLevel
  * @property string $ListTimeFrom
  * @property string $ListTimeTo
+ * @property integer $MinActiveItemCount
  * @property integer $SpacingIntervalInMinutes
- * @property integer $ListingHoldInventoryLevel
  */
 class SellingManagerAutoListMinActiveItemsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -24,11 +24,11 @@ class SellingManagerAutoListMinActiveItemsType extends \DTS\eBaySDK\Types\BaseTy
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'MinActiveItemCount' => [
+        'ListingHoldInventoryLevel' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'MinActiveItemCount'
+            'elementName' => 'ListingHoldInventoryLevel'
         ],
         'ListTimeFrom' => [
             'type' => 'string',
@@ -42,20 +42,20 @@ class SellingManagerAutoListMinActiveItemsType extends \DTS\eBaySDK\Types\BaseTy
             'attribute' => false,
             'elementName' => 'ListTimeTo'
         ],
+        'MinActiveItemCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MinActiveItemCount'
+        ],
         'SpacingIntervalInMinutes' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SpacingIntervalInMinutes'
-        ],
-        'ListingHoldInventoryLevel' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ListingHoldInventoryLevel'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class SellingManagerAutoListMinActiveItemsType extends \DTS\eBaySDK\Types\BaseTy
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

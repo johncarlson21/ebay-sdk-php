@@ -34,7 +34,7 @@ class MaximumBuyerPolicyViolationsDetailsType extends \DTS\eBaySDK\Types\BaseTyp
             'elementName' => 'PolicyViolationDuration'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class MaximumBuyerPolicyViolationsDetailsType extends \DTS\eBaySDK\Types\BaseTyp
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

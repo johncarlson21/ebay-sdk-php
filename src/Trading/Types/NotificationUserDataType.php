@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $ExternalUserData
  * @property \DTS\eBaySDK\Trading\Types\SMSSubscriptionType $SMSSubscription
  * @property \DTS\eBaySDK\Trading\Types\SummaryEventScheduleType[] $SummarySchedule
- * @property string $ExternalUserData
  */
 class NotificationUserDataType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -22,6 +22,12 @@ class NotificationUserDataType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'ExternalUserData' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ExternalUserData'
+        ],
         'SMSSubscription' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SMSSubscriptionType',
             'repeatable' => false,
@@ -33,15 +39,9 @@ class NotificationUserDataType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'SummarySchedule'
-        ],
-        'ExternalUserData' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ExternalUserData'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class NotificationUserDataType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AddressType $Address
- * @property string $Fax
- * @property string $Email
  * @property string $AdditionalContactInformation
- * @property string $TradeRegistrationNumber
+ * @property \DTS\eBaySDK\Trading\Types\AddressType $Address
+ * @property string $Email
+ * @property string $Fax
  * @property boolean $LegalInvoice
  * @property string $TermsAndConditions
+ * @property string $TradeRegistrationNumber
  * @property \DTS\eBaySDK\Trading\Types\VATDetailsType $VATDetails
  */
 class BusinessSellerDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -27,17 +27,17 @@ class BusinessSellerDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'AdditionalContactInformation' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'AdditionalContactInformation'
+        ],
         'Address' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Address'
-        ],
-        'Fax' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Fax'
         ],
         'Email' => [
             'type' => 'string',
@@ -45,17 +45,11 @@ class BusinessSellerDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Email'
         ],
-        'AdditionalContactInformation' => [
+        'Fax' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'AdditionalContactInformation'
-        ],
-        'TradeRegistrationNumber' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TradeRegistrationNumber'
+            'elementName' => 'Fax'
         ],
         'LegalInvoice' => [
             'type' => 'boolean',
@@ -69,6 +63,12 @@ class BusinessSellerDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'TermsAndConditions'
         ],
+        'TradeRegistrationNumber' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TradeRegistrationNumber'
+        ],
         'VATDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\VATDetailsType',
             'repeatable' => false,
@@ -76,7 +76,7 @@ class BusinessSellerDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'VATDetails'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -93,7 +93,7 @@ class BusinessSellerDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

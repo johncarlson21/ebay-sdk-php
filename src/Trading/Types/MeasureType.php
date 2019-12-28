@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $unit
  * @property \DTS\eBaySDK\Trading\Enums\MeasurementSystemCodeType $measurementSystem
+ * @property string $unit
  */
 class MeasureType extends \DTS\eBaySDK\Types\DecimalType
 {
@@ -21,20 +21,20 @@ class MeasureType extends \DTS\eBaySDK\Types\DecimalType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'unit' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => true,
-            'attributeName' => 'unit'
-        ],
         'measurementSystem' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'measurementSystem'
+        ],
+        'unit' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => true,
+            'attributeName' => 'unit'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class MeasureType extends \DTS\eBaySDK\Types\DecimalType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

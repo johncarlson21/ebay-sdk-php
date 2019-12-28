@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Type
- * @property string $Group
- * @property string $FieldName
  * @property string $Code
- * @property string[] $Value
+ * @property string $FieldName
+ * @property string $Group
  * @property string $Message
  * @property \DTS\eBaySDK\Trading\Types\MetadataType[] $Metadata
+ * @property string $Type
+ * @property string[] $Value
  */
 class ListingRecommendationType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -26,17 +26,11 @@ class ListingRecommendationType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Type' => [
+        'Code' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Type'
-        ],
-        'Group' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Group'
+            'elementName' => 'Code'
         ],
         'FieldName' => [
             'type' => 'string',
@@ -44,17 +38,11 @@ class ListingRecommendationType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'FieldName'
         ],
-        'Code' => [
+        'Group' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Code'
-        ],
-        'Value' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'Value'
+            'elementName' => 'Group'
         ],
         'Message' => [
             'type' => 'string',
@@ -67,9 +55,21 @@ class ListingRecommendationType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Metadata'
+        ],
+        'Type' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Type'
+        ],
+        'Value' => [
+            'type' => 'string',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'Value'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class ListingRecommendationType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

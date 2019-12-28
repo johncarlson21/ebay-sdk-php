@@ -12,16 +12,15 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property boolean $IncludeCodiceFiscale
+ * @property boolean $IncludeContainingOrder
+ * @property boolean $IncludeFinalValueFee
+ * @property \DTS\eBaySDK\Trading\Enums\InventoryTrackingMethodCodeType $InventoryTrackingMethod
  * @property \DateTime $ModTimeFrom
  * @property \DateTime $ModTimeTo
- * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
- * @property boolean $IncludeFinalValueFee
- * @property boolean $IncludeContainingOrder
- * @property \DTS\eBaySDK\Trading\Types\SKUArrayType $SKUArray
- * @property \DTS\eBaySDK\Trading\Enums\TransactionPlatformCodeType $Platform
  * @property integer $NumberOfDays
- * @property \DTS\eBaySDK\Trading\Enums\InventoryTrackingMethodCodeType $InventoryTrackingMethod
- * @property boolean $IncludeCodiceFiscale
+ * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
+ * @property \DTS\eBaySDK\Trading\Types\SKUArrayType $SKUArray
  */
 class GetSellerTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -29,6 +28,30 @@ class GetSellerTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'IncludeCodiceFiscale' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeCodiceFiscale'
+        ],
+        'IncludeContainingOrder' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeContainingOrder'
+        ],
+        'IncludeFinalValueFee' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeFinalValueFee'
+        ],
+        'InventoryTrackingMethod' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'InventoryTrackingMethod'
+        ],
         'ModTimeFrom' => [
             'type' => 'DateTime',
             'repeatable' => false,
@@ -41,56 +64,26 @@ class GetSellerTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
             'attribute' => false,
             'elementName' => 'ModTimeTo'
         ],
-        'Pagination' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Pagination'
-        ],
-        'IncludeFinalValueFee' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeFinalValueFee'
-        ],
-        'IncludeContainingOrder' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeContainingOrder'
-        ],
-        'SKUArray' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SKUArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SKUArray'
-        ],
-        'Platform' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Platform'
-        ],
         'NumberOfDays' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NumberOfDays'
         ],
-        'InventoryTrackingMethod' => [
-            'type' => 'string',
+        'Pagination' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'InventoryTrackingMethod'
+            'elementName' => 'Pagination'
         ],
-        'IncludeCodiceFiscale' => [
-            'type' => 'boolean',
+        'SKUArray' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SKUArrayType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'IncludeCodiceFiscale'
+            'elementName' => 'SKUArray'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -107,7 +100,7 @@ class GetSellerTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetSellerTransactionsRequest';
         }

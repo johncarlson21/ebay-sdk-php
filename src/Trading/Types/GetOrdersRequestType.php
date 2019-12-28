@@ -12,17 +12,16 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\OrderIDArrayType $OrderIDArray
  * @property \DateTime $CreateTimeFrom
  * @property \DateTime $CreateTimeTo
- * @property \DTS\eBaySDK\Trading\Enums\TradingRoleCodeType $OrderRole
- * @property \DTS\eBaySDK\Trading\Enums\OrderStatusCodeType $OrderStatus
- * @property \DTS\eBaySDK\Trading\Enums\ListingTypeCodeType $ListingType
- * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
+ * @property boolean $IncludeFinalValueFee
  * @property \DateTime $ModTimeFrom
  * @property \DateTime $ModTimeTo
  * @property integer $NumberOfDays
- * @property boolean $IncludeFinalValueFee
+ * @property \DTS\eBaySDK\Trading\Types\OrderIDArrayType $OrderIDArray
+ * @property \DTS\eBaySDK\Trading\Enums\TradingRoleCodeType $OrderRole
+ * @property \DTS\eBaySDK\Trading\Enums\OrderStatusCodeType $OrderStatus
+ * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
  * @property \DTS\eBaySDK\Trading\Enums\SortOrderCodeType $SortingOrder
  */
 class GetOrdersRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -31,12 +30,6 @@ class GetOrdersRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTyp
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'OrderIDArray' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\OrderIDArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'OrderIDArray'
-        ],
         'CreateTimeFrom' => [
             'type' => 'DateTime',
             'repeatable' => false,
@@ -49,29 +42,11 @@ class GetOrdersRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTyp
             'attribute' => false,
             'elementName' => 'CreateTimeTo'
         ],
-        'OrderRole' => [
-            'type' => 'string',
+        'IncludeFinalValueFee' => [
+            'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'OrderRole'
-        ],
-        'OrderStatus' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'OrderStatus'
-        ],
-        'ListingType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ListingType'
-        ],
-        'Pagination' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Pagination'
+            'elementName' => 'IncludeFinalValueFee'
         ],
         'ModTimeFrom' => [
             'type' => 'DateTime',
@@ -91,11 +66,29 @@ class GetOrdersRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTyp
             'attribute' => false,
             'elementName' => 'NumberOfDays'
         ],
-        'IncludeFinalValueFee' => [
-            'type' => 'boolean',
+        'OrderIDArray' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\OrderIDArrayType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'IncludeFinalValueFee'
+            'elementName' => 'OrderIDArray'
+        ],
+        'OrderRole' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'OrderRole'
+        ],
+        'OrderStatus' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'OrderStatus'
+        ],
+        'Pagination' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Pagination'
         ],
         'SortingOrder' => [
             'type' => 'string',
@@ -104,7 +97,7 @@ class GetOrdersRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTyp
             'elementName' => 'SortingOrder'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -121,7 +114,7 @@ class GetOrdersRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTyp
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetOrdersRequest';
         }

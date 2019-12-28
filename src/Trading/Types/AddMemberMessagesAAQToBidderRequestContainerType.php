@@ -41,7 +41,7 @@ class AddMemberMessagesAAQToBidderRequestContainerType extends \DTS\eBaySDK\Type
             'elementName' => 'MemberMessage'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class AddMemberMessagesAAQToBidderRequestContainerType extends \DTS\eBaySDK\Type
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

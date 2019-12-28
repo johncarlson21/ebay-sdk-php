@@ -12,16 +12,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $GalleryURL
+ * @property \DTS\eBaySDK\Trading\Types\ExtendedPictureDetailsType $ExtendedPictureDetails
+ * @property string[] $ExternalPictureURL
+ * @property string $GalleryErrorInfo
+ * @property \DTS\eBaySDK\Trading\Enums\GalleryStatusCodeType $GalleryStatus
  * @property \DTS\eBaySDK\Trading\Enums\GalleryTypeCodeType $GalleryType
  * @property \DTS\eBaySDK\Trading\Enums\PhotoDisplayCodeType $PhotoDisplay
- * @property string[] $PictureURL
  * @property \DTS\eBaySDK\Trading\Enums\PictureSourceCodeType $PictureSource
- * @property string $GalleryDuration
- * @property \DTS\eBaySDK\Trading\Enums\GalleryStatusCodeType $GalleryStatus
- * @property string $GalleryErrorInfo
- * @property string[] $ExternalPictureURL
- * @property \DTS\eBaySDK\Trading\Types\ExtendedPictureDetailsType $ExtendedPictureDetails
+ * @property string[] $PictureURL
  */
 class PictureDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -29,11 +27,29 @@ class PictureDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'GalleryURL' => [
+        'ExtendedPictureDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ExtendedPictureDetailsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ExtendedPictureDetails'
+        ],
+        'ExternalPictureURL' => [
+            'type' => 'string',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'ExternalPictureURL'
+        ],
+        'GalleryErrorInfo' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'GalleryURL'
+            'elementName' => 'GalleryErrorInfo'
+        ],
+        'GalleryStatus' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'GalleryStatus'
         ],
         'GalleryType' => [
             'type' => 'string',
@@ -47,50 +63,20 @@ class PictureDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PhotoDisplay'
         ],
-        'PictureURL' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'PictureURL'
-        ],
         'PictureSource' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PictureSource'
         ],
-        'GalleryDuration' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'GalleryDuration'
-        ],
-        'GalleryStatus' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'GalleryStatus'
-        ],
-        'GalleryErrorInfo' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'GalleryErrorInfo'
-        ],
-        'ExternalPictureURL' => [
+        'PictureURL' => [
             'type' => 'string',
             'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'ExternalPictureURL'
-        ],
-        'ExtendedPictureDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ExtendedPictureDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ExtendedPictureDetails'
+            'elementName' => 'PictureURL'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -107,7 +93,7 @@ class PictureDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

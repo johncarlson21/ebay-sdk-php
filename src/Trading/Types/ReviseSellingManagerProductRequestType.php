@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType $SellingManagerProductDetails
- * @property \DTS\eBaySDK\Trading\Types\SellingManagerFolderDetailsType $SellingManagerFolderDetails
  * @property string[] $DeletedField
+ * @property \DTS\eBaySDK\Trading\Types\SellingManagerFolderDetailsType $SellingManagerFolderDetails
+ * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType $SellingManagerProductDetails
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductSpecificsType $SellingManagerProductSpecifics
  */
 class ReviseSellingManagerProductRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -23,11 +23,11 @@ class ReviseSellingManagerProductRequestType extends \DTS\eBaySDK\Trading\Types\
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'SellingManagerProductDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType',
-            'repeatable' => false,
+        'DeletedField' => [
+            'type' => 'string',
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'SellingManagerProductDetails'
+            'elementName' => 'DeletedField'
         ],
         'SellingManagerFolderDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerFolderDetailsType',
@@ -35,11 +35,11 @@ class ReviseSellingManagerProductRequestType extends \DTS\eBaySDK\Trading\Types\
             'attribute' => false,
             'elementName' => 'SellingManagerFolderDetails'
         ],
-        'DeletedField' => [
-            'type' => 'string',
-            'repeatable' => true,
+        'SellingManagerProductDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType',
+            'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'DeletedField'
+            'elementName' => 'SellingManagerProductDetails'
         ],
         'SellingManagerProductSpecifics' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductSpecificsType',
@@ -48,7 +48,7 @@ class ReviseSellingManagerProductRequestType extends \DTS\eBaySDK\Trading\Types\
             'elementName' => 'SellingManagerProductSpecifics'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class ReviseSellingManagerProductRequestType extends \DTS\eBaySDK\Trading\Types\
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'ReviseSellingManagerProductRequest';
         }

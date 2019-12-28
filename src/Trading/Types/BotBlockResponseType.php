@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $BotBlockAudioUrl
  * @property string $BotBlockToken
  * @property string $BotBlockUrl
- * @property string $BotBlockAudioUrl
  */
 class BotBlockResponseType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -22,6 +22,12 @@ class BotBlockResponseType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'BotBlockAudioUrl' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BotBlockAudioUrl'
+        ],
         'BotBlockToken' => [
             'type' => 'string',
             'repeatable' => false,
@@ -33,15 +39,9 @@ class BotBlockResponseType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BotBlockUrl'
-        ],
-        'BotBlockAudioUrl' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BotBlockAudioUrl'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class BotBlockResponseType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

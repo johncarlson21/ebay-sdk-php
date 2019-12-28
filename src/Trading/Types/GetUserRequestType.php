@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property boolean $IncludeFeatureEligibility
  * @property string $ItemID
  * @property string $UserID
- * @property boolean $IncludeFeatureEligibility
  */
 class GetUserRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -22,6 +22,12 @@ class GetUserRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'IncludeFeatureEligibility' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeFeatureEligibility'
+        ],
         'ItemID' => [
             'type' => 'string',
             'repeatable' => false,
@@ -33,15 +39,9 @@ class GetUserRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UserID'
-        ],
-        'IncludeFeatureEligibility' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeFeatureEligibility'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class GetUserRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetUserRequest';
         }

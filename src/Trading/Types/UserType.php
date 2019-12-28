@@ -13,47 +13,46 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property boolean $AboutMePage
+ * @property \DTS\eBaySDK\Trading\Types\BiddingSummaryType $BiddingSummary
+ * @property string $BillingEmail
+ * @property \DTS\eBaySDK\Trading\Enums\BusinessRoleType $BusinessRole
+ * @property \DTS\eBaySDK\Trading\Types\BuyerType $BuyerInfo
+ * @property boolean $eBayGoodStanding
+ * @property boolean $eBayWikiReadOnly
  * @property string $EIASToken
  * @property string $Email
- * @property integer $FeedbackScore
- * @property integer $UniqueNegativeFeedbackCount
- * @property integer $UniquePositiveFeedbackCount
- * @property double $PositiveFeedbackPercent
+ * @property boolean $EnterpriseSeller
  * @property boolean $FeedbackPrivate
  * @property \DTS\eBaySDK\Trading\Enums\FeedbackRatingStarCodeType $FeedbackRatingStar
+ * @property integer $FeedbackScore
  * @property boolean $IDVerified
- * @property boolean $eBayGoodStanding
+ * @property \DTS\eBaySDK\Trading\Types\MembershipDetailsType $Membership
  * @property boolean $NewUser
+ * @property \DTS\eBaySDK\Trading\Enums\PayPalAccountLevelCodeType $PayPalAccountLevel
+ * @property \DTS\eBaySDK\Trading\Enums\PayPalAccountStatusCodeType $PayPalAccountStatus
+ * @property \DTS\eBaySDK\Trading\Enums\PayPalAccountTypeCodeType $PayPalAccountType
+ * @property double $PositiveFeedbackPercent
+ * @property boolean $QualifiesForSelling
  * @property \DTS\eBaySDK\Trading\Types\AddressType $RegistrationAddress
  * @property \DateTime $RegistrationDate
+ * @property \DTS\eBaySDK\Trading\Types\SellerType $SellerInfo
+ * @property \DTS\eBaySDK\Trading\Types\AddressType $ShippingAddress
  * @property \DTS\eBaySDK\Trading\Enums\SiteCodeType $Site
+ * @property string $StaticAlias
  * @property \DTS\eBaySDK\Trading\Enums\UserStatusCodeType $Status
+ * @property integer $TUVLevel
+ * @property integer $UniqueNegativeFeedbackCount
+ * @property integer $UniqueNeutralFeedbackCount
+ * @property integer $UniquePositiveFeedbackCount
+ * @property boolean $UserAnonymized
+ * @property string $UserFirstName
  * @property string $UserID
  * @property boolean $UserIDChanged
  * @property \DateTime $UserIDLastChanged
- * @property \DTS\eBaySDK\Trading\Enums\VATStatusCodeType $VATStatus
- * @property \DTS\eBaySDK\Trading\Types\BuyerType $BuyerInfo
- * @property \DTS\eBaySDK\Trading\Types\SellerType $SellerInfo
- * @property \DTS\eBaySDK\Trading\Enums\BusinessRoleType $BusinessRole
- * @property \DTS\eBaySDK\Trading\Enums\PayPalAccountLevelCodeType $PayPalAccountLevel
- * @property \DTS\eBaySDK\Trading\Enums\PayPalAccountTypeCodeType $PayPalAccountType
- * @property \DTS\eBaySDK\Trading\Enums\PayPalAccountStatusCodeType $PayPalAccountStatus
- * @property \DTS\eBaySDK\Trading\Enums\EBaySubscriptionTypeCodeType[] $UserSubscription
- * @property boolean $eBayWikiReadOnly
- * @property integer $TUVLevel
- * @property string $VATID
- * @property boolean $MotorsDealer
- * @property \DTS\eBaySDK\Trading\Types\BiddingSummaryType $BiddingSummary
- * @property boolean $UserAnonymized
- * @property integer $UniqueNeutralFeedbackCount
- * @property boolean $EnterpriseSeller
- * @property string $BillingEmail
- * @property boolean $QualifiesForSelling
- * @property string $StaticAlias
- * @property \DTS\eBaySDK\Trading\Types\AddressType $ShippingAddress
- * @property \DTS\eBaySDK\Trading\Types\MembershipDetailsType $Membership
- * @property string $UserFirstName
  * @property string $UserLastName
+ * @property \DTS\eBaySDK\Trading\Enums\EBaySubscriptionTypeCodeType[] $UserSubscription
+ * @property string $VATID
+ * @property \DTS\eBaySDK\Trading\Enums\VATStatusCodeType $VATStatus
  */
 class UserType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -67,6 +66,42 @@ class UserType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'AboutMePage'
         ],
+        'BiddingSummary' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\BiddingSummaryType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BiddingSummary'
+        ],
+        'BillingEmail' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BillingEmail'
+        ],
+        'BusinessRole' => [
+            'type' => 'DTS\eBaySDK\Trading\Enums\BusinessRoleType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BusinessRole'
+        ],
+        'BuyerInfo' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\BuyerType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BuyerInfo'
+        ],
+        'eBayGoodStanding' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'eBayGoodStanding'
+        ],
+        'eBayWikiReadOnly' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'eBayWikiReadOnly'
+        ],
         'EIASToken' => [
             'type' => 'string',
             'repeatable' => false,
@@ -79,29 +114,11 @@ class UserType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Email'
         ],
-        'FeedbackScore' => [
-            'type' => 'integer',
+        'EnterpriseSeller' => [
+            'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'FeedbackScore'
-        ],
-        'UniqueNegativeFeedbackCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UniqueNegativeFeedbackCount'
-        ],
-        'UniquePositiveFeedbackCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UniquePositiveFeedbackCount'
-        ],
-        'PositiveFeedbackPercent' => [
-            'type' => 'double',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PositiveFeedbackPercent'
+            'elementName' => 'EnterpriseSeller'
         ],
         'FeedbackPrivate' => [
             'type' => 'boolean',
@@ -115,23 +132,59 @@ class UserType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'FeedbackRatingStar'
         ],
+        'FeedbackScore' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'FeedbackScore'
+        ],
         'IDVerified' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'IDVerified'
         ],
-        'eBayGoodStanding' => [
-            'type' => 'boolean',
+        'Membership' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\MembershipDetailsType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'eBayGoodStanding'
+            'elementName' => 'Membership'
         ],
         'NewUser' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NewUser'
+        ],
+        'PayPalAccountLevel' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PayPalAccountLevel'
+        ],
+        'PayPalAccountStatus' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PayPalAccountStatus'
+        ],
+        'PayPalAccountType' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PayPalAccountType'
+        ],
+        'PositiveFeedbackPercent' => [
+            'type' => 'double',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PositiveFeedbackPercent'
+        ],
+        'QualifiesForSelling' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'QualifiesForSelling'
         ],
         'RegistrationAddress' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
@@ -145,17 +198,71 @@ class UserType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'RegistrationDate'
         ],
+        'SellerInfo' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SellerType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SellerInfo'
+        ],
+        'ShippingAddress' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingAddress'
+        ],
         'Site' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Site'
         ],
+        'StaticAlias' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'StaticAlias'
+        ],
         'Status' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Status'
+        ],
+        'TUVLevel' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TUVLevel'
+        ],
+        'UniqueNegativeFeedbackCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UniqueNegativeFeedbackCount'
+        ],
+        'UniqueNeutralFeedbackCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UniqueNeutralFeedbackCount'
+        ],
+        'UniquePositiveFeedbackCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UniquePositiveFeedbackCount'
+        ],
+        'UserAnonymized' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UserAnonymized'
+        ],
+        'UserFirstName' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UserFirstName'
         ],
         'UserID' => [
             'type' => 'string',
@@ -175,47 +282,11 @@ class UserType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'UserIDLastChanged'
         ],
-        'VATStatus' => [
+        'UserLastName' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'VATStatus'
-        ],
-        'BuyerInfo' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\BuyerType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BuyerInfo'
-        ],
-        'SellerInfo' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellerType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellerInfo'
-        ],
-        'BusinessRole' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BusinessRole'
-        ],
-        'PayPalAccountLevel' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PayPalAccountLevel'
-        ],
-        'PayPalAccountType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PayPalAccountType'
-        ],
-        'PayPalAccountStatus' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PayPalAccountStatus'
+            'elementName' => 'UserLastName'
         ],
         'UserSubscription' => [
             'type' => 'string',
@@ -223,98 +294,20 @@ class UserType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'UserSubscription'
         ],
-        'eBayWikiReadOnly' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'eBayWikiReadOnly'
-        ],
-        'TUVLevel' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TUVLevel'
-        ],
         'VATID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VATID'
         ],
-        'MotorsDealer' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MotorsDealer'
-        ],
-        'BiddingSummary' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\BiddingSummaryType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BiddingSummary'
-        ],
-        'UserAnonymized' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UserAnonymized'
-        ],
-        'UniqueNeutralFeedbackCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UniqueNeutralFeedbackCount'
-        ],
-        'EnterpriseSeller' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'EnterpriseSeller'
-        ],
-        'BillingEmail' => [
+        'VATStatus' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'BillingEmail'
-        ],
-        'QualifiesForSelling' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'QualifiesForSelling'
-        ],
-        'StaticAlias' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'StaticAlias'
-        ],
-        'ShippingAddress' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingAddress'
-        ],
-        'Membership' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MembershipDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Membership'
-        ],
-        'UserFirstName' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UserFirstName'
-        ],
-        'UserLastName' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UserLastName'
+            'elementName' => 'VATStatus'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -331,7 +324,7 @@ class UserType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

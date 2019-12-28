@@ -12,11 +12,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $DetailVersion
+ * @property integer $MaxCharactersPerName
+ * @property integer $MaxCharactersPerValue
  * @property integer $MaxItemSpecificsPerItem
  * @property integer $MaxValuesPerName
- * @property integer $MaxCharactersPerValue
- * @property integer $MaxCharactersPerName
- * @property string $DetailVersion
  * @property \DateTime $UpdateTime
  */
 class ItemSpecificDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -25,6 +25,24 @@ class ItemSpecificDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'DetailVersion' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DetailVersion'
+        ],
+        'MaxCharactersPerName' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MaxCharactersPerName'
+        ],
+        'MaxCharactersPerValue' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MaxCharactersPerValue'
+        ],
         'MaxItemSpecificsPerItem' => [
             'type' => 'integer',
             'repeatable' => false,
@@ -37,24 +55,6 @@ class ItemSpecificDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'MaxValuesPerName'
         ],
-        'MaxCharactersPerValue' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MaxCharactersPerValue'
-        ],
-        'MaxCharactersPerName' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MaxCharactersPerName'
-        ],
-        'DetailVersion' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DetailVersion'
-        ],
         'UpdateTime' => [
             'type' => 'DateTime',
             'repeatable' => false,
@@ -62,7 +62,7 @@ class ItemSpecificDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'UpdateTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -79,7 +79,7 @@ class ItemSpecificDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

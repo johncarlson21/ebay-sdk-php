@@ -12,19 +12,19 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $IncludeStockPhotoURL
- * @property boolean $UseStockPhotoURLAsGallery
- * @property string $StockPhotoURL
+ * @property \DTS\eBaySDK\Trading\Types\BrandMPNType $BrandMPN
  * @property string[] $Copyright
+ * @property string $EAN
+ * @property boolean $IncludeeBayProductDetails
+ * @property boolean $IncludeStockPhotoURL
+ * @property string $ISBN
  * @property string $ProductReferenceID
  * @property boolean $ReturnSearchResultOnDuplicates
- * @property string $ISBN
- * @property string $UPC
- * @property string $EAN
- * @property \DTS\eBaySDK\Trading\Types\BrandMPNType $BrandMPN
+ * @property string $StockPhotoURL
  * @property \DTS\eBaySDK\Trading\Types\TicketListingDetailsType $TicketListingDetails
+ * @property string $UPC
  * @property boolean $UseFirstProduct
- * @property boolean $IncludeeBayProductDetails
+ * @property boolean $UseStockPhotoURLAsGallery
  */
 class ProductListingDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,29 +32,41 @@ class ProductListingDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'IncludeStockPhotoURL' => [
-            'type' => 'boolean',
+        'BrandMPN' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\BrandMPNType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'IncludeStockPhotoURL'
-        ],
-        'UseStockPhotoURLAsGallery' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UseStockPhotoURLAsGallery'
-        ],
-        'StockPhotoURL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'StockPhotoURL'
+            'elementName' => 'BrandMPN'
         ],
         'Copyright' => [
             'type' => 'string',
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Copyright'
+        ],
+        'EAN' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'EAN'
+        ],
+        'IncludeeBayProductDetails' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeeBayProductDetails'
+        ],
+        'IncludeStockPhotoURL' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeStockPhotoURL'
+        ],
+        'ISBN' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ISBN'
         ],
         'ProductReferenceID' => [
             'type' => 'string',
@@ -68,29 +80,11 @@ class ProductListingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ReturnSearchResultOnDuplicates'
         ],
-        'ISBN' => [
+        'StockPhotoURL' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ISBN'
-        ],
-        'UPC' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UPC'
-        ],
-        'EAN' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'EAN'
-        ],
-        'BrandMPN' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\BrandMPNType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BrandMPN'
+            'elementName' => 'StockPhotoURL'
         ],
         'TicketListingDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\TicketListingDetailsType',
@@ -98,20 +92,26 @@ class ProductListingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'TicketListingDetails'
         ],
+        'UPC' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UPC'
+        ],
         'UseFirstProduct' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UseFirstProduct'
         ],
-        'IncludeeBayProductDetails' => [
+        'UseStockPhotoURLAsGallery' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'IncludeeBayProductDetails'
+            'elementName' => 'UseStockPhotoURLAsGallery'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -128,7 +128,7 @@ class ProductListingDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

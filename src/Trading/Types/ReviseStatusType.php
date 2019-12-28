@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $ItemRevised
  * @property boolean $BuyItNowAdded
  * @property boolean $BuyItNowLowered
+ * @property boolean $ItemRevised
  * @property boolean $ReserveLowered
  * @property boolean $ReserveRemoved
  */
@@ -24,12 +24,6 @@ class ReviseStatusType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemRevised' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemRevised'
-        ],
         'BuyItNowAdded' => [
             'type' => 'boolean',
             'repeatable' => false,
@@ -41,6 +35,12 @@ class ReviseStatusType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BuyItNowLowered'
+        ],
+        'ItemRevised' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemRevised'
         ],
         'ReserveLowered' => [
             'type' => 'boolean',
@@ -55,7 +55,7 @@ class ReviseStatusType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ReserveRemoved'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class ReviseStatusType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

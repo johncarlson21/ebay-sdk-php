@@ -12,27 +12,27 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $BuyerUserID
+ * @property \DateTime $DisputeCreatedTime
+ * @property \DTS\eBaySDK\Trading\Enums\DisputeCreditEligibilityCodeType $DisputeCreditEligibility
+ * @property \DTS\eBaySDK\Trading\Enums\DisputeExplanationCodeType $DisputeExplanation
  * @property string $DisputeID
+ * @property \DTS\eBaySDK\Trading\Types\DisputeMessageType[] $DisputeMessage
+ * @property \DateTime $DisputeModifiedTime
+ * @property \DTS\eBaySDK\Trading\Enums\DisputeReasonCodeType $DisputeReason
  * @property \DTS\eBaySDK\Trading\Enums\DisputeRecordTypeCodeType $DisputeRecordType
+ * @property \DTS\eBaySDK\Trading\Types\DisputeResolutionType[] $DisputeResolution
  * @property \DTS\eBaySDK\Trading\Enums\DisputeStateCodeType $DisputeState
  * @property \DTS\eBaySDK\Trading\Enums\DisputeStatusCodeType $DisputeStatus
- * @property \DTS\eBaySDK\Trading\Enums\TradingRoleCodeType $OtherPartyRole
+ * @property boolean $Escalation
+ * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
+ * @property string $OrderLineItemID
  * @property string $OtherPartyName
- * @property \DTS\eBaySDK\Trading\Enums\TradingRoleCodeType $UserRole
- * @property string $BuyerUserID
+ * @property \DTS\eBaySDK\Trading\Enums\TradingRoleCodeType $OtherPartyRole
+ * @property boolean $PurchaseProtection
  * @property string $SellerUserID
  * @property string $TransactionID
- * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
- * @property \DTS\eBaySDK\Trading\Enums\DisputeReasonCodeType $DisputeReason
- * @property \DTS\eBaySDK\Trading\Enums\DisputeExplanationCodeType $DisputeExplanation
- * @property \DTS\eBaySDK\Trading\Enums\DisputeCreditEligibilityCodeType $DisputeCreditEligibility
- * @property \DateTime $DisputeCreatedTime
- * @property \DateTime $DisputeModifiedTime
- * @property \DTS\eBaySDK\Trading\Types\DisputeResolutionType[] $DisputeResolution
- * @property \DTS\eBaySDK\Trading\Types\DisputeMessageType[] $DisputeMessage
- * @property boolean $Escalation
- * @property boolean $PurchaseProtection
- * @property string $OrderLineItemID
+ * @property \DTS\eBaySDK\Trading\Enums\TradingRoleCodeType $UserRole
  */
 class DisputeType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -40,17 +40,65 @@ class DisputeType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'BuyerUserID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BuyerUserID'
+        ],
+        'DisputeCreatedTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DisputeCreatedTime'
+        ],
+        'DisputeCreditEligibility' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DisputeCreditEligibility'
+        ],
+        'DisputeExplanation' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DisputeExplanation'
+        ],
         'DisputeID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DisputeID'
         ],
+        'DisputeMessage' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\DisputeMessageType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'DisputeMessage'
+        ],
+        'DisputeModifiedTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DisputeModifiedTime'
+        ],
+        'DisputeReason' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DisputeReason'
+        ],
         'DisputeRecordType' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DisputeRecordType'
+        ],
+        'DisputeResolution' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\DisputeResolutionType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'DisputeResolution'
         ],
         'DisputeState' => [
             'type' => 'string',
@@ -64,11 +112,23 @@ class DisputeType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DisputeStatus'
         ],
-        'OtherPartyRole' => [
+        'Escalation' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Escalation'
+        ],
+        'Item' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Item'
+        ],
+        'OrderLineItemID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'OtherPartyRole'
+            'elementName' => 'OrderLineItemID'
         ],
         'OtherPartyName' => [
             'type' => 'string',
@@ -76,17 +136,17 @@ class DisputeType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'OtherPartyName'
         ],
-        'UserRole' => [
+        'OtherPartyRole' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'UserRole'
+            'elementName' => 'OtherPartyRole'
         ],
-        'BuyerUserID' => [
-            'type' => 'string',
+        'PurchaseProtection' => [
+            'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'BuyerUserID'
+            'elementName' => 'PurchaseProtection'
         ],
         'SellerUserID' => [
             'type' => 'string',
@@ -100,74 +160,14 @@ class DisputeType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'TransactionID'
         ],
-        'Item' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Item'
-        ],
-        'DisputeReason' => [
+        'UserRole' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'DisputeReason'
-        ],
-        'DisputeExplanation' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DisputeExplanation'
-        ],
-        'DisputeCreditEligibility' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DisputeCreditEligibility'
-        ],
-        'DisputeCreatedTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DisputeCreatedTime'
-        ],
-        'DisputeModifiedTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DisputeModifiedTime'
-        ],
-        'DisputeResolution' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\DisputeResolutionType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'DisputeResolution'
-        ],
-        'DisputeMessage' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\DisputeMessageType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'DisputeMessage'
-        ],
-        'Escalation' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Escalation'
-        ],
-        'PurchaseProtection' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PurchaseProtection'
-        ],
-        'OrderLineItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'OrderLineItemID'
+            'elementName' => 'UserRole'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -184,7 +184,7 @@ class DisputeType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

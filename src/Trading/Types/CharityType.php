@@ -12,14 +12,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $CharityID
+ * @property boolean $CharityListing
  * @property string $CharityName
  * @property integer $CharityNumber
  * @property double $DonationPercent
- * @property string $CharityID
- * @property string $Mission
  * @property string $LogoURL
+ * @property string $Mission
  * @property \DTS\eBaySDK\Trading\Enums\CharityStatusCodeType $Status
- * @property boolean $CharityListing
  */
 class CharityType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -27,6 +27,18 @@ class CharityType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'CharityID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CharityID'
+        ],
+        'CharityListing' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CharityListing'
+        ],
         'CharityName' => [
             'type' => 'string',
             'repeatable' => false,
@@ -45,11 +57,11 @@ class CharityType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DonationPercent'
         ],
-        'CharityID' => [
+        'LogoURL' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'CharityID'
+            'elementName' => 'LogoURL'
         ],
         'Mission' => [
             'type' => 'string',
@@ -57,26 +69,14 @@ class CharityType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Mission'
         ],
-        'LogoURL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'LogoURL'
-        ],
         'Status' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Status'
-        ],
-        'CharityListing' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CharityListing'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -93,7 +93,7 @@ class CharityType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

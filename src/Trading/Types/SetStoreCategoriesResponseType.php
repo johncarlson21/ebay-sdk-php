@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $TaskID
- * @property \DTS\eBaySDK\Trading\Enums\TaskStatusCodeType $Status
  * @property \DTS\eBaySDK\Trading\Types\StoreCustomCategoryArrayType $CustomCategory
+ * @property \DTS\eBaySDK\Trading\Enums\TaskStatusCodeType $Status
+ * @property integer $TaskID
  */
 class SetStoreCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -22,11 +22,11 @@ class SetStoreCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'TaskID' => [
-            'type' => 'integer',
+        'CustomCategory' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomCategoryArrayType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'TaskID'
+            'elementName' => 'CustomCategory'
         ],
         'Status' => [
             'type' => 'string',
@@ -34,14 +34,14 @@ class SetStoreCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
             'attribute' => false,
             'elementName' => 'Status'
         ],
-        'CustomCategory' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomCategoryArrayType',
+        'TaskID' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'CustomCategory'
+            'elementName' => 'TaskID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class SetStoreCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

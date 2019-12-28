@@ -12,17 +12,18 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Enums\AccountEntrySortTypeCodeType $AccountEntrySortType
  * @property \DTS\eBaySDK\Trading\Enums\AccountHistorySelectionCodeType $AccountHistorySelection
- * @property \DateTime $InvoiceDate
  * @property \DateTime $BeginDate
+ * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $Currency
  * @property \DateTime $EndDate
- * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
  * @property boolean $ExcludeBalance
  * @property boolean $ExcludeSummary
  * @property boolean $IncludeConversionRate
- * @property \DTS\eBaySDK\Trading\Enums\AccountEntrySortTypeCodeType $AccountEntrySortType
- * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $Currency
+ * @property \DateTime $InvoiceDate
  * @property string $ItemID
+ * @property string $OrderID
+ * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
  */
 class GetAccountRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -30,17 +31,17 @@ class GetAccountRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTy
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'AccountEntrySortType' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'AccountEntrySortType'
+        ],
         'AccountHistorySelection' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AccountHistorySelection'
-        ],
-        'InvoiceDate' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'InvoiceDate'
         ],
         'BeginDate' => [
             'type' => 'DateTime',
@@ -48,17 +49,17 @@ class GetAccountRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTy
             'attribute' => false,
             'elementName' => 'BeginDate'
         ],
+        'Currency' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Currency'
+        ],
         'EndDate' => [
             'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EndDate'
-        ],
-        'Pagination' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Pagination'
         ],
         'ExcludeBalance' => [
             'type' => 'boolean',
@@ -78,26 +79,32 @@ class GetAccountRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTy
             'attribute' => false,
             'elementName' => 'IncludeConversionRate'
         ],
-        'AccountEntrySortType' => [
-            'type' => 'string',
+        'InvoiceDate' => [
+            'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'AccountEntrySortType'
-        ],
-        'Currency' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Currency'
+            'elementName' => 'InvoiceDate'
         ],
         'ItemID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
+        ],
+        'OrderID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'OrderID'
+        ],
+        'Pagination' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Pagination'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -114,7 +121,7 @@ class GetAccountRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTy
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetAccountRequest';
         }

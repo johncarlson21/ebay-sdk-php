@@ -12,12 +12,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $CurrencyID
- * @property \DTS\eBaySDK\Trading\Enums\CombinedPaymentPeriodCodeType $CombinedDuration
- * @property \DTS\eBaySDK\Trading\Enums\ModifyActionCodeType $ModifyActionCode
- * @property \DTS\eBaySDK\Trading\Types\FlatShippingDiscountType $FlatShippingDiscount
- * @property \DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType $CalculatedShippingDiscount
  * @property \DTS\eBaySDK\Trading\Types\CalculatedHandlingDiscountType $CalculatedHandlingDiscount
+ * @property \DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType $CalculatedShippingDiscount
+ * @property \DTS\eBaySDK\Trading\Enums\CombinedPaymentPeriodCodeType $CombinedDuration
+ * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $CurrencyID
+ * @property \DTS\eBaySDK\Trading\Types\FlatShippingDiscountType $FlatShippingDiscount
+ * @property \DTS\eBaySDK\Trading\Enums\ModifyActionCodeType $ModifyActionCode
  * @property \DTS\eBaySDK\Trading\Types\PromotionalShippingDiscountDetailsType $PromotionalShippingDiscountDetails
  */
 class SetShippingDiscountProfilesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -26,29 +26,11 @@ class SetShippingDiscountProfilesRequestType extends \DTS\eBaySDK\Trading\Types\
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'CurrencyID' => [
-            'type' => 'string',
+        'CalculatedHandlingDiscount' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\CalculatedHandlingDiscountType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'CurrencyID'
-        ],
-        'CombinedDuration' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CombinedDuration'
-        ],
-        'ModifyActionCode' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ModifyActionCode'
-        ],
-        'FlatShippingDiscount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\FlatShippingDiscountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FlatShippingDiscount'
+            'elementName' => 'CalculatedHandlingDiscount'
         ],
         'CalculatedShippingDiscount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType',
@@ -56,11 +38,29 @@ class SetShippingDiscountProfilesRequestType extends \DTS\eBaySDK\Trading\Types\
             'attribute' => false,
             'elementName' => 'CalculatedShippingDiscount'
         ],
-        'CalculatedHandlingDiscount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\CalculatedHandlingDiscountType',
+        'CombinedDuration' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'CalculatedHandlingDiscount'
+            'elementName' => 'CombinedDuration'
+        ],
+        'CurrencyID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CurrencyID'
+        ],
+        'FlatShippingDiscount' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\FlatShippingDiscountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'FlatShippingDiscount'
+        ],
+        'ModifyActionCode' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ModifyActionCode'
         ],
         'PromotionalShippingDiscountDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PromotionalShippingDiscountDetailsType',
@@ -69,7 +69,7 @@ class SetShippingDiscountProfilesRequestType extends \DTS\eBaySDK\Trading\Types\
             'elementName' => 'PromotionalShippingDiscountDetails'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class SetShippingDiscountProfilesRequestType extends \DTS\eBaySDK\Trading\Types\
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'SetShippingDiscountProfilesRequest';
         }

@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $SearchKeywords
- * @property integer $StoreCategoryID
- * @property \DTS\eBaySDK\Trading\Enums\ListingTypeCodeType $ListingType
- * @property \DTS\eBaySDK\Trading\Enums\StoreItemListSortOrderCodeType $SearchSortOrder
- * @property \DTS\eBaySDK\Trading\Types\AmountType $MinPrice
- * @property \DTS\eBaySDK\Trading\Types\AmountType $MaxPrice
  * @property string[] $FavoriteItemID
+ * @property \DTS\eBaySDK\Trading\Enums\ListingTypeCodeType $ListingType
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $MaxPrice
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $MinPrice
+ * @property string $SearchKeywords
+ * @property \DTS\eBaySDK\Trading\Enums\StoreItemListSortOrderCodeType $SearchSortOrder
+ * @property integer $StoreCategoryID
  */
 class SellerFavoriteItemPreferencesType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -26,17 +26,11 @@ class SellerFavoriteItemPreferencesType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'SearchKeywords' => [
+        'FavoriteItemID' => [
             'type' => 'string',
-            'repeatable' => false,
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'SearchKeywords'
-        ],
-        'StoreCategoryID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'StoreCategoryID'
+            'elementName' => 'FavoriteItemID'
         ],
         'ListingType' => [
             'type' => 'string',
@@ -44,11 +38,11 @@ class SellerFavoriteItemPreferencesType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ListingType'
         ],
-        'SearchSortOrder' => [
-            'type' => 'string',
+        'MaxPrice' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'SearchSortOrder'
+            'elementName' => 'MaxPrice'
         ],
         'MinPrice' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -56,20 +50,26 @@ class SellerFavoriteItemPreferencesType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'MinPrice'
         ],
-        'MaxPrice' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+        'SearchKeywords' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'MaxPrice'
+            'elementName' => 'SearchKeywords'
         ],
-        'FavoriteItemID' => [
+        'SearchSortOrder' => [
             'type' => 'string',
-            'repeatable' => true,
+            'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'FavoriteItemID'
+            'elementName' => 'SearchSortOrder'
+        ],
+        'StoreCategoryID' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'StoreCategoryID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class SellerFavoriteItemPreferencesType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

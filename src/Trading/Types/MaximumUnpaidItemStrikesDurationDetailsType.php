@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\PeriodCodeType $Period
  * @property string $Description
+ * @property \DTS\eBaySDK\Trading\Enums\PeriodCodeType $Period
  */
 class MaximumUnpaidItemStrikesDurationDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -21,20 +21,20 @@ class MaximumUnpaidItemStrikesDurationDetailsType extends \DTS\eBaySDK\Types\Bas
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Period' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Period'
-        ],
         'Description' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Description'
+        ],
+        'Period' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Period'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class MaximumUnpaidItemStrikesDurationDetailsType extends \DTS\eBaySDK\Types\Bas
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

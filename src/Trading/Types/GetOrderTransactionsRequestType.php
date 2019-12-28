@@ -12,10 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property boolean $IncludeFinalValueFees
  * @property \DTS\eBaySDK\Trading\Types\ItemTransactionIDArrayType $ItemTransactionIDArray
  * @property \DTS\eBaySDK\Trading\Types\OrderIDArrayType $OrderIDArray
- * @property \DTS\eBaySDK\Trading\Enums\TransactionPlatformCodeType $Platform
- * @property boolean $IncludeFinalValueFees
  */
 class GetOrderTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -23,6 +22,12 @@ class GetOrderTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'IncludeFinalValueFees' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeFinalValueFees'
+        ],
         'ItemTransactionIDArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemTransactionIDArrayType',
             'repeatable' => false,
@@ -34,21 +39,9 @@ class GetOrderTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OrderIDArray'
-        ],
-        'Platform' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Platform'
-        ],
-        'IncludeFinalValueFees' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeFinalValueFees'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +58,7 @@ class GetOrderTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetOrderTransactionsRequest';
         }

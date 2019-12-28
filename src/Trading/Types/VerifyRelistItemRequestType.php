@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
  * @property string[] $DeletedField
+ * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
  */
 class VerifyRelistItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -21,20 +21,20 @@ class VerifyRelistItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Item' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Item'
-        ],
         'DeletedField' => [
             'type' => 'string',
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'DeletedField'
+        ],
+        'Item' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Item'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class VerifyRelistItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'VerifyRelistItemRequest';
         }

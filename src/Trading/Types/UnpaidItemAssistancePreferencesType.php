@@ -12,12 +12,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $DelayBeforeOpeningDispute
- * @property boolean $OptInStatus
- * @property boolean $AutoRelist
- * @property boolean $RemoveAllExcludedUsers
- * @property string[] $ExcludedUser
  * @property boolean $AutoOptDonationRefund
+ * @property boolean $AutoRelist
+ * @property integer $DelayBeforeOpeningDispute
+ * @property string[] $ExcludedUser
+ * @property boolean $OptInStatus
+ * @property boolean $RemoveAllExcludedUsers
  */
 class UnpaidItemAssistancePreferencesType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -25,17 +25,11 @@ class UnpaidItemAssistancePreferencesType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'DelayBeforeOpeningDispute' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DelayBeforeOpeningDispute'
-        ],
-        'OptInStatus' => [
+        'AutoOptDonationRefund' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'OptInStatus'
+            'elementName' => 'AutoOptDonationRefund'
         ],
         'AutoRelist' => [
             'type' => 'boolean',
@@ -43,11 +37,11 @@ class UnpaidItemAssistancePreferencesType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'AutoRelist'
         ],
-        'RemoveAllExcludedUsers' => [
-            'type' => 'boolean',
+        'DelayBeforeOpeningDispute' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'RemoveAllExcludedUsers'
+            'elementName' => 'DelayBeforeOpeningDispute'
         ],
         'ExcludedUser' => [
             'type' => 'string',
@@ -55,14 +49,20 @@ class UnpaidItemAssistancePreferencesType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ExcludedUser'
         ],
-        'AutoOptDonationRefund' => [
+        'OptInStatus' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'AutoOptDonationRefund'
+            'elementName' => 'OptInStatus'
+        ],
+        'RemoveAllExcludedUsers' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'RemoveAllExcludedUsers'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -79,7 +79,7 @@ class UnpaidItemAssistancePreferencesType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }
