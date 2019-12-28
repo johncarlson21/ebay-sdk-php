@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class StoreItemListLayoutCodeType
+use MyCLabs\Enum\Enum;
+
+class StoreItemListLayoutCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_GALLERY_VIEW = 'GalleryView';
-    const C_LIST_VIEW = 'ListView';
+    private const CustomCode = 'CustomCode';
+    private const GalleryView = 'GalleryView';
+    private const ListView = 'ListView';
+
 }

@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class AspectUsageCodeType
+use MyCLabs\Enum\Enum;
+
+class AspectUsageCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_INSTANCE = 'Instance';
-    const C_PRODUCT = 'Product';
+    private const CustomCode = 'CustomCode';
+    private const Instance = 'Instance';
+    private const Product = 'Product';
+
 }

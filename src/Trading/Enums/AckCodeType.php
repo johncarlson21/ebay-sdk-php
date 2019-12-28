@@ -10,11 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class AckCodeType
+use MyCLabs\Enum\Enum;
+
+class AckCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FAILURE = 'Failure';
-    const C_PARTIAL_FAILURE = 'PartialFailure';
-    const C_SUCCESS = 'Success';
-    const C_WARNING = 'Warning';
+    private const CustomCode = 'CustomCode';
+    private const Failure = 'Failure';
+    private const PartialFailure = 'PartialFailure';
+    private const Success = 'Success';
+    private const Warning = 'Warning';
+
 }

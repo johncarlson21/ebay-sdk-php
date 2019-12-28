@@ -10,10 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class GallerySortFilterCodeType
+use MyCLabs\Enum\Enum;
+
+class GallerySortFilterCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_SHOW_ANY_ITEMS = 'ShowAnyItems';
-    const C_SHOW_ITEMS_WITH_GALLERY_IMAGES_FIRST = 'ShowItemsWithGalleryImagesFirst';
-    const C_SHOW_ONLY_ITEMS_WITH_GALLERY_IMAGES = 'ShowOnlyItemsWithGalleryImages';
+
 }

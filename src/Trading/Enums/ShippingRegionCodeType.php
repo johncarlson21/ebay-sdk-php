@@ -10,21 +10,24 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ShippingRegionCodeType
+use MyCLabs\Enum\Enum;
+
+class ShippingRegionCodeType extends Enum 
 {
-    const C_AFRICA = 'Africa';
-    const C_AMERICAS = 'Americas';
-    const C_ASIA = 'Asia';
-    const C_CARIBBEAN = 'Caribbean';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_EUROPE = 'Europe';
-    const C_EUROPEAN_UNION = 'EuropeanUnion';
-    const C_LATIN_AMERICA = 'LatinAmerica';
-    const C_MIDDLE_EAST = 'MiddleEast';
-    const C_NONE = 'None';
-    const C_NORTH_AMERICA = 'NorthAmerica';
-    const C_OCEANIA = 'Oceania';
-    const C_SOUTH_AMERICA = 'SouthAmerica';
-    const C_WILL_NOT_SHIP = 'WillNotShip';
-    const C_WORLDWIDE = 'Worldwide';
+    private const Africa = 'Africa';
+    private const Americas = 'Americas';
+    private const Asia = 'Asia';
+    private const Caribbean = 'Caribbean';
+    private const CustomCode = 'CustomCode';
+    private const Europe = 'Europe';
+    private const EuropeanUnion = 'EuropeanUnion';
+    private const LatinAmerica = 'LatinAmerica';
+    private const MiddleEast = 'MiddleEast';
+    private const None = 'None';
+    private const NorthAmerica = 'NorthAmerica';
+    private const Oceania = 'Oceania';
+    private const SouthAmerica = 'SouthAmerica';
+    private const WillNotShip = 'WillNotShip';
+    private const Worldwide = 'Worldwide';
+
 }

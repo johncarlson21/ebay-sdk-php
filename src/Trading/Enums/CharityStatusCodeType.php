@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class CharityStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class CharityStatusCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_NO_LONGER_VALID = 'NoLongerValid';
-    const C_VALID = 'Valid';
+    private const CustomCode = 'CustomCode';
+    private const NoLongerValid = 'NoLongerValid';
+    private const Valid = 'Valid';
+
 }

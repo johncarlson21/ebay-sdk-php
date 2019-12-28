@@ -10,12 +10,15 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SelectionModeCodeType
+use MyCLabs\Enum\Enum;
+
+class SelectionModeCodeType extends Enum 
 {
-    const C_AUTOMATIC = 'Automatic';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FREE_TEXT = 'FreeText';
-    const C_MANUAL = 'Manual';
-    const C_PREFILLED = 'Prefilled';
-    const C_SELECTION_ONLY = 'SelectionOnly';
+    private const Automatic = 'Automatic';
+    private const CustomCode = 'CustomCode';
+    private const FreeText = 'FreeText';
+    private const Manual = 'Manual';
+    private const Prefilled = 'Prefilled';
+    private const SelectionOnly = 'SelectionOnly';
+
 }

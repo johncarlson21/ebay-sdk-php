@@ -10,12 +10,15 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class QuantityOperatorCodeType
+use MyCLabs\Enum\Enum;
+
+class QuantityOperatorCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_EQUAL = 'Equal';
-    const C_GREATER_THAN = 'GreaterThan';
-    const C_GREATER_THAN_OR_EQUAL = 'GreaterThanOrEqual';
-    const C_LESS_THAN = 'LessThan';
-    const C_LESS_THAN_OR_EQUAL = 'LessThanOrEqual';
+    private const CustomCode = 'CustomCode';
+    private const Equal = 'Equal';
+    private const GreaterThan = 'GreaterThan';
+    private const GreaterThanOrEqual = 'GreaterThanOrEqual';
+    private const LessThan = 'LessThan';
+    private const LessThanOrEqual = 'LessThanOrEqual';
+
 }

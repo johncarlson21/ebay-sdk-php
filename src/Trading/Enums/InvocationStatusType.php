@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class InvocationStatusType
+use MyCLabs\Enum\Enum;
+
+class InvocationStatusType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FAILURE = 'Failure';
-    const C_IN_PROGRESS = 'InProgress';
-    const C_SUCCESS = 'Success';
+    private const CustomCode = 'CustomCode';
+    private const Failure = 'Failure';
+    private const InProgress = 'InProgress';
+    private const Success = 'Success';
+
 }

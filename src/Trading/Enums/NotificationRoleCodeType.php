@@ -10,11 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class NotificationRoleCodeType
+use MyCLabs\Enum\Enum;
+
+class NotificationRoleCodeType extends Enum 
 {
-    const C_APPLICATION = 'Application';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_EVENT = 'Event';
-    const C_USER = 'User';
-    const C_USER_DATA = 'UserData';
+    private const Application = 'Application';
+    private const CustomCode = 'CustomCode';
+    private const Event = 'Event';
+    private const User = 'User';
+    private const UserData = 'UserData';
+
 }

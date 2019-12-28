@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class MinimumAdvertisedPriceExposureCodeType
+use MyCLabs\Enum\Enum;
+
+class MinimumAdvertisedPriceExposureCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DURING_CHECKOUT = 'DuringCheckout';
-    const C_NONE = 'None';
-    const C_PRE_CHECKOUT = 'PreCheckout';
+    private const CustomCode = 'CustomCode';
+    private const DuringCheckout = 'DuringCheckout';
+    private const None = 'None';
+    private const PreCheckout = 'PreCheckout';
+
 }

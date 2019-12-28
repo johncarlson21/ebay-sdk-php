@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ListingSubtypeCodeType
+use MyCLabs\Enum\Enum;
+
+class ListingSubtypeCodeType extends Enum 
 {
-    const C_CLASSIFIED_AD = 'ClassifiedAd';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_LOCAL_MARKET_BEST_OFFER_ONLY = 'LocalMarketBestOfferOnly';
+    private const ClassifiedAd = 'ClassifiedAd';
+    private const CustomCode = 'CustomCode';
+    private const LocalMarketBestOfferOnly = 'LocalMarketBestOfferOnly';
+
 }

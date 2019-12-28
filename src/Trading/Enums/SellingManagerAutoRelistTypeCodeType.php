@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SellingManagerAutoRelistTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class SellingManagerAutoRelistTypeCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_RELIST_CONTINUOUSLY = 'RelistContinuously';
-    const C_RELIST_CONTINUOUSLY_UNTIL_SOLD = 'RelistContinuouslyUntilSold';
-    const C_RELIST_ONCE_IF_NOT_SOLD = 'RelistOnceIfNotSold';
+    private const CustomCode = 'CustomCode';
+    private const RelistContinuously = 'RelistContinuously';
+    private const RelistContinuouslyUntilSold = 'RelistContinuouslyUntilSold';
+    private const RelistOnceIfNotSold = 'RelistOnceIfNotSold';
+
 }

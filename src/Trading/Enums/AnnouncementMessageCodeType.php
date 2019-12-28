@@ -10,11 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class AnnouncementMessageCodeType
+use MyCLabs\Enum\Enum;
+
+class AnnouncementMessageCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DEPRECATION = 'Deprecation';
-    const C_DEPRECATION_AND_MAPPING = 'DeprecationAndMapping';
-    const C_MAPPING = 'Mapping';
-    const C_NONE = 'None';
+    private const CustomCode = 'CustomCode';
+    private const Deprecation = 'Deprecation';
+    private const DeprecationAndMapping = 'DeprecationAndMapping';
+    private const Mapping = 'Mapping';
+    private const None = 'None';
+
 }

@@ -10,11 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class GalleryTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class GalleryTypeCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FEATURED = 'Featured';
-    const C_GALLERY = 'Gallery';
-    const C_NONE = 'None';
-    const C_PLUS = 'Plus';
+    private const CustomCode = 'CustomCode';
+    private const Gallery = 'Gallery';
+    private const None = 'None';
+    private const Plus = 'Plus';
+
 }

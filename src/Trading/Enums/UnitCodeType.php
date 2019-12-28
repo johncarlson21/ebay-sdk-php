@@ -10,15 +10,18 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class UnitCodeType
+use MyCLabs\Enum\Enum;
+
+class UnitCodeType extends Enum 
 {
-    const C_CM = 'cm';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FT = 'ft';
-    const C_GM = 'gm';
-    const C_INCHES = 'inches';
-    const C_KG = 'kg';
-    const C_LBS = 'lbs';
-    const C_MM = 'mm';
-    const C_OZ = 'oz';
+    private const cm = 'cm';
+    private const CustomCode = 'CustomCode';
+    private const ft = 'ft';
+    private const gm = 'gm';
+    private const inches = 'inches';
+    private const kg = 'kg';
+    private const lbs = 'lbs';
+    private const mm = 'mm';
+    private const oz = 'oz';
+
 }

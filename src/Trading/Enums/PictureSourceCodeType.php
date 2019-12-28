@@ -10,10 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class PictureSourceCodeType
+use MyCLabs\Enum\Enum;
+
+class PictureSourceCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_EPS = 'EPS';
-    const C_PICTURE_MANAGER = 'PictureManager';
-    const C_VENDOR = 'Vendor';
+    private const CustomCode = 'CustomCode';
+    private const EPS = 'EPS';
+    private const Vendor = 'Vendor';
+
 }

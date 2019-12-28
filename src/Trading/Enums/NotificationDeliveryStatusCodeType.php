@@ -10,11 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class NotificationDeliveryStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class NotificationDeliveryStatusCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DELIVERED = 'Delivered';
-    const C_FAILED = 'Failed';
-    const C_MARKED_DOWN = 'MarkedDown';
-    const C_REJECTED = 'Rejected';
+
 }

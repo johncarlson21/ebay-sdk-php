@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ReturnsAcceptedOptionsCodeType
+use MyCLabs\Enum\Enum;
+
+class ReturnsAcceptedOptionsCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_RETURNS_ACCEPTED = 'ReturnsAccepted';
-    const C_RETURNS_NOT_ACCEPTED = 'ReturnsNotAccepted';
+    private const CustomCode = 'CustomCode';
+    private const ReturnsAccepted = 'ReturnsAccepted';
+    private const ReturnsNotAccepted = 'ReturnsNotAccepted';
+
 }

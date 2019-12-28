@@ -10,9 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class AddressRecordTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class AddressRecordTypeCodeType extends Enum 
 {
-    const C_BUSINESS = 'Business';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_RESIDENTIAL = 'Residential';
+
 }

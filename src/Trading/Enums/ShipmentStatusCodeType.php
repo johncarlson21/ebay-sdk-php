@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ShipmentStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class ShipmentStatusCodeType extends Enum 
 {
-    const C_ACTIVE = 'Active';
-    const C_CANCELED = 'Canceled';
-    const C_CUSTOM_CODE = 'CustomCode';
+    private const Active = 'Active';
+    private const Canceled = 'Canceled';
+    private const CustomCode = 'CustomCode';
+
 }

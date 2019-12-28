@@ -10,14 +10,17 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class DayOfWeekCodeType
+use MyCLabs\Enum\Enum;
+
+class DayOfWeekCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FRIDAY = 'Friday';
-    const C_MONDAY = 'Monday';
-    const C_SATURDAY = 'Saturday';
-    const C_SUNDAY = 'Sunday';
-    const C_THURSDAY = 'Thursday';
-    const C_TUESDAY = 'Tuesday';
-    const C_WEDNESDAY = 'Wednesday';
+    private const CustomCode = 'CustomCode';
+    private const Friday = 'Friday';
+    private const Monday = 'Monday';
+    private const Saturday = 'Saturday';
+    private const Sunday = 'Sunday';
+    private const Thursday = 'Thursday';
+    private const Tuesday = 'Tuesday';
+    private const Wednesday = 'Wednesday';
+
 }

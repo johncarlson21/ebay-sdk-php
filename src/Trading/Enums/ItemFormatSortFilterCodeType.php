@@ -10,11 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ItemFormatSortFilterCodeType
+use MyCLabs\Enum\Enum;
+
+class ItemFormatSortFilterCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_SHOW_ANY_ITEMS = 'ShowAnyItems';
-    const C_SHOW_ITEMS_WITHBIN_FIRST = 'ShowItemsWithBINFirst';
-    const C_SHOW_ONLY_ITEMS_WITHBIN = 'ShowOnlyItemsWithBIN';
-    const C_SHOW_ONLY_STORE_ITEMS = 'ShowOnlyStoreItems';
+
 }

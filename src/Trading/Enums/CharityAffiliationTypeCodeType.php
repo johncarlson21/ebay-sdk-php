@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class CharityAffiliationTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class CharityAffiliationTypeCodeType extends Enum 
 {
-    const C_COMMUNITY = 'Community';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DIRECT = 'Direct';
-    const C_REMOVE = 'Remove';
+    private const Community = 'Community';
+    private const CustomCode = 'CustomCode';
+    private const Direct = 'Direct';
+    private const Remove = 'Remove';
+
 }

@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class PictureFormatCodeType
+use MyCLabs\Enum\Enum;
+
+class PictureFormatCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_GIF = 'GIF';
-    const C_JPG = 'JPG';
-    const C_PNG = 'PNG';
+    private const CustomCode = 'CustomCode';
+    private const GIF = 'GIF';
+    private const JPG = 'JPG';
+    private const PNG = 'PNG';
+
 }

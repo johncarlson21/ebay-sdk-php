@@ -10,11 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class CheckoutStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class CheckoutStatusCodeType extends Enum 
 {
-    const C_BUYER_REQUESTS_TOTAL = 'BuyerRequestsTotal';
-    const C_CHECKOUT_COMPLETE = 'CheckoutComplete';
-    const C_CHECKOUT_INCOMPLETE = 'CheckoutIncomplete';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_SELLER_RESPONDED = 'SellerResponded';
+    private const BuyerRequestsTotal = 'BuyerRequestsTotal';
+    private const CheckoutComplete = 'CheckoutComplete';
+    private const CheckoutIncomplete = 'CheckoutIncomplete';
+    private const CustomCode = 'CustomCode';
+    private const SellerResponded = 'SellerResponded';
+
 }

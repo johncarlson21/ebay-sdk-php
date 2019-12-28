@@ -10,11 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class OrderStatusFilterCodeType
+use MyCLabs\Enum\Enum;
+
+class OrderStatusFilterCodeType extends Enum 
 {
-    const C_ALL = 'All';
-    const C_AWAITING_PAYMENT = 'AwaitingPayment';
-    const C_AWAITING_SHIPMENT = 'AwaitingShipment';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_PAID_AND_SHIPPED = 'PaidAndShipped';
+    private const All = 'All';
+    private const AwaitingPayment = 'AwaitingPayment';
+    private const AwaitingShipment = 'AwaitingShipment';
+    private const CustomCode = 'CustomCode';
+    private const PaidAndShipped = 'PaidAndShipped';
+
 }

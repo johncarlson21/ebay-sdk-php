@@ -10,8 +10,11 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class DeliveryMethodCodeType
+use MyCLabs\Enum\Enum;
+
+class DeliveryMethodCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_EMAIL = 'Email';
+    private const CustomCode = 'CustomCode';
+    private const Email = 'Email';
+
 }

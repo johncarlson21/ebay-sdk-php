@@ -10,13 +10,16 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class AdFormatEnabledCodeType
+use MyCLabs\Enum\Enum;
+
+class AdFormatEnabledCodeType extends Enum 
 {
-    const C_CLASSIFIED_AD_ENABLED = 'ClassifiedAdEnabled';
-    const C_CLASSIFIED_AD_ONLY = 'ClassifiedAdOnly';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DISABLED = 'Disabled';
-    const C_ENABLED = 'Enabled';
-    const C_LOCAL_MARKET_BEST_OFFER_ONLY = 'LocalMarketBestOfferOnly';
-    const C_ONLY = 'Only';
+    private const ClassifiedAdEnabled = 'ClassifiedAdEnabled';
+    private const ClassifiedAdOnly = 'ClassifiedAdOnly';
+    private const CustomCode = 'CustomCode';
+    private const Disabled = 'Disabled';
+    private const Enabled = 'Enabled';
+    private const LocalMarketBestOfferOnly = 'LocalMarketBestOfferOnly';
+    private const Only = 'Only';
+
 }

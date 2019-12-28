@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class USPSRateOptionCodeType
+use MyCLabs\Enum\Enum;
+
+class USPSRateOptionCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_USPS_DISCOUNTED = 'USPSDiscounted';
-    const C_USPS_RETAIL = 'USPSRetail';
+    private const CustomCode = 'CustomCode';
+    private const USPSDiscounted = 'USPSDiscounted';
+    private const USPSRetail = 'USPSRetail';
+
 }

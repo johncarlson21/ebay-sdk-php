@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class CompleteStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class CompleteStatusCodeType extends Enum 
 {
-    const C_COMPLETE = 'Complete';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_INCOMPLETE = 'Incomplete';
-    const C_PENDING = 'Pending';
+    private const Complete = 'Complete';
+    private const CustomCode = 'CustomCode';
+    private const Incomplete = 'Incomplete';
+    private const Pending = 'Pending';
+
 }

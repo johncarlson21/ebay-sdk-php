@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class FeedbackSummaryPeriodCodeType
+use MyCLabs\Enum\Enum;
+
+class FeedbackSummaryPeriodCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FIFTY_TWO_WEEKS = 'FiftyTwoWeeks';
-    const C_THIRTY_DAYS = 'ThirtyDays';
+    private const CustomCode = 'CustomCode';
+    private const FiftyTwoWeeks = 'FiftyTwoWeeks';
+    private const ThirtyDays = 'ThirtyDays';
+
 }

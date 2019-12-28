@@ -10,12 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class PictureManagerActionCodeType
+use MyCLabs\Enum\Enum;
+
+class PictureManagerActionCodeType extends Enum 
 {
-    const C_ADD = 'Add';
-    const C_CHANGE = 'Change';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DELETE = 'Delete';
-    const C_MOVE = 'Move';
-    const C_RENAME = 'Rename';
+
 }

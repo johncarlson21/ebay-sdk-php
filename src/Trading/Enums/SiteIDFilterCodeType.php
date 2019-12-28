@@ -10,12 +10,15 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SiteIDFilterCodeType
+use MyCLabs\Enum\Enum;
+
+class SiteIDFilterCodeType extends Enum 
 {
-    const C_AVAILABLE_IN_COUNTRY_IMPLIED = 'AvailableInCountryImplied';
-    const C_BELGIUM_LISTING = 'BelgiumListing';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_LISTED_IN_CURRENCY_IMPLIED = 'ListedInCurrencyImplied';
-    const C_LOCATED_IN_COUNTRY_IMPLIED = 'LocatedInCountryImplied';
-    const C_SITE_IMPLIED = 'SiteImplied';
+    private const AvailableInCountryImplied = 'AvailableInCountryImplied';
+    private const BelgiumListing = 'BelgiumListing';
+    private const CustomCode = 'CustomCode';
+    private const ListedInCurrencyImplied = 'ListedInCurrencyImplied';
+    private const LocatedInCountryImplied = 'LocatedInCountryImplied';
+    private const SiteImplied = 'SiteImplied';
+
 }

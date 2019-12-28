@@ -10,9 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class PromotionItemSelectionCodeType
+use MyCLabs\Enum\Enum;
+
+class PromotionItemSelectionCodeType extends Enum 
 {
-    const C_AUTOMATIC = 'Automatic';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_MANUAL = 'Manual';
+
 }

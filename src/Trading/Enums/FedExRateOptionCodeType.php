@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class FedExRateOptionCodeType
+use MyCLabs\Enum\Enum;
+
+class FedExRateOptionCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FED_EX_COUNTER = 'FedExCounter';
-    const C_FED_EX_DISCOUNTED = 'FedExDiscounted';
-    const C_FED_EX_STANDARD_LIST = 'FedExStandardList';
+    private const CustomCode = 'CustomCode';
+    private const FedExCounter = 'FedExCounter';
+    private const FedExDiscounted = 'FedExDiscounted';
+    private const FedExStandardList = 'FedExStandardList';
+
 }

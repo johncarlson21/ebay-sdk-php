@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class PictureUploadPolicyCodeType
+use MyCLabs\Enum\Enum;
+
+class PictureUploadPolicyCodeType extends Enum 
 {
-    const C_ADD = 'Add';
-    const C_CLEAR_AND_ADD = 'ClearAndAdd';
-    const C_CUSTOM_CODE = 'CustomCode';
+    private const Add = 'Add';
+    private const ClearAndAdd = 'ClearAndAdd';
+    private const CustomCode = 'CustomCode';
+
 }

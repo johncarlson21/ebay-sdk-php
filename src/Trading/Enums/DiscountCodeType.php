@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class DiscountCodeType
+use MyCLabs\Enum\Enum;
+
+class DiscountCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_PERCENTAGE = 'Percentage';
-    const C_PRICE = 'Price';
+    private const CustomCode = 'CustomCode';
+    private const Percentage = 'Percentage';
+    private const Price = 'Price';
+
 }

@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class DepositTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class DepositTypeCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FAST_DEPOSIT = 'FastDeposit';
-    const C_NONE = 'None';
-    const C_OTHER_METHOD = 'OtherMethod';
+    private const CustomCode = 'CustomCode';
+    private const FastDeposit = 'FastDeposit';
+    private const None = 'None';
+    private const OtherMethod = 'OtherMethod';
+
 }

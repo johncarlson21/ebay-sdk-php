@@ -10,8 +10,11 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class NotificationEventPropertyNameCodeType
+use MyCLabs\Enum\Enum;
+
+class NotificationEventPropertyNameCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_TIME_LEFT = 'TimeLeft';
+    private const CustomCode = 'CustomCode';
+    private const TimeLeft = 'TimeLeft';
+
 }

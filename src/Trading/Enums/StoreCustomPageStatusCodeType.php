@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class StoreCustomPageStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class StoreCustomPageStatusCodeType extends Enum 
 {
-    const C_ACTIVE = 'Active';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DELETE = 'Delete';
-    const C_INACTIVE = 'Inactive';
+    private const Active = 'Active';
+    private const CustomCode = 'CustomCode';
+    private const Delete = 'Delete';
+    private const Inactive = 'Inactive';
+
 }

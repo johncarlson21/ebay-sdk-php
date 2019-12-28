@@ -10,12 +10,15 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class PayPalAccountTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class PayPalAccountTypeCodeType extends Enum 
 {
-    const C_BUSINESS = 'Business';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_INVALID = 'Invalid';
-    const C_PERSONAL = 'Personal';
-    const C_PREMIER = 'Premier';
-    const C_UNKNOWN = 'Unknown';
+    private const Business = 'Business';
+    private const CustomCode = 'CustomCode';
+    private const Invalid = 'Invalid';
+    private const Personal = 'Personal';
+    private const Premier = 'Premier';
+    private const Unknown = 'Unknown';
+
 }

@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class TokenReturnMethodCodeType
+use MyCLabs\Enum\Enum;
+
+class TokenReturnMethodCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FETCH_TOKEN = 'FetchToken';
-    const C_REDIRECT = 'Redirect';
+    private const CustomCode = 'CustomCode';
+    private const FetchToken = 'FetchToken';
+    private const Redirect = 'Redirect';
+
 }

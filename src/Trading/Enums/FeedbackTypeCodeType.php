@@ -10,11 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class FeedbackTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class FeedbackTypeCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FEEDBACK_LEFT = 'FeedbackLeft';
-    const C_FEEDBACK_RECEIVED = 'FeedbackReceived';
-    const C_FEEDBACK_RECEIVED_AS_BUYER = 'FeedbackReceivedAsBuyer';
-    const C_FEEDBACK_RECEIVED_AS_SELLER = 'FeedbackReceivedAsSeller';
+    private const CustomCode = 'CustomCode';
+    private const FeedbackLeft = 'FeedbackLeft';
+    private const FeedbackReceived = 'FeedbackReceived';
+    private const FeedbackReceivedAsBuyer = 'FeedbackReceivedAsBuyer';
+    private const FeedbackReceivedAsSeller = 'FeedbackReceivedAsSeller';
+
 }

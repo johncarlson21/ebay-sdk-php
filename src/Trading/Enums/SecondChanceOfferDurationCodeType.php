@@ -10,11 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SecondChanceOfferDurationCodeType
+use MyCLabs\Enum\Enum;
+
+class SecondChanceOfferDurationCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DAYS_1 = 'Days_1';
-    const C_DAYS_3 = 'Days_3';
-    const C_DAYS_5 = 'Days_5';
-    const C_DAYS_7 = 'Days_7';
+    private const CustomCode = 'CustomCode';
+    private const Days_1 = 'Days_1';
+    private const Days_3 = 'Days_3';
+    private const Days_5 = 'Days_5';
+    private const Days_7 = 'Days_7';
+
 }

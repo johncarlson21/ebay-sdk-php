@@ -10,17 +10,20 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ShipmentDeliveryStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class ShipmentDeliveryStatusCodeType extends Enum 
 {
-    const C_CANCELED = 'Canceled';
-    const C_CREATED = 'Created';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DELIVERED = 'Delivered';
-    const C_DROPPED_OFF = 'DroppedOff';
-    const C_ERROR = 'Error';
-    const C_IN_TRANSIT = 'InTransit';
-    const C_LABEL_PRINTED = 'LabelPrinted';
-    const C_RETURNED = 'Returned';
-    const C_UNCONFIRMED = 'Unconfirmed';
-    const C_UNKNOWN = 'Unknown';
+    private const Canceled = 'Canceled';
+    private const Created = 'Created';
+    private const CustomCode = 'CustomCode';
+    private const Delivered = 'Delivered';
+    private const DroppedOff = 'DroppedOff';
+    private const Error = 'Error';
+    private const InTransit = 'InTransit';
+    private const LabelPrinted = 'LabelPrinted';
+    private const Returned = 'Returned';
+    private const Unconfirmed = 'Unconfirmed';
+    private const Unknown = 'Unknown';
+
 }

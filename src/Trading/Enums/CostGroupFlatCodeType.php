@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class CostGroupFlatCodeType
+use MyCLabs\Enum\Enum;
+
+class CostGroupFlatCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_GROUP1_MAX_FLAT_SHIPPING_COST = 'Group1MaxFlatShippingCost';
-    const C_GROUP2_MAX_FLAT_SHIPPING_COST = 'Group2MaxFlatShippingCost';
-    const C_GROUP3_MAX_FLAT_SHIPPING_COST = 'Group3MaxFlatShippingCost';
+    private const CustomCode = 'CustomCode';
+    private const Group1MaxFlatShippingCost = 'Group1MaxFlatShippingCost';
+    private const Group2MaxFlatShippingCost = 'Group2MaxFlatShippingCost';
+    private const Group3MaxFlatShippingCost = 'Group3MaxFlatShippingCost';
+
 }

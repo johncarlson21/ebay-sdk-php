@@ -10,9 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class RefundFailureCodeType
+use MyCLabs\Enum\Enum;
+
+class RefundFailureCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_PAYPAL_BILLING_AGREEMENT_CANCELED = 'PaypalBillingAgreementCanceled';
-    const C_PAYPAL_RISK_DECLINES_TRANSACTION = 'PaypalRiskDeclinesTransaction';
+
 }

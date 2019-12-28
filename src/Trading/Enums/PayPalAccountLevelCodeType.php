@@ -10,14 +10,17 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class PayPalAccountLevelCodeType
+use MyCLabs\Enum\Enum;
+
+class PayPalAccountLevelCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_INTERNATIONAL_UNVERIFIED = 'InternationalUnverified';
-    const C_INTERNATIONAL_VERIFIED = 'InternationalVerified';
-    const C_INVALID = 'Invalid';
-    const C_TRUSTED = 'Trusted';
-    const C_UNKNOWN = 'Unknown';
-    const C_UNVERIFIED = 'Unverified';
-    const C_VERIFIED = 'Verified';
+    private const CustomCode = 'CustomCode';
+    private const InternationalUnverified = 'InternationalUnverified';
+    private const InternationalVerified = 'InternationalVerified';
+    private const Invalid = 'Invalid';
+    private const Trusted = 'Trusted';
+    private const Unknown = 'Unknown';
+    private const Unverified = 'Unverified';
+    private const Verified = 'Verified';
+
 }

@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SortOrderCodeType
+use MyCLabs\Enum\Enum;
+
+class SortOrderCodeType extends Enum 
 {
-    const C_ASCENDING = 'Ascending';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DESCENDING = 'Descending';
+    private const Ascending = 'Ascending';
+    private const CustomCode = 'CustomCode';
+    private const Descending = 'Descending';
+
 }

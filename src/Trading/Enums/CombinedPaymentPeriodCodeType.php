@@ -10,13 +10,16 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class CombinedPaymentPeriodCodeType
+use MyCLabs\Enum\Enum;
+
+class CombinedPaymentPeriodCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DAYS_14 = 'Days_14';
-    const C_DAYS_3 = 'Days_3';
-    const C_DAYS_30 = 'Days_30';
-    const C_DAYS_5 = 'Days_5';
-    const C_DAYS_7 = 'Days_7';
-    const C_INELIGIBLE = 'Ineligible';
+    private const CustomCode = 'CustomCode';
+    private const Days_14 = 'Days_14';
+    private const Days_3 = 'Days_3';
+    private const Days_30 = 'Days_30';
+    private const Days_5 = 'Days_5';
+    private const Days_7 = 'Days_7';
+    private const Ineligible = 'Ineligible';
+
 }

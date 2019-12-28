@@ -10,9 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SkypeContactOptionCodeType
+use MyCLabs\Enum\Enum;
+
+class SkypeContactOptionCodeType extends Enum 
 {
-    const C_CHAT = 'Chat';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_VOICE = 'Voice';
+
 }

@@ -10,12 +10,10 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class TransactionPlatformCodeType
+use MyCLabs\Enum\Enum;
+
+class TransactionPlatformCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_EXPRESS = 'Express';
-    const C_E_BAY = 'eBay';
-    const C_HALF = 'Half';
-    const C_SHOPPING = 'Shopping';
-    const C_WORLD_OF_GOOD = 'WorldOfGood';
+    private const eBay = 'eBay';
+
 }

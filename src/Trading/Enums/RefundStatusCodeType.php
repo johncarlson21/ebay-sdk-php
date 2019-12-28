@@ -10,10 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class RefundStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class RefundStatusCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FAILED = 'Failed';
-    const C_PENDING = 'Pending';
-    const C_SUCCESSFUL = 'Successful';
+
 }

@@ -10,19 +10,22 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ListingDurationCodeType
+use MyCLabs\Enum\Enum;
+
+class ListingDurationCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DAYS_1 = 'Days_1';
-    const C_DAYS_10 = 'Days_10';
-    const C_DAYS_120 = 'Days_120';
-    const C_DAYS_14 = 'Days_14';
-    const C_DAYS_21 = 'Days_21';
-    const C_DAYS_3 = 'Days_3';
-    const C_DAYS_30 = 'Days_30';
-    const C_DAYS_5 = 'Days_5';
-    const C_DAYS_60 = 'Days_60';
-    const C_DAYS_7 = 'Days_7';
-    const C_DAYS_90 = 'Days_90';
-    const C_GTC = 'GTC';
+    private const CustomCode = 'CustomCode';
+    private const Days_1 = 'Days_1';
+    private const Days_10 = 'Days_10';
+    private const Days_120 = 'Days_120';
+    private const Days_14 = 'Days_14';
+    private const Days_21 = 'Days_21';
+    private const Days_3 = 'Days_3';
+    private const Days_30 = 'Days_30';
+    private const Days_5 = 'Days_5';
+    private const Days_60 = 'Days_60';
+    private const Days_7 = 'Days_7';
+    private const Days_90 = 'Days_90';
+    private const GTC = 'GTC';
+
 }

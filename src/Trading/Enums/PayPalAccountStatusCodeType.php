@@ -10,15 +10,18 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class PayPalAccountStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class PayPalAccountStatusCodeType extends Enum 
 {
-    const C_ACTIVE = 'Active';
-    const C_CLOSED = 'Closed';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_HIGH_RESTRICTED = 'HighRestricted';
-    const C_INVALID = 'Invalid';
-    const C_LOCKED = 'Locked';
-    const C_LOW_RESTRICTED = 'LowRestricted';
-    const C_UNKNOWN = 'Unknown';
-    const C_WIRE_OFF = 'WireOff';
+    private const Active = 'Active';
+    private const Closed = 'Closed';
+    private const CustomCode = 'CustomCode';
+    private const HighRestricted = 'HighRestricted';
+    private const Invalid = 'Invalid';
+    private const Locked = 'Locked';
+    private const LowRestricted = 'LowRestricted';
+    private const Unknown = 'Unknown';
+    private const WireOff = 'WireOff';
+
 }

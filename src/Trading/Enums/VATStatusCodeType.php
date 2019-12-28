@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class VATStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class VATStatusCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_NOVAT_TAX = 'NoVATTax';
-    const C_VAT_EXEMPT = 'VATExempt';
-    const C_VAT_TAX = 'VATTax';
+    private const CustomCode = 'CustomCode';
+    private const NoVATTax = 'NoVATTax';
+    private const VATExempt = 'VATExempt';
+    private const VATTax = 'VATTax';
+
 }

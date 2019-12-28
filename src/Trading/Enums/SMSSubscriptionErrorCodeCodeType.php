@@ -10,12 +10,15 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SMSSubscriptionErrorCodeCodeType
+use MyCLabs\Enum\Enum;
+
+class SMSSubscriptionErrorCodeCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_PHONE_NUMBER_CARRIER_CHANGED = 'PhoneNumberCarrierChanged';
-    const C_PHONE_NUMBER_CHANGED = 'PhoneNumberChanged';
-    const C_PHONE_NUMBER_INVALID = 'PhoneNumberInvalid';
-    const C_SMS_AGGREGATOR_NOT_AVAILABLE = 'SMSAggregatorNotAvailable';
-    const C_USER_REQUESTED_UNREGISTRATION = 'UserRequestedUnregistration';
+    private const CustomCode = 'CustomCode';
+    private const PhoneNumberCarrierChanged = 'PhoneNumberCarrierChanged';
+    private const PhoneNumberChanged = 'PhoneNumberChanged';
+    private const PhoneNumberInvalid = 'PhoneNumberInvalid';
+    private const SMSAggregatorNotAvailable = 'SMSAggregatorNotAvailable';
+    private const UserRequestedUnregistration = 'UserRequestedUnregistration';
+
 }

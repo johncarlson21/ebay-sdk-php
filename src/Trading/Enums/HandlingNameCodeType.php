@@ -10,12 +10,15 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class HandlingNameCodeType
+use MyCLabs\Enum\Enum;
+
+class HandlingNameCodeType extends Enum 
 {
-    const C_COMBINED_HANDLING_FEE = 'CombinedHandlingFee';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_EACH_ADDITIONAL_AMOUNT = 'EachAdditionalAmount';
-    const C_EACH_ADDITIONAL_AMOUNT_OFF = 'EachAdditionalAmountOff';
-    const C_EACH_ADDITIONAL_PERCENT_OFF = 'EachAdditionalPercentOff';
-    const C_INDIVIDUAL_HANDLING_FEE = 'IndividualHandlingFee';
+    private const CombinedHandlingFee = 'CombinedHandlingFee';
+    private const CustomCode = 'CustomCode';
+    private const EachAdditionalAmount = 'EachAdditionalAmount';
+    private const EachAdditionalAmountOff = 'EachAdditionalAmountOff';
+    private const EachAdditionalPercentOff = 'EachAdditionalPercentOff';
+    private const IndividualHandlingFee = 'IndividualHandlingFee';
+
 }

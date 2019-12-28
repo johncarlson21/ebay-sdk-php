@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class BuyerProtectionSourceCodeType
+use MyCLabs\Enum\Enum;
+
+class BuyerProtectionSourceCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_E_BAY = 'eBay';
-    const C_PAY_PAL = 'PayPal';
+    private const CustomCode = 'CustomCode';
+    private const eBay = 'eBay';
+    private const PayPal = 'PayPal';
+
 }

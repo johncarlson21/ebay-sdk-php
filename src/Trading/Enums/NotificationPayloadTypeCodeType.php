@@ -10,8 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class NotificationPayloadTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class NotificationPayloadTypeCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_EBL_SCHEMASOAP = 'eBLSchemaSOAP';
+
 }

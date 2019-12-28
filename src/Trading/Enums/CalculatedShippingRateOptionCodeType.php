@@ -10,9 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class CalculatedShippingRateOptionCodeType
+use MyCLabs\Enum\Enum;
+
+class CalculatedShippingRateOptionCodeType extends Enum 
 {
-    const C_COMBINED_ITEM_WEIGHT = 'CombinedItemWeight';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_INDIVIDUAL_ITEM_WEIGHT = 'IndividualItemWeight';
+
 }

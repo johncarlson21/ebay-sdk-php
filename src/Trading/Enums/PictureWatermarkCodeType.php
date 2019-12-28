@@ -10,9 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class PictureWatermarkCodeType
+use MyCLabs\Enum\Enum;
+
+class PictureWatermarkCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_ICON = 'Icon';
-    const C_USER = 'User';
+
 }

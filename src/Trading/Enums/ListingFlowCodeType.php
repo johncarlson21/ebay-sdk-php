@@ -10,10 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ListingFlowCodeType
+use MyCLabs\Enum\Enum;
+
+class ListingFlowCodeType extends Enum 
 {
-    const C_ADD_ITEM = 'AddItem';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_RELIST_ITEM = 'RelistItem';
-    const C_REVISE_ITEM = 'ReviseItem';
+
 }

@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class DisplayPayNowButtonCodeType
+use MyCLabs\Enum\Enum;
+
+class DisplayPayNowButtonCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_SHOW_PAY_NOW_BUTTON_FOR_ALL_PAYMENT_METHODS = 'ShowPayNowButtonForAllPaymentMethods';
-    const C_SHOW_PAY_NOW_BUTTON_FOR_PAY_PAL_ONLY = 'ShowPayNowButtonForPayPalOnly';
+    private const CustomCode = 'CustomCode';
+    private const ShowPayNowButtonForAllPaymentMethods = 'ShowPayNowButtonForAllPaymentMethods';
+    private const ShowPayNowButtonForPayPalOnly = 'ShowPayNowButtonForPayPalOnly';
+
 }

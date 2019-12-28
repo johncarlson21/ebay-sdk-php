@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SellerDashboardAlertSeverityCodeType
+use MyCLabs\Enum\Enum;
+
+class SellerDashboardAlertSeverityCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_INFORMATIONAL = 'Informational';
-    const C_STRONG_WARNING = 'StrongWarning';
-    const C_WARNING = 'Warning';
+    private const CustomCode = 'CustomCode';
+    private const Informational = 'Informational';
+    private const StrongWarning = 'StrongWarning';
+    private const Warning = 'Warning';
+
 }

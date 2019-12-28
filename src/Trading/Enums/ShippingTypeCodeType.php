@@ -10,15 +10,18 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ShippingTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class ShippingTypeCodeType extends Enum 
 {
-    const C_CALCULATED = 'Calculated';
-    const C_CALCULATED_DOMESTIC_FLAT_INTERNATIONAL = 'CalculatedDomesticFlatInternational';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FLAT = 'Flat';
-    const C_FLAT_DOMESTIC_CALCULATED_INTERNATIONAL = 'FlatDomesticCalculatedInternational';
-    const C_FREE = 'Free';
-    const C_FREIGHT = 'Freight';
-    const C_FREIGHT_FLAT = 'FreightFlat';
-    const C_NOT_SPECIFIED = 'NotSpecified';
+    private const Calculated = 'Calculated';
+    private const CalculatedDomesticFlatInternational = 'CalculatedDomesticFlatInternational';
+    private const CustomCode = 'CustomCode';
+    private const Flat = 'Flat';
+    private const FlatDomesticCalculatedInternational = 'FlatDomesticCalculatedInternational';
+    private const Free = 'Free';
+    private const Freight = 'Freight';
+    private const FreightFlat = 'FreightFlat';
+    private const NotSpecified = 'NotSpecified';
+
 }

@@ -10,14 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class PhotoDisplayCodeType
+use MyCLabs\Enum\Enum;
+
+class PhotoDisplayCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_NONE = 'None';
-    const C_PICTURE_PACK = 'PicturePack';
-    const C_SITE_HOSTED_PICTURE_SHOW = 'SiteHostedPictureShow';
-    const C_SLIDE_SHOW = 'SlideShow';
-    const C_SUPER_SIZE = 'SuperSize';
-    const C_SUPER_SIZE_PICTURE_SHOW = 'SuperSizePictureShow';
-    const C_VENDOR_HOSTED_PICTURE_SHOW = 'VendorHostedPictureShow';
+    private const CustomCode = 'CustomCode';
+    private const None = 'None';
+    private const PicturePack = 'PicturePack';
+    private const SuperSize = 'SuperSize';
+    private const SuperSizePictureShow = 'SuperSizePictureShow';
+
 }

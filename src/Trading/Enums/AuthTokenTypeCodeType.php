@@ -10,8 +10,11 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class AuthTokenTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class AuthTokenTypeCodeType extends Enum 
 {
-    const C_CLIENT_ALERTS_TOKEN = 'ClientAlertsToken';
-    const C_CUSTOM_CODE = 'CustomCode';
+    private const ClientAlertsToken = 'ClientAlertsToken';
+    private const CustomCode = 'CustomCode';
+
 }

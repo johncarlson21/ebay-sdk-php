@@ -10,13 +10,16 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class TokenStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class TokenStatusCodeType extends Enum 
 {
-    const C_ACTIVE = 'Active';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_EXPIRED = 'Expired';
-    const C_INVALID = 'Invalid';
-    const C_REVOKED_BYE_BAY = 'RevokedByeBay';
-    const C_REVOKED_BY_APP = 'RevokedByApp';
-    const C_REVOKED_BY_USER = 'RevokedByUser';
+    private const Active = 'Active';
+    private const CustomCode = 'CustomCode';
+    private const Expired = 'Expired';
+    private const Invalid = 'Invalid';
+    private const RevokedByApp = 'RevokedByApp';
+    private const RevokedByeBay = 'RevokedByeBay';
+    private const RevokedByUser = 'RevokedByUser';
+
 }

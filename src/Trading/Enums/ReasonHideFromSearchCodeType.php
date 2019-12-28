@@ -10,8 +10,11 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ReasonHideFromSearchCodeType
+use MyCLabs\Enum\Enum;
+
+class ReasonHideFromSearchCodeType extends Enum 
 {
-    const C_DUPLICATE_LISTING = 'DuplicateListing';
-    const C_OUT_OF_STOCK = 'OutOfStock';
+    private const DuplicateListing = 'DuplicateListing';
+    private const OutOfStock = 'OutOfStock';
+
 }

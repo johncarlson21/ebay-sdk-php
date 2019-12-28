@@ -10,11 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ApplicationDeviceTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class ApplicationDeviceTypeCodeType extends Enum 
 {
-    const C_BROWSER = 'Browser';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DESKTOP = 'Desktop';
-    const C_SET_TOPTV_BOX = 'SetTopTVBox';
-    const C_WIRELESS = 'Wireless';
+    private const Browser = 'Browser';
+    private const CustomCode = 'CustomCode';
+    private const Desktop = 'Desktop';
+    private const SetTopTVBox = 'SetTopTVBox';
+    private const Wireless = 'Wireless';
+
 }

@@ -10,10 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class RefundLineTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class RefundLineTypeCodeType extends Enum 
 {
-    const C_ADDITIONAL = 'Additional';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_PURCHASE_PRICE = 'PurchasePrice';
-    const C_SHIPPING_PRICE = 'ShippingPrice';
+
 }

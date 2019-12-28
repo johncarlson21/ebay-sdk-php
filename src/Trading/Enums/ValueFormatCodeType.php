@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ValueFormatCodeType
+use MyCLabs\Enum\Enum;
+
+class ValueFormatCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FULL_DATE = 'FullDate';
-    const C_PARTIAL_DATE = 'PartialDate';
-    const C_YEAR = 'Year';
+    private const CustomCode = 'CustomCode';
+    private const FullDate = 'FullDate';
+    private const PartialDate = 'PartialDate';
+    private const Year = 'Year';
+
 }

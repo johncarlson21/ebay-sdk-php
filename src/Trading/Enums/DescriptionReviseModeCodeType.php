@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class DescriptionReviseModeCodeType
+use MyCLabs\Enum\Enum;
+
+class DescriptionReviseModeCodeType extends Enum 
 {
-    const C_APPEND = 'Append';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_PREPEND = 'Prepend';
-    const C_REPLACE = 'Replace';
+    private const Append = 'Append';
+    private const CustomCode = 'CustomCode';
+    private const Prepend = 'Prepend';
+    private const Replace = 'Replace';
+
 }

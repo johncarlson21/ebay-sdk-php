@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class BestOfferTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class BestOfferTypeCodeType extends Enum 
 {
-    const C_BUYER_BEST_OFFER = 'BuyerBestOffer';
-    const C_BUYER_COUNTER_OFFER = 'BuyerCounterOffer';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_SELLER_COUNTER_OFFER = 'SellerCounterOffer';
+    private const BuyerBestOffer = 'BuyerBestOffer';
+    private const BuyerCounterOffer = 'BuyerCounterOffer';
+    private const CustomCode = 'CustomCode';
+    private const SellerCounterOffer = 'SellerCounterOffer';
+
 }

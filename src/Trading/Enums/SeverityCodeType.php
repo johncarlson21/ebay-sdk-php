@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SeverityCodeType
+use MyCLabs\Enum\Enum;
+
+class SeverityCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_ERROR = 'Error';
-    const C_WARNING = 'Warning';
+    private const CustomCode = 'CustomCode';
+    private const Error = 'Error';
+    private const Warning = 'Warning';
+
 }

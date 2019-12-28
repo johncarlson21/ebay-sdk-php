@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SellerAccountStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class SellerAccountStatusCodeType extends Enum 
 {
-    const C_CURRENT = 'Current';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_ON_HOLD = 'OnHold';
-    const C_PAST_DUE = 'PastDue';
+    private const Current = 'Current';
+    private const CustomCode = 'CustomCode';
+    private const OnHold = 'OnHold';
+    private const PastDue = 'PastDue';
+
 }

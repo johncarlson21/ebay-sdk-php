@@ -10,13 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class PictureManagerPictureDisplayTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class PictureManagerPictureDisplayTypeCodeType extends Enum 
 {
-    const C_BIBO = 'BIBO';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_LARGE = 'Large';
-    const C_ORIGINAL = 'Original';
-    const C_STANDARD = 'Standard';
-    const C_SUPERSIZE = 'Supersize';
-    const C_THUMBNAIL = 'Thumbnail';
+
 }

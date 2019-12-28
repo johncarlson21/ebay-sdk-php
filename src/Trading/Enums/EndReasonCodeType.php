@@ -10,13 +10,17 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class EndReasonCodeType
+use MyCLabs\Enum\Enum;
+
+class EndReasonCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_INCORRECT = 'Incorrect';
-    const C_LOST_OR_BROKEN = 'LostOrBroken';
-    const C_NOT_AVAILABLE = 'NotAvailable';
-    const C_OTHER_LISTING_ERROR = 'OtherListingError';
-    const C_SELL_TO_HIGH_BIDDER = 'SellToHighBidder';
-    const C_SOLD = 'Sold';
+    private const CustomCode = 'CustomCode';
+    private const Incorrect = 'Incorrect';
+    private const LostOrBroken = 'LostOrBroken';
+    private const NotAvailable = 'NotAvailable';
+    private const OtherListingError = 'OtherListingError';
+    private const ProductDeleted = 'ProductDeleted';
+    private const SellToHighBidder = 'SellToHighBidder';
+    private const Sold = 'Sold';
+
 }

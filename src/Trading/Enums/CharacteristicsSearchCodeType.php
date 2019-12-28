@@ -10,9 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class CharacteristicsSearchCodeType
+use MyCLabs\Enum\Enum;
+
+class CharacteristicsSearchCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_MULTI = 'Multi';
-    const C_SINGLE = 'Single';
+
 }

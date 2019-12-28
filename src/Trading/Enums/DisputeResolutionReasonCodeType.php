@@ -10,20 +10,23 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class DisputeResolutionReasonCodeType
+use MyCLabs\Enum\Enum;
+
+class DisputeResolutionReasonCodeType extends Enum 
 {
-    const C_BUYER_PAID_AUCTION_FEES = 'BuyerPaidAuctionFees';
-    const C_CAME_TO_AGREEMENT = 'CameToAgreement';
-    const C_CLAIM_PAID = 'ClaimPaid';
-    const C_COMPUTER_TECHNICAL_PROBLEM = 'ComputerTechnicalProblem';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FAMILY_EMERGENCY = 'FamilyEmergency';
-    const C_FIRST_INFRACTION = 'FirstInfraction';
-    const C_ITEM_RETURNED = 'ItemReturned';
-    const C_NO_CONTACT = 'NoContact';
-    const C_OTHER_RESOLUTION = 'OtherResolution';
-    const C_PROOF_GIVEN_IN_FEEDBACK = 'ProofGivenInFeedback';
-    const C_PROOF_OF_PAYMENT = 'ProofOfPayment';
-    const C_SELLER_RECEIVED_PAYMENT = 'SellerReceivedPayment';
-    const C_UNRESOLVED = 'Unresolved';
+    private const BuyerPaidAuctionFees = 'BuyerPaidAuctionFees';
+    private const CameToAgreement = 'CameToAgreement';
+    private const ClaimPaid = 'ClaimPaid';
+    private const ComputerTechnicalProblem = 'ComputerTechnicalProblem';
+    private const CustomCode = 'CustomCode';
+    private const FamilyEmergency = 'FamilyEmergency';
+    private const FirstInfraction = 'FirstInfraction';
+    private const ItemReturned = 'ItemReturned';
+    private const NoContact = 'NoContact';
+    private const OtherResolution = 'OtherResolution';
+    private const ProofGivenInFeedback = 'ProofGivenInFeedback';
+    private const ProofOfPayment = 'ProofOfPayment';
+    private const SellerReceivedPayment = 'SellerReceivedPayment';
+    private const Unresolved = 'Unresolved';
+
 }

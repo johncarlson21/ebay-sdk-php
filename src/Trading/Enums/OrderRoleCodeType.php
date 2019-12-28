@@ -10,9 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class OrderRoleCodeType
+use MyCLabs\Enum\Enum;
+
+class OrderRoleCodeType extends Enum 
 {
-    const C_BUYER = 'Buyer';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_SELLER = 'Seller';
+
 }

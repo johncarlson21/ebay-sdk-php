@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ErrorClassificationCodeType
+use MyCLabs\Enum\Enum;
+
+class ErrorClassificationCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_REQUEST_ERROR = 'RequestError';
-    const C_SYSTEM_ERROR = 'SystemError';
+    private const CustomCode = 'CustomCode';
+    private const RequestError = 'RequestError';
+    private const SystemError = 'SystemError';
+
 }

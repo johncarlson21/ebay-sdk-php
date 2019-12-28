@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class AddressUsageCodeType
+use MyCLabs\Enum\Enum;
+
+class AddressUsageCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DEFAULT_SHIPPING = 'DefaultShipping';
-    const C_INVALID = 'Invalid';
-    const C_SHIPPING = 'Shipping';
+    private const CustomCode = 'CustomCode';
+    private const DefaultShipping = 'DefaultShipping';
+    private const Invalid = 'Invalid';
+    private const Shipping = 'Shipping';
+
 }

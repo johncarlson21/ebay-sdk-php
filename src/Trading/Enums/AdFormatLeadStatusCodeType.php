@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class AdFormatLeadStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class AdFormatLeadStatusCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_NEW = 'New';
-    const C_RESPONDED = 'Responded';
+    private const CustomCode = 'CustomCode';
+    private const New = 'New';
+    private const Responded = 'Responded';
+
 }

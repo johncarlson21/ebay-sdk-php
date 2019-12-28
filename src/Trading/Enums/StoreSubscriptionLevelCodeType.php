@@ -10,11 +10,16 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class StoreSubscriptionLevelCodeType
+use MyCLabs\Enum\Enum;
+
+class StoreSubscriptionLevelCodeType extends Enum 
 {
-    const C_ANCHOR = 'Anchor';
-    const C_BASIC = 'Basic';
-    const C_CLOSE = 'Close';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FEATURED = 'Featured';
+    private const Anchor = 'Anchor';
+    private const Basic = 'Basic';
+    private const Close = 'Close';
+    private const CustomCode = 'CustomCode';
+    private const Enterprise = 'Enterprise';
+    private const Featured = 'Featured';
+    private const Starter = 'Starter';
+
 }

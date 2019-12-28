@@ -10,10 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class EscrowCodeType
+use MyCLabs\Enum\Enum;
+
+class EscrowCodeType extends Enum 
 {
-    const C_BY_BUYER = 'ByBuyer';
-    const C_BY_SELLER = 'BySeller';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_NONE = 'None';
+
 }

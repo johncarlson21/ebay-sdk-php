@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SearchStandingStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class SearchStandingStatusCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_LOWERED = 'Lowered';
-    const C_RAISED = 'Raised';
-    const C_STANDARD = 'Standard';
+    private const CustomCode = 'CustomCode';
+    private const Lowered = 'Lowered';
+    private const Raised = 'Raised';
+    private const Standard = 'Standard';
+
 }

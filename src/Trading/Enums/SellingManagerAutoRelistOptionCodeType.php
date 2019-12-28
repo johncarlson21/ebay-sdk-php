@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SellingManagerAutoRelistOptionCodeType
+use MyCLabs\Enum\Enum;
+
+class SellingManagerAutoRelistOptionCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_RELIST_AFTER_DAYS_HOURS = 'RelistAfterDaysHours';
-    const C_RELIST_AT_SPECIFIC_TIME_OF_DAY = 'RelistAtSpecificTimeOfDay';
-    const C_RELIST_IMMEDIATELY = 'RelistImmediately';
+    private const CustomCode = 'CustomCode';
+    private const RelistAfterDaysHours = 'RelistAfterDaysHours';
+    private const RelistAtSpecificTimeOfDay = 'RelistAtSpecificTimeOfDay';
+    private const RelistImmediately = 'RelistImmediately';
+
 }

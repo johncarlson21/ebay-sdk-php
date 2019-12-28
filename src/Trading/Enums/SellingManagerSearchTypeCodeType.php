@@ -10,16 +10,19 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SellingManagerSearchTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class SellingManagerSearchTypeCodeType extends Enum 
 {
-    const C_BUYER_EMAIL = 'BuyerEmail';
-    const C_BUYER_FULL_NAME = 'BuyerFullName';
-    const C_BUYER_USERID = 'BuyerUserID';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_CUSTOM_LABEL = 'CustomLabel';
-    const C_ITEMID = 'ItemID';
-    const C_PRODUCTID = 'ProductID';
-    const C_PRODUCT_NAME = 'ProductName';
-    const C_SALE_RECORDID = 'SaleRecordID';
-    const C_TITLE = 'Title';
+    private const BuyerEmail = 'BuyerEmail';
+    private const BuyerFullName = 'BuyerFullName';
+    private const BuyerUserID = 'BuyerUserID';
+    private const CustomCode = 'CustomCode';
+    private const CustomLabel = 'CustomLabel';
+    private const ItemID = 'ItemID';
+    private const ProductID = 'ProductID';
+    private const ProductName = 'ProductName';
+    private const SaleRecordID = 'SaleRecordID';
+    private const Title = 'Title';
+
 }

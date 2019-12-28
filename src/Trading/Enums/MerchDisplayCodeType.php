@@ -10,9 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class MerchDisplayCodeType
+use MyCLabs\Enum\Enum;
+
+class MerchDisplayCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DEFAULT_THEME = 'DefaultTheme';
-    const C_STORE_THEME = 'StoreTheme';
+
 }

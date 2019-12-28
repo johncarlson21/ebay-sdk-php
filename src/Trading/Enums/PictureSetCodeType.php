@@ -10,10 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class PictureSetCodeType
+use MyCLabs\Enum\Enum;
+
+class PictureSetCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_LARGE = 'Large';
-    const C_STANDARD = 'Standard';
-    const C_SUPERSIZE = 'Supersize';
+    private const CustomCode = 'CustomCode';
+    private const Standard = 'Standard';
+    private const Supersize = 'Supersize';
+
 }

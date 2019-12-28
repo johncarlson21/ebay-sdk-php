@@ -10,9 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class RangeCodeType
+use MyCLabs\Enum\Enum;
+
+class RangeCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_HIGH = 'High';
-    const C_LOW = 'Low';
+
 }

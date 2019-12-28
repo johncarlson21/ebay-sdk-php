@@ -10,21 +10,23 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class BidActionCodeType
+use MyCLabs\Enum\Enum;
+
+class BidActionCodeType extends Enum 
 {
-    const C_ABSENTEE = 'Absentee';
-    const C_ACCEPT = 'Accept';
-    const C_AUTO_CANCEL = 'AutoCancel';
-    const C_AUTO_RETRACTION = 'AutoRetraction';
-    const C_BID = 'Bid';
-    const C_BUY_IT_NOW = 'BuyItNow';
-    const C_CANCELLED = 'Cancelled';
-    const C_COUNTER = 'Counter';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DECLINE = 'Decline';
-    const C_NOT_USED = 'NotUsed';
-    const C_OFFER = 'Offer';
-    const C_PURCHASE = 'Purchase';
-    const C_RETRACTION = 'Retraction';
-    const C_UNKNOWN = 'Unknown';
+    private const Absentee = 'Absentee';
+    private const Accept = 'Accept';
+    private const AutoCancel = 'AutoCancel';
+    private const AutoRetraction = 'AutoRetraction';
+    private const Bid = 'Bid';
+    private const BuyItNow = 'BuyItNow';
+    private const Cancelled = 'Cancelled';
+    private const Counter = 'Counter';
+    private const CustomCode = 'CustomCode';
+    private const Decline = 'Decline';
+    private const Offer = 'Offer';
+    private const Purchase = 'Purchase';
+    private const Retraction = 'Retraction';
+    private const Unknown = 'Unknown';
+
 }

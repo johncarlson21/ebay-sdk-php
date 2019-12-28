@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ConditionEnabledCodeType
+use MyCLabs\Enum\Enum;
+
+class ConditionEnabledCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DISABLED = 'Disabled';
-    const C_ENABLED = 'Enabled';
-    const C_REQUIRED = 'Required';
+    private const CustomCode = 'CustomCode';
+    private const Disabled = 'Disabled';
+    private const Enabled = 'Enabled';
+    private const Required = 'Required';
+
 }

@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class BestOfferActionCodeType
+use MyCLabs\Enum\Enum;
+
+class BestOfferActionCodeType extends Enum 
 {
-    const C_ACCEPT = 'Accept';
-    const C_COUNTER = 'Counter';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DECLINE = 'Decline';
+    private const Accept = 'Accept';
+    private const Counter = 'Counter';
+    private const CustomCode = 'CustomCode';
+    private const Decline = 'Decline';
+
 }

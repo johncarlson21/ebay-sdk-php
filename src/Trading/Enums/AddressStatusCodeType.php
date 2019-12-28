@@ -10,10 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class AddressStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class AddressStatusCodeType extends Enum 
 {
-    const C_CONFIRMED = 'Confirmed';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_NONE = 'None';
-    const C_UNCONFIRMED = 'Unconfirmed';
+
 }

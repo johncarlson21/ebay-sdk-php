@@ -10,8 +10,11 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ShippingServiceType
+use MyCLabs\Enum\Enum;
+
+class ShippingServiceType extends Enum 
 {
-    const C_DOMESTIC = 'Domestic';
-    const C_INTERNATIONAL = 'International';
+    private const Domestic = 'Domestic';
+    private const International = 'International';
+
 }

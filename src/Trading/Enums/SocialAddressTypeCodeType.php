@@ -10,13 +10,16 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SocialAddressTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class SocialAddressTypeCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FACEBOOK = 'Facebook';
-    const C_GOOGLE_PLUS = 'GooglePlus';
-    const C_LINKEDIN = 'Linkedin';
-    const C_MYSPACE = 'Myspace';
-    const C_ORKUT = 'Orkut';
-    const C_TWITTER = 'Twitter';
+    private const CustomCode = 'CustomCode';
+    private const Facebook = 'Facebook';
+    private const GooglePlus = 'GooglePlus';
+    private const Linkedin = 'Linkedin';
+    private const Myspace = 'Myspace';
+    private const Orkut = 'Orkut';
+    private const Twitter = 'Twitter';
+
 }

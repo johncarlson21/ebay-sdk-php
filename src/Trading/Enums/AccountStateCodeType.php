@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class AccountStateCodeType
+use MyCLabs\Enum\Enum;
+
+class AccountStateCodeType extends Enum 
 {
-    const C_ACTIVE = 'Active';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_INACTIVE = 'Inactive';
-    const C_PENDING = 'Pending';
+    private const Active = 'Active';
+    private const CustomCode = 'CustomCode';
+    private const Inactive = 'Inactive';
+    private const Pending = 'Pending';
+
 }

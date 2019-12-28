@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class PickupMethodCodeType
+use MyCLabs\Enum\Enum;
+
+class PickupMethodCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_IN_STORE_PICKUP = 'InStorePickup';
-    const C_PICK_UP_DROP_OFF = 'PickUpDropOff';
+    private const CustomCode = 'CustomCode';
+    private const InStorePickup = 'InStorePickup';
+    private const PickUpDropOff = 'PickUpDropOff';
+
 }

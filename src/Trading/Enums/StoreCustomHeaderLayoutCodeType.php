@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class StoreCustomHeaderLayoutCodeType
+use MyCLabs\Enum\Enum;
+
+class StoreCustomHeaderLayoutCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_CUSTOM_HEADER_SHOWN = 'CustomHeaderShown';
-    const C_NO_HEADER = 'NoHeader';
+    private const CustomCode = 'CustomCode';
+    private const CustomHeaderShown = 'CustomHeaderShown';
+    private const NoHeader = 'NoHeader';
+
 }

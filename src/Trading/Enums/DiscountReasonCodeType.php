@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class DiscountReasonCodeType
+use MyCLabs\Enum\Enum;
+
+class DiscountReasonCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_PROMOTION = 'Promotion';
-    const C_SPECIAL_OFFER = 'SpecialOffer';
+    private const CustomCode = 'CustomCode';
+    private const Promotion = 'Promotion';
+    private const SpecialOffer = 'SpecialOffer';
+
 }

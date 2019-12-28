@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class UnpaidItemCaseOpenTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class UnpaidItemCaseOpenTypeCodeType extends Enum 
 {
-    const C_AUTO = 'Auto';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_MANUAL = 'Manual';
+    private const Auto = 'Auto';
+    private const CustomCode = 'CustomCode';
+    private const Manual = 'Manual';
+
 }

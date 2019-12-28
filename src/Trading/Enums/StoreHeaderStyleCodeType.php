@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class StoreHeaderStyleCodeType
+use MyCLabs\Enum\Enum;
+
+class StoreHeaderStyleCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FULL = 'Full';
-    const C_MINIMIZED = 'Minimized';
+    private const CustomCode = 'CustomCode';
+    private const Full = 'Full';
+    private const Minimized = 'Minimized';
+
 }

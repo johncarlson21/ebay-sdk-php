@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class InventoryTrackingMethodCodeType
+use MyCLabs\Enum\Enum;
+
+class InventoryTrackingMethodCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_ITEMID = 'ItemID';
-    const C_SKU = 'SKU';
+    private const CustomCode = 'CustomCode';
+    private const ItemID = 'ItemID';
+    private const SKU = 'SKU';
+
 }
