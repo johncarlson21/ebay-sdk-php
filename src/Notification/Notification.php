@@ -50,7 +50,7 @@ class Notification
     }
 
     /**
-     * Helper method to get response class of notification correponding
+     * Helper method to get response class of notification corresponding
      */
     public function getResponseClass()
     {
@@ -141,7 +141,7 @@ class Notification
 
     /**
      * check the integrity of the soap text
-     * @param string $soap soap text reveived from notification
+     * @param string $soap soap text received from notification
      * @return bool
      */
     private function checkSoap($soap)
