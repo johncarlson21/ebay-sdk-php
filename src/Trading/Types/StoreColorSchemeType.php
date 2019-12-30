@@ -12,10 +12,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $ColorSchemeID
- * @property string $Name
  * @property \DTS\eBaySDK\Trading\Types\StoreColorType $Color
+ * @property integer $ColorSchemeID
  * @property \DTS\eBaySDK\Trading\Types\StoreFontType $Font
+ * @property string $Name
  */
 class StoreColorSchemeType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -23,32 +23,32 @@ class StoreColorSchemeType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ColorSchemeID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ColorSchemeID'
-        ],
-        'Name' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Name'
-        ],
         'Color' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreColorType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Color'
         ],
+        'ColorSchemeID' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ColorSchemeID'
+        ],
         'Font' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreFontType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Font'
+        ],
+        'Name' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Name'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class StoreColorSchemeType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

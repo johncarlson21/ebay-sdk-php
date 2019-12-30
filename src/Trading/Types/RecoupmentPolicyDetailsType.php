@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $DetailVersion
  * @property boolean $EnforcedOnListingSite
  * @property boolean $EnforcedOnRegistrationSite
- * @property string $DetailVersion
  * @property \DateTime $UpdateTime
  */
 class RecoupmentPolicyDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -23,6 +23,12 @@ class RecoupmentPolicyDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'DetailVersion' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DetailVersion'
+        ],
         'EnforcedOnListingSite' => [
             'type' => 'boolean',
             'repeatable' => false,
@@ -35,12 +41,6 @@ class RecoupmentPolicyDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'EnforcedOnRegistrationSite'
         ],
-        'DetailVersion' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DetailVersion'
-        ],
         'UpdateTime' => [
             'type' => 'DateTime',
             'repeatable' => false,
@@ -48,7 +48,7 @@ class RecoupmentPolicyDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'UpdateTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class RecoupmentPolicyDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

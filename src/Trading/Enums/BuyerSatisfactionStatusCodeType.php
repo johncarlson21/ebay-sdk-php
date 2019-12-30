@@ -10,13 +10,15 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class BuyerSatisfactionStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class BuyerSatisfactionStatusCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_EXCELLENT = 'Excellent';
-    const C_GOOD = 'Good';
-    const C_NEEDS_WORK = 'NeedsWork';
-    const C_POOR = 'Poor';
-    const C_UNACCEPTABLE = 'Unacceptable';
-    const C_VERY_POOR = 'VeryPoor';
+    private const CustomCode = 'CustomCode';
+    private const Excellent = 'Excellent';
+    private const Good = 'Good';
+    private const Poor = 'Poor';
+    private const Unacceptable = 'Unacceptable';
+    private const VeryPoor = 'VeryPoor';
+
 }

@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalTaxAmount
  * @property \DTS\eBaySDK\Trading\Types\TaxDetailsType[] $TaxDetails
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalTaxAmount
  */
 class TaxesType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -21,20 +21,20 @@ class TaxesType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'TotalTaxAmount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TotalTaxAmount'
-        ],
         'TaxDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\TaxDetailsType',
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'TaxDetails'
+        ],
+        'TotalTaxAmount' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TotalTaxAmount'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class TaxesType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

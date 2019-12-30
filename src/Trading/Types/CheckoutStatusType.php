@@ -13,11 +13,11 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Enums\PaymentStatusCodeType $eBayPaymentStatus
+ * @property boolean $IntegratedMerchantCreditCardEnabled
  * @property \DateTime $LastModifiedTime
+ * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentInstrumentCodeType $PaymentInstrument
  * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentMethodCodeType $PaymentMethod
  * @property \DTS\eBaySDK\Trading\Enums\CompleteStatusCodeType $Status
- * @property boolean $IntegratedMerchantCreditCardEnabled
- * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentInstrumentCodeType $PaymentInstrument
  */
 class CheckoutStatusType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -31,11 +31,23 @@ class CheckoutStatusType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'eBayPaymentStatus'
         ],
+        'IntegratedMerchantCreditCardEnabled' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IntegratedMerchantCreditCardEnabled'
+        ],
         'LastModifiedTime' => [
             'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LastModifiedTime'
+        ],
+        'PaymentInstrument' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PaymentInstrument'
         ],
         'PaymentMethod' => [
             'type' => 'string',
@@ -48,21 +60,9 @@ class CheckoutStatusType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Status'
-        ],
-        'IntegratedMerchantCreditCardEnabled' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IntegratedMerchantCreditCardEnabled'
-        ],
-        'PaymentInstrument' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentInstrument'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -79,7 +79,7 @@ class CheckoutStatusType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

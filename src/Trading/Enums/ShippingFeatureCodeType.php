@@ -10,13 +10,16 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ShippingFeatureCodeType
+use MyCLabs\Enum\Enum;
+
+class ShippingFeatureCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DELIVERY_CONFIRMATION = 'DeliveryConfirmation';
-    const C_NOT_DEFINED = 'NotDefined';
-    const C_OTHER = 'Other';
-    const C_SATURDAY_DELIVERY = 'SaturdayDelivery';
-    const C_SIGNATURE_CONFIRMATION = 'SignatureConfirmation';
-    const C_STEALTH_POSTAGE = 'StealthPostage';
+    private const CustomCode = 'CustomCode';
+    private const DeliveryConfirmation = 'DeliveryConfirmation';
+    private const NotDefined = 'NotDefined';
+    private const Other = 'Other';
+    private const SaturdayDelivery = 'SaturdayDelivery';
+    private const SignatureConfirmation = 'SignatureConfirmation';
+    private const StealthPostage = 'StealthPostage';
+
 }

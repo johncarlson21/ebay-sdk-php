@@ -12,11 +12,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $ProfileID
- * @property string $ProfileType
- * @property string $ProfileName
- * @property string $ShortSummary
  * @property \DTS\eBaySDK\Trading\Types\CategoryGroupType $CategoryGroup
+ * @property integer $ProfileID
+ * @property string $ProfileName
+ * @property string $ProfileType
+ * @property string $ShortSummary
  */
 class SupportedSellerProfileType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -24,17 +24,17 @@ class SupportedSellerProfileType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'CategoryGroup' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\CategoryGroupType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CategoryGroup'
+        ],
         'ProfileID' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ProfileID'
-        ],
-        'ProfileType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ProfileType'
         ],
         'ProfileName' => [
             'type' => 'string',
@@ -42,20 +42,20 @@ class SupportedSellerProfileType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ProfileName'
         ],
+        'ProfileType' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ProfileType'
+        ],
         'ShortSummary' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShortSummary'
-        ],
-        'CategoryGroup' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\CategoryGroupType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CategoryGroup'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class SupportedSellerProfileType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

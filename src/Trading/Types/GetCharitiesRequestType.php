@@ -12,14 +12,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property integer $CharityDomain
  * @property string $CharityID
  * @property string $CharityName
- * @property string $Query
  * @property integer $CharityRegion
- * @property integer $CharityDomain
+ * @property boolean $Featured
  * @property boolean $IncludeDescription
  * @property \DTS\eBaySDK\Trading\Enums\StringMatchCodeType $MatchType
- * @property boolean $Featured
+ * @property string $Query
  */
 class GetCharitiesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -27,6 +27,12 @@ class GetCharitiesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequest
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'CharityDomain' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CharityDomain'
+        ],
         'CharityID' => [
             'type' => 'string',
             'repeatable' => false,
@@ -39,23 +45,17 @@ class GetCharitiesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequest
             'attribute' => false,
             'elementName' => 'CharityName'
         ],
-        'Query' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Query'
-        ],
         'CharityRegion' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CharityRegion'
         ],
-        'CharityDomain' => [
-            'type' => 'integer',
+        'Featured' => [
+            'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'CharityDomain'
+            'elementName' => 'Featured'
         ],
         'IncludeDescription' => [
             'type' => 'boolean',
@@ -69,14 +69,14 @@ class GetCharitiesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequest
             'attribute' => false,
             'elementName' => 'MatchType'
         ],
-        'Featured' => [
-            'type' => 'boolean',
+        'Query' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Featured'
+            'elementName' => 'Query'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -93,7 +93,7 @@ class GetCharitiesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequest
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetCharitiesRequest';
         }

@@ -10,18 +10,19 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class CharitySellerStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class CharitySellerStatusCodeType extends Enum 
 {
-    const C_CLOSED = 'Closed';
-    const C_CREDIT_CARD_ABOUT_TO_EXPIRE = 'CreditCardAboutToExpire';
-    const C_CREDIT_CARD_EXPIRED = 'CreditCardExpired';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DIRECT_DEBIT_REJECTED = 'DirectDebitRejected';
-    const C_NOT_REGISTERED_LOST_DIRECT_SELLER_STATUS = 'NotRegisteredLostDirectSellerStatus';
-    const C_REGISTERED = 'Registered';
-    const C_REGISTERED_DIRECT_SELLER = 'RegisteredDirectSeller';
-    const C_REGISTERED_NO_CREDIT_CARD = 'RegisteredNoCreditCard';
-    const C_REGISTERED_NO_PAYMENT_METHOD = 'RegisteredNoPaymentMethod';
-    const C_SUSPENDED = 'Suspended';
-    const C_TOKEN_EXPIRED = 'TokenExpired';
+    private const Closed = 'Closed';
+    private const CreditCardAboutToExpire = 'CreditCardAboutToExpire';
+    private const CreditCardExpired = 'CreditCardExpired';
+    private const CustomCode = 'CustomCode';
+    private const NotRegisteredLostDirectSellerStatus = 'NotRegisteredLostDirectSellerStatus';
+    private const Registered = 'Registered';
+    private const RegisteredDirectSeller = 'RegisteredDirectSeller';
+    private const RegisteredNoPaymentMethod = 'RegisteredNoPaymentMethod';
+    private const Suspended = 'Suspended';
+    private const TokenExpired = 'TokenExpired';
+
 }

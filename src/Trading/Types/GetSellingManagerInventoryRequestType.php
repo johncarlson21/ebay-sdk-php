@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerProductSortCodeType $Sort
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerInventoryPropertyTypeCodeType[] $Filter
  * @property integer $FolderID
  * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
- * @property \DTS\eBaySDK\Trading\Enums\SortOrderCodeType $SortOrder
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerSearchType $Search
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerProductSortCodeType $Sort
+ * @property \DTS\eBaySDK\Trading\Enums\SortOrderCodeType $SortOrder
  * @property integer $StoreCategoryID
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerInventoryPropertyTypeCodeType[] $Filter
  */
 class GetSellingManagerInventoryRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -26,11 +26,11 @@ class GetSellingManagerInventoryRequestType extends \DTS\eBaySDK\Trading\Types\A
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Sort' => [
+        'Filter' => [
             'type' => 'string',
-            'repeatable' => false,
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'Sort'
+            'elementName' => 'Filter'
         ],
         'FolderID' => [
             'type' => 'integer',
@@ -44,32 +44,32 @@ class GetSellingManagerInventoryRequestType extends \DTS\eBaySDK\Trading\Types\A
             'attribute' => false,
             'elementName' => 'Pagination'
         ],
-        'SortOrder' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SortOrder'
-        ],
         'Search' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerSearchType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Search'
         ],
+        'Sort' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Sort'
+        ],
+        'SortOrder' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SortOrder'
+        ],
         'StoreCategoryID' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'StoreCategoryID'
-        ],
-        'Filter' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'Filter'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class GetSellingManagerInventoryRequestType extends \DTS\eBaySDK\Trading\Types\A
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetSellingManagerInventoryRequest';
         }

@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerAutoRelistType $AutomatedRelistingRule
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerAutoSecondChanceOfferType $AutomatedSecondChanceOfferRule
+ * @property string $ItemID
  */
 class SetSellingManagerItemAutomationRuleRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -22,12 +22,6 @@ class SetSellingManagerItemAutomationRuleRequestType extends \DTS\eBaySDK\Tradin
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
-        ],
         'AutomatedRelistingRule' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerAutoRelistType',
             'repeatable' => false,
@@ -39,9 +33,15 @@ class SetSellingManagerItemAutomationRuleRequestType extends \DTS\eBaySDK\Tradin
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AutomatedSecondChanceOfferRule'
+        ],
+        'ItemID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class SetSellingManagerItemAutomationRuleRequestType extends \DTS\eBaySDK\Tradin
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'SetSellingManagerItemAutomationRuleRequest';
         }

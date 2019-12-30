@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class DisputeCreditEligibilityCodeType
+use MyCLabs\Enum\Enum;
+
+class DisputeCreditEligibilityCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_ELIGIBLE = 'Eligible';
-    const C_IN_ELIGIBLE = 'InEligible';
+    private const CustomCode = 'CustomCode';
+    private const Eligible = 'Eligible';
+    private const InEligible = 'InEligible';
+
 }

@@ -10,12 +10,15 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class CancelInitiatorCodeType
+use MyCLabs\Enum\Enum;
+
+class CancelInitiatorCodeType extends Enum 
 {
-    const C_BUYER = 'Buyer';
-    const C_CS = 'CS';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_SELLER = 'Seller';
-    const C_SYSTEM = 'System';
-    const C_UNKNOWN = 'Unknown';
+    private const Buyer = 'Buyer';
+    private const CS = 'CS';
+    private const CustomCode = 'CustomCode';
+    private const Seller = 'Seller';
+    private const System = 'System';
+    private const Unknown = 'Unknown';
+
 }

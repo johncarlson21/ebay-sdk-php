@@ -10,21 +10,24 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class URLTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class URLTypeCodeType extends Enum 
 {
-    const C_APPEAL_PRODUCT_URL = 'AppealProductUrl';
-    const C_CREATE_PRODUCT_URL = 'CreateProductUrl';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_E_BAY_STOREURL = 'eBayStoreURL';
-    const C_LARGE_LOGOURL = 'LargeLogoURL';
-    const C_MANAGE_PRODUCT_URL = 'ManageProductUrl';
-    const C_MEDIUM_LOGOURL = 'MediumLogoURL';
-    const C_MYE_BAYURL = 'MyeBayURL';
-    const C_MYE_BAY_BIDDINGURL = 'MyeBayBiddingURL';
-    const C_MYE_BAY_NOT_WONURL = 'MyeBayNotWonURL';
-    const C_MYE_BAY_WATCHINGURL = 'MyeBayWatchingURL';
-    const C_MYE_BAY_WONURL = 'MyeBayWonURL';
-    const C_SMALL_LOGOURL = 'SmallLogoURL';
-    const C_VIEW_ITEMURL = 'ViewItemURL';
-    const C_VIEW_USERURL = 'ViewUserURL';
+    private const AppealProductUrl = 'AppealProductUrl';
+    private const CreateProductUrl = 'CreateProductUrl';
+    private const CustomCode = 'CustomCode';
+    private const eBayStoreURL = 'eBayStoreURL';
+    private const LargeLogoURL = 'LargeLogoURL';
+    private const ManageProductUrl = 'ManageProductUrl';
+    private const MediumLogoURL = 'MediumLogoURL';
+    private const MyeBayBiddingURL = 'MyeBayBiddingURL';
+    private const MyeBayNotWonURL = 'MyeBayNotWonURL';
+    private const MyeBayURL = 'MyeBayURL';
+    private const MyeBayWatchingURL = 'MyeBayWatchingURL';
+    private const MyeBayWonURL = 'MyeBayWonURL';
+    private const SmallLogoURL = 'SmallLogoURL';
+    private const ViewItemURL = 'ViewItemURL';
+    private const ViewUserURL = 'ViewUserURL';
+
 }

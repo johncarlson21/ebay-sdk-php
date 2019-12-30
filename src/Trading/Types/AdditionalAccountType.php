@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $AccountCode
  * @property \DTS\eBaySDK\Trading\Types\AmountType $Balance
  * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $Currency
- * @property string $AccountCode
  */
 class AdditionalAccountType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -22,6 +22,12 @@ class AdditionalAccountType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'AccountCode' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'AccountCode'
+        ],
         'Balance' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
@@ -33,15 +39,9 @@ class AdditionalAccountType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Currency'
-        ],
-        'AccountCode' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AccountCode'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class AdditionalAccountType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

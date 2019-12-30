@@ -12,12 +12,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $PackageID
- * @property string $Description
- * @property \DTS\eBaySDK\Trading\Enums\ShippingPackageCodeType $ShippingPackage
  * @property boolean $DefaultValue
- * @property boolean $DimensionsSupported
+ * @property string $Description
  * @property string $DetailVersion
+ * @property boolean $DimensionsSupported
+ * @property integer $PackageID
+ * @property \DTS\eBaySDK\Trading\Enums\ShippingPackageCodeType $ShippingPackage
  * @property \DateTime $UpdateTime
  */
 class ShippingPackageDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -26,11 +26,11 @@ class ShippingPackageDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'PackageID' => [
-            'type' => 'integer',
+        'DefaultValue' => [
+            'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'PackageID'
+            'elementName' => 'DefaultValue'
         ],
         'Description' => [
             'type' => 'string',
@@ -38,17 +38,11 @@ class ShippingPackageDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Description'
         ],
-        'ShippingPackage' => [
+        'DetailVersion' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ShippingPackage'
-        ],
-        'DefaultValue' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DefaultValue'
+            'elementName' => 'DetailVersion'
         ],
         'DimensionsSupported' => [
             'type' => 'boolean',
@@ -56,11 +50,17 @@ class ShippingPackageDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DimensionsSupported'
         ],
-        'DetailVersion' => [
+        'PackageID' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PackageID'
+        ],
+        'ShippingPackage' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'DetailVersion'
+            'elementName' => 'ShippingPackage'
         ],
         'UpdateTime' => [
             'type' => 'DateTime',
@@ -69,7 +69,7 @@ class ShippingPackageDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'UpdateTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class ShippingPackageDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

@@ -10,9 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class BidGroupStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class BidGroupStatusCodeType extends Enum 
 {
-    const C_CLOSED = 'Closed';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_OPEN = 'Open';
+
 }

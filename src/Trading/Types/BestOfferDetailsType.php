@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $BestOffer
  * @property integer $BestOfferCount
  * @property boolean $BestOfferEnabled
- * @property \DTS\eBaySDK\Trading\Types\AmountType $BestOffer
  * @property \DTS\eBaySDK\Trading\Enums\BestOfferStatusCodeType $BestOfferStatus
  */
 class BestOfferDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -23,6 +23,12 @@ class BestOfferDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'BestOffer' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BestOffer'
+        ],
         'BestOfferCount' => [
             'type' => 'integer',
             'repeatable' => false,
@@ -35,12 +41,6 @@ class BestOfferDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'BestOfferEnabled'
         ],
-        'BestOffer' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BestOffer'
-        ],
         'BestOfferStatus' => [
             'type' => 'string',
             'repeatable' => false,
@@ -48,7 +48,7 @@ class BestOfferDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'BestOfferStatus'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class BestOfferDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

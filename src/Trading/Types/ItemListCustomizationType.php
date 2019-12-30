@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $Include
- * @property \DTS\eBaySDK\Trading\Enums\ListingTypeCodeType $ListingType
- * @property \DTS\eBaySDK\Trading\Enums\ItemSortTypeCodeType $Sort
  * @property integer $DurationInDays
+ * @property boolean $Include
  * @property boolean $IncludeNotes
- * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
+ * @property \DTS\eBaySDK\Trading\Enums\ListingTypeCodeType $ListingType
  * @property \DTS\eBaySDK\Trading\Enums\OrderStatusFilterCodeType $OrderStatusFilter
+ * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
+ * @property \DTS\eBaySDK\Trading\Enums\ItemSortTypeCodeType $Sort
  */
 class ItemListCustomizationType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -26,29 +26,17 @@ class ItemListCustomizationType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Include' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Include'
-        ],
-        'ListingType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ListingType'
-        ],
-        'Sort' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Sort'
-        ],
         'DurationInDays' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DurationInDays'
+        ],
+        'Include' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Include'
         ],
         'IncludeNotes' => [
             'type' => 'boolean',
@@ -56,20 +44,32 @@ class ItemListCustomizationType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'IncludeNotes'
         ],
-        'Pagination' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
+        'ListingType' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Pagination'
+            'elementName' => 'ListingType'
         ],
         'OrderStatusFilter' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OrderStatusFilter'
+        ],
+        'Pagination' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Pagination'
+        ],
+        'Sort' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Sort'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class ItemListCustomizationType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

@@ -55,7 +55,7 @@ class GetUserDisputesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
             'elementName' => 'Pagination'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class GetUserDisputesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetUserDisputesRequest';
         }

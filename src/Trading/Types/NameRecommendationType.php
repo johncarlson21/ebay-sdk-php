@@ -12,11 +12,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $HelpText
+ * @property string $HelpURL
  * @property string $Name
  * @property \DTS\eBaySDK\Trading\Types\RecommendationValidationRulesType $ValidationRules
  * @property \DTS\eBaySDK\Trading\Types\ValueRecommendationType[] $ValueRecommendation
- * @property string $HelpURL
- * @property string $HelpText
  */
 class NameRecommendationType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -24,6 +24,18 @@ class NameRecommendationType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'HelpText' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'HelpText'
+        ],
+        'HelpURL' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'HelpURL'
+        ],
         'Name' => [
             'type' => 'string',
             'repeatable' => false,
@@ -41,21 +53,9 @@ class NameRecommendationType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ValueRecommendation'
-        ],
-        'HelpURL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'HelpURL'
-        ],
-        'HelpText' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'HelpText'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class NameRecommendationType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

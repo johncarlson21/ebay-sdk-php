@@ -13,8 +13,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Enums\StoreCategoryUpdateActionCodeType $Action
- * @property integer $ItemDestinationCategoryID
  * @property integer $DestinationParentCategoryID
+ * @property integer $ItemDestinationCategoryID
  * @property \DTS\eBaySDK\Trading\Types\StoreCustomCategoryArrayType $StoreCategories
  */
 class SetStoreCategoriesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -29,17 +29,17 @@ class SetStoreCategoriesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'attribute' => false,
             'elementName' => 'Action'
         ],
-        'ItemDestinationCategoryID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemDestinationCategoryID'
-        ],
         'DestinationParentCategoryID' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DestinationParentCategoryID'
+        ],
+        'ItemDestinationCategoryID' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemDestinationCategoryID'
         ],
         'StoreCategories' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomCategoryArrayType',
@@ -48,7 +48,7 @@ class SetStoreCategoriesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'elementName' => 'StoreCategories'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class SetStoreCategoriesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'SetStoreCategoriesRequest';
         }

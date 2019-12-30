@@ -10,8 +10,11 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class BusinessRoleType
+use MyCLabs\Enum\Enum;
+
+class BusinessRoleType extends Enum 
 {
-    const C_FULL_MARKET_PLACE_PARTICIPANT = 'FullMarketPlaceParticipant';
-    const C_SHOPPER = 'Shopper';
+    private const FullMarketPlaceParticipant = 'FullMarketPlaceParticipant';
+    private const Shopper = 'Shopper';
+
 }

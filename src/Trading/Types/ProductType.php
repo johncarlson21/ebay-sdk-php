@@ -12,6 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $productID
+ * @property string $stockPhotoURL
+ * @property string $title
  */
 class ProductType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -19,8 +22,26 @@ class ProductType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'productID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'productID'
+        ],
+        'stockPhotoURL' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'stockPhotoURL'
+        ],
+        'title' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'title'
+        ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -37,7 +58,7 @@ class ProductType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

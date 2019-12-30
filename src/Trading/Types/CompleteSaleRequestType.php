@@ -12,15 +12,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
- * @property string $TransactionID
  * @property \DTS\eBaySDK\Trading\Types\FeedbackInfoType $FeedbackInfo
- * @property boolean $Shipped
- * @property boolean $Paid
- * @property \DTS\eBaySDK\Trading\Enums\ListingTypeCodeType $ListingType
- * @property \DTS\eBaySDK\Trading\Types\ShipmentType $Shipment
+ * @property string $ItemID
  * @property string $OrderID
  * @property string $OrderLineItemID
+ * @property boolean $Paid
+ * @property \DTS\eBaySDK\Trading\Types\ShipmentType $Shipment
+ * @property boolean $Shipped
+ * @property string $TransactionID
  */
 class CompleteSaleRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -28,47 +27,17 @@ class CompleteSaleRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequest
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
-        ],
-        'TransactionID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TransactionID'
-        ],
         'FeedbackInfo' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FeedbackInfoType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeedbackInfo'
         ],
-        'Shipped' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Shipped'
-        ],
-        'Paid' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Paid'
-        ],
-        'ListingType' => [
+        'ItemID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ListingType'
-        ],
-        'Shipment' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShipmentType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Shipment'
+            'elementName' => 'ItemID'
         ],
         'OrderID' => [
             'type' => 'string',
@@ -81,9 +50,33 @@ class CompleteSaleRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequest
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
+        ],
+        'Paid' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Paid'
+        ],
+        'Shipment' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ShipmentType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Shipment'
+        ],
+        'Shipped' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Shipped'
+        ],
+        'TransactionID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TransactionID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -100,7 +93,7 @@ class CompleteSaleRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequest
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'CompleteSaleRequest';
         }

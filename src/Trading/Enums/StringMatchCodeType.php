@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class StringMatchCodeType
+use MyCLabs\Enum\Enum;
+
+class StringMatchCodeType extends Enum 
 {
-    const C_CONTAINS = 'Contains';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_STARTS_WITH = 'StartsWith';
+    private const Contains = 'Contains';
+    private const CustomCode = 'CustomCode';
+    private const StartsWith = 'StartsWith';
+
 }

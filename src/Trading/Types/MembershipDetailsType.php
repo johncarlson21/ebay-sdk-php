@@ -27,7 +27,7 @@ class MembershipDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'Program'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -44,7 +44,7 @@ class MembershipDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

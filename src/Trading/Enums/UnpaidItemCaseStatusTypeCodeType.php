@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class UnpaidItemCaseStatusTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class UnpaidItemCaseStatusTypeCodeType extends Enum 
 {
-    const C_CLOSED_WITHOUT_PAYMENT = 'ClosedWithoutPayment';
-    const C_CLOSED_WITH_PAYMENT = 'ClosedWithPayment';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_OPEN = 'Open';
+    private const ClosedWithoutPayment = 'ClosedWithoutPayment';
+    private const ClosedWithPayment = 'ClosedWithPayment';
+    private const CustomCode = 'CustomCode';
+    private const Open = 'Open';
+
 }

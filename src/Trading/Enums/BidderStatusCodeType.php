@@ -10,10 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class BidderStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class BidderStatusCodeType extends Enum 
 {
-    const C_APPROVED = 'Approved';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DENIED = 'Denied';
-    const C_PENDING = 'Pending';
+
 }

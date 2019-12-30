@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ClassifiedAdPaymentMethodEnabledCodeType
+use MyCLabs\Enum\Enum;
+
+class ClassifiedAdPaymentMethodEnabledCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_ENABLED_WITHOUT_CHECKOUT = 'EnabledWithoutCheckout';
-    const C_ENABLED_WITH_CHECKOUT = 'EnabledWithCheckout';
-    const C_NOT_SUPPORTED = 'NotSupported';
+    private const CustomCode = 'CustomCode';
+    private const EnabledWithCheckout = 'EnabledWithCheckout';
+    private const EnabledWithoutCheckout = 'EnabledWithoutCheckout';
+    private const NotSupported = 'NotSupported';
+
 }

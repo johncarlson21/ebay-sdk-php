@@ -12,19 +12,19 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $WatchList
- * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $BidList
  * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $BestOfferList
- * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $WonList
- * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $LostList
+ * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $BidList
+ * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $BuyingSummary
+ * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $DeletedFromLostList
+ * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $DeletedFromWonList
  * @property \DTS\eBaySDK\Trading\Types\MyeBaySelectionType $FavoriteSearches
  * @property \DTS\eBaySDK\Trading\Types\MyeBaySelectionType $FavoriteSellers
- * @property \DTS\eBaySDK\Trading\Types\MyeBaySelectionType $SecondChanceOffer
- * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $DeletedFromWonList
- * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $DeletedFromLostList
- * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $BuyingSummary
- * @property \DTS\eBaySDK\Trading\Types\MyeBaySelectionType $UserDefinedLists
  * @property boolean $HideVariations
+ * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $LostList
+ * @property \DTS\eBaySDK\Trading\Types\MyeBaySelectionType $SecondChanceOffer
+ * @property \DTS\eBaySDK\Trading\Types\MyeBaySelectionType $UserDefinedLists
+ * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $WatchList
+ * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $WonList
  */
 class GetMyeBayBuyingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -32,11 +32,11 @@ class GetMyeBayBuyingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'WatchList' => [
+        'BestOfferList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'WatchList'
+            'elementName' => 'BestOfferList'
         ],
         'BidList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
@@ -44,23 +44,23 @@ class GetMyeBayBuyingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
             'attribute' => false,
             'elementName' => 'BidList'
         ],
-        'BestOfferList' => [
+        'BuyingSummary' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'BestOfferList'
+            'elementName' => 'BuyingSummary'
         ],
-        'WonList' => [
+        'DeletedFromLostList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'WonList'
+            'elementName' => 'DeletedFromLostList'
         ],
-        'LostList' => [
+        'DeletedFromWonList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'LostList'
+            'elementName' => 'DeletedFromWonList'
         ],
         'FavoriteSearches' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyeBaySelectionType',
@@ -74,29 +74,23 @@ class GetMyeBayBuyingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
             'attribute' => false,
             'elementName' => 'FavoriteSellers'
         ],
+        'HideVariations' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'HideVariations'
+        ],
+        'LostList' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'LostList'
+        ],
         'SecondChanceOffer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyeBaySelectionType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SecondChanceOffer'
-        ],
-        'DeletedFromWonList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DeletedFromWonList'
-        ],
-        'DeletedFromLostList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DeletedFromLostList'
-        ],
-        'BuyingSummary' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BuyingSummary'
         ],
         'UserDefinedLists' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyeBaySelectionType',
@@ -104,14 +98,20 @@ class GetMyeBayBuyingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
             'attribute' => false,
             'elementName' => 'UserDefinedLists'
         ],
-        'HideVariations' => [
-            'type' => 'boolean',
+        'WatchList' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'HideVariations'
+            'elementName' => 'WatchList'
+        ],
+        'WonList' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'WonList'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -128,7 +128,7 @@ class GetMyeBayBuyingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetMyeBayBuyingRequest';
         }

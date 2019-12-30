@@ -10,14 +10,17 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class HitCounterCodeType
+use MyCLabs\Enum\Enum;
+
+class HitCounterCodeType extends Enum 
 {
-    const C_BASIC_STYLE = 'BasicStyle';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_GREENLED = 'GreenLED';
-    const C_HIDDEN = 'Hidden';
-    const C_HIDDEN_STYLE = 'HiddenStyle';
-    const C_HONESTY_STYLE = 'HonestyStyle';
-    const C_NO_HIT_COUNTER = 'NoHitCounter';
-    const C_RETRO_STYLE = 'RetroStyle';
+    private const BasicStyle = 'BasicStyle';
+    private const CustomCode = 'CustomCode';
+    private const GreenLED = 'GreenLED';
+    private const Hidden = 'Hidden';
+    private const HiddenStyle = 'HiddenStyle';
+    private const HonestyStyle = 'HonestyStyle';
+    private const NoHitCounter = 'NoHitCounter';
+    private const RetroStyle = 'RetroStyle';
+
 }

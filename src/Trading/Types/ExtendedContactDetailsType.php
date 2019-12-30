@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\ContactHoursDetailsType $ContactHoursDetails
  * @property boolean $ClassifiedAdContactByEmailEnabled
+ * @property \DTS\eBaySDK\Trading\Types\ContactHoursDetailsType $ContactHoursDetails
  */
 class ExtendedContactDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -21,20 +21,20 @@ class ExtendedContactDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ContactHoursDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ContactHoursDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ContactHoursDetails'
-        ],
         'ClassifiedAdContactByEmailEnabled' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ClassifiedAdContactByEmailEnabled'
+        ],
+        'ContactHoursDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ContactHoursDetailsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ContactHoursDetails'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class ExtendedContactDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

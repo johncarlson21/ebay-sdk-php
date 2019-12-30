@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\StoreSubscriptionLevelCodeType $Level
  * @property \DTS\eBaySDK\Trading\Types\AmountType $Fee
+ * @property \DTS\eBaySDK\Trading\Enums\StoreSubscriptionLevelCodeType $Level
  */
 class StoreSubscriptionType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -21,20 +21,20 @@ class StoreSubscriptionType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Level' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Level'
-        ],
         'Fee' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Fee'
+        ],
+        'Level' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Level'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class StoreSubscriptionType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

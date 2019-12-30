@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class AccessRuleStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class AccessRuleStatusCodeType extends Enum 
 {
-    const C_APPLICATION_BLOCKED = 'ApplicationBlocked';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_RULE_OFF = 'RuleOff';
-    const C_RULE_ON = 'RuleOn';
+    private const ApplicationBlocked = 'ApplicationBlocked';
+    private const CustomCode = 'CustomCode';
+    private const RuleOff = 'RuleOff';
+    private const RuleOn = 'RuleOn';
+
 }

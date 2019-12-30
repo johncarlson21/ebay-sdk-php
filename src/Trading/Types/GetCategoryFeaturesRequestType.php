@@ -12,11 +12,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property boolean $AllFeaturesForCategory
  * @property string $CategoryID
+ * @property \DTS\eBaySDK\Trading\Enums\FeatureIDCodeType[] $FeatureID
  * @property integer $LevelLimit
  * @property boolean $ViewAllNodes
- * @property \DTS\eBaySDK\Trading\Enums\FeatureIDCodeType[] $FeatureID
- * @property boolean $AllFeaturesForCategory
  */
 class GetCategoryFeaturesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -24,11 +24,23 @@ class GetCategoryFeaturesRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'AllFeaturesForCategory' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'AllFeaturesForCategory'
+        ],
         'CategoryID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
+        ],
+        'FeatureID' => [
+            'type' => 'string',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'FeatureID'
         ],
         'LevelLimit' => [
             'type' => 'integer',
@@ -41,21 +53,9 @@ class GetCategoryFeaturesRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ViewAllNodes'
-        ],
-        'FeatureID' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'FeatureID'
-        ],
-        'AllFeaturesForCategory' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AllFeaturesForCategory'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class GetCategoryFeaturesRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetCategoryFeaturesRequest';
         }

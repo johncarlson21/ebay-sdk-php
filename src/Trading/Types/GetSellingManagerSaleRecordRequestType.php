@@ -13,9 +13,9 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $ItemID
- * @property string $TransactionID
  * @property string $OrderID
  * @property string $OrderLineItemID
+ * @property string $TransactionID
  */
 class GetSellingManagerSaleRecordRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -29,12 +29,6 @@ class GetSellingManagerSaleRecordRequestType extends \DTS\eBaySDK\Trading\Types\
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
-        'TransactionID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TransactionID'
-        ],
         'OrderID' => [
             'type' => 'string',
             'repeatable' => false,
@@ -46,9 +40,15 @@ class GetSellingManagerSaleRecordRequestType extends \DTS\eBaySDK\Trading\Types\
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
+        ],
+        'TransactionID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TransactionID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class GetSellingManagerSaleRecordRequestType extends \DTS\eBaySDK\Trading\Types\
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetSellingManagerSaleRecordRequest';
         }

@@ -13,25 +13,25 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $CommentingUser
- * @property \DTS\eBaySDK\Trading\Enums\FeedbackRatingStarCodeType $FeedbackRatingStar
  * @property integer $CommentingUserScore
+ * @property boolean $CommentReplaced
  * @property string $CommentText
  * @property \DateTime $CommentTime
  * @property \DTS\eBaySDK\Trading\Enums\CommentTypeCodeType $CommentType
- * @property string $FeedbackResponse
- * @property string $Followup
- * @property string $ItemID
- * @property \DTS\eBaySDK\Trading\Enums\TradingRoleCodeType $Role
- * @property string $ItemTitle
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ItemPrice
- * @property string $FeedbackID
- * @property string $TransactionID
- * @property boolean $CommentReplaced
- * @property boolean $ResponseReplaced
- * @property boolean $FollowUpReplaced
  * @property boolean $Countable
+ * @property string $FeedbackID
+ * @property \DTS\eBaySDK\Trading\Enums\FeedbackRatingStarCodeType $FeedbackRatingStar
+ * @property string $FeedbackResponse
  * @property boolean $FeedbackRevised
+ * @property string $Followup
+ * @property boolean $FollowUpReplaced
+ * @property string $ItemID
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ItemPrice
+ * @property string $ItemTitle
  * @property string $OrderLineItemID
+ * @property boolean $ResponseReplaced
+ * @property \DTS\eBaySDK\Trading\Enums\TradingRoleCodeType $Role
+ * @property string $TransactionID
  */
 class FeedbackDetailType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -45,17 +45,17 @@ class FeedbackDetailType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CommentingUser'
         ],
-        'FeedbackRatingStar' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FeedbackRatingStar'
-        ],
         'CommentingUserScore' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CommentingUserScore'
+        ],
+        'CommentReplaced' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CommentReplaced'
         ],
         'CommentText' => [
             'type' => 'string',
@@ -75,41 +75,11 @@ class FeedbackDetailType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CommentType'
         ],
-        'FeedbackResponse' => [
-            'type' => 'string',
+        'Countable' => [
+            'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'FeedbackResponse'
-        ],
-        'Followup' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Followup'
-        ],
-        'ItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
-        ],
-        'Role' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Role'
-        ],
-        'ItemTitle' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemTitle'
-        ],
-        'ItemPrice' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemPrice'
+            'elementName' => 'Countable'
         ],
         'FeedbackID' => [
             'type' => 'string',
@@ -117,35 +87,17 @@ class FeedbackDetailType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'FeedbackID'
         ],
-        'TransactionID' => [
+        'FeedbackRatingStar' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'TransactionID'
+            'elementName' => 'FeedbackRatingStar'
         ],
-        'CommentReplaced' => [
-            'type' => 'boolean',
+        'FeedbackResponse' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'CommentReplaced'
-        ],
-        'ResponseReplaced' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ResponseReplaced'
-        ],
-        'FollowUpReplaced' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FollowUpReplaced'
-        ],
-        'Countable' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Countable'
+            'elementName' => 'FeedbackResponse'
         ],
         'FeedbackRevised' => [
             'type' => 'boolean',
@@ -153,14 +105,62 @@ class FeedbackDetailType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'FeedbackRevised'
         ],
+        'Followup' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Followup'
+        ],
+        'FollowUpReplaced' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'FollowUpReplaced'
+        ],
+        'ItemID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
+        ],
+        'ItemPrice' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemPrice'
+        ],
+        'ItemTitle' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemTitle'
+        ],
         'OrderLineItemID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
+        ],
+        'ResponseReplaced' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ResponseReplaced'
+        ],
+        'Role' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Role'
+        ],
+        'TransactionID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TransactionID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -177,7 +177,7 @@ class FeedbackDetailType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

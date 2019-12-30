@@ -10,11 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ProPackCodeType
+use MyCLabs\Enum\Enum;
+
+class ProPackCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DISABLED = 'Disabled';
-    const C_ENABLED = 'Enabled';
-    const C_POWER_SELLER_ONLY = 'PowerSellerOnly';
-    const C_TOP_RATED_SELLER_ONLY = 'TopRatedSellerOnly';
+
 }

@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DateTime $EndTime
  * @property string $CorrelationID
+ * @property \DateTime $EndTime
  * @property \DTS\eBaySDK\Trading\Types\ErrorType[] $Errors
  */
 class EndItemResponseContainerType extends \DTS\eBaySDK\Types\BaseType
@@ -22,17 +22,17 @@ class EndItemResponseContainerType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'EndTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'EndTime'
-        ],
         'CorrelationID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CorrelationID'
+        ],
+        'EndTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'EndTime'
         ],
         'Errors' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ErrorType',
@@ -41,7 +41,7 @@ class EndItemResponseContainerType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'Errors'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class EndItemResponseContainerType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

@@ -15,8 +15,8 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $ActiveItemsOnly
  * @property \DateTime $EndTimeFrom
  * @property \DateTime $EndTimeTo
- * @property string $UserID
  * @property \DTS\eBaySDK\Trading\Enums\GranularityLevelCodeType $GranularityLevel
+ * @property string $UserID
  */
 class GetBidderListRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -42,20 +42,20 @@ class GetBidderListRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
             'attribute' => false,
             'elementName' => 'EndTimeTo'
         ],
-        'UserID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UserID'
-        ],
         'GranularityLevel' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'GranularityLevel'
+        ],
+        'UserID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UserID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class GetBidderListRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetBidderListRequest';
         }

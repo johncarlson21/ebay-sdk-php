@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class UPSRateOptionCodeType
+use MyCLabs\Enum\Enum;
+
+class UPSRateOptionCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_UPS_DAILY_RATES = 'UPSDailyRates';
-    const C_UPS_ON_DEMAND_RATES = 'UPSOnDemandRates';
+    private const CustomCode = 'CustomCode';
+    private const UPSDailyRates = 'UPSDailyRates';
+    private const UPSOnDemandRates = 'UPSOnDemandRates';
+
 }

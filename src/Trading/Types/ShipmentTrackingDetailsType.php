@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ShippingCarrierUsed
- * @property string $ShipmentTrackingNumber
  * @property \DTS\eBaySDK\Trading\Types\ShipmentLineItemType $ShipmentLineItem
+ * @property string $ShipmentTrackingNumber
+ * @property string $ShippingCarrierUsed
  */
 class ShipmentTrackingDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -22,11 +22,11 @@ class ShipmentTrackingDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ShippingCarrierUsed' => [
-            'type' => 'string',
+        'ShipmentLineItem' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ShipmentLineItemType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ShippingCarrierUsed'
+            'elementName' => 'ShipmentLineItem'
         ],
         'ShipmentTrackingNumber' => [
             'type' => 'string',
@@ -34,14 +34,14 @@ class ShipmentTrackingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShipmentTrackingNumber'
         ],
-        'ShipmentLineItem' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShipmentLineItemType',
+        'ShippingCarrierUsed' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ShipmentLineItem'
+            'elementName' => 'ShippingCarrierUsed'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class ShipmentTrackingDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

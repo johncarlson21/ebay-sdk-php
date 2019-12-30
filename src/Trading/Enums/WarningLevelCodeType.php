@@ -10,8 +10,11 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class WarningLevelCodeType
+use MyCLabs\Enum\Enum;
+
+class WarningLevelCodeType extends Enum 
 {
-    const C_HIGH = 'High';
-    const C_LOW = 'Low';
+    private const High = 'High';
+    private const Low = 'Low';
+
 }

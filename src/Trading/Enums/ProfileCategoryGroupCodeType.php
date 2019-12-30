@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ProfileCategoryGroupCodeType
+use MyCLabs\Enum\Enum;
+
+class ProfileCategoryGroupCodeType extends Enum 
 {
-    const C_ALL = 'ALL';
-    const C_INHERIT = 'Inherit';
-    const C_MOTORS_VEHICLE = 'MOTORS_VEHICLE';
-    const C_NONE = 'None';
+    private const ALL = 'ALL';
+    private const Inherit = 'Inherit';
+    private const MOTORS_VEHICLE = 'MOTORS_VEHICLE';
+    private const None = 'None';
+
 }

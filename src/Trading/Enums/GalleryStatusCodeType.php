@@ -10,17 +10,20 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class GalleryStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class GalleryStatusCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_IMAGE_NON_EXISTENT = 'ImageNonExistent';
-    const C_IMAGE_PROCESSING_ERROR = 'ImageProcessingError';
-    const C_IMAGE_READ_TIME_OUT = 'ImageReadTimeOut';
-    const C_INVALID_FILE = 'InvalidFile';
-    const C_INVALID_FILE_FORMAT = 'InvalidFileFormat';
-    const C_INVALID_PROTOCOL = 'InvalidProtocol';
-    const C_INVALID_URL = 'InvalidUrl';
-    const C_PENDING = 'Pending';
-    const C_SERVER_DOWN = 'ServerDown';
-    const C_SUCCESS = 'Success';
+    private const CustomCode = 'CustomCode';
+    private const ImageNonExistent = 'ImageNonExistent';
+    private const ImageProcessingError = 'ImageProcessingError';
+    private const ImageReadTimeOut = 'ImageReadTimeOut';
+    private const InvalidFile = 'InvalidFile';
+    private const InvalidFileFormat = 'InvalidFileFormat';
+    private const InvalidProtocol = 'InvalidProtocol';
+    private const InvalidUrl = 'InvalidUrl';
+    private const Pending = 'Pending';
+    private const ServerDown = 'ServerDown';
+    private const Success = 'Success';
+
 }

@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $AudioChallengeURL
  * @property string $ChallengeToken
  * @property string $ImageChallengeURL
- * @property string $AudioChallengeURL
  */
 class GetChallengeTokenResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -22,6 +22,12 @@ class GetChallengeTokenResponseType extends \DTS\eBaySDK\Trading\Types\AbstractR
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'AudioChallengeURL' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'AudioChallengeURL'
+        ],
         'ChallengeToken' => [
             'type' => 'string',
             'repeatable' => false,
@@ -33,15 +39,9 @@ class GetChallengeTokenResponseType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ImageChallengeURL'
-        ],
-        'AudioChallengeURL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AudioChallengeURL'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class GetChallengeTokenResponseType extends \DTS\eBaySDK\Trading\Types\AbstractR
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

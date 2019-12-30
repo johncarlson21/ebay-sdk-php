@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $FileReferenceID
  * @property \DTS\eBaySDK\Trading\Types\RecommendationsType[] $Recommendations
  * @property string $TaskReferenceID
- * @property string $FileReferenceID
  */
 class GetCategorySpecificsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -22,6 +22,12 @@ class GetCategorySpecificsResponseType extends \DTS\eBaySDK\Trading\Types\Abstra
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'FileReferenceID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'FileReferenceID'
+        ],
         'Recommendations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\RecommendationsType',
             'repeatable' => true,
@@ -33,15 +39,9 @@ class GetCategorySpecificsResponseType extends \DTS\eBaySDK\Trading\Types\Abstra
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TaskReferenceID'
-        ],
-        'FileReferenceID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FileReferenceID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class GetCategorySpecificsResponseType extends \DTS\eBaySDK\Trading\Types\Abstra
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

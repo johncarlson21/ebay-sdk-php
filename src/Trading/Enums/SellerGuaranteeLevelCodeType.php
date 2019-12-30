@@ -10,11 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SellerGuaranteeLevelCodeType
+use MyCLabs\Enum\Enum;
+
+class SellerGuaranteeLevelCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_NOT_ELIGIBLE = 'NotEligible';
-    const C_PREMIUM = 'Premium';
-    const C_REGULAR = 'Regular';
-    const C_ULTRA = 'Ultra';
+
 }

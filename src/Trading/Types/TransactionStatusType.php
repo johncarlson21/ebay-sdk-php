@@ -12,19 +12,19 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\PaymentStatusCodeType $eBayPaymentStatus
- * @property \DTS\eBaySDK\Trading\Enums\CheckoutStatusCodeType $CheckoutStatus
- * @property \DateTime $LastTimeModified
- * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentMethodCodeType $PaymentMethodUsed
- * @property \DTS\eBaySDK\Trading\Enums\CompleteStatusCodeType $CompleteStatus
  * @property boolean $BuyerSelectedShipping
- * @property \DTS\eBaySDK\Trading\Enums\PaymentHoldStatusCodeType $PaymentHoldStatus
- * @property boolean $IntegratedMerchantCreditCardEnabled
- * @property \DTS\eBaySDK\Trading\Enums\InquiryStatusCodeType $InquiryStatus
- * @property \DTS\eBaySDK\Trading\Enums\ReturnStatusCodeType $ReturnStatus
- * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentInstrumentCodeType $PaymentInstrument
- * @property \DTS\eBaySDK\Trading\Enums\DigitalStatusCodeType $DigitalStatus
  * @property \DTS\eBaySDK\Trading\Enums\CancelStatusCodeType $CancelStatus
+ * @property \DTS\eBaySDK\Trading\Enums\CheckoutStatusCodeType $CheckoutStatus
+ * @property \DTS\eBaySDK\Trading\Enums\CompleteStatusCodeType $CompleteStatus
+ * @property \DTS\eBaySDK\Trading\Enums\DigitalStatusCodeType $DigitalStatus
+ * @property \DTS\eBaySDK\Trading\Enums\PaymentStatusCodeType $eBayPaymentStatus
+ * @property \DTS\eBaySDK\Trading\Enums\InquiryStatusCodeType $InquiryStatus
+ * @property boolean $IntegratedMerchantCreditCardEnabled
+ * @property \DateTime $LastTimeModified
+ * @property \DTS\eBaySDK\Trading\Enums\PaymentHoldStatusCodeType $PaymentHoldStatus
+ * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentInstrumentCodeType $PaymentInstrument
+ * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentMethodCodeType $PaymentMethodUsed
+ * @property \DTS\eBaySDK\Trading\Enums\ReturnStatusCodeType $ReturnStatus
  */
 class TransactionStatusType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,11 +32,17 @@ class TransactionStatusType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'eBayPaymentStatus' => [
+        'BuyerSelectedShipping' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BuyerSelectedShipping'
+        ],
+        'CancelStatus' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'eBayPaymentStatus'
+            'elementName' => 'CancelStatus'
         ],
         'CheckoutStatus' => [
             'type' => 'string',
@@ -44,59 +50,11 @@ class TransactionStatusType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CheckoutStatus'
         ],
-        'LastTimeModified' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'LastTimeModified'
-        ],
-        'PaymentMethodUsed' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentMethodUsed'
-        ],
         'CompleteStatus' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CompleteStatus'
-        ],
-        'BuyerSelectedShipping' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BuyerSelectedShipping'
-        ],
-        'PaymentHoldStatus' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentHoldStatus'
-        ],
-        'IntegratedMerchantCreditCardEnabled' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IntegratedMerchantCreditCardEnabled'
-        ],
-        'InquiryStatus' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'InquiryStatus'
-        ],
-        'ReturnStatus' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ReturnStatus'
-        ],
-        'PaymentInstrument' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentInstrument'
         ],
         'DigitalStatus' => [
             'type' => 'string',
@@ -104,14 +62,56 @@ class TransactionStatusType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DigitalStatus'
         ],
-        'CancelStatus' => [
+        'eBayPaymentStatus' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'CancelStatus'
+            'elementName' => 'eBayPaymentStatus'
+        ],
+        'InquiryStatus' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'InquiryStatus'
+        ],
+        'IntegratedMerchantCreditCardEnabled' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IntegratedMerchantCreditCardEnabled'
+        ],
+        'LastTimeModified' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'LastTimeModified'
+        ],
+        'PaymentHoldStatus' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PaymentHoldStatus'
+        ],
+        'PaymentInstrument' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PaymentInstrument'
+        ],
+        'PaymentMethodUsed' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PaymentMethodUsed'
+        ],
+        'ReturnStatus' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ReturnStatus'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -128,7 +128,7 @@ class TransactionStatusType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

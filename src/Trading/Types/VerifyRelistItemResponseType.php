@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
- * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
- * @property \DateTime $StartTime
- * @property \DateTime $EndTime
  * @property \DTS\eBaySDK\Trading\Enums\DiscountReasonCodeType[] $DiscountReason
- * @property \DTS\eBaySDK\Trading\Types\ProductSuggestionsType $ProductSuggestions
+ * @property \DateTime $EndTime
+ * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
+ * @property string $ItemID
  * @property \DTS\eBaySDK\Trading\Types\ListingRecommendationsType $ListingRecommendations
+ * @property \DTS\eBaySDK\Trading\Types\ProductSuggestionsType $ProductSuggestions
+ * @property \DateTime $StartTime
  */
 class VerifyRelistItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -26,23 +26,11 @@ class VerifyRelistItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRe
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
+        'DiscountReason' => [
             'type' => 'string',
-            'repeatable' => false,
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'ItemID'
-        ],
-        'Fees' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\FeesType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Fees'
-        ],
-        'StartTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'StartTime'
+            'elementName' => 'DiscountReason'
         ],
         'EndTime' => [
             'type' => 'DateTime',
@@ -50,11 +38,23 @@ class VerifyRelistItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRe
             'attribute' => false,
             'elementName' => 'EndTime'
         ],
-        'DiscountReason' => [
-            'type' => 'string',
-            'repeatable' => true,
+        'Fees' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\FeesType',
+            'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'DiscountReason'
+            'elementName' => 'Fees'
+        ],
+        'ItemID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
+        ],
+        'ListingRecommendations' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ListingRecommendationsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ListingRecommendations'
         ],
         'ProductSuggestions' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ProductSuggestionsType',
@@ -62,14 +62,14 @@ class VerifyRelistItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRe
             'attribute' => false,
             'elementName' => 'ProductSuggestions'
         ],
-        'ListingRecommendations' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ListingRecommendationsType',
+        'StartTime' => [
+            'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ListingRecommendations'
+            'elementName' => 'StartTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class VerifyRelistItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRe
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

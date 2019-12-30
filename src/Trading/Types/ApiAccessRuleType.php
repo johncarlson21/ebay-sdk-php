@@ -20,12 +20,12 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property integer $HourlyHardLimit
  * @property integer $HourlySoftLimit
  * @property integer $HourlyUsage
+ * @property \DateTime $ModTime
  * @property integer $Period
  * @property integer $PeriodicHardLimit
  * @property integer $PeriodicSoftLimit
- * @property integer $PeriodicUsage
  * @property \DateTime $PeriodicStartDate
- * @property \DateTime $ModTime
+ * @property integer $PeriodicUsage
  * @property \DTS\eBaySDK\Trading\Enums\AccessRuleCurrentStatusCodeType $RuleCurrentStatus
  * @property \DTS\eBaySDK\Trading\Enums\AccessRuleStatusCodeType $RuleStatus
  */
@@ -83,6 +83,12 @@ class ApiAccessRuleType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'HourlyUsage'
         ],
+        'ModTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ModTime'
+        ],
         'Period' => [
             'type' => 'integer',
             'repeatable' => false,
@@ -101,23 +107,17 @@ class ApiAccessRuleType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PeriodicSoftLimit'
         ],
-        'PeriodicUsage' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PeriodicUsage'
-        ],
         'PeriodicStartDate' => [
             'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PeriodicStartDate'
         ],
-        'ModTime' => [
-            'type' => 'DateTime',
+        'PeriodicUsage' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ModTime'
+            'elementName' => 'PeriodicUsage'
         ],
         'RuleCurrentStatus' => [
             'type' => 'string',
@@ -132,7 +132,7 @@ class ApiAccessRuleType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'RuleStatus'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -149,7 +149,7 @@ class ApiAccessRuleType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class LogisticsPlanCodeType
+use MyCLabs\Enum\Enum;
+
+class LogisticsPlanCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DIGITAL_DELIVERY = 'DigitalDelivery';
-    const C_PICK_UP_DROP_OFF = 'PickUpDropOff';
+    private const CustomCode = 'CustomCode';
+    private const DigitalDelivery = 'DigitalDelivery';
+    private const PickUpDropOff = 'PickUpDropOff';
+
 }

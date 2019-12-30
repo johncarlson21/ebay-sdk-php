@@ -10,11 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class StoreFontFaceCodeType
+use MyCLabs\Enum\Enum;
+
+class StoreFontFaceCodeType extends Enum 
 {
-    const C_ARIAL = 'Arial';
-    const C_COURIER = 'Courier';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_TIMES = 'Times';
-    const C_VERDANA = 'Verdana';
+    private const Arial = 'Arial';
+    private const Courier = 'Courier';
+    private const CustomCode = 'CustomCode';
+    private const Times = 'Times';
+    private const Verdana = 'Verdana';
+
 }

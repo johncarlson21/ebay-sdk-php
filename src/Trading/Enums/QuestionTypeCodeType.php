@@ -10,13 +10,16 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class QuestionTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class QuestionTypeCodeType extends Enum 
 {
-    const C_CUSTOMIZED_SUBJECT = 'CustomizedSubject';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_GENERAL = 'General';
-    const C_MULTIPLE_ITEM_SHIPPING = 'MultipleItemShipping';
-    const C_NONE = 'None';
-    const C_PAYMENT = 'Payment';
-    const C_SHIPPING = 'Shipping';
+    private const CustomCode = 'CustomCode';
+    private const CustomizedSubject = 'CustomizedSubject';
+    private const General = 'General';
+    private const MultipleItemShipping = 'MultipleItemShipping';
+    private const None = 'None';
+    private const Payment = 'Payment';
+    private const Shipping = 'Shipping';
+
 }

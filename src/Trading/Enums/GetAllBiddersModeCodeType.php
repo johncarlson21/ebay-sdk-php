@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class GetAllBiddersModeCodeType
+use MyCLabs\Enum\Enum;
+
+class GetAllBiddersModeCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_ENDED_LISTING = 'EndedListing';
-    const C_SECOND_CHANCE_ELIGIBLE_ENDED_LISTING = 'SecondChanceEligibleEndedListing';
-    const C_VIEW_ALL = 'ViewAll';
+    private const CustomCode = 'CustomCode';
+    private const EndedListing = 'EndedListing';
+    private const SecondChanceEligibleEndedListing = 'SecondChanceEligibleEndedListing';
+    private const ViewAll = 'ViewAll';
+
 }

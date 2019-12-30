@@ -27,7 +27,7 @@ class AddSellingManagerInventoryFolderResponseType extends \DTS\eBaySDK\Trading\
             'elementName' => 'FolderID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -44,7 +44,7 @@ class AddSellingManagerInventoryFolderResponseType extends \DTS\eBaySDK\Trading\
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

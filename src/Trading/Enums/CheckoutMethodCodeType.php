@@ -10,9 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class CheckoutMethodCodeType
+use MyCLabs\Enum\Enum;
+
+class CheckoutMethodCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_OTHER = 'Other';
-    const C_THIRD_PARTY_CHECKOUT = 'ThirdPartyCheckout';
+
 }

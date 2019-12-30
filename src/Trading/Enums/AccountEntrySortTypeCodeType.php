@@ -10,14 +10,17 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class AccountEntrySortTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class AccountEntrySortTypeCodeType extends Enum 
 {
-    const C_ACCOUNT_ENTRY_CREATED_TIME_ASCENDING = 'AccountEntryCreatedTimeAscending';
-    const C_ACCOUNT_ENTRY_CREATED_TIME_DESCENDING = 'AccountEntryCreatedTimeDescending';
-    const C_ACCOUNT_ENTRY_FEE_TYPE_ASCENDING = 'AccountEntryFeeTypeAscending';
-    const C_ACCOUNT_ENTRY_FEE_TYPE_DESCENDING = 'AccountEntryFeeTypeDescending';
-    const C_ACCOUNT_ENTRY_ITEM_NUMBER_ASCENDING = 'AccountEntryItemNumberAscending';
-    const C_ACCOUNT_ENTRY_ITEM_NUMBER_DESCENDING = 'AccountEntryItemNumberDescending';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_NONE = 'None';
+    private const AccountEntryCreatedTimeAscending = 'AccountEntryCreatedTimeAscending';
+    private const AccountEntryCreatedTimeDescending = 'AccountEntryCreatedTimeDescending';
+    private const AccountEntryFeeTypeAscending = 'AccountEntryFeeTypeAscending';
+    private const AccountEntryFeeTypeDescending = 'AccountEntryFeeTypeDescending';
+    private const AccountEntryItemNumberAscending = 'AccountEntryItemNumberAscending';
+    private const AccountEntryItemNumberDescending = 'AccountEntryItemNumberDescending';
+    private const CustomCode = 'CustomCode';
+    private const None = 'None';
+
 }

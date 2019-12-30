@@ -12,35 +12,34 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $GlobalShipping
+ * @property \DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType $CalculatedShippingDiscount
  * @property \DTS\eBaySDK\Trading\Types\CalculatedShippingRateType $CalculatedShippingRate
  * @property boolean $ChangePaymentInstructions
- * @property boolean $InsuranceWanted
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $CODCost
+ * @property string[] $ExcludeShipToLocation
+ * @property \DTS\eBaySDK\Trading\Types\FlatShippingDiscountType $FlatShippingDiscount
+ * @property boolean $GlobalShipping
+ * @property \DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType $InternationalCalculatedShippingDiscount
+ * @property \DTS\eBaySDK\Trading\Types\FlatShippingDiscountType $InternationalFlatShippingDiscount
+ * @property boolean $InternationalPromotionalShippingDiscount
+ * @property string $InternationalShippingDiscountProfileID
+ * @property \DTS\eBaySDK\Trading\Types\InternationalShippingServiceOptionsType[] $InternationalShippingServiceOption
  * @property boolean $PaymentEdited
  * @property string $PaymentInstructions
+ * @property boolean $PromotionalShippingDiscount
+ * @property \DTS\eBaySDK\Trading\Types\PromotionalShippingDiscountDetailsType $PromotionalShippingDiscountDetails
+ * @property \DTS\eBaySDK\Trading\Types\RateTableDetailsType $RateTableDetails
  * @property \DTS\eBaySDK\Trading\Types\SalesTaxType $SalesTax
+ * @property boolean $SellerExcludeShipToLocationsPreference
+ * @property integer $SellingManagerSalesRecordNumber
+ * @property \DTS\eBaySDK\Trading\Types\ShipmentTrackingDetailsType[] $ShipmentTrackingDetails
+ * @property string $ShippingDiscountProfileID
  * @property string $ShippingRateErrorMessage
  * @property \DTS\eBaySDK\Trading\Enums\ShippingRateTypeCodeType $ShippingRateType
  * @property \DTS\eBaySDK\Trading\Types\ShippingServiceOptionsType[] $ShippingServiceOptions
- * @property \DTS\eBaySDK\Trading\Types\InternationalShippingServiceOptionsType[] $InternationalShippingServiceOption
- * @property \DTS\eBaySDK\Trading\Enums\ShippingTypeCodeType $ShippingType
- * @property integer $SellingManagerSalesRecordNumber
- * @property \DTS\eBaySDK\Trading\Types\TaxTableType $TaxTable
  * @property string $ShippingServiceUsed
- * @property string $ShippingDiscountProfileID
- * @property \DTS\eBaySDK\Trading\Types\FlatShippingDiscountType $FlatShippingDiscount
- * @property \DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType $CalculatedShippingDiscount
- * @property boolean $PromotionalShippingDiscount
- * @property string $InternationalShippingDiscountProfileID
- * @property \DTS\eBaySDK\Trading\Types\FlatShippingDiscountType $InternationalFlatShippingDiscount
- * @property \DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType $InternationalCalculatedShippingDiscount
- * @property boolean $InternationalPromotionalShippingDiscount
- * @property \DTS\eBaySDK\Trading\Types\PromotionalShippingDiscountDetailsType $PromotionalShippingDiscountDetails
- * @property \DTS\eBaySDK\Trading\Types\AmountType $CODCost
- * @property string[] $ExcludeShipToLocation
- * @property boolean $SellerExcludeShipToLocationsPreference
- * @property \DTS\eBaySDK\Trading\Types\ShipmentTrackingDetailsType[] $ShipmentTrackingDetails
- * @property \DTS\eBaySDK\Trading\Types\RateTableDetailsType $RateTableDetails
+ * @property \DTS\eBaySDK\Trading\Enums\ShippingTypeCodeType $ShippingType
+ * @property \DTS\eBaySDK\Trading\Types\TaxTableType $TaxTable
  */
 class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -48,11 +47,11 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'GlobalShipping' => [
-            'type' => 'boolean',
+        'CalculatedShippingDiscount' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'GlobalShipping'
+            'elementName' => 'CalculatedShippingDiscount'
         ],
         'CalculatedShippingRate' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CalculatedShippingRateType',
@@ -66,11 +65,59 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ChangePaymentInstructions'
         ],
-        'InsuranceWanted' => [
+        'CODCost' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CODCost'
+        ],
+        'ExcludeShipToLocation' => [
+            'type' => 'string',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'ExcludeShipToLocation'
+        ],
+        'FlatShippingDiscount' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\FlatShippingDiscountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'FlatShippingDiscount'
+        ],
+        'GlobalShipping' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'InsuranceWanted'
+            'elementName' => 'GlobalShipping'
+        ],
+        'InternationalCalculatedShippingDiscount' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'InternationalCalculatedShippingDiscount'
+        ],
+        'InternationalFlatShippingDiscount' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\FlatShippingDiscountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'InternationalFlatShippingDiscount'
+        ],
+        'InternationalPromotionalShippingDiscount' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'InternationalPromotionalShippingDiscount'
+        ],
+        'InternationalShippingDiscountProfileID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'InternationalShippingDiscountProfileID'
+        ],
+        'InternationalShippingServiceOption' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\InternationalShippingServiceOptionsType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'InternationalShippingServiceOption'
         ],
         'PaymentEdited' => [
             'type' => 'boolean',
@@ -84,11 +131,53 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PaymentInstructions'
         ],
+        'PromotionalShippingDiscount' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PromotionalShippingDiscount'
+        ],
+        'PromotionalShippingDiscountDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PromotionalShippingDiscountDetailsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PromotionalShippingDiscountDetails'
+        ],
+        'RateTableDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\RateTableDetailsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'RateTableDetails'
+        ],
         'SalesTax' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SalesTaxType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SalesTax'
+        ],
+        'SellerExcludeShipToLocationsPreference' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SellerExcludeShipToLocationsPreference'
+        ],
+        'SellingManagerSalesRecordNumber' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SellingManagerSalesRecordNumber'
+        ],
+        'ShipmentTrackingDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ShipmentTrackingDetailsType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'ShipmentTrackingDetails'
+        ],
+        'ShippingDiscountProfileID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingDiscountProfileID'
         ],
         'ShippingRateErrorMessage' => [
             'type' => 'string',
@@ -108,11 +197,11 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingServiceOptions'
         ],
-        'InternationalShippingServiceOption' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\InternationalShippingServiceOptionsType',
-            'repeatable' => true,
+        'ShippingServiceUsed' => [
+            'type' => 'string',
+            'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'InternationalShippingServiceOption'
+            'elementName' => 'ShippingServiceUsed'
         ],
         'ShippingType' => [
             'type' => 'string',
@@ -120,110 +209,14 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingType'
         ],
-        'SellingManagerSalesRecordNumber' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellingManagerSalesRecordNumber'
-        ],
         'TaxTable' => [
             'type' => 'DTS\eBaySDK\Trading\Types\TaxTableType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TaxTable'
-        ],
-        'ShippingServiceUsed' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingServiceUsed'
-        ],
-        'ShippingDiscountProfileID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingDiscountProfileID'
-        ],
-        'FlatShippingDiscount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\FlatShippingDiscountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FlatShippingDiscount'
-        ],
-        'CalculatedShippingDiscount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CalculatedShippingDiscount'
-        ],
-        'PromotionalShippingDiscount' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PromotionalShippingDiscount'
-        ],
-        'InternationalShippingDiscountProfileID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'InternationalShippingDiscountProfileID'
-        ],
-        'InternationalFlatShippingDiscount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\FlatShippingDiscountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'InternationalFlatShippingDiscount'
-        ],
-        'InternationalCalculatedShippingDiscount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'InternationalCalculatedShippingDiscount'
-        ],
-        'InternationalPromotionalShippingDiscount' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'InternationalPromotionalShippingDiscount'
-        ],
-        'PromotionalShippingDiscountDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PromotionalShippingDiscountDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PromotionalShippingDiscountDetails'
-        ],
-        'CODCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CODCost'
-        ],
-        'ExcludeShipToLocation' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'ExcludeShipToLocation'
-        ],
-        'SellerExcludeShipToLocationsPreference' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellerExcludeShipToLocationsPreference'
-        ],
-        'ShipmentTrackingDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShipmentTrackingDetailsType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'ShipmentTrackingDetails'
-        ],
-        'RateTableDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\RateTableDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'RateTableDetails'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -240,7 +233,7 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

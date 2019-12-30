@@ -12,14 +12,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\PaymentTransactionStatusCodeType $PaymentStatus
- * @property \DTS\eBaySDK\Trading\Types\UserIdentityType $Payer
- * @property \DTS\eBaySDK\Trading\Types\UserIdentityType $Payee
- * @property \DateTime $PaymentTime
- * @property \DTS\eBaySDK\Trading\Types\AmountType $PaymentAmount
- * @property \DTS\eBaySDK\Trading\Types\TransactionReferenceType $ReferenceID
  * @property \DTS\eBaySDK\Trading\Types\AmountType $FeeOrCreditAmount
+ * @property \DTS\eBaySDK\Trading\Types\UserIdentityType $Payee
+ * @property \DTS\eBaySDK\Trading\Types\UserIdentityType $Payer
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $PaymentAmount
  * @property \DTS\eBaySDK\Trading\Types\TransactionReferenceType[] $PaymentReferenceID
+ * @property \DTS\eBaySDK\Trading\Enums\PaymentTransactionStatusCodeType $PaymentStatus
+ * @property \DateTime $PaymentTime
+ * @property \DTS\eBaySDK\Trading\Types\TransactionReferenceType $ReferenceID
  */
 class PaymentTransactionType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -27,17 +27,11 @@ class PaymentTransactionType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'PaymentStatus' => [
-            'type' => 'string',
+        'FeeOrCreditAmount' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'PaymentStatus'
-        ],
-        'Payer' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\UserIdentityType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Payer'
+            'elementName' => 'FeeOrCreditAmount'
         ],
         'Payee' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UserIdentityType',
@@ -45,11 +39,11 @@ class PaymentTransactionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Payee'
         ],
-        'PaymentTime' => [
-            'type' => 'DateTime',
+        'Payer' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\UserIdentityType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'PaymentTime'
+            'elementName' => 'Payer'
         ],
         'PaymentAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -57,26 +51,32 @@ class PaymentTransactionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PaymentAmount'
         ],
-        'ReferenceID' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\TransactionReferenceType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ReferenceID'
-        ],
-        'FeeOrCreditAmount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FeeOrCreditAmount'
-        ],
         'PaymentReferenceID' => [
             'type' => 'DTS\eBaySDK\Trading\Types\TransactionReferenceType',
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'PaymentReferenceID'
+        ],
+        'PaymentStatus' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PaymentStatus'
+        ],
+        'PaymentTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PaymentTime'
+        ],
+        'ReferenceID' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\TransactionReferenceType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ReferenceID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -93,7 +93,7 @@ class PaymentTransactionType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

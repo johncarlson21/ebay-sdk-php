@@ -10,13 +10,16 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class DetailLevelCodeType
+use MyCLabs\Enum\Enum;
+
+class DetailLevelCodeType extends Enum 
 {
-    const C_ITEM_RETURN_ATTRIBUTES = 'ItemReturnAttributes';
-    const C_ITEM_RETURN_CATEGORIES = 'ItemReturnCategories';
-    const C_ITEM_RETURN_DESCRIPTION = 'ItemReturnDescription';
-    const C_RETURN_ALL = 'ReturnAll';
-    const C_RETURN_HEADERS = 'ReturnHeaders';
-    const C_RETURN_MESSAGES = 'ReturnMessages';
-    const C_RETURN_SUMMARY = 'ReturnSummary';
+    private const ItemReturnAttributes = 'ItemReturnAttributes';
+    private const ItemReturnCategories = 'ItemReturnCategories';
+    private const ItemReturnDescription = 'ItemReturnDescription';
+    private const ReturnAll = 'ReturnAll';
+    private const ReturnHeaders = 'ReturnHeaders';
+    private const ReturnMessages = 'ReturnMessages';
+    private const ReturnSummary = 'ReturnSummary';
+
 }

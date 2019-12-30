@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DateTime $EndTime
  * @property string $ItemID
  * @property \DateTime $StartTime
- * @property \DateTime $EndTime
  */
 class AddSecondChanceItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -22,6 +22,12 @@ class AddSecondChanceItemResponseType extends \DTS\eBaySDK\Trading\Types\Abstrac
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'EndTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'EndTime'
+        ],
         'ItemID' => [
             'type' => 'string',
             'repeatable' => false,
@@ -33,15 +39,9 @@ class AddSecondChanceItemResponseType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'StartTime'
-        ],
-        'EndTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'EndTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class AddSecondChanceItemResponseType extends \DTS\eBaySDK\Trading\Types\Abstrac
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

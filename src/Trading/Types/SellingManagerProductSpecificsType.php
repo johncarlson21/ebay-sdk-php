@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Types\NameValueListArrayType $ItemSpecifics
  * @property string $PrimaryCategoryID
  * @property \DTS\eBaySDK\Trading\Types\VariationsType $Variations
- * @property \DTS\eBaySDK\Trading\Types\NameValueListArrayType $ItemSpecifics
  */
 class SellingManagerProductSpecificsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -22,6 +22,12 @@ class SellingManagerProductSpecificsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'ItemSpecifics' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\NameValueListArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemSpecifics'
+        ],
         'PrimaryCategoryID' => [
             'type' => 'string',
             'repeatable' => false,
@@ -33,15 +39,9 @@ class SellingManagerProductSpecificsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Variations'
-        ],
-        'ItemSpecifics' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\NameValueListArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemSpecifics'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class SellingManagerProductSpecificsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

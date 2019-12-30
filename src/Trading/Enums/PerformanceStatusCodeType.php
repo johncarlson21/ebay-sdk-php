@@ -10,11 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class PerformanceStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class PerformanceStatusCodeType extends Enum 
 {
-    const C_ABOVE_STANDARD = 'AboveStandard';
-    const C_BELOW_STANDARD = 'BelowStandard';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_STANDARD = 'Standard';
-    const C_TOP_RATED = 'TopRated';
+    private const AboveStandard = 'AboveStandard';
+    private const BelowStandard = 'BelowStandard';
+    private const CustomCode = 'CustomCode';
+    private const Standard = 'Standard';
+    private const TopRated = 'TopRated';
+
 }

@@ -10,12 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class PeriodCodeType
+use MyCLabs\Enum\Enum;
+
+class PeriodCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DAYS_1 = 'Days_1';
-    const C_DAYS_180 = 'Days_180';
-    const C_DAYS_30 = 'Days_30';
-    const C_DAYS_360 = 'Days_360';
-    const C_DAYS_540 = 'Days_540';
+    private const CustomCode = 'CustomCode';
+    private const Days_180 = 'Days_180';
+    private const Days_30 = 'Days_30';
+    private const Days_360 = 'Days_360';
+
 }

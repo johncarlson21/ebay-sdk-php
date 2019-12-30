@@ -12,11 +12,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
- * @property integer $TransactionID
- * @property string $OrderID
  * @property \DTS\eBaySDK\Trading\Types\TimeRangeType $EmailDateRange
+ * @property string $ItemID
+ * @property string $OrderID
  * @property string $OrderLineItemID
+ * @property integer $TransactionID
  */
 class GetSellingManagerEmailLogRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -24,17 +24,17 @@ class GetSellingManagerEmailLogRequestType extends \DTS\eBaySDK\Trading\Types\Ab
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'EmailDateRange' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\TimeRangeType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'EmailDateRange'
+        ],
         'ItemID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ],
-        'TransactionID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TransactionID'
         ],
         'OrderID' => [
             'type' => 'string',
@@ -42,20 +42,20 @@ class GetSellingManagerEmailLogRequestType extends \DTS\eBaySDK\Trading\Types\Ab
             'attribute' => false,
             'elementName' => 'OrderID'
         ],
-        'EmailDateRange' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\TimeRangeType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'EmailDateRange'
-        ],
         'OrderLineItemID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
+        ],
+        'TransactionID' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TransactionID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class GetSellingManagerEmailLogRequestType extends \DTS\eBaySDK\Trading\Types\Ab
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetSellingManagerEmailLogRequest';
         }

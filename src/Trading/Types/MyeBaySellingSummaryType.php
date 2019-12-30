@@ -13,18 +13,18 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property integer $ActiveAuctionCount
- * @property integer $AuctionSellingCount
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $AmountLimitRemaining
  * @property integer $AuctionBidCount
+ * @property integer $AuctionSellingCount
+ * @property integer $ClassifiedAdCount
+ * @property integer $ClassifiedAdOfferCount
+ * @property integer $QuantityLimitRemaining
+ * @property integer $SoldDurationInDays
  * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalAuctionSellingValue
+ * @property integer $TotalLeadCount
+ * @property integer $TotalListingsWithLeads
  * @property integer $TotalSoldCount
  * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalSoldValue
- * @property integer $SoldDurationInDays
- * @property integer $ClassifiedAdCount
- * @property integer $TotalLeadCount
- * @property integer $ClassifiedAdOfferCount
- * @property integer $TotalListingsWithLeads
- * @property integer $QuantityLimitRemaining
- * @property \DTS\eBaySDK\Trading\Types\AmountType $AmountLimitRemaining
  */
 class MyeBaySellingSummaryType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -38,11 +38,11 @@ class MyeBaySellingSummaryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ActiveAuctionCount'
         ],
-        'AuctionSellingCount' => [
-            'type' => 'integer',
+        'AmountLimitRemaining' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'AuctionSellingCount'
+            'elementName' => 'AmountLimitRemaining'
         ],
         'AuctionBidCount' => [
             'type' => 'integer',
@@ -50,11 +50,53 @@ class MyeBaySellingSummaryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'AuctionBidCount'
         ],
+        'AuctionSellingCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'AuctionSellingCount'
+        ],
+        'ClassifiedAdCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ClassifiedAdCount'
+        ],
+        'ClassifiedAdOfferCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ClassifiedAdOfferCount'
+        ],
+        'QuantityLimitRemaining' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'QuantityLimitRemaining'
+        ],
+        'SoldDurationInDays' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SoldDurationInDays'
+        ],
         'TotalAuctionSellingValue' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalAuctionSellingValue'
+        ],
+        'TotalLeadCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TotalLeadCount'
+        ],
+        'TotalListingsWithLeads' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TotalListingsWithLeads'
         ],
         'TotalSoldCount' => [
             'type' => 'integer',
@@ -67,51 +109,9 @@ class MyeBaySellingSummaryType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalSoldValue'
-        ],
-        'SoldDurationInDays' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SoldDurationInDays'
-        ],
-        'ClassifiedAdCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ClassifiedAdCount'
-        ],
-        'TotalLeadCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TotalLeadCount'
-        ],
-        'ClassifiedAdOfferCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ClassifiedAdOfferCount'
-        ],
-        'TotalListingsWithLeads' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TotalListingsWithLeads'
-        ],
-        'QuantityLimitRemaining' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'QuantityLimitRemaining'
-        ],
-        'AmountLimitRemaining' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AmountLimitRemaining'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -128,7 +128,7 @@ class MyeBaySellingSummaryType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

@@ -12,12 +12,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $OnVacation
- * @property \DateTime $ReturnDate
+ * @property boolean $DisplayMessageStoreCustomText
  * @property boolean $MessageItem
  * @property boolean $MessageStore
- * @property boolean $DisplayMessageStoreCustomText
  * @property string $MessageStoreCustomText
+ * @property boolean $OnVacation
+ * @property \DateTime $ReturnDate
  */
 class StoreVacationPreferencesType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -25,17 +25,11 @@ class StoreVacationPreferencesType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'OnVacation' => [
+        'DisplayMessageStoreCustomText' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'OnVacation'
-        ],
-        'ReturnDate' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ReturnDate'
+            'elementName' => 'DisplayMessageStoreCustomText'
         ],
         'MessageItem' => [
             'type' => 'boolean',
@@ -49,20 +43,26 @@ class StoreVacationPreferencesType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'MessageStore'
         ],
-        'DisplayMessageStoreCustomText' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DisplayMessageStoreCustomText'
-        ],
         'MessageStoreCustomText' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MessageStoreCustomText'
+        ],
+        'OnVacation' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'OnVacation'
+        ],
+        'ReturnDate' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ReturnDate'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -79,7 +79,7 @@ class StoreVacationPreferencesType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

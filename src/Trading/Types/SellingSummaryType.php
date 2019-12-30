@@ -13,12 +13,12 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property integer $ActiveAuctionCount
- * @property integer $AuctionSellingCount
  * @property integer $AuctionBidCount
+ * @property integer $AuctionSellingCount
+ * @property integer $SoldDurationInDays
  * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalAuctionSellingValue
  * @property integer $TotalSoldCount
  * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalSoldValue
- * @property integer $SoldDurationInDays
  */
 class SellingSummaryType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,23 @@ class SellingSummaryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ActiveAuctionCount'
         ],
+        'AuctionBidCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'AuctionBidCount'
+        ],
         'AuctionSellingCount' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AuctionSellingCount'
         ],
-        'AuctionBidCount' => [
+        'SoldDurationInDays' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'AuctionBidCount'
+            'elementName' => 'SoldDurationInDays'
         ],
         'TotalAuctionSellingValue' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -61,15 +67,9 @@ class SellingSummaryType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalSoldValue'
-        ],
-        'SoldDurationInDays' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SoldDurationInDays'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class SellingSummaryType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

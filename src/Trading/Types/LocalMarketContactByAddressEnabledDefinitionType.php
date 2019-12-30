@@ -19,8 +19,9 @@ class LocalMarketContactByAddressEnabledDefinitionType extends \DTS\eBaySDK\Type
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-    ];
 
+    ];
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -37,7 +38,7 @@ class LocalMarketContactByAddressEnabledDefinitionType extends \DTS\eBaySDK\Type
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

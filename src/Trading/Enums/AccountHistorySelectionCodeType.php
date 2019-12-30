@@ -10,10 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class AccountHistorySelectionCodeType
+use MyCLabs\Enum\Enum;
+
+class AccountHistorySelectionCodeType extends Enum 
 {
-    const C_BETWEEN_SPECIFIED_DATES = 'BetweenSpecifiedDates';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_LAST_INVOICE = 'LastInvoice';
-    const C_SPECIFIED_INVOICE = 'SpecifiedInvoice';
+    private const BetweenSpecifiedDates = 'BetweenSpecifiedDates';
+    private const CustomCode = 'CustomCode';
+    private const LastInvoice = 'LastInvoice';
+    private const OrderId = 'OrderId';
+    private const SpecifiedInvoice = 'SpecifiedInvoice';
+
 }

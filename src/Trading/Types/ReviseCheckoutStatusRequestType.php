@@ -12,24 +12,24 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
- * @property string $TransactionID
- * @property string $OrderID
- * @property \DTS\eBaySDK\Trading\Types\AmountType $AmountPaid
- * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentMethodCodeType $PaymentMethodUsed
- * @property \DTS\eBaySDK\Trading\Enums\CompleteStatusCodeType $CheckoutStatus
- * @property string $ShippingService
- * @property boolean $ShippingIncludedInTax
- * @property \DTS\eBaySDK\Trading\Enums\RCSPaymentStatusCodeType $PaymentStatus
  * @property \DTS\eBaySDK\Trading\Types\AmountType $AdjustmentAmount
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $AmountPaid
  * @property string $BuyerID
- * @property \DTS\eBaySDK\Trading\Types\AmountType $SalesTax
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingCost
+ * @property \DTS\eBaySDK\Trading\Enums\CompleteStatusCodeType $CheckoutStatus
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $CODCost
  * @property string $EncryptedID
  * @property \DTS\eBaySDK\Trading\Types\ExternalTransactionType $ExternalTransaction
+ * @property string $ItemID
  * @property string $MultipleSellerPaymentID
- * @property \DTS\eBaySDK\Trading\Types\AmountType $CODCost
+ * @property string $OrderID
  * @property string $OrderLineItemID
+ * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentMethodCodeType $PaymentMethodUsed
+ * @property \DTS\eBaySDK\Trading\Enums\RCSPaymentStatusCodeType $PaymentStatus
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $SalesTax
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingCost
+ * @property boolean $ShippingIncludedInTax
+ * @property string $ShippingService
+ * @property string $TransactionID
  */
 class ReviseCheckoutStatusRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -37,23 +37,11 @@ class ReviseCheckoutStatusRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
-            'type' => 'string',
+        'AdjustmentAmount' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ItemID'
-        ],
-        'TransactionID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TransactionID'
-        ],
-        'OrderID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'OrderID'
+            'elementName' => 'AdjustmentAmount'
         ],
         'AmountPaid' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -61,11 +49,11 @@ class ReviseCheckoutStatusRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'attribute' => false,
             'elementName' => 'AmountPaid'
         ],
-        'PaymentMethodUsed' => [
+        'BuyerID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'PaymentMethodUsed'
+            'elementName' => 'BuyerID'
         ],
         'CheckoutStatus' => [
             'type' => 'string',
@@ -73,47 +61,11 @@ class ReviseCheckoutStatusRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'attribute' => false,
             'elementName' => 'CheckoutStatus'
         ],
-        'ShippingService' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingService'
-        ],
-        'ShippingIncludedInTax' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingIncludedInTax'
-        ],
-        'PaymentStatus' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentStatus'
-        ],
-        'AdjustmentAmount' => [
+        'CODCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'AdjustmentAmount'
-        ],
-        'BuyerID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BuyerID'
-        ],
-        'SalesTax' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SalesTax'
-        ],
-        'ShippingCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingCost'
+            'elementName' => 'CODCost'
         ],
         'EncryptedID' => [
             'type' => 'string',
@@ -127,26 +79,74 @@ class ReviseCheckoutStatusRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'attribute' => false,
             'elementName' => 'ExternalTransaction'
         ],
+        'ItemID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
+        ],
         'MultipleSellerPaymentID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MultipleSellerPaymentID'
         ],
-        'CODCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+        'OrderID' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'CODCost'
+            'elementName' => 'OrderID'
         ],
         'OrderLineItemID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
+        ],
+        'PaymentMethodUsed' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PaymentMethodUsed'
+        ],
+        'PaymentStatus' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PaymentStatus'
+        ],
+        'SalesTax' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SalesTax'
+        ],
+        'ShippingCost' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingCost'
+        ],
+        'ShippingIncludedInTax' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingIncludedInTax'
+        ],
+        'ShippingService' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingService'
+        ],
+        'TransactionID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TransactionID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -163,7 +163,7 @@ class ReviseCheckoutStatusRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'ReviseCheckoutStatusRequest';
         }

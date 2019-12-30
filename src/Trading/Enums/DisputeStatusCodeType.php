@@ -10,27 +10,30 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class DisputeStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class DisputeStatusCodeType extends Enum 
 {
-    const C_CLAIM_APPROVED = 'ClaimApproved';
-    const C_CLAIM_CLOSED = 'ClaimClosed';
-    const C_CLAIM_DENIED = 'ClaimDenied';
-    const C_CLAIM_IN_PROCESS = 'ClaimInProcess';
-    const C_CLAIM_OPENED = 'ClaimOpened';
-    const C_CLAIM_PAID = 'ClaimPaid';
-    const C_CLAIM_RESOLVED = 'ClaimResolved';
-    const C_CLAIM_SUBMITTED = 'ClaimSubmitted';
-    const C_CLOSED = 'Closed';
-    const C_CLOSEDFVF_CREDIT_NO_STRIKE = 'ClosedFVFCreditNoStrike';
-    const C_CLOSEDFVF_CREDIT_STRIKE = 'ClosedFVFCreditStrike';
-    const C_CLOSED_NOFVF_CREDIT_NO_STRIKE = 'ClosedNoFVFCreditNoStrike';
-    const C_CLOSED_NOFVF_CREDIT_STRIKE = 'ClosedNoFVFCreditStrike';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FVF_CREDIT_REVERSED_AFTER_CLOSING = 'FVFCreditReversedAfterClosing';
-    const C_NO_DOCUMENTATION = 'NoDocumentation';
-    const C_STRIKE_APPEALED_AFTER_CLOSING = 'StrikeAppealedAfterClosing';
-    const C_STRIKE_APPEALED_ANDFVF_CREDIT_REVERSED = 'StrikeAppealedAndFVFCreditReversed';
-    const C_UNPAID_ITEM_OPENED = 'UnpaidItemOpened';
-    const C_WAITING_FOR_BUYER_RESPONSE = 'WaitingForBuyerResponse';
-    const C_WAITING_FOR_SELLER_RESPONSE = 'WaitingForSellerResponse';
+    private const ClaimApproved = 'ClaimApproved';
+    private const ClaimClosed = 'ClaimClosed';
+    private const ClaimDenied = 'ClaimDenied';
+    private const ClaimInProcess = 'ClaimInProcess';
+    private const ClaimOpened = 'ClaimOpened';
+    private const ClaimPaid = 'ClaimPaid';
+    private const ClaimResolved = 'ClaimResolved';
+    private const ClaimSubmitted = 'ClaimSubmitted';
+    private const Closed = 'Closed';
+    private const ClosedFVFCreditNoStrike = 'ClosedFVFCreditNoStrike';
+    private const ClosedFVFCreditStrike = 'ClosedFVFCreditStrike';
+    private const ClosedNoFVFCreditNoStrike = 'ClosedNoFVFCreditNoStrike';
+    private const ClosedNoFVFCreditStrike = 'ClosedNoFVFCreditStrike';
+    private const CustomCode = 'CustomCode';
+    private const FVFCreditReversedAfterClosing = 'FVFCreditReversedAfterClosing';
+    private const NoDocumentation = 'NoDocumentation';
+    private const StrikeAppealedAfterClosing = 'StrikeAppealedAfterClosing';
+    private const StrikeAppealedAndFVFCreditReversed = 'StrikeAppealedAndFVFCreditReversed';
+    private const UnpaidItemOpened = 'UnpaidItemOpened';
+    private const WaitingForBuyerResponse = 'WaitingForBuyerResponse';
+    private const WaitingForSellerResponse = 'WaitingForSellerResponse';
+
 }

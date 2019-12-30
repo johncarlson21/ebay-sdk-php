@@ -12,16 +12,15 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $DeliveryURL
- * @property string $ReferenceID
- * @property \DateTime $ExpirationTime
- * @property \DTS\eBaySDK\Trading\Enums\NotificationEventTypeCodeType $Type
- * @property integer $Retries
  * @property \DTS\eBaySDK\Trading\Enums\NotificationEventStateCodeType $DeliveryStatus
- * @property \DateTime $NextRetryTime
  * @property \DateTime $DeliveryTime
- * @property string $ErrorMessage
+ * @property string $DeliveryURL
  * @property string $DeliveryURLName
+ * @property string $ErrorMessage
+ * @property \DateTime $ExpirationTime
+ * @property \DateTime $NextRetryTime
+ * @property integer $Retries
+ * @property \DTS\eBaySDK\Trading\Enums\NotificationEventTypeCodeType $Type
  */
 class NotificationDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -29,47 +28,11 @@ class NotificationDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'DeliveryURL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DeliveryURL'
-        ],
-        'ReferenceID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ReferenceID'
-        ],
-        'ExpirationTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ExpirationTime'
-        ],
-        'Type' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Type'
-        ],
-        'Retries' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Retries'
-        ],
         'DeliveryStatus' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DeliveryStatus'
-        ],
-        'NextRetryTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'NextRetryTime'
         ],
         'DeliveryTime' => [
             'type' => 'DateTime',
@@ -77,20 +40,50 @@ class NotificationDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DeliveryTime'
         ],
-        'ErrorMessage' => [
+        'DeliveryURL' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ErrorMessage'
+            'elementName' => 'DeliveryURL'
         ],
         'DeliveryURLName' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DeliveryURLName'
+        ],
+        'ErrorMessage' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ErrorMessage'
+        ],
+        'ExpirationTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ExpirationTime'
+        ],
+        'NextRetryTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'NextRetryTime'
+        ],
+        'Retries' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Retries'
+        ],
+        'Type' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Type'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -107,7 +100,7 @@ class NotificationDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

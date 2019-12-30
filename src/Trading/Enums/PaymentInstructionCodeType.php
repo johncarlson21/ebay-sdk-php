@@ -10,8 +10,11 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class PaymentInstructionCodeType
+use MyCLabs\Enum\Enum;
+
+class PaymentInstructionCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_PAYMENT_INSTRUCTION = 'PaymentInstruction';
+    private const CustomCode = 'CustomCode';
+    private const PaymentInstruction = 'PaymentInstruction';
+
 }

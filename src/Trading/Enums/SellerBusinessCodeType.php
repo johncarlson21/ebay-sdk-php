@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SellerBusinessCodeType
+use MyCLabs\Enum\Enum;
+
+class SellerBusinessCodeType extends Enum 
 {
-    const C_COMMERCIAL = 'Commercial';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_PRIVATE = 'Private';
-    const C_UNDEFINED = 'Undefined';
+    private const Commercial = 'Commercial';
+    private const CustomCode = 'CustomCode';
+    private const Private = 'Private';
+    private const Undefined = 'Undefined';
+
 }

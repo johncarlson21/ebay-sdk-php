@@ -10,8 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class BalanceCodeType
+use MyCLabs\Enum\Enum;
+
+class BalanceCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_OTHER = 'Other';
+
 }

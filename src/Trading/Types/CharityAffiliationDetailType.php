@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $CharityID
  * @property \DTS\eBaySDK\Trading\Enums\CharityAffiliationTypeCodeType $AffiliationType
+ * @property string $CharityID
  * @property \DateTime $LastUsedTime
  */
 class CharityAffiliationDetailType extends \DTS\eBaySDK\Types\BaseType
@@ -22,17 +22,17 @@ class CharityAffiliationDetailType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'CharityID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CharityID'
-        ],
         'AffiliationType' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AffiliationType'
+        ],
+        'CharityID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CharityID'
         ],
         'LastUsedTime' => [
             'type' => 'DateTime',
@@ -41,7 +41,7 @@ class CharityAffiliationDetailType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'LastUsedTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class CharityAffiliationDetailType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

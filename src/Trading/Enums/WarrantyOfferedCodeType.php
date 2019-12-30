@@ -10,8 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class WarrantyOfferedCodeType
+use MyCLabs\Enum\Enum;
+
+class WarrantyOfferedCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_WARRANTY_OFFERED = 'WarrantyOffered';
+
 }

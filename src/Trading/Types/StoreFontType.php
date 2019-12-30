@@ -12,15 +12,15 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\StoreFontFaceCodeType $NameFace
- * @property \DTS\eBaySDK\Trading\Enums\StoreFontSizeCodeType $NameSize
- * @property string $NameColor
- * @property \DTS\eBaySDK\Trading\Enums\StoreFontFaceCodeType $TitleFace
- * @property \DTS\eBaySDK\Trading\Enums\StoreFontSizeCodeType $TitleSize
- * @property string $TitleColor
+ * @property string $DescColor
  * @property \DTS\eBaySDK\Trading\Enums\StoreFontFaceCodeType $DescFace
  * @property \DTS\eBaySDK\Trading\Enums\StoreFontSizeCodeType $DescSize
- * @property string $DescColor
+ * @property string $NameColor
+ * @property \DTS\eBaySDK\Trading\Enums\StoreFontFaceCodeType $NameFace
+ * @property \DTS\eBaySDK\Trading\Enums\StoreFontSizeCodeType $NameSize
+ * @property string $TitleColor
+ * @property \DTS\eBaySDK\Trading\Enums\StoreFontFaceCodeType $TitleFace
+ * @property \DTS\eBaySDK\Trading\Enums\StoreFontSizeCodeType $TitleSize
  */
 class StoreFontType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -28,41 +28,11 @@ class StoreFontType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'NameFace' => [
+        'DescColor' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'NameFace'
-        ],
-        'NameSize' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'NameSize'
-        ],
-        'NameColor' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'NameColor'
-        ],
-        'TitleFace' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TitleFace'
-        ],
-        'TitleSize' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TitleSize'
-        ],
-        'TitleColor' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TitleColor'
+            'elementName' => 'DescColor'
         ],
         'DescFace' => [
             'type' => 'string',
@@ -76,14 +46,44 @@ class StoreFontType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DescSize'
         ],
-        'DescColor' => [
+        'NameColor' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'DescColor'
+            'elementName' => 'NameColor'
+        ],
+        'NameFace' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'NameFace'
+        ],
+        'NameSize' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'NameSize'
+        ],
+        'TitleColor' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TitleColor'
+        ],
+        'TitleFace' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TitleFace'
+        ],
+        'TitleSize' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TitleSize'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -100,7 +100,7 @@ class StoreFontType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

@@ -10,11 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class TopRatedProgramCodeType
+use MyCLabs\Enum\Enum;
+
+class TopRatedProgramCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DE = 'DE';
-    const C_GLOBAL = 'Global';
-    const C_UK = 'UK';
-    const C_US = 'US';
+    private const CustomCode = 'CustomCode';
+    private const DE = 'DE';
+    private const Global = 'Global';
+    private const UK = 'UK';
+    private const US = 'US';
+
 }

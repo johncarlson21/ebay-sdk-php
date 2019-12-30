@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\SuggestedCategoryArrayType $SuggestedCategoryArray
  * @property integer $CategoryCount
+ * @property \DTS\eBaySDK\Trading\Types\SuggestedCategoryArrayType $SuggestedCategoryArray
  */
 class GetSuggestedCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -21,20 +21,20 @@ class GetSuggestedCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\Abst
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'SuggestedCategoryArray' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SuggestedCategoryArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SuggestedCategoryArray'
-        ],
         'CategoryCount' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CategoryCount'
+        ],
+        'SuggestedCategoryArray' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SuggestedCategoryArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SuggestedCategoryArray'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class GetSuggestedCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\Abst
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

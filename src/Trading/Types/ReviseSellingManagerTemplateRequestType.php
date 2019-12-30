@@ -12,11 +12,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $SaleTemplateID
- * @property integer $ProductID
- * @property string $SaleTemplateName
- * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
  * @property string[] $DeletedField
+ * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
+ * @property integer $SaleTemplateID
+ * @property string $SaleTemplateName
  * @property boolean $VerifyOnly
  */
 class ReviseSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -25,23 +24,11 @@ class ReviseSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\Types
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'SaleTemplateID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SaleTemplateID'
-        ],
-        'ProductID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ProductID'
-        ],
-        'SaleTemplateName' => [
+        'DeletedField' => [
             'type' => 'string',
-            'repeatable' => false,
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'SaleTemplateName'
+            'elementName' => 'DeletedField'
         ],
         'Item' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
@@ -49,11 +36,17 @@ class ReviseSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\Types
             'attribute' => false,
             'elementName' => 'Item'
         ],
-        'DeletedField' => [
-            'type' => 'string',
-            'repeatable' => true,
+        'SaleTemplateID' => [
+            'type' => 'integer',
+            'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'DeletedField'
+            'elementName' => 'SaleTemplateID'
+        ],
+        'SaleTemplateName' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SaleTemplateName'
         ],
         'VerifyOnly' => [
             'type' => 'boolean',
@@ -62,7 +55,7 @@ class ReviseSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\Types
             'elementName' => 'VerifyOnly'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -79,7 +72,7 @@ class ReviseSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\Types
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'ReviseSellingManagerTemplateRequest';
         }

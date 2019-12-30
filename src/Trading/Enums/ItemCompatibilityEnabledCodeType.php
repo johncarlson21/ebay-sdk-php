@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ItemCompatibilityEnabledCodeType
+use MyCLabs\Enum\Enum;
+
+class ItemCompatibilityEnabledCodeType extends Enum 
 {
-    const C_BY_APPLICATION = 'ByApplication';
-    const C_BY_SPECIFICATION = 'BySpecification';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DISABLED = 'Disabled';
+    private const ByApplication = 'ByApplication';
+    private const BySpecification = 'BySpecification';
+    private const CustomCode = 'CustomCode';
+    private const Disabled = 'Disabled';
+
 }

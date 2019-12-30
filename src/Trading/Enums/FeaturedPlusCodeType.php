@@ -10,11 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class FeaturedPlusCodeType
+use MyCLabs\Enum\Enum;
+
+class FeaturedPlusCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DISABLED = 'Disabled';
-    const C_ENABLED = 'Enabled';
-    const C_POWER_SELLER_ONLY = 'PowerSellerOnly';
-    const C_TOP_RATED_SELLER_ONLY = 'TopRatedSellerOnly';
+    private const CustomCode = 'CustomCode';
+    private const Disabled = 'Disabled';
+    private const Enabled = 'Enabled';
+    private const PowerSellerOnly = 'PowerSellerOnly';
+    private const TopRatedSellerOnly = 'TopRatedSellerOnly';
+
 }

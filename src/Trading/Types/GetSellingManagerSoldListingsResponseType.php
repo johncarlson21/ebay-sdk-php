@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\SellingManagerSoldOrderType[] $SaleRecord
  * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
+ * @property \DTS\eBaySDK\Trading\Types\SellingManagerSoldOrderType[] $SaleRecord
  */
 class GetSellingManagerSoldListingsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -21,20 +21,20 @@ class GetSellingManagerSoldListingsResponseType extends \DTS\eBaySDK\Trading\Typ
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'SaleRecord' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerSoldOrderType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'SaleRecord'
-        ],
         'PaginationResult' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
+        ],
+        'SaleRecord' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerSoldOrderType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'SaleRecord'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class GetSellingManagerSoldListingsResponseType extends \DTS\eBaySDK\Trading\Typ
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

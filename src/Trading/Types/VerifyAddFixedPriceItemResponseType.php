@@ -12,12 +12,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
- * @property string $SKU
- * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
- * @property string $CategoryID
  * @property string $Category2ID
+ * @property string $CategoryID
  * @property \DTS\eBaySDK\Trading\Enums\DiscountReasonCodeType[] $DiscountReason
+ * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
+ * @property string $ItemID
  * @property \DTS\eBaySDK\Trading\Types\ListingRecommendationsType $ListingRecommendations
  */
 class VerifyAddFixedPriceItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
@@ -26,23 +25,11 @@ class VerifyAddFixedPriceItemResponseType extends \DTS\eBaySDK\Trading\Types\Abs
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
+        'Category2ID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ItemID'
-        ],
-        'SKU' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SKU'
-        ],
-        'Fees' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\FeesType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Fees'
+            'elementName' => 'Category2ID'
         ],
         'CategoryID' => [
             'type' => 'string',
@@ -50,17 +37,23 @@ class VerifyAddFixedPriceItemResponseType extends \DTS\eBaySDK\Trading\Types\Abs
             'attribute' => false,
             'elementName' => 'CategoryID'
         ],
-        'Category2ID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Category2ID'
-        ],
         'DiscountReason' => [
             'type' => 'string',
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'DiscountReason'
+        ],
+        'Fees' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\FeesType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Fees'
+        ],
+        'ItemID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
         ],
         'ListingRecommendations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ListingRecommendationsType',
@@ -69,7 +62,7 @@ class VerifyAddFixedPriceItemResponseType extends \DTS\eBaySDK\Trading\Types\Abs
             'elementName' => 'ListingRecommendations'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +79,7 @@ class VerifyAddFixedPriceItemResponseType extends \DTS\eBaySDK\Trading\Types\Abs
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

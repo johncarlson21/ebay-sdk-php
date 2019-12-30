@@ -10,9 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class BidderTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class BidderTypeCodeType extends Enum 
 {
-    const C_ALL_BIDDER = 'AllBidder';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_HIGH_BIDDER = 'HighBidder';
+
 }

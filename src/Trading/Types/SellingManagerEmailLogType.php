@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerEmailTypeCodeType $EmailType
  * @property string $CustomEmailName
  * @property \DTS\eBaySDK\Trading\Enums\SellingManagerEmailSentStatusCodeType $EmailState
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerEmailTypeCodeType $EmailType
  * @property \DateTime $EventTime
  */
 class SellingManagerEmailLogType extends \DTS\eBaySDK\Types\BaseType
@@ -23,12 +23,6 @@ class SellingManagerEmailLogType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'EmailType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'EmailType'
-        ],
         'CustomEmailName' => [
             'type' => 'string',
             'repeatable' => false,
@@ -41,6 +35,12 @@ class SellingManagerEmailLogType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'EmailState'
         ],
+        'EmailType' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'EmailType'
+        ],
         'EventTime' => [
             'type' => 'DateTime',
             'repeatable' => false,
@@ -48,7 +48,7 @@ class SellingManagerEmailLogType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'EventTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class SellingManagerEmailLogType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

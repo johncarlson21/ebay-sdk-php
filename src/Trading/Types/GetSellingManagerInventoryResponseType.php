@@ -13,8 +13,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DateTime $InventoryCountLastCalculatedDate
- * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductType[] $SellingManagerProduct
  * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
+ * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductType[] $SellingManagerProduct
  */
 class GetSellingManagerInventoryResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -28,20 +28,20 @@ class GetSellingManagerInventoryResponseType extends \DTS\eBaySDK\Trading\Types\
             'attribute' => false,
             'elementName' => 'InventoryCountLastCalculatedDate'
         ],
-        'SellingManagerProduct' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'SellingManagerProduct'
-        ],
         'PaginationResult' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
+        ],
+        'SellingManagerProduct' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'SellingManagerProduct'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class GetSellingManagerInventoryResponseType extends \DTS\eBaySDK\Trading\Types\
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

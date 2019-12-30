@@ -10,14 +10,17 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class DisputeSortTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class DisputeSortTypeCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DISPUTE_CREATED_TIME_ASCENDING = 'DisputeCreatedTimeAscending';
-    const C_DISPUTE_CREATED_TIME_DESCENDING = 'DisputeCreatedTimeDescending';
-    const C_DISPUTE_CREDIT_ELIGIBILITY_ASCENDING = 'DisputeCreditEligibilityAscending';
-    const C_DISPUTE_CREDIT_ELIGIBILITY_DESCENDING = 'DisputeCreditEligibilityDescending';
-    const C_DISPUTE_STATUS_ASCENDING = 'DisputeStatusAscending';
-    const C_DISPUTE_STATUS_DESCENDING = 'DisputeStatusDescending';
-    const C_NONE = 'None';
+    private const CustomCode = 'CustomCode';
+    private const DisputeCreatedTimeAscending = 'DisputeCreatedTimeAscending';
+    private const DisputeCreatedTimeDescending = 'DisputeCreatedTimeDescending';
+    private const DisputeCreditEligibilityAscending = 'DisputeCreditEligibilityAscending';
+    private const DisputeCreditEligibilityDescending = 'DisputeCreditEligibilityDescending';
+    private const DisputeStatusAscending = 'DisputeStatusAscending';
+    private const DisputeStatusDescending = 'DisputeStatusDescending';
+    private const None = 'None';
+
 }

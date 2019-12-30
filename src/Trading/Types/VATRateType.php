@@ -13,9 +13,9 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $ItemID
+ * @property string $OrderLineItemID
  * @property string $TransactionID
  * @property double $VATPercent
- * @property string $OrderLineItemID
  */
 class VATRateType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -29,6 +29,12 @@ class VATRateType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
+        'OrderLineItemID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'OrderLineItemID'
+        ],
         'TransactionID' => [
             'type' => 'string',
             'repeatable' => false,
@@ -40,15 +46,9 @@ class VATRateType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VATPercent'
-        ],
-        'OrderLineItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'OrderLineItemID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class VATRateType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

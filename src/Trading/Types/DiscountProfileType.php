@@ -17,8 +17,8 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\AmountType $EachAdditionalAmount
  * @property \DTS\eBaySDK\Trading\Types\AmountType $EachAdditionalAmountOff
  * @property double $EachAdditionalPercentOff
- * @property \DTS\eBaySDK\Trading\Types\MeasureType $WeightOff
  * @property string $MappedDiscountProfileID
+ * @property \DTS\eBaySDK\Trading\Types\MeasureType $WeightOff
  */
 class DiscountProfileType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -56,20 +56,20 @@ class DiscountProfileType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'EachAdditionalPercentOff'
         ],
-        'WeightOff' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MeasureType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'WeightOff'
-        ],
         'MappedDiscountProfileID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MappedDiscountProfileID'
+        ],
+        'WeightOff' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\MeasureType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'WeightOff'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class DiscountProfileType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

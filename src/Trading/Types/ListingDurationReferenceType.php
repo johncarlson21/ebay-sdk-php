@@ -27,7 +27,7 @@ class ListingDurationReferenceType extends \DTS\eBaySDK\Types\IntegerType
             'attributeName' => 'type'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -44,7 +44,7 @@ class ListingDurationReferenceType extends \DTS\eBaySDK\Types\IntegerType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

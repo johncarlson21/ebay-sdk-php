@@ -12,12 +12,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $PickupMethod
- * @property string $PickupStoreID
- * @property \DTS\eBaySDK\Trading\Enums\PickupStatusCodeType $PickupStatus
  * @property string $MerchantPickupCode
  * @property \DateTime $PickupFulfillmentTime
  * @property string $PickupLocationUUID
+ * @property string $PickupMethod
+ * @property \DTS\eBaySDK\Trading\Enums\PickupStatusCodeType $PickupStatus
+ * @property string $PickupStoreID
  */
 class PickupMethodSelectedType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -25,24 +25,6 @@ class PickupMethodSelectedType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'PickupMethod' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PickupMethod'
-        ],
-        'PickupStoreID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PickupStoreID'
-        ],
-        'PickupStatus' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PickupStatus'
-        ],
         'MerchantPickupCode' => [
             'type' => 'string',
             'repeatable' => false,
@@ -60,9 +42,27 @@ class PickupMethodSelectedType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PickupLocationUUID'
+        ],
+        'PickupMethod' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PickupMethod'
+        ],
+        'PickupStatus' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PickupStatus'
+        ],
+        'PickupStoreID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PickupStoreID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -79,7 +79,7 @@ class PickupMethodSelectedType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

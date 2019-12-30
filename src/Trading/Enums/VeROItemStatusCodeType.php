@@ -10,12 +10,15 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class VeROItemStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class VeROItemStatusCodeType extends Enum 
 {
-    const C_CLARIFICATION_REQUIRED = 'ClarificationRequired';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_RECEIVED = 'Received';
-    const C_REMOVED = 'Removed';
-    const C_SUBMISSION_FAILED = 'SubmissionFailed';
-    const C_SUBMITTED = 'Submitted';
+    private const ClarificationRequired = 'ClarificationRequired';
+    private const CustomCode = 'CustomCode';
+    private const Received = 'Received';
+    private const Removed = 'Removed';
+    private const SubmissionFailed = 'SubmissionFailed';
+    private const Submitted = 'Submitted';
+
 }

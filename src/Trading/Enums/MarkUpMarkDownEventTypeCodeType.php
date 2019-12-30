@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class MarkUpMarkDownEventTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class MarkUpMarkDownEventTypeCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_MARK_DOWN = 'MarkDown';
-    const C_MARK_UP = 'MarkUp';
+    private const CustomCode = 'CustomCode';
+    private const MarkDown = 'MarkDown';
+    private const MarkUp = 'MarkUp';
+
 }

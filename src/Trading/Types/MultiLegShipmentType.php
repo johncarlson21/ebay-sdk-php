@@ -13,9 +13,9 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Types\MultiLegShippingServiceType $ShippingServiceDetails
- * @property \DTS\eBaySDK\Trading\Types\AddressType $ShipToAddress
- * @property integer $ShippingTimeMin
  * @property integer $ShippingTimeMax
+ * @property integer $ShippingTimeMin
+ * @property \DTS\eBaySDK\Trading\Types\AddressType $ShipToAddress
  */
 class MultiLegShipmentType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -29,11 +29,11 @@ class MultiLegShipmentType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingServiceDetails'
         ],
-        'ShipToAddress' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
+        'ShippingTimeMax' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ShipToAddress'
+            'elementName' => 'ShippingTimeMax'
         ],
         'ShippingTimeMin' => [
             'type' => 'integer',
@@ -41,14 +41,14 @@ class MultiLegShipmentType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingTimeMin'
         ],
-        'ShippingTimeMax' => [
-            'type' => 'integer',
+        'ShipToAddress' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ShippingTimeMax'
+            'elementName' => 'ShipToAddress'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class MultiLegShipmentType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

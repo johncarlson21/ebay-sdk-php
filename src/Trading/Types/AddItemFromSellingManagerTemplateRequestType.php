@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
  * @property integer $SaleTemplateID
  * @property \DateTime $ScheduleTime
- * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
  */
 class AddItemFromSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -22,6 +22,12 @@ class AddItemFromSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'Item' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Item'
+        ],
         'SaleTemplateID' => [
             'type' => 'integer',
             'repeatable' => false,
@@ -33,15 +39,9 @@ class AddItemFromSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ScheduleTime'
-        ],
-        'Item' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Item'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class AddItemFromSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'AddItemFromSellingManagerTemplateRequest';
         }

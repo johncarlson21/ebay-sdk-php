@@ -10,11 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class FeedbackRatingDetailCodeType
+use MyCLabs\Enum\Enum;
+
+class FeedbackRatingDetailCodeType extends Enum 
 {
-    const C_COMMUNICATION = 'Communication';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_ITEM_AS_DESCRIBED = 'ItemAsDescribed';
-    const C_SHIPPING_AND_HANDLING_CHARGES = 'ShippingAndHandlingCharges';
-    const C_SHIPPING_TIME = 'ShippingTime';
+    private const Communication = 'Communication';
+    private const CustomCode = 'CustomCode';
+    private const ItemAsDescribed = 'ItemAsDescribed';
+    private const ShippingAndHandlingCharges = 'ShippingAndHandlingCharges';
+    private const ShippingTime = 'ShippingTime';
+
 }

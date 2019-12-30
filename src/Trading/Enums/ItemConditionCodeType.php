@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ItemConditionCodeType
+use MyCLabs\Enum\Enum;
+
+class ItemConditionCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_NEW = 'New';
-    const C_USED = 'Used';
+    private const CustomCode = 'CustomCode';
+    private const New = 'New';
+    private const Used = 'Used';
+
 }

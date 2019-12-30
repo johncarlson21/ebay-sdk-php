@@ -13,13 +13,13 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Enums\SellingManagerAlertTypeCodeType $AlertType
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerSoldListingsPropertyTypeCodeType $SoldAlert
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerInventoryPropertyTypeCodeType $InventoryAlert
  * @property \DTS\eBaySDK\Trading\Enums\SellingManagerAutomationPropertyTypeCodeType $AutomationAlert
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerPaisaPayPropertyTypeCodeType $PaisaPayAlert
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerGeneralPropertyTypeCodeType $GeneralAlert
- * @property integer $DurationInDays
  * @property integer $Count
+ * @property integer $DurationInDays
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerGeneralPropertyTypeCodeType $GeneralAlert
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerInventoryPropertyTypeCodeType $InventoryAlert
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerPaisaPayPropertyTypeCodeType $PaisaPayAlert
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerSoldListingsPropertyTypeCodeType $SoldAlert
  */
 class SellingManagerAlertType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,35 +33,17 @@ class SellingManagerAlertType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'AlertType'
         ],
-        'SoldAlert' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SoldAlert'
-        ],
-        'InventoryAlert' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'InventoryAlert'
-        ],
         'AutomationAlert' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AutomationAlert'
         ],
-        'PaisaPayAlert' => [
-            'type' => 'string',
+        'Count' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'PaisaPayAlert'
-        ],
-        'GeneralAlert' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'GeneralAlert'
+            'elementName' => 'Count'
         ],
         'DurationInDays' => [
             'type' => 'integer',
@@ -69,14 +51,32 @@ class SellingManagerAlertType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DurationInDays'
         ],
-        'Count' => [
-            'type' => 'integer',
+        'GeneralAlert' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Count'
+            'elementName' => 'GeneralAlert'
+        ],
+        'InventoryAlert' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'InventoryAlert'
+        ],
+        'PaisaPayAlert' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PaisaPayAlert'
+        ],
+        'SoldAlert' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SoldAlert'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -93,7 +93,7 @@ class SellingManagerAlertType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

@@ -12,17 +12,16 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\CustomSecurityHeaderType $RequesterCredentials
+ * @property \DTS\eBaySDK\Trading\Types\BotBlockRequestType $BotBlock
  * @property \DTS\eBaySDK\Trading\Enums\DetailLevelCodeType[] $DetailLevel
- * @property string $ErrorLanguage
- * @property string $MessageID
- * @property string $Version
  * @property string $EndUserIP
  * @property \DTS\eBaySDK\Trading\Enums\ErrorHandlingCodeType $ErrorHandling
+ * @property string $ErrorLanguage
  * @property string $InvocationID
+ * @property string $MessageID
  * @property string[] $OutputSelector
+ * @property string $Version
  * @property \DTS\eBaySDK\Trading\Enums\WarningLevelCodeType $WarningLevel
- * @property \DTS\eBaySDK\Trading\Types\BotBlockRequestType $BotBlock
  */
 class AbstractRequestType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -30,35 +29,17 @@ class AbstractRequestType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'RequesterCredentials' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\CustomSecurityHeaderType',
+        'BotBlock' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\BotBlockRequestType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'RequesterCredentials'
+            'elementName' => 'BotBlock'
         ],
         'DetailLevel' => [
             'type' => 'string',
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'DetailLevel'
-        ],
-        'ErrorLanguage' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ErrorLanguage'
-        ],
-        'MessageID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MessageID'
-        ],
-        'Version' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Version'
         ],
         'EndUserIP' => [
             'type' => 'string',
@@ -72,11 +53,23 @@ class AbstractRequestType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ErrorHandling'
         ],
+        'ErrorLanguage' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ErrorLanguage'
+        ],
         'InvocationID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InvocationID'
+        ],
+        'MessageID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MessageID'
         ],
         'OutputSelector' => [
             'type' => 'string',
@@ -84,20 +77,20 @@ class AbstractRequestType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'OutputSelector'
         ],
+        'Version' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Version'
+        ],
         'WarningLevel' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'WarningLevel'
-        ],
-        'BotBlock' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\BotBlockRequestType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BotBlock'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -114,7 +107,7 @@ class AbstractRequestType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

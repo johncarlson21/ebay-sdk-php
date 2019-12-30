@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\MyMessagesFolderOperationCodeType $Operation
  * @property integer[] $FolderID
  * @property string[] $FolderName
+ * @property \DTS\eBaySDK\Trading\Enums\MyMessagesFolderOperationCodeType $Operation
  */
 class ReviseMyMessagesFoldersRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -22,12 +22,6 @@ class ReviseMyMessagesFoldersRequestType extends \DTS\eBaySDK\Trading\Types\Abst
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Operation' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Operation'
-        ],
         'FolderID' => [
             'type' => 'integer',
             'repeatable' => true,
@@ -39,9 +33,15 @@ class ReviseMyMessagesFoldersRequestType extends \DTS\eBaySDK\Trading\Types\Abst
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'FolderName'
+        ],
+        'Operation' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Operation'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class ReviseMyMessagesFoldersRequestType extends \DTS\eBaySDK\Trading\Types\Abst
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'ReviseMyMessagesFoldersRequest';
         }

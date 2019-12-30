@@ -12,13 +12,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\SearchStandingDashboardType $SearchStanding
- * @property \DTS\eBaySDK\Trading\Types\SellerFeeDiscountDashboardType $SellerFeeDiscount
- * @property \DTS\eBaySDK\Trading\Types\PowerSellerDashboardType $PowerSellerStatus
- * @property \DTS\eBaySDK\Trading\Types\PolicyComplianceDashboardType $PolicyCompliance
  * @property \DTS\eBaySDK\Trading\Types\BuyerSatisfactionDashboardType $BuyerSatisfaction
- * @property \DTS\eBaySDK\Trading\Types\SellerAccountDashboardType $SellerAccount
  * @property \DTS\eBaySDK\Trading\Types\PerformanceDashboardType[] $Performance
+ * @property \DTS\eBaySDK\Trading\Types\PowerSellerDashboardType $PowerSellerStatus
+ * @property \DTS\eBaySDK\Trading\Types\SearchStandingDashboardType $SearchStanding
+ * @property \DTS\eBaySDK\Trading\Types\SellerAccountDashboardType $SellerAccount
+ * @property \DTS\eBaySDK\Trading\Types\SellerFeeDiscountDashboardType $SellerFeeDiscount
  */
 class GetSellerDashboardResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -26,17 +25,17 @@ class GetSellerDashboardResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'SearchStanding' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SearchStandingDashboardType',
+        'BuyerSatisfaction' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\BuyerSatisfactionDashboardType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'SearchStanding'
+            'elementName' => 'BuyerSatisfaction'
         ],
-        'SellerFeeDiscount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellerFeeDiscountDashboardType',
-            'repeatable' => false,
+        'Performance' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PerformanceDashboardType',
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'SellerFeeDiscount'
+            'elementName' => 'Performance'
         ],
         'PowerSellerStatus' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PowerSellerDashboardType',
@@ -44,17 +43,11 @@ class GetSellerDashboardResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
             'attribute' => false,
             'elementName' => 'PowerSellerStatus'
         ],
-        'PolicyCompliance' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PolicyComplianceDashboardType',
+        'SearchStanding' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SearchStandingDashboardType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'PolicyCompliance'
-        ],
-        'BuyerSatisfaction' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\BuyerSatisfactionDashboardType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BuyerSatisfaction'
+            'elementName' => 'SearchStanding'
         ],
         'SellerAccount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerAccountDashboardType',
@@ -62,14 +55,14 @@ class GetSellerDashboardResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
             'attribute' => false,
             'elementName' => 'SellerAccount'
         ],
-        'Performance' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PerformanceDashboardType',
-            'repeatable' => true,
+        'SellerFeeDiscount' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SellerFeeDiscountDashboardType',
+            'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Performance'
+            'elementName' => 'SellerFeeDiscount'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +79,7 @@ class GetSellerDashboardResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

@@ -10,26 +10,29 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ReturnStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class ReturnStatusCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_INVALID = 'Invalid';
-    const C_NOT_APPLICABLE = 'NotApplicable';
-    const C_RETURN_CLOSED_ESCALATED = 'ReturnClosedEscalated';
-    const C_RETURN_CLOSED_NO_REFUND = 'ReturnClosedNoRefund';
-    const C_RETURN_CLOSED_WITH_REFUND = 'ReturnClosedWithRefund';
-    const C_RETURN_DELIVERED = 'ReturnDelivered';
-    const C_RETURN_ESCALATED = 'ReturnEscalated';
-    const C_RETURN_ESCALATED_CLOSED_NO_REFUND = 'ReturnEscalatedClosedNoRefund';
-    const C_RETURN_ESCALATED_CLOSED_WITH_REFUND = 'ReturnEscalatedClosedWithRefund';
-    const C_RETURN_ESCALATED_PENDINGCS = 'ReturnEscalatedPendingCS';
-    const C_RETURN_ESCALATED_PENDING_BUYER = 'ReturnEscalatedPendingBuyer';
-    const C_RETURN_ESCALATED_PENDING_SELLER = 'ReturnEscalatedPendingSeller';
-    const C_RETURN_OPEN = 'ReturnOpen';
-    const C_RETURN_REQUEST_CLOSED_NO_REFUND = 'ReturnRequestClosedNoRefund';
-    const C_RETURN_REQUEST_CLOSED_WITH_REFUND = 'ReturnRequestClosedWithRefund';
-    const C_RETURN_REQUEST_PENDING = 'ReturnRequestPending';
-    const C_RETURN_REQUEST_PENDING_APPROVAL = 'ReturnRequestPendingApproval';
-    const C_RETURN_REQUEST_REJECTED = 'ReturnRequestRejected';
-    const C_RETURN_SHIPPED = 'ReturnShipped';
+    private const CustomCode = 'CustomCode';
+    private const Invalid = 'Invalid';
+    private const NotApplicable = 'NotApplicable';
+    private const ReturnClosedEscalated = 'ReturnClosedEscalated';
+    private const ReturnClosedNoRefund = 'ReturnClosedNoRefund';
+    private const ReturnClosedWithRefund = 'ReturnClosedWithRefund';
+    private const ReturnDelivered = 'ReturnDelivered';
+    private const ReturnEscalated = 'ReturnEscalated';
+    private const ReturnEscalatedClosedNoRefund = 'ReturnEscalatedClosedNoRefund';
+    private const ReturnEscalatedClosedWithRefund = 'ReturnEscalatedClosedWithRefund';
+    private const ReturnEscalatedPendingBuyer = 'ReturnEscalatedPendingBuyer';
+    private const ReturnEscalatedPendingCS = 'ReturnEscalatedPendingCS';
+    private const ReturnEscalatedPendingSeller = 'ReturnEscalatedPendingSeller';
+    private const ReturnOpen = 'ReturnOpen';
+    private const ReturnRequestClosedNoRefund = 'ReturnRequestClosedNoRefund';
+    private const ReturnRequestClosedWithRefund = 'ReturnRequestClosedWithRefund';
+    private const ReturnRequestPending = 'ReturnRequestPending';
+    private const ReturnRequestPendingApproval = 'ReturnRequestPendingApproval';
+    private const ReturnRequestRejected = 'ReturnRequestRejected';
+    private const ReturnShipped = 'ReturnShipped';
+
 }

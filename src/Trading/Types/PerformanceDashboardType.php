@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Types\SellerDashboardAlertType $Alert
  * @property \DTS\eBaySDK\Trading\Enums\SiteCodeType[] $Site
  * @property \DTS\eBaySDK\Trading\Enums\PerformanceStatusCodeType $Status
- * @property \DTS\eBaySDK\Trading\Types\SellerDashboardAlertType $Alert
  */
 class PerformanceDashboardType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -22,6 +22,12 @@ class PerformanceDashboardType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'Alert' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SellerDashboardAlertType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Alert'
+        ],
         'Site' => [
             'type' => 'string',
             'repeatable' => true,
@@ -33,15 +39,9 @@ class PerformanceDashboardType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Status'
-        ],
-        'Alert' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellerDashboardAlertType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Alert'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class PerformanceDashboardType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

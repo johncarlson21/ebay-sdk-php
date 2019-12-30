@@ -14,17 +14,17 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property \DTS\eBaySDK\Trading\Types\BidderNoticePreferencesType $BidderNoticePreferences
  * @property \DTS\eBaySDK\Trading\Types\CombinedPaymentPreferencesType $CombinedPaymentPreferences
- * @property \DTS\eBaySDK\Trading\Types\SellerPaymentPreferencesType $SellerPaymentPreferences
- * @property \DTS\eBaySDK\Trading\Types\SellerFavoriteItemPreferencesType $SellerFavoriteItemPreferences
- * @property \DTS\eBaySDK\Trading\Types\EndOfAuctionEmailPreferencesType $EndOfAuctionEmailPreferences
- * @property boolean $EmailShipmentTrackingNumberPreference
- * @property boolean $RequiredShipPhoneNumberPreference
- * @property \DTS\eBaySDK\Trading\Types\UnpaidItemAssistancePreferencesType $UnpaidItemAssistancePreferences
- * @property \DTS\eBaySDK\Trading\Types\PurchaseReminderEmailPreferencesType $PurchaseReminderEmailPreferences
  * @property \DTS\eBaySDK\Trading\Types\DispatchCutoffTimePreferencesType $DispatchCutoffTimePreference
+ * @property boolean $EmailShipmentTrackingNumberPreference
+ * @property \DTS\eBaySDK\Trading\Types\EndOfAuctionEmailPreferencesType $EndOfAuctionEmailPreferences
  * @property boolean $GlobalShippingProgramListingPreference
- * @property boolean $OverrideGSPserviceWithIntlService
  * @property boolean $OutOfStockControlPreference
+ * @property boolean $OverrideGSPserviceWithIntlService
+ * @property \DTS\eBaySDK\Trading\Types\PurchaseReminderEmailPreferencesType $PurchaseReminderEmailPreferences
+ * @property boolean $RequiredShipPhoneNumberPreference
+ * @property \DTS\eBaySDK\Trading\Types\SellerFavoriteItemPreferencesType $SellerFavoriteItemPreferences
+ * @property \DTS\eBaySDK\Trading\Types\SellerPaymentPreferencesType $SellerPaymentPreferences
+ * @property \DTS\eBaySDK\Trading\Types\UnpaidItemAssistancePreferencesType $UnpaidItemAssistancePreferences
  */
 class SetUserPreferencesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -44,23 +44,11 @@ class SetUserPreferencesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'attribute' => false,
             'elementName' => 'CombinedPaymentPreferences'
         ],
-        'SellerPaymentPreferences' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellerPaymentPreferencesType',
+        'DispatchCutoffTimePreference' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\DispatchCutoffTimePreferencesType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'SellerPaymentPreferences'
-        ],
-        'SellerFavoriteItemPreferences' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellerFavoriteItemPreferencesType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellerFavoriteItemPreferences'
-        ],
-        'EndOfAuctionEmailPreferences' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\EndOfAuctionEmailPreferencesType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'EndOfAuctionEmailPreferences'
+            'elementName' => 'DispatchCutoffTimePreference'
         ],
         'EmailShipmentTrackingNumberPreference' => [
             'type' => 'boolean',
@@ -68,29 +56,11 @@ class SetUserPreferencesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'attribute' => false,
             'elementName' => 'EmailShipmentTrackingNumberPreference'
         ],
-        'RequiredShipPhoneNumberPreference' => [
-            'type' => 'boolean',
+        'EndOfAuctionEmailPreferences' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\EndOfAuctionEmailPreferencesType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'RequiredShipPhoneNumberPreference'
-        ],
-        'UnpaidItemAssistancePreferences' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\UnpaidItemAssistancePreferencesType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UnpaidItemAssistancePreferences'
-        ],
-        'PurchaseReminderEmailPreferences' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PurchaseReminderEmailPreferencesType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PurchaseReminderEmailPreferences'
-        ],
-        'DispatchCutoffTimePreference' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\DispatchCutoffTimePreferencesType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DispatchCutoffTimePreference'
+            'elementName' => 'EndOfAuctionEmailPreferences'
         ],
         'GlobalShippingProgramListingPreference' => [
             'type' => 'boolean',
@@ -98,20 +68,50 @@ class SetUserPreferencesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'attribute' => false,
             'elementName' => 'GlobalShippingProgramListingPreference'
         ],
+        'OutOfStockControlPreference' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'OutOfStockControlPreference'
+        ],
         'OverrideGSPserviceWithIntlService' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OverrideGSPserviceWithIntlService'
         ],
-        'OutOfStockControlPreference' => [
+        'PurchaseReminderEmailPreferences' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PurchaseReminderEmailPreferencesType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PurchaseReminderEmailPreferences'
+        ],
+        'RequiredShipPhoneNumberPreference' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'OutOfStockControlPreference'
+            'elementName' => 'RequiredShipPhoneNumberPreference'
+        ],
+        'SellerFavoriteItemPreferences' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SellerFavoriteItemPreferencesType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SellerFavoriteItemPreferences'
+        ],
+        'SellerPaymentPreferences' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SellerPaymentPreferencesType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SellerPaymentPreferences'
+        ],
+        'UnpaidItemAssistancePreferences' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\UnpaidItemAssistancePreferencesType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UnpaidItemAssistancePreferences'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -128,7 +128,7 @@ class SetUserPreferencesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'SetUserPreferencesRequest';
         }

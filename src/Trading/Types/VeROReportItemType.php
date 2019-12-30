@@ -12,14 +12,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
- * @property integer $VeROReasonCodeID
- * @property string $MessageToSeller
  * @property boolean $CopyEmailToRightsOwner
- * @property \DTS\eBaySDK\Trading\Enums\ShippingRegionCodeType[] $Region
  * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType[] $Country
- * @property string $Patent
  * @property string $DetailedMessage
+ * @property string $ItemID
+ * @property string $MessageToSeller
+ * @property string $Patent
+ * @property \DTS\eBaySDK\Trading\Enums\ShippingRegionCodeType[] $Region
+ * @property integer $VeROReasonCodeID
  */
 class VeROReportItemType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -27,35 +27,11 @@ class VeROReportItemType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
-        ],
-        'VeROReasonCodeID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'VeROReasonCodeID'
-        ],
-        'MessageToSeller' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MessageToSeller'
-        ],
         'CopyEmailToRightsOwner' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CopyEmailToRightsOwner'
-        ],
-        'Region' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'Region'
         ],
         'Country' => [
             'type' => 'string',
@@ -63,20 +39,44 @@ class VeROReportItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Country'
         ],
+        'DetailedMessage' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DetailedMessage'
+        ],
+        'ItemID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
+        ],
+        'MessageToSeller' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MessageToSeller'
+        ],
         'Patent' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Patent'
         ],
-        'DetailedMessage' => [
+        'Region' => [
             'type' => 'string',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'Region'
+        ],
+        'VeROReasonCodeID' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'DetailedMessage'
+            'elementName' => 'VeROReasonCodeID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -93,7 +93,7 @@ class VeROReportItemType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

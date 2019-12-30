@@ -12,14 +12,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\SellingSummaryType $SellingSummary
- * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $ScheduledList
  * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $ActiveList
- * @property \DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType $SoldList
- * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $UnsoldList
- * @property \DTS\eBaySDK\Trading\Types\MyeBaySellingSummaryType $Summary
  * @property \DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType $DeletedFromSoldList
  * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $DeletedFromUnsoldList
+ * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $ScheduledList
+ * @property \DTS\eBaySDK\Trading\Types\SellingSummaryType $SellingSummary
+ * @property \DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType $SoldList
+ * @property \DTS\eBaySDK\Trading\Types\MyeBaySellingSummaryType $Summary
+ * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $UnsoldList
  */
 class GetMyeBaySellingResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -27,41 +27,11 @@ class GetMyeBaySellingResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRe
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'SellingSummary' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellingSummaryType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellingSummary'
-        ],
-        'ScheduledList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ScheduledList'
-        ],
         'ActiveList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ActiveList'
-        ],
-        'SoldList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SoldList'
-        ],
-        'UnsoldList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UnsoldList'
-        ],
-        'Summary' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MyeBaySellingSummaryType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Summary'
         ],
         'DeletedFromSoldList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType',
@@ -74,9 +44,39 @@ class GetMyeBaySellingResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRe
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DeletedFromUnsoldList'
+        ],
+        'ScheduledList' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ScheduledList'
+        ],
+        'SellingSummary' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SellingSummaryType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SellingSummary'
+        ],
+        'SoldList' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SoldList'
+        ],
+        'Summary' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\MyeBaySellingSummaryType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Summary'
+        ],
+        'UnsoldList' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UnsoldList'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -93,7 +93,7 @@ class GetMyeBaySellingResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRe
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

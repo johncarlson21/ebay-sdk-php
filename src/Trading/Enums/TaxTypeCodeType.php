@@ -10,9 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class TaxTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class TaxTypeCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_SALES_TAX = 'SalesTax';
-    const C_WASTE_RECYCLING_FEE = 'WasteRecyclingFee';
+    private const CustomCode = 'CustomCode';
+    private const GST = 'GST';
+    private const SalesTax = 'SalesTax';
+    private const WasteRecyclingFee = 'WasteRecyclingFee';
+
 }

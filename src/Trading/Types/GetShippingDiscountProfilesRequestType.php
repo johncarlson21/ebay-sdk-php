@@ -19,8 +19,9 @@ class GetShippingDiscountProfilesRequestType extends \DTS\eBaySDK\Trading\Types\
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-    ];
 
+    ];
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -37,7 +38,7 @@ class GetShippingDiscountProfilesRequestType extends \DTS\eBaySDK\Trading\Types\
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetShippingDiscountProfilesRequest';
         }

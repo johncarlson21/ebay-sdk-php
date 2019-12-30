@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\ShippingDetailsType $ShippingDetails
  * @property \DTS\eBaySDK\Trading\Types\PickupInStoreDetailsType $PickUpInStoreDetails
+ * @property \DTS\eBaySDK\Trading\Types\ShippingDetailsType $ShippingDetails
  */
 class GetItemShippingResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -21,20 +21,20 @@ class GetItemShippingResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ShippingDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShippingDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingDetails'
-        ],
         'PickUpInStoreDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PickupInStoreDetailsType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PickUpInStoreDetails'
+        ],
+        'ShippingDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ShippingDetailsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingDetails'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class GetItemShippingResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

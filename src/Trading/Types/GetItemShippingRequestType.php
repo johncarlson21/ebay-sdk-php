@@ -12,10 +12,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType $DestinationCountryCode
+ * @property string $DestinationPostalCode
  * @property string $ItemID
  * @property integer $QuantitySold
- * @property string $DestinationPostalCode
- * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType $DestinationCountryCode
  */
 class GetItemShippingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -23,6 +23,18 @@ class GetItemShippingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'DestinationCountryCode' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DestinationCountryCode'
+        ],
+        'DestinationPostalCode' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DestinationPostalCode'
+        ],
         'ItemID' => [
             'type' => 'string',
             'repeatable' => false,
@@ -34,21 +46,9 @@ class GetItemShippingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QuantitySold'
-        ],
-        'DestinationPostalCode' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DestinationPostalCode'
-        ],
-        'DestinationCountryCode' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DestinationCountryCode'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class GetItemShippingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetItemShippingRequest';
         }

@@ -12,14 +12,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Types\MaximumItemRequirementsType $MaximumItemRequirements
+ * @property \DTS\eBaySDK\Trading\Types\MaximumUnpaidItemStrikesInfoType $MaximumUnpaidItemStrikesInfo
  * @property boolean $ShipToRegistrationCountry
  * @property boolean $ZeroFeedbackScore
- * @property integer $MinimumFeedbackScore
- * @property \DTS\eBaySDK\Trading\Types\MaximumItemRequirementsType $MaximumItemRequirements
- * @property boolean $LinkedPayPalAccount
- * @property \DTS\eBaySDK\Trading\Types\VerifiedUserRequirementsType $VerifiedUserRequirements
- * @property \DTS\eBaySDK\Trading\Types\MaximumUnpaidItemStrikesInfoType $MaximumUnpaidItemStrikesInfo
- * @property \DTS\eBaySDK\Trading\Types\MaximumBuyerPolicyViolationsType $MaximumBuyerPolicyViolations
  */
 class BuyerRequirementDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -27,6 +23,18 @@ class BuyerRequirementDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'MaximumItemRequirements' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\MaximumItemRequirementsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MaximumItemRequirements'
+        ],
+        'MaximumUnpaidItemStrikesInfo' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\MaximumUnpaidItemStrikesInfoType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MaximumUnpaidItemStrikesInfo'
+        ],
         'ShipToRegistrationCountry' => [
             'type' => 'boolean',
             'repeatable' => false,
@@ -38,45 +46,9 @@ class BuyerRequirementDetailsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ZeroFeedbackScore'
-        ],
-        'MinimumFeedbackScore' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MinimumFeedbackScore'
-        ],
-        'MaximumItemRequirements' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MaximumItemRequirementsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MaximumItemRequirements'
-        ],
-        'LinkedPayPalAccount' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'LinkedPayPalAccount'
-        ],
-        'VerifiedUserRequirements' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\VerifiedUserRequirementsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'VerifiedUserRequirements'
-        ],
-        'MaximumUnpaidItemStrikesInfo' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MaximumUnpaidItemStrikesInfoType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MaximumUnpaidItemStrikesInfo'
-        ],
-        'MaximumBuyerPolicyViolations' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MaximumBuyerPolicyViolationsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MaximumBuyerPolicyViolations'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -93,7 +65,7 @@ class BuyerRequirementDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

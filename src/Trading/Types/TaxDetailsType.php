@@ -12,13 +12,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Enums\CollectionMethodCodeType $CollectionMethod
  * @property \DTS\eBaySDK\Trading\Enums\TaxTypeCodeType $Imposition
- * @property \DTS\eBaySDK\Trading\Enums\TaxDescriptionCodeType $TaxDescription
  * @property \DTS\eBaySDK\Trading\Types\AmountType $TaxAmount
- * @property \DTS\eBaySDK\Trading\Types\AmountType $TaxOnSubtotalAmount
- * @property \DTS\eBaySDK\Trading\Types\AmountType $TaxOnShippingAmount
- * @property \DTS\eBaySDK\Trading\Types\AmountType $TaxOnHandlingAmount
  * @property string $TaxCode
+ * @property \DTS\eBaySDK\Trading\Enums\TaxDescriptionCodeType $TaxDescription
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $TaxOnHandlingAmount
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $TaxOnShippingAmount
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $TaxOnSubtotalAmount
  */
 class TaxDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -26,17 +27,17 @@ class TaxDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'CollectionMethod' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CollectionMethod'
+        ],
         'Imposition' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Imposition'
-        ],
-        'TaxDescription' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TaxDescription'
         ],
         'TaxAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -44,17 +45,17 @@ class TaxDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'TaxAmount'
         ],
-        'TaxOnSubtotalAmount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+        'TaxCode' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'TaxOnSubtotalAmount'
+            'elementName' => 'TaxCode'
         ],
-        'TaxOnShippingAmount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+        'TaxDescription' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'TaxOnShippingAmount'
+            'elementName' => 'TaxDescription'
         ],
         'TaxOnHandlingAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -62,14 +63,20 @@ class TaxDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'TaxOnHandlingAmount'
         ],
-        'TaxCode' => [
-            'type' => 'string',
+        'TaxOnShippingAmount' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'TaxCode'
+            'elementName' => 'TaxOnShippingAmount'
+        ],
+        'TaxOnSubtotalAmount' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TaxOnSubtotalAmount'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +93,7 @@ class TaxDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

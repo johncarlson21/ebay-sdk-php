@@ -12,14 +12,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $ScheduledList
  * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $ActiveList
- * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $SoldList
- * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $UnsoldList
  * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $DeletedFromSoldList
  * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $DeletedFromUnsoldList
- * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $SellingSummary
  * @property boolean $HideVariations
+ * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $ScheduledList
+ * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $SellingSummary
+ * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $SoldList
+ * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $UnsoldList
  */
 class GetMyeBaySellingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -27,29 +27,11 @@ class GetMyeBaySellingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ScheduledList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ScheduledList'
-        ],
         'ActiveList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ActiveList'
-        ],
-        'SoldList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SoldList'
-        ],
-        'UnsoldList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UnsoldList'
         ],
         'DeletedFromSoldList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
@@ -63,20 +45,38 @@ class GetMyeBaySellingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
             'attribute' => false,
             'elementName' => 'DeletedFromUnsoldList'
         ],
+        'HideVariations' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'HideVariations'
+        ],
+        'ScheduledList' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ScheduledList'
+        ],
         'SellingSummary' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellingSummary'
         ],
-        'HideVariations' => [
-            'type' => 'boolean',
+        'SoldList' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'HideVariations'
+            'elementName' => 'SoldList'
+        ],
+        'UnsoldList' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UnsoldList'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -93,7 +93,7 @@ class GetMyeBaySellingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetMyeBaySellingRequest';
         }

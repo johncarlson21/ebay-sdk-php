@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
  * @property string $Description
+ * @property string $ItemID
  */
 class AddToItemDescriptionRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -21,20 +21,20 @@ class AddToItemDescriptionRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
-        ],
         'Description' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Description'
+        ],
+        'ItemID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class AddToItemDescriptionRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'AddToItemDescriptionRequest';
         }

@@ -10,25 +10,28 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ValueTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class ValueTypeCodeType extends Enum 
 {
-    const C_CEDULA = 'CEDULA';
-    const C_CNPJ = 'CNPJ';
-    const C_CODICE_FISCALE = 'CodiceFiscale';
-    const C_CPF_TAXID = 'CPFTaxID';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DATE = 'Date';
-    const C_DECIMAL = 'Decimal';
-    const C_DNI = 'DNI';
-    const C_DRIVER_LICENSE = 'DriverLicense';
-    const C_EAN = 'EAN';
-    const C_ISBN = 'ISBN';
-    const C_NIE = 'NIE';
-    const C_NIF = 'NIF';
-    const C_NIT = 'NIT';
-    const C_NUMERIC = 'Numeric';
-    const C_RUSSIAN_PASSPORT = 'RussianPassport';
-    const C_TEXT = 'Text';
-    const C_TURKEYID = 'TurkeyID';
-    const C_UPC = 'UPC';
+    private const CEDULA = 'CEDULA';
+    private const CNPJ = 'CNPJ';
+    private const CodiceFiscale = 'CodiceFiscale';
+    private const CPFTaxID = 'CPFTaxID';
+    private const CustomCode = 'CustomCode';
+    private const Date = 'Date';
+    private const Decimal = 'Decimal';
+    private const DNI = 'DNI';
+    private const DriverLicense = 'DriverLicense';
+    private const EAN = 'EAN';
+    private const ISBN = 'ISBN';
+    private const NIE = 'NIE';
+    private const NIF = 'NIF';
+    private const NIT = 'NIT';
+    private const Numeric = 'Numeric';
+    private const RussianPassport = 'RussianPassport';
+    private const Text = 'Text';
+    private const TurkeyID = 'TurkeyID';
+    private const UPC = 'UPC';
+
 }

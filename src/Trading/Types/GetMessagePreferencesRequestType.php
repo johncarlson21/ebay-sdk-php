@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $SellerID
  * @property boolean $IncludeASQPreferences
+ * @property string $SellerID
  */
 class GetMessagePreferencesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -21,20 +21,20 @@ class GetMessagePreferencesRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'SellerID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellerID'
-        ],
         'IncludeASQPreferences' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'IncludeASQPreferences'
+        ],
+        'SellerID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SellerID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class GetMessagePreferencesRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetMessagePreferencesRequest';
         }

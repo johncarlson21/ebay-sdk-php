@@ -10,11 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class EndOfAuctionLogoTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class EndOfAuctionLogoTypeCodeType extends Enum 
 {
-    const C_CUSTOMIZED = 'Customized';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_NONE = 'None';
-    const C_STORE = 'Store';
-    const C_WINNING_BIDDER_NOTICE = 'WinningBidderNotice';
+    private const CustomCode = 'CustomCode';
+    private const Customized = 'Customized';
+    private const None = 'None';
+    private const Store = 'Store';
+    private const WinningBidderNotice = 'WinningBidderNotice';
+
 }

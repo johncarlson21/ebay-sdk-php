@@ -10,28 +10,31 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class DisputeResolutionRecordTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class DisputeResolutionRecordTypeCodeType extends Enum 
 {
-    const C_APPEAL_BUYER_STRIKE = 'AppealBuyerStrike';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FEATURE_FEE_CREDIT = 'FeatureFeeCredit';
-    const C_FEATURE_FEE_NOT_CREDIT = 'FeatureFeeNotCredit';
-    const C_FVF_CREDIT = 'FVFCredit';
-    const C_FVF_CREDIT_NOT_GRANTED = 'FVFCreditNotGranted';
-    const C_FVF_ON_SHIPPING_CREDIT = 'FVFOnShippingCredit';
-    const C_FVF_ON_SHIPPING_CREDIT_NOT_GRANTED = 'FVFOnShippingCreditNotGranted';
-    const C_GENERATECS_TICKET_FOR_SUSPEND = 'GenerateCSTicketForSuspend';
-    const C_INSERTION_FEE_CREDIT = 'InsertionFeeCredit';
-    const C_ITEM_NOT_RECEIVED_CLAIM_FILED = 'ItemNotReceivedClaimFiled';
-    const C_RESTRICT_BUYER = 'RestrictBuyer';
-    const C_REVERSEFVF_CREDIT = 'ReverseFVFCredit';
-    const C_REVERSEFVF_ON_SHIPPING_CREDIT = 'ReverseFVFOnShippingCredit';
-    const C_REVERSE_FEATURE_FEE_CREDIT = 'ReverseFeatureFeeCredit';
-    const C_REVERSE_INSERTION_FEE_CREDIT = 'ReverseInsertionFeeCredit';
-    const C_STRIKE_BUYER = 'StrikeBuyer';
-    const C_SUSPEND_BUYER = 'SuspendBuyer';
-    const C_UNPAID_ITEM_RELISTED = 'UnpaidItemRelisted';
-    const C_UNPAID_ITEM_REVISED = 'UnpaidItemRevised';
-    const C_UNRESTRICT_BUYER = 'UnrestrictBuyer';
-    const C_UNSUSPEND_BUYER = 'UnsuspendBuyer';
+    private const AppealBuyerStrike = 'AppealBuyerStrike';
+    private const CustomCode = 'CustomCode';
+    private const FeatureFeeCredit = 'FeatureFeeCredit';
+    private const FeatureFeeNotCredit = 'FeatureFeeNotCredit';
+    private const FVFCredit = 'FVFCredit';
+    private const FVFCreditNotGranted = 'FVFCreditNotGranted';
+    private const FVFOnShippingCredit = 'FVFOnShippingCredit';
+    private const FVFOnShippingCreditNotGranted = 'FVFOnShippingCreditNotGranted';
+    private const GenerateCSTicketForSuspend = 'GenerateCSTicketForSuspend';
+    private const InsertionFeeCredit = 'InsertionFeeCredit';
+    private const ItemNotReceivedClaimFiled = 'ItemNotReceivedClaimFiled';
+    private const RestrictBuyer = 'RestrictBuyer';
+    private const ReverseFeatureFeeCredit = 'ReverseFeatureFeeCredit';
+    private const ReverseFVFCredit = 'ReverseFVFCredit';
+    private const ReverseFVFOnShippingCredit = 'ReverseFVFOnShippingCredit';
+    private const ReverseInsertionFeeCredit = 'ReverseInsertionFeeCredit';
+    private const StrikeBuyer = 'StrikeBuyer';
+    private const SuspendBuyer = 'SuspendBuyer';
+    private const UnpaidItemRelisted = 'UnpaidItemRelisted';
+    private const UnpaidItemRevised = 'UnpaidItemRevised';
+    private const UnrestrictBuyer = 'UnrestrictBuyer';
+    private const UnsuspendBuyer = 'UnsuspendBuyer';
+
 }

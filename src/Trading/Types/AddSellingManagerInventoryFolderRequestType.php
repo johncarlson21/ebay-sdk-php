@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $Comment
  * @property string $FolderName
  * @property integer $ParentFolderID
- * @property string $Comment
  */
 class AddSellingManagerInventoryFolderRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -22,6 +22,12 @@ class AddSellingManagerInventoryFolderRequestType extends \DTS\eBaySDK\Trading\T
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'Comment' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Comment'
+        ],
         'FolderName' => [
             'type' => 'string',
             'repeatable' => false,
@@ -33,15 +39,9 @@ class AddSellingManagerInventoryFolderRequestType extends \DTS\eBaySDK\Trading\T
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ParentFolderID'
-        ],
-        'Comment' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Comment'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class AddSellingManagerInventoryFolderRequestType extends \DTS\eBaySDK\Trading\T
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'AddSellingManagerInventoryFolderRequest';
         }

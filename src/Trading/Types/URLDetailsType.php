@@ -12,10 +12,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\URLTypeCodeType $URLType
- * @property string $URL
  * @property string $DetailVersion
  * @property \DateTime $UpdateTime
+ * @property string $URL
+ * @property \DTS\eBaySDK\Trading\Enums\URLTypeCodeType $URLType
  */
 class URLDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -23,18 +23,6 @@ class URLDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'URLType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'URLType'
-        ],
-        'URL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'URL'
-        ],
         'DetailVersion' => [
             'type' => 'string',
             'repeatable' => false,
@@ -46,9 +34,21 @@ class URLDetailsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UpdateTime'
+        ],
+        'URL' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'URL'
+        ],
+        'URLType' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'URLType'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class URLDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

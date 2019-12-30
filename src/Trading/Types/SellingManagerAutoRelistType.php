@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerAutoRelistTypeCodeType $Type
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerAutoRelistOptionCodeType $RelistCondition
+ * @property \DTS\eBaySDK\Trading\Types\BestOfferDetailsType $BestOfferDetails
+ * @property integer $ListingHoldInventoryLevel
  * @property integer $RelistAfterDays
  * @property integer $RelistAfterHours
  * @property string $RelistAtSpecificTimeOfDay
- * @property \DTS\eBaySDK\Trading\Types\BestOfferDetailsType $BestOfferDetails
- * @property integer $ListingHoldInventoryLevel
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerAutoRelistOptionCodeType $RelistCondition
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerAutoRelistTypeCodeType $Type
  */
 class SellingManagerAutoRelistType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -26,17 +26,17 @@ class SellingManagerAutoRelistType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Type' => [
-            'type' => 'string',
+        'BestOfferDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\BestOfferDetailsType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Type'
+            'elementName' => 'BestOfferDetails'
         ],
-        'RelistCondition' => [
-            'type' => 'string',
+        'ListingHoldInventoryLevel' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'RelistCondition'
+            'elementName' => 'ListingHoldInventoryLevel'
         ],
         'RelistAfterDays' => [
             'type' => 'integer',
@@ -56,20 +56,20 @@ class SellingManagerAutoRelistType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'RelistAtSpecificTimeOfDay'
         ],
-        'BestOfferDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\BestOfferDetailsType',
+        'RelistCondition' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'BestOfferDetails'
+            'elementName' => 'RelistCondition'
         ],
-        'ListingHoldInventoryLevel' => [
-            'type' => 'integer',
+        'Type' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ListingHoldInventoryLevel'
+            'elementName' => 'Type'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class SellingManagerAutoRelistType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ShippingCostPaidByOption
  * @property string $Description
+ * @property string $ShippingCostPaidByOption
  */
 class ShippingCostPaidByDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -21,20 +21,20 @@ class ShippingCostPaidByDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ShippingCostPaidByOption' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingCostPaidByOption'
-        ],
         'Description' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Description'
+        ],
+        'ShippingCostPaidByOption' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingCostPaidByOption'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class ShippingCostPaidByDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

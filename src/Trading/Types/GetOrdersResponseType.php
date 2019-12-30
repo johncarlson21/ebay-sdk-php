@@ -12,11 +12,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
  * @property boolean $HasMoreOrders
  * @property \DTS\eBaySDK\Trading\Types\OrderArrayType $OrderArray
  * @property integer $OrdersPerPage
  * @property integer $PageNumber
+ * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
  * @property integer $ReturnedOrderCountActual
  */
 class GetOrdersResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
@@ -25,12 +25,6 @@ class GetOrdersResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseT
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'PaginationResult' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PaginationResult'
-        ],
         'HasMoreOrders' => [
             'type' => 'boolean',
             'repeatable' => false,
@@ -55,6 +49,12 @@ class GetOrdersResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseT
             'attribute' => false,
             'elementName' => 'PageNumber'
         ],
+        'PaginationResult' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PaginationResult'
+        ],
         'ReturnedOrderCountActual' => [
             'type' => 'integer',
             'repeatable' => false,
@@ -62,7 +62,7 @@ class GetOrdersResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseT
             'elementName' => 'ReturnedOrderCountActual'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -79,7 +79,7 @@ class GetOrdersResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseT
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

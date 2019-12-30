@@ -12,15 +12,15 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $PromotionalSaleID
- * @property string $PromotionalSaleName
- * @property \DTS\eBaySDK\Trading\Types\ItemIDArrayType $PromotionalSaleItemIDArray
- * @property \DTS\eBaySDK\Trading\Enums\PromotionalSaleStatusCodeType $Status
  * @property \DTS\eBaySDK\Trading\Enums\DiscountCodeType $DiscountType
  * @property double $DiscountValue
- * @property \DateTime $PromotionalSaleStartTime
  * @property \DateTime $PromotionalSaleEndTime
+ * @property integer $PromotionalSaleID
+ * @property \DTS\eBaySDK\Trading\Types\ItemIDArrayType $PromotionalSaleItemIDArray
+ * @property string $PromotionalSaleName
+ * @property \DateTime $PromotionalSaleStartTime
  * @property \DTS\eBaySDK\Trading\Enums\PromotionalSaleTypeCodeType $PromotionalSaleType
+ * @property \DTS\eBaySDK\Trading\Enums\PromotionalSaleStatusCodeType $Status
  */
 class PromotionalSaleType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -28,30 +28,6 @@ class PromotionalSaleType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'PromotionalSaleID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PromotionalSaleID'
-        ],
-        'PromotionalSaleName' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PromotionalSaleName'
-        ],
-        'PromotionalSaleItemIDArray' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemIDArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PromotionalSaleItemIDArray'
-        ],
-        'Status' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Status'
-        ],
         'DiscountType' => [
             'type' => 'string',
             'repeatable' => false,
@@ -64,26 +40,50 @@ class PromotionalSaleType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DiscountValue'
         ],
-        'PromotionalSaleStartTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PromotionalSaleStartTime'
-        ],
         'PromotionalSaleEndTime' => [
             'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PromotionalSaleEndTime'
         ],
+        'PromotionalSaleID' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PromotionalSaleID'
+        ],
+        'PromotionalSaleItemIDArray' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemIDArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PromotionalSaleItemIDArray'
+        ],
+        'PromotionalSaleName' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PromotionalSaleName'
+        ],
+        'PromotionalSaleStartTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PromotionalSaleStartTime'
+        ],
         'PromotionalSaleType' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PromotionalSaleType'
+        ],
+        'Status' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Status'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -100,7 +100,7 @@ class PromotionalSaleType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

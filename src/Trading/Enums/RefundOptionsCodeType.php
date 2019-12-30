@@ -10,12 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class RefundOptionsCodeType
+use MyCLabs\Enum\Enum;
+
+class RefundOptionsCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_EXCHANGE = 'Exchange';
-    const C_MERCHANDISE_CREDIT = 'MerchandiseCredit';
-    const C_MONEY_BACK = 'MoneyBack';
-    const C_MONEY_BACK_OR_EXCHANGE = 'MoneyBackOrExchange';
-    const C_MONEY_BACK_OR_REPLACEMENT = 'MoneyBackOrReplacement';
+    private const CustomCode = 'CustomCode';
+    private const MoneyBack = 'MoneyBack';
+    private const MoneyBackOrExchange = 'MoneyBackOrExchange';
+    private const MoneyBackOrReplacement = 'MoneyBackOrReplacement';
+
 }

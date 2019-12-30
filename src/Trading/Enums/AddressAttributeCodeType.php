@@ -10,8 +10,11 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class AddressAttributeCodeType
+use MyCLabs\Enum\Enum;
+
+class AddressAttributeCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_REFERENCE_NUMBER = 'ReferenceNumber';
+    private const CustomCode = 'CustomCode';
+    private const ReferenceNumber = 'ReferenceNumber';
+
 }

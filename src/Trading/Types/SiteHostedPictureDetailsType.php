@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $BaseURL
+ * @property string $ExternalPictureURL
+ * @property string $FullURL
+ * @property \DTS\eBaySDK\Trading\Enums\PictureFormatCodeType $PictureFormat
  * @property string $PictureName
  * @property \DTS\eBaySDK\Trading\Enums\PictureSetCodeType $PictureSet
- * @property \DTS\eBaySDK\Trading\Enums\PictureFormatCodeType $PictureFormat
- * @property string $FullURL
- * @property string $BaseURL
  * @property \DTS\eBaySDK\Trading\Types\PictureSetMemberType[] $PictureSetMember
- * @property string $ExternalPictureURL
  * @property \DateTime $UseByDate
  */
 class SiteHostedPictureDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -27,6 +27,30 @@ class SiteHostedPictureDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'BaseURL' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BaseURL'
+        ],
+        'ExternalPictureURL' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ExternalPictureURL'
+        ],
+        'FullURL' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'FullURL'
+        ],
+        'PictureFormat' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PictureFormat'
+        ],
         'PictureName' => [
             'type' => 'string',
             'repeatable' => false,
@@ -39,35 +63,11 @@ class SiteHostedPictureDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PictureSet'
         ],
-        'PictureFormat' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PictureFormat'
-        ],
-        'FullURL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FullURL'
-        ],
-        'BaseURL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BaseURL'
-        ],
         'PictureSetMember' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PictureSetMemberType',
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'PictureSetMember'
-        ],
-        'ExternalPictureURL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ExternalPictureURL'
         ],
         'UseByDate' => [
             'type' => 'DateTime',
@@ -76,7 +76,7 @@ class SiteHostedPictureDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'UseByDate'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -93,7 +93,7 @@ class SiteHostedPictureDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

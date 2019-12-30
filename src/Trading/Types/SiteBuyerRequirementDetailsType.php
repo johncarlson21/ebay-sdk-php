@@ -12,14 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $DetailVersion
  * @property boolean $LinkedPayPalAccount
  * @property \DTS\eBaySDK\Trading\Types\MaximumBuyerPolicyViolationsDetailsType $MaximumBuyerPolicyViolations
  * @property \DTS\eBaySDK\Trading\Types\MaximumItemRequirementsDetailsType $MaximumItemRequirements
  * @property \DTS\eBaySDK\Trading\Types\MaximumUnpaidItemStrikesInfoDetailsType $MaximumUnpaidItemStrikesInfo
  * @property \DTS\eBaySDK\Trading\Types\MinimumFeedbackScoreDetailsType $MinimumFeedbackScore
  * @property boolean $ShipToRegistrationCountry
- * @property \DTS\eBaySDK\Trading\Types\VerifiedUserRequirementsDetailsType $VerifiedUserRequirements
- * @property string $DetailVersion
  * @property \DateTime $UpdateTime
  */
 class SiteBuyerRequirementDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -28,6 +27,12 @@ class SiteBuyerRequirementDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'DetailVersion' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DetailVersion'
+        ],
         'LinkedPayPalAccount' => [
             'type' => 'boolean',
             'repeatable' => false,
@@ -64,18 +69,6 @@ class SiteBuyerRequirementDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShipToRegistrationCountry'
         ],
-        'VerifiedUserRequirements' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\VerifiedUserRequirementsDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'VerifiedUserRequirements'
-        ],
-        'DetailVersion' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DetailVersion'
-        ],
         'UpdateTime' => [
             'type' => 'DateTime',
             'repeatable' => false,
@@ -83,7 +76,7 @@ class SiteBuyerRequirementDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'UpdateTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -100,7 +93,7 @@ class SiteBuyerRequirementDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

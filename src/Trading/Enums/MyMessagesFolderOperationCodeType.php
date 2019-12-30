@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class MyMessagesFolderOperationCodeType
+use MyCLabs\Enum\Enum;
+
+class MyMessagesFolderOperationCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DISPLAY = 'Display';
-    const C_REMOVE = 'Remove';
-    const C_RENAME = 'Rename';
+    private const CustomCode = 'CustomCode';
+    private const Display = 'Display';
+    private const Remove = 'Remove';
+    private const Rename = 'Rename';
+
 }

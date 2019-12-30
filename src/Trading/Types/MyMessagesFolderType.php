@@ -13,7 +13,6 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property integer $FolderID
- * @property string $FolderName
  */
 class MyMessagesFolderType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -26,15 +25,9 @@ class MyMessagesFolderType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FolderID'
-        ],
-        'FolderName' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FolderName'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +44,7 @@ class MyMessagesFolderType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

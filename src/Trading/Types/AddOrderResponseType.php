@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $OrderID
  * @property \DateTime $CreatedTime
+ * @property string $OrderID
  */
 class AddOrderResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -21,20 +21,20 @@ class AddOrderResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseTy
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'OrderID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'OrderID'
-        ],
         'CreatedTime' => [
             'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CreatedTime'
+        ],
+        'OrderID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'OrderID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class AddOrderResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseTy
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

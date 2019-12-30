@@ -13,9 +13,9 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType $SellingManagerProductDetails
- * @property \DTS\eBaySDK\Trading\Types\SellingManagerTemplateDetailsArrayType $SellingManagerTemplateDetailsArray
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductInventoryStatusType $SellingManagerProductInventoryStatus
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductSpecificsType $SellingManagerProductSpecifics
+ * @property \DTS\eBaySDK\Trading\Types\SellingManagerTemplateDetailsArrayType $SellingManagerTemplateDetailsArray
  */
 class SellingManagerProductType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -29,12 +29,6 @@ class SellingManagerProductType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SellingManagerProductDetails'
         ],
-        'SellingManagerTemplateDetailsArray' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerTemplateDetailsArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellingManagerTemplateDetailsArray'
-        ],
         'SellingManagerProductInventoryStatus' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductInventoryStatusType',
             'repeatable' => false,
@@ -46,9 +40,15 @@ class SellingManagerProductType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellingManagerProductSpecifics'
+        ],
+        'SellingManagerTemplateDetailsArray' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerTemplateDetailsArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SellingManagerTemplateDetailsArray'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class SellingManagerProductType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

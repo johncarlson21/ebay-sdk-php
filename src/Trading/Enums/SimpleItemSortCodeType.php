@@ -10,16 +10,19 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SimpleItemSortCodeType
+use MyCLabs\Enum\Enum;
+
+class SimpleItemSortCodeType extends Enum 
 {
-    const C_BEST_MATCH = 'BestMatch';
-    const C_BEST_MATCH_CATEGORY_GROUP = 'BestMatchCategoryGroup';
-    const C_BID_COUNT = 'BidCount';
-    const C_COUNTRY = 'Country';
-    const C_CURRENT_BID = 'CurrentBid';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DISTANCE = 'Distance';
-    const C_END_TIME = 'EndTime';
-    const C_PRICE_PLUS_SHIPPING = 'PricePlusShipping';
-    const C_START_DATE = 'StartDate';
+    private const BestMatch = 'BestMatch';
+    private const BestMatchCategoryGroup = 'BestMatchCategoryGroup';
+    private const BidCount = 'BidCount';
+    private const Country = 'Country';
+    private const CurrentBid = 'CurrentBid';
+    private const CustomCode = 'CustomCode';
+    private const Distance = 'Distance';
+    private const EndTime = 'EndTime';
+    private const PricePlusShipping = 'PricePlusShipping';
+    private const StartDate = 'StartDate';
+
 }

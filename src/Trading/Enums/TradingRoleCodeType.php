@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class TradingRoleCodeType
+use MyCLabs\Enum\Enum;
+
+class TradingRoleCodeType extends Enum 
 {
-    const C_BUYER = 'Buyer';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_SELLER = 'Seller';
+    private const Buyer = 'Buyer';
+    private const CustomCode = 'CustomCode';
+    private const Seller = 'Seller';
+
 }

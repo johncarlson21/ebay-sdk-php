@@ -10,11 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class StoreCustomListingHeaderLinkCodeType
+use MyCLabs\Enum\Enum;
+
+class StoreCustomListingHeaderLinkCodeType extends Enum 
 {
-    const C_ABOUT_ME_PAGE = 'AboutMePage';
-    const C_CUSTOM_CATEGORY = 'CustomCategory';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_CUSTOM_PAGE = 'CustomPage';
-    const C_NONE = 'None';
+    private const AboutMePage = 'AboutMePage';
+    private const CustomCategory = 'CustomCategory';
+    private const CustomCode = 'CustomCode';
+    private const CustomPage = 'CustomPage';
+    private const None = 'None';
+
 }

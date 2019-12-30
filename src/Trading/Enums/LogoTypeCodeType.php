@@ -10,10 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class LogoTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class LogoTypeCodeType extends Enum 
 {
-    const C_CUSTOM = 'Custom';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_STORE = 'Store';
-    const C_WINNING_BIDDER_NOTICE = 'WinningBidderNotice';
+
 }

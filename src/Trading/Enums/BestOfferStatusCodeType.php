@@ -10,18 +10,21 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class BestOfferStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class BestOfferStatusCodeType extends Enum 
 {
-    const C_ACCEPTED = 'Accepted';
-    const C_ACTIVE = 'Active';
-    const C_ADMIN_ENDED = 'AdminEnded';
-    const C_ALL = 'All';
-    const C_COUNTERED = 'Countered';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DECLINED = 'Declined';
-    const C_EXPIRED = 'Expired';
-    const C_PENDING = 'Pending';
-    const C_PENDING_BUYER_CONFIRMATION = 'PendingBuyerConfirmation';
-    const C_PENDING_BUYER_PAYMENT = 'PendingBuyerPayment';
-    const C_RETRACTED = 'Retracted';
+    private const Accepted = 'Accepted';
+    private const Active = 'Active';
+    private const AdminEnded = 'AdminEnded';
+    private const All = 'All';
+    private const Countered = 'Countered';
+    private const CustomCode = 'CustomCode';
+    private const Declined = 'Declined';
+    private const Expired = 'Expired';
+    private const Pending = 'Pending';
+    private const PendingBuyerConfirmation = 'PendingBuyerConfirmation';
+    private const PendingBuyerPayment = 'PendingBuyerPayment';
+    private const Retracted = 'Retracted';
+
 }

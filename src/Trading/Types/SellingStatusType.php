@@ -12,23 +12,23 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property boolean $AdminEnded
  * @property integer $BidCount
+ * @property integer $BidderCount
  * @property \DTS\eBaySDK\Trading\Types\AmountType $BidIncrement
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ConvertedCurrentPrice
  * @property \DTS\eBaySDK\Trading\Types\AmountType $CurrentPrice
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $FinalValueFee
  * @property \DTS\eBaySDK\Trading\Types\UserType $HighBidder
  * @property integer $LeadCount
+ * @property \DTS\eBaySDK\Trading\Enums\ListingStatusCodeType $ListingStatus
  * @property \DTS\eBaySDK\Trading\Types\AmountType $MinimumToBid
+ * @property \DTS\eBaySDK\Trading\Types\PromotionalSaleDetailsType $PromotionalSaleDetails
  * @property integer $QuantitySold
+ * @property integer $QuantitySoldByPickupInStore
  * @property boolean $ReserveMet
  * @property boolean $SecondChanceEligible
- * @property integer $BidderCount
- * @property \DTS\eBaySDK\Trading\Enums\ListingStatusCodeType $ListingStatus
- * @property \DTS\eBaySDK\Trading\Types\AmountType $FinalValueFee
- * @property \DTS\eBaySDK\Trading\Types\PromotionalSaleDetailsType $PromotionalSaleDetails
- * @property boolean $AdminEnded
  * @property boolean $SoldAsBin
- * @property integer $QuantitySoldByPickupInStore
  * @property \DTS\eBaySDK\Trading\Types\SuggestedBidValueType $SuggestedBidValues
  */
 class SellingStatusType extends \DTS\eBaySDK\Types\BaseType
@@ -37,11 +37,23 @@ class SellingStatusType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'AdminEnded' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'AdminEnded'
+        ],
         'BidCount' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BidCount'
+        ],
+        'BidderCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BidderCount'
         ],
         'BidIncrement' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -61,6 +73,12 @@ class SellingStatusType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CurrentPrice'
         ],
+        'FinalValueFee' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'FinalValueFee'
+        ],
         'HighBidder' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UserType',
             'repeatable' => false,
@@ -73,17 +91,35 @@ class SellingStatusType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'LeadCount'
         ],
+        'ListingStatus' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ListingStatus'
+        ],
         'MinimumToBid' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MinimumToBid'
         ],
+        'PromotionalSaleDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PromotionalSaleDetailsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PromotionalSaleDetails'
+        ],
         'QuantitySold' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QuantitySold'
+        ],
+        'QuantitySoldByPickupInStore' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'QuantitySoldByPickupInStore'
         ],
         'ReserveMet' => [
             'type' => 'boolean',
@@ -97,47 +133,11 @@ class SellingStatusType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SecondChanceEligible'
         ],
-        'BidderCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BidderCount'
-        ],
-        'ListingStatus' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ListingStatus'
-        ],
-        'FinalValueFee' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FinalValueFee'
-        ],
-        'PromotionalSaleDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PromotionalSaleDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PromotionalSaleDetails'
-        ],
-        'AdminEnded' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AdminEnded'
-        ],
         'SoldAsBin' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SoldAsBin'
-        ],
-        'QuantitySoldByPickupInStore' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'QuantitySoldByPickupInStore'
         ],
         'SuggestedBidValues' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SuggestedBidValueType',
@@ -146,7 +146,7 @@ class SellingStatusType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'SuggestedBidValues'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -163,7 +163,7 @@ class SellingStatusType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

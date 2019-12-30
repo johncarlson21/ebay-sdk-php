@@ -15,8 +15,8 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Enums\DisputeExplanationCodeType $DisputeExplanation
  * @property \DTS\eBaySDK\Trading\Enums\DisputeReasonCodeType $DisputeReason
  * @property string $ItemID
- * @property string $TransactionID
  * @property string $OrderLineItemID
+ * @property string $TransactionID
  */
 class AddDisputeRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -42,20 +42,20 @@ class AddDisputeRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTy
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
-        'TransactionID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TransactionID'
-        ],
         'OrderLineItemID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
+        ],
+        'TransactionID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TransactionID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class AddDisputeRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTy
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'AddDisputeRequest';
         }

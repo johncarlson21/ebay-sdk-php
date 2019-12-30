@@ -12,14 +12,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
  * @property boolean $HasMoreTransactions
- * @property integer $TransactionsPerPage
  * @property integer $PageNumber
+ * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
+ * @property boolean $PayPalPreferred
  * @property integer $ReturnedTransactionCountActual
  * @property \DTS\eBaySDK\Trading\Types\UserType $Seller
  * @property \DTS\eBaySDK\Trading\Types\TransactionArrayType $TransactionArray
- * @property boolean $PayPalPreferred
+ * @property integer $TransactionsPerPage
  */
 class GetSellerTransactionsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -27,29 +27,29 @@ class GetSellerTransactionsResponseType extends \DTS\eBaySDK\Trading\Types\Abstr
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'PaginationResult' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PaginationResult'
-        ],
         'HasMoreTransactions' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'HasMoreTransactions'
         ],
-        'TransactionsPerPage' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TransactionsPerPage'
-        ],
         'PageNumber' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PageNumber'
+        ],
+        'PaginationResult' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PaginationResult'
+        ],
+        'PayPalPreferred' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PayPalPreferred'
         ],
         'ReturnedTransactionCountActual' => [
             'type' => 'integer',
@@ -69,14 +69,14 @@ class GetSellerTransactionsResponseType extends \DTS\eBaySDK\Trading\Types\Abstr
             'attribute' => false,
             'elementName' => 'TransactionArray'
         ],
-        'PayPalPreferred' => [
-            'type' => 'boolean',
+        'TransactionsPerPage' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'PayPalPreferred'
+            'elementName' => 'TransactionsPerPage'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -93,7 +93,7 @@ class GetSellerTransactionsResponseType extends \DTS\eBaySDK\Trading\Types\Abstr
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

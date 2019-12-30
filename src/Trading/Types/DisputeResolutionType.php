@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\DisputeResolutionRecordTypeCodeType $DisputeResolutionRecordType
  * @property \DTS\eBaySDK\Trading\Enums\DisputeResolutionReasonCodeType $DisputeResolutionReason
+ * @property \DTS\eBaySDK\Trading\Enums\DisputeResolutionRecordTypeCodeType $DisputeResolutionRecordType
  * @property \DateTime $ResolutionTime
  */
 class DisputeResolutionType extends \DTS\eBaySDK\Types\BaseType
@@ -22,17 +22,17 @@ class DisputeResolutionType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'DisputeResolutionRecordType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DisputeResolutionRecordType'
-        ],
         'DisputeResolutionReason' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DisputeResolutionReason'
+        ],
+        'DisputeResolutionRecordType' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DisputeResolutionRecordType'
         ],
         'ResolutionTime' => [
             'type' => 'DateTime',
@@ -41,7 +41,7 @@ class DisputeResolutionType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ResolutionTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class DisputeResolutionType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

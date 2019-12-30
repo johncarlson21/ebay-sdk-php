@@ -10,11 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SMSSubscriptionUserStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class SMSSubscriptionUserStatusCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FAILED = 'Failed';
-    const C_PENDING = 'Pending';
-    const C_REGISTERED = 'Registered';
-    const C_UNREGISTERED = 'Unregistered';
+    private const CustomCode = 'CustomCode';
+    private const Failed = 'Failed';
+    private const Pending = 'Pending';
+    private const Registered = 'Registered';
+    private const Unregistered = 'Unregistered';
+
 }

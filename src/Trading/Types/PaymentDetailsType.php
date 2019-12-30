@@ -12,10 +12,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $HoursToDeposit
  * @property integer $DaysToFullPayment
  * @property \DTS\eBaySDK\Trading\Types\AmountType $DepositAmount
  * @property \DTS\eBaySDK\Trading\Enums\DepositTypeCodeType $DepositType
+ * @property integer $HoursToDeposit
  */
 class PaymentDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -23,12 +23,6 @@ class PaymentDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'HoursToDeposit' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'HoursToDeposit'
-        ],
         'DaysToFullPayment' => [
             'type' => 'integer',
             'repeatable' => false,
@@ -46,9 +40,15 @@ class PaymentDetailsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DepositType'
+        ],
+        'HoursToDeposit' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'HoursToDeposit'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class PaymentDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

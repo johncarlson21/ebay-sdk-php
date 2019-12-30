@@ -12,10 +12,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $Quantity
  * @property string $CountryOfOrigin
  * @property string $Description
  * @property string $ItemID
+ * @property integer $Quantity
  * @property string $TransactionID
  */
 class LineItemType extends \DTS\eBaySDK\Types\BaseType
@@ -24,12 +24,6 @@ class LineItemType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Quantity' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Quantity'
-        ],
         'CountryOfOrigin' => [
             'type' => 'string',
             'repeatable' => false,
@@ -48,6 +42,12 @@ class LineItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
+        'Quantity' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Quantity'
+        ],
         'TransactionID' => [
             'type' => 'string',
             'repeatable' => false,
@@ -55,7 +55,7 @@ class LineItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'TransactionID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class LineItemType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

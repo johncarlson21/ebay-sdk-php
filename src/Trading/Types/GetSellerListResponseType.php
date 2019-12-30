@@ -12,11 +12,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
  * @property boolean $HasMoreItems
  * @property \DTS\eBaySDK\Trading\Types\ItemArrayType $ItemArray
  * @property integer $ItemsPerPage
  * @property integer $PageNumber
+ * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
  * @property integer $ReturnedItemCountActual
  * @property \DTS\eBaySDK\Trading\Types\UserType $Seller
  */
@@ -26,12 +26,6 @@ class GetSellerListResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'PaginationResult' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PaginationResult'
-        ],
         'HasMoreItems' => [
             'type' => 'boolean',
             'repeatable' => false,
@@ -56,6 +50,12 @@ class GetSellerListResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
             'attribute' => false,
             'elementName' => 'PageNumber'
         ],
+        'PaginationResult' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PaginationResult'
+        ],
         'ReturnedItemCountActual' => [
             'type' => 'integer',
             'repeatable' => false,
@@ -69,7 +69,7 @@ class GetSellerListResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
             'elementName' => 'Seller'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class GetSellerListResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

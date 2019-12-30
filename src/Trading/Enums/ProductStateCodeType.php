@@ -10,12 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ProductStateCodeType
+use MyCLabs\Enum\Enum;
+
+class ProductStateCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DELETE = 'Delete';
-    const C_MERGE = 'Merge';
-    const C_UPDATE = 'Update';
-    const C_UPDATE_MAJOR = 'UpdateMajor';
-    const C_UPDATE_NO_DETAILS = 'UpdateNoDetails';
+
 }

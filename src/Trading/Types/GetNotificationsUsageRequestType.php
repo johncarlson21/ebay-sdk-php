@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DateTime $StartTime
  * @property \DateTime $EndTime
  * @property string $ItemID
+ * @property \DateTime $StartTime
  */
 class GetNotificationsUsageRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -22,12 +22,6 @@ class GetNotificationsUsageRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'StartTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'StartTime'
-        ],
         'EndTime' => [
             'type' => 'DateTime',
             'repeatable' => false,
@@ -39,9 +33,15 @@ class GetNotificationsUsageRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
+        ],
+        'StartTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'StartTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class GetNotificationsUsageRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetNotificationsUsageRequest';
         }

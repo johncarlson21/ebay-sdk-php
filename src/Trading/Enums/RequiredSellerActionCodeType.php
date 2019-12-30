@@ -10,18 +10,18 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class RequiredSellerActionCodeType
+use MyCLabs\Enum\Enum;
+
+class RequiredSellerActionCodeType extends Enum 
 {
-    const C_CONTACTE_BAYCS = 'ContacteBayCS';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_MARK_AS_SHIPPED = 'MarkAsShipped';
-    const C_NONE = 'None';
-    const C_RESOLVEEBP_CASE = 'ResolveeBPCase';
-    const C_RESOLVEPPP_ICASE = 'ResolvePPPIcase';
-    const C_RESOLVE_BUYER_MESSAGE_INR = 'ResolveBuyerMessageInr';
-    const C_RESOLVE_BUYER_MESSAGE_SNAD = 'ResolveBuyerMessageSnad';
-    const C_RESOLVE_RETURN = 'ResolveReturn';
-    const C_SETUP_PAYOUT_METHOD = 'SetupPayoutMethod';
-    const C_UPDATE_PAYOUT_METHOD = 'UpdatePayoutMethod';
-    const C_UPLOAD_TRACKING_INFO = 'UploadTrackingInfo';
+    private const ContacteBayCS = 'ContacteBayCS';
+    private const CustomCode = 'CustomCode';
+    private const MarkAsShipped = 'MarkAsShipped';
+    private const ResolveBuyerMessageInr = 'ResolveBuyerMessageInr';
+    private const ResolveBuyerMessageSnad = 'ResolveBuyerMessageSnad';
+    private const ResolveeBPCase = 'ResolveeBPCase';
+    private const ResolvePPPIcase = 'ResolvePPPIcase';
+    private const ResolveReturn = 'ResolveReturn';
+    private const UploadTrackingInfo = 'UploadTrackingInfo';
+
 }

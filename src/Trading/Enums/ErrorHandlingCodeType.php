@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ErrorHandlingCodeType
+use MyCLabs\Enum\Enum;
+
+class ErrorHandlingCodeType extends Enum 
 {
-    const C_ALL_OR_NOTHING = 'AllOrNothing';
-    const C_BEST_EFFORT = 'BestEffort';
-    const C_FAIL_ON_ERROR = 'FailOnError';
-    const C_LEGACY = 'Legacy';
+    private const AllOrNothing = 'AllOrNothing';
+    private const BestEffort = 'BestEffort';
+    private const FailOnError = 'FailOnError';
+    private const Legacy = 'Legacy';
+
 }

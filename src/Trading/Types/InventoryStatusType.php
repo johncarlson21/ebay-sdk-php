@@ -12,10 +12,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $SKU
  * @property string $ItemID
- * @property \DTS\eBaySDK\Trading\Types\AmountType $StartPrice
  * @property integer $Quantity
+ * @property string $SKU
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $StartPrice
  */
 class InventoryStatusType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -23,32 +23,32 @@ class InventoryStatusType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'SKU' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SKU'
-        ],
         'ItemID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
-        'StartPrice' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'StartPrice'
-        ],
         'Quantity' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Quantity'
+        ],
+        'SKU' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SKU'
+        ],
+        'StartPrice' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'StartPrice'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class InventoryStatusType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

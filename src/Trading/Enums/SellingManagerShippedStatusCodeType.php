@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SellingManagerShippedStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class SellingManagerShippedStatusCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_SHIPPED = 'Shipped';
-    const C_UNSHIPPED = 'Unshipped';
+    private const CustomCode = 'CustomCode';
+    private const Shipped = 'Shipped';
+    private const Unshipped = 'Unshipped';
+
 }

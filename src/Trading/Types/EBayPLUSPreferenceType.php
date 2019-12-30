@@ -13,10 +13,10 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType $Country
- * @property boolean $OptInStatus
  * @property boolean $ListingPreference
+ * @property boolean $OptInStatus
  */
-class EBayPLUSPreferenceType extends \DTS\eBaySDK\Types\BaseType
+class eBayPLUSPreferenceType extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
@@ -28,20 +28,20 @@ class EBayPLUSPreferenceType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Country'
         ],
-        'OptInStatus' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'OptInStatus'
-        ],
         'ListingPreference' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ListingPreference'
+        ],
+        'OptInStatus' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'OptInStatus'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class EBayPLUSPreferenceType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

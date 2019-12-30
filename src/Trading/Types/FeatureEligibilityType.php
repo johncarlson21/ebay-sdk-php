@@ -12,11 +12,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property boolean $QualifiedForAuctionOneDayDuration
+ * @property boolean $QualifiedForFixedPriceOneDayDuration
  * @property boolean $QualifiesForBuyItNow
  * @property boolean $QualifiesForBuyItNowMultiple
- * @property boolean $QualifiedForFixedPriceOneDayDuration
  * @property boolean $QualifiesForVariations
- * @property boolean $QualifiedForAuctionOneDayDuration
  */
 class FeatureEligibilityType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -24,6 +24,18 @@ class FeatureEligibilityType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'QualifiedForAuctionOneDayDuration' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'QualifiedForAuctionOneDayDuration'
+        ],
+        'QualifiedForFixedPriceOneDayDuration' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'QualifiedForFixedPriceOneDayDuration'
+        ],
         'QualifiesForBuyItNow' => [
             'type' => 'boolean',
             'repeatable' => false,
@@ -36,26 +48,14 @@ class FeatureEligibilityType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'QualifiesForBuyItNowMultiple'
         ],
-        'QualifiedForFixedPriceOneDayDuration' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'QualifiedForFixedPriceOneDayDuration'
-        ],
         'QualifiesForVariations' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QualifiesForVariations'
-        ],
-        'QualifiedForAuctionOneDayDuration' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'QualifiedForAuctionOneDayDuration'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class FeatureEligibilityType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

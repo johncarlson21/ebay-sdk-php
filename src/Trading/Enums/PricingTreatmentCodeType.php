@@ -10,11 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class PricingTreatmentCodeType
+use MyCLabs\Enum\Enum;
+
+class PricingTreatmentCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_MAP = 'MAP';
-    const C_MFO = 'MFO';
-    const C_NONE = 'None';
-    const C_STP = 'STP';
+    private const CustomCode = 'CustomCode';
+    private const MAP = 'MAP';
+    private const MFO = 'MFO';
+    private const None = 'None';
+    private const STP = 'STP';
+
 }

@@ -12,11 +12,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Enums\DisputeActivityCodeType $DisputeActivity
  * @property string $DisputeID
  * @property string $MessageText
- * @property \DTS\eBaySDK\Trading\Enums\DisputeActivityCodeType $DisputeActivity
- * @property string $ShippingCarrierUsed
  * @property string $ShipmentTrackNumber
+ * @property string $ShippingCarrierUsed
  * @property \DateTime $ShippingTime
  */
 class AddDisputeResponseRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -25,6 +25,12 @@ class AddDisputeResponseRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'DisputeActivity' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DisputeActivity'
+        ],
         'DisputeID' => [
             'type' => 'string',
             'repeatable' => false,
@@ -37,23 +43,17 @@ class AddDisputeResponseRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'attribute' => false,
             'elementName' => 'MessageText'
         ],
-        'DisputeActivity' => [
+        'ShipmentTrackNumber' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'DisputeActivity'
+            'elementName' => 'ShipmentTrackNumber'
         ],
         'ShippingCarrierUsed' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingCarrierUsed'
-        ],
-        'ShipmentTrackNumber' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShipmentTrackNumber'
         ],
         'ShippingTime' => [
             'type' => 'DateTime',
@@ -62,7 +62,7 @@ class AddDisputeResponseRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'elementName' => 'ShippingTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -79,7 +79,7 @@ class AddDisputeResponseRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'AddDisputeResponseRequest';
         }

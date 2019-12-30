@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $CategorySiteID
  * @property string[] $CategoryParent
+ * @property string $CategorySiteID
  * @property integer $LevelLimit
  * @property boolean $ViewAllNodes
  */
@@ -23,17 +23,17 @@ class GetCategoriesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'CategorySiteID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CategorySiteID'
-        ],
         'CategoryParent' => [
             'type' => 'string',
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'CategoryParent'
+        ],
+        'CategorySiteID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CategorySiteID'
         ],
         'LevelLimit' => [
             'type' => 'integer',
@@ -48,7 +48,7 @@ class GetCategoriesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
             'elementName' => 'ViewAllNodes'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class GetCategoriesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetCategoriesRequest';
         }

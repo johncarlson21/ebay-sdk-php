@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class RCSPaymentStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class RCSPaymentStatusCodeType extends Enum 
 {
-    const C_CANCELED = 'Canceled';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_PAID = 'Paid';
-    const C_PENDING = 'Pending';
+    private const Canceled = 'Canceled';
+    private const CustomCode = 'CustomCode';
+    private const Paid = 'Paid';
+    private const Pending = 'Pending';
+
 }

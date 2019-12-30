@@ -13,8 +13,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
- * @property string $SaleTemplateName
  * @property integer $ProductID
+ * @property string $SaleTemplateName
  */
 class AddSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -28,20 +28,20 @@ class AddSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\Types\Ab
             'attribute' => false,
             'elementName' => 'Item'
         ],
-        'SaleTemplateName' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SaleTemplateName'
-        ],
         'ProductID' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ProductID'
+        ],
+        'SaleTemplateName' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SaleTemplateName'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class AddSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\Types\Ab
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'AddSellingManagerTemplateRequest';
         }

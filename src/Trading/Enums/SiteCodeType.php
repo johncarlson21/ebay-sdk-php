@@ -10,33 +10,33 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SiteCodeType
+use MyCLabs\Enum\Enum;
+
+class SiteCodeType extends Enum 
 {
-    const C_AUSTRALIA = 'Australia';
-    const C_AUSTRIA = 'Austria';
-    const C_BELGIUM__DUTCH = 'Belgium_Dutch';
-    const C_BELGIUM__FRENCH = 'Belgium_French';
-    const C_CANADA = 'Canada';
-    const C_CANADA_FRENCH = 'CanadaFrench';
-    const C_CHINA = 'China';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_E_BAY_MOTORS = 'eBayMotors';
-    const C_FRANCE = 'France';
-    const C_GERMANY = 'Germany';
-    const C_HONG_KONG = 'HongKong';
-    const C_INDIA = 'India';
-    const C_IRELAND = 'Ireland';
-    const C_ITALY = 'Italy';
-    const C_MALAYSIA = 'Malaysia';
-    const C_NETHERLANDS = 'Netherlands';
-    const C_PHILIPPINES = 'Philippines';
-    const C_POLAND = 'Poland';
-    const C_RUSSIA = 'Russia';
-    const C_SINGAPORE = 'Singapore';
-    const C_SPAIN = 'Spain';
-    const C_SWEDEN = 'Sweden';
-    const C_SWITZERLAND = 'Switzerland';
-    const C_TAIWAN = 'Taiwan';
-    const C_UK = 'UK';
-    const C_US = 'US';
+    private const Australia = 'Australia';
+    private const Austria = 'Austria';
+    private const Belgium_Dutch = 'Belgium_Dutch';
+    private const Belgium_French = 'Belgium_French';
+    private const Canada = 'Canada';
+    private const CanadaFrench = 'CanadaFrench';
+    private const CustomCode = 'CustomCode';
+    private const eBayMotors = 'eBayMotors';
+    private const France = 'France';
+    private const Germany = 'Germany';
+    private const HongKong = 'HongKong';
+    private const India = 'India';
+    private const Ireland = 'Ireland';
+    private const Italy = 'Italy';
+    private const Malaysia = 'Malaysia';
+    private const Netherlands = 'Netherlands';
+    private const Philippines = 'Philippines';
+    private const Poland = 'Poland';
+    private const Russia = 'Russia';
+    private const Singapore = 'Singapore';
+    private const Spain = 'Spain';
+    private const Switzerland = 'Switzerland';
+    private const UK = 'UK';
+    private const US = 'US';
+
 }

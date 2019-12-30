@@ -14,9 +14,9 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property \DTS\eBaySDK\Trading\Types\ApplicationDeliveryPreferencesType $ApplicationDeliveryPreferences
  * @property string $DeliveryURLName
- * @property \DTS\eBaySDK\Trading\Types\NotificationEnableArrayType $UserDeliveryPreferenceArray
- * @property \DTS\eBaySDK\Trading\Types\NotificationUserDataType $UserData
  * @property \DTS\eBaySDK\Trading\Types\NotificationEventPropertyType[] $EventProperty
+ * @property \DTS\eBaySDK\Trading\Types\NotificationUserDataType $UserData
+ * @property \DTS\eBaySDK\Trading\Types\NotificationEnableArrayType $UserDeliveryPreferenceArray
  */
 class GetNotificationPreferencesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -36,11 +36,11 @@ class GetNotificationPreferencesResponseType extends \DTS\eBaySDK\Trading\Types\
             'attribute' => false,
             'elementName' => 'DeliveryURLName'
         ],
-        'UserDeliveryPreferenceArray' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\NotificationEnableArrayType',
-            'repeatable' => false,
+        'EventProperty' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\NotificationEventPropertyType',
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'UserDeliveryPreferenceArray'
+            'elementName' => 'EventProperty'
         ],
         'UserData' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NotificationUserDataType',
@@ -48,14 +48,14 @@ class GetNotificationPreferencesResponseType extends \DTS\eBaySDK\Trading\Types\
             'attribute' => false,
             'elementName' => 'UserData'
         ],
-        'EventProperty' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\NotificationEventPropertyType',
-            'repeatable' => true,
+        'UserDeliveryPreferenceArray' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\NotificationEnableArrayType',
+            'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'EventProperty'
+            'elementName' => 'UserDeliveryPreferenceArray'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class GetNotificationPreferencesResponseType extends \DTS\eBaySDK\Trading\Types\
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

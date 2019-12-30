@@ -10,10 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ItemSpecificSourceCodeType
+use MyCLabs\Enum\Enum;
+
+class ItemSpecificSourceCodeType extends Enum 
 {
-    const C_ATTRIBUTE = 'Attribute';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_ITEM_SPECIFIC = 'ItemSpecific';
-    const C_PRODUCT = 'Product';
+    private const CustomCode = 'CustomCode';
+    private const ItemSpecific = 'ItemSpecific';
+    private const Product = 'Product';
+
 }

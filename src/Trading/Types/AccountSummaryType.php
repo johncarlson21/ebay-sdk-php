@@ -13,9 +13,6 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Enums\AccountStateCodeType $AccountState
- * @property \DTS\eBaySDK\Trading\Types\AmountType $InvoicePayment
- * @property \DTS\eBaySDK\Trading\Types\AmountType $InvoiceCredit
- * @property \DTS\eBaySDK\Trading\Types\AmountType $InvoiceNewFee
  * @property \DTS\eBaySDK\Trading\Types\AdditionalAccountType[] $AdditionalAccount
  * @property \DTS\eBaySDK\Trading\Types\AmountType $AmountPastDue
  * @property string $BankAccountInfo
@@ -25,9 +22,11 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property string $CreditCardInfo
  * @property \DateTime $CreditCardModifyDate
  * @property \DTS\eBaySDK\Trading\Types\AmountType $CurrentBalance
- * @property string $Email
  * @property \DTS\eBaySDK\Trading\Types\AmountType $InvoiceBalance
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $InvoiceCredit
  * @property \DateTime $InvoiceDate
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $InvoiceNewFee
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $InvoicePayment
  * @property \DTS\eBaySDK\Trading\Types\AmountType $LastAmountPaid
  * @property \DateTime $LastPaymentDate
  * @property boolean $PastDue
@@ -44,24 +43,6 @@ class AccountSummaryType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AccountState'
-        ],
-        'InvoicePayment' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'InvoicePayment'
-        ],
-        'InvoiceCredit' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'InvoiceCredit'
-        ],
-        'InvoiceNewFee' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'InvoiceNewFee'
         ],
         'AdditionalAccount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AdditionalAccountType',
@@ -117,23 +98,35 @@ class AccountSummaryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CurrentBalance'
         ],
-        'Email' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Email'
-        ],
         'InvoiceBalance' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InvoiceBalance'
         ],
+        'InvoiceCredit' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'InvoiceCredit'
+        ],
         'InvoiceDate' => [
             'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InvoiceDate'
+        ],
+        'InvoiceNewFee' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'InvoiceNewFee'
+        ],
+        'InvoicePayment' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'InvoicePayment'
         ],
         'LastAmountPaid' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -160,7 +153,7 @@ class AccountSummaryType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'PaymentMethod'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -177,7 +170,7 @@ class AccountSummaryType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

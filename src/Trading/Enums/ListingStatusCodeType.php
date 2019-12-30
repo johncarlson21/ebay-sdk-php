@@ -10,11 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ListingStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class ListingStatusCodeType extends Enum 
 {
-    const C_ACTIVE = 'Active';
-    const C_COMPLETED = 'Completed';
-    const C_CUSTOM = 'Custom';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_ENDED = 'Ended';
+    private const Active = 'Active';
+    private const Completed = 'Completed';
+    private const Custom = 'Custom';
+    private const CustomCode = 'CustomCode';
+    private const Ended = 'Ended';
+
 }

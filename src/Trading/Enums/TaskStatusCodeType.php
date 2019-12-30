@@ -10,11 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class TaskStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class TaskStatusCodeType extends Enum 
 {
-    const C_COMPLETE = 'Complete';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FAILED = 'Failed';
-    const C_IN_PROGRESS = 'InProgress';
-    const C_PENDING = 'Pending';
+    private const Complete = 'Complete';
+    private const CustomCode = 'CustomCode';
+    private const Failed = 'Failed';
+    private const InProgress = 'InProgress';
+    private const Pending = 'Pending';
+
 }

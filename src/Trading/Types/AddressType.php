@@ -12,38 +12,34 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Name
- * @property string $Street
- * @property string $Street1
- * @property string $Street2
- * @property string $CityName
- * @property string $County
- * @property string $StateOrProvince
- * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType $Country
- * @property string $CountryName
- * @property string $Phone
- * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType $PhoneCountryCode
- * @property string $PhoneCountryPrefix
- * @property string $PhoneAreaOrCityCode
- * @property string $PhoneLocalNumber
- * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType $Phone2CountryCode
- * @property string $Phone2CountryPrefix
- * @property string $Phone2AreaOrCityCode
- * @property string $Phone2LocalNumber
- * @property string $PostalCode
+ * @property \DTS\eBaySDK\Trading\Types\AddressAttributeType[] $AddressAttribute
  * @property string $AddressID
  * @property \DTS\eBaySDK\Trading\Enums\AddressOwnerCodeType $AddressOwner
+ * @property \DTS\eBaySDK\Trading\Enums\AddressUsageCodeType $AddressUsage
+ * @property string $CityName
+ * @property string $CompanyName
+ * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType $Country
+ * @property string $CountryName
+ * @property string $County
  * @property string $ExternalAddressID
+ * @property string $FirstName
  * @property string $InternationalName
  * @property string $InternationalStateAndCity
  * @property string $InternationalStreet
- * @property string $CompanyName
- * @property string $FirstName
  * @property string $LastName
+ * @property string $Name
+ * @property string $Phone
  * @property string $Phone2
- * @property \DTS\eBaySDK\Trading\Enums\AddressUsageCodeType $AddressUsage
+ * @property string $PhoneAreaOrCityCode
+ * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType $PhoneCountryCode
+ * @property string $PhoneCountryPrefix
+ * @property string $PhoneLocalNumber
+ * @property string $PostalCode
  * @property string $ReferenceID
- * @property \DTS\eBaySDK\Trading\Types\AddressAttributeType[] $AddressAttribute
+ * @property string $StateOrProvince
+ * @property string $Street
+ * @property string $Street1
+ * @property string $Street2
  */
 class AddressType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -51,119 +47,11 @@ class AddressType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Name' => [
-            'type' => 'string',
-            'repeatable' => false,
+        'AddressAttribute' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AddressAttributeType',
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'Name'
-        ],
-        'Street' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Street'
-        ],
-        'Street1' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Street1'
-        ],
-        'Street2' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Street2'
-        ],
-        'CityName' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CityName'
-        ],
-        'County' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'County'
-        ],
-        'StateOrProvince' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'StateOrProvince'
-        ],
-        'Country' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Country'
-        ],
-        'CountryName' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CountryName'
-        ],
-        'Phone' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Phone'
-        ],
-        'PhoneCountryCode' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PhoneCountryCode'
-        ],
-        'PhoneCountryPrefix' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PhoneCountryPrefix'
-        ],
-        'PhoneAreaOrCityCode' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PhoneAreaOrCityCode'
-        ],
-        'PhoneLocalNumber' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PhoneLocalNumber'
-        ],
-        'Phone2CountryCode' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Phone2CountryCode'
-        ],
-        'Phone2CountryPrefix' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Phone2CountryPrefix'
-        ],
-        'Phone2AreaOrCityCode' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Phone2AreaOrCityCode'
-        ],
-        'Phone2LocalNumber' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Phone2LocalNumber'
-        ],
-        'PostalCode' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PostalCode'
+            'elementName' => 'AddressAttribute'
         ],
         'AddressID' => [
             'type' => 'string',
@@ -177,11 +65,53 @@ class AddressType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'AddressOwner'
         ],
+        'AddressUsage' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'AddressUsage'
+        ],
+        'CityName' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CityName'
+        ],
+        'CompanyName' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CompanyName'
+        ],
+        'Country' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Country'
+        ],
+        'CountryName' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CountryName'
+        ],
+        'County' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'County'
+        ],
         'ExternalAddressID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ExternalAddressID'
+        ],
+        'FirstName' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'FirstName'
         ],
         'InternationalName' => [
             'type' => 'string',
@@ -201,23 +131,23 @@ class AddressType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'InternationalStreet'
         ],
-        'CompanyName' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CompanyName'
-        ],
-        'FirstName' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FirstName'
-        ],
         'LastName' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LastName'
+        ],
+        'Name' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Name'
+        ],
+        'Phone' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Phone'
         ],
         'Phone2' => [
             'type' => 'string',
@@ -225,11 +155,35 @@ class AddressType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Phone2'
         ],
-        'AddressUsage' => [
+        'PhoneAreaOrCityCode' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'AddressUsage'
+            'elementName' => 'PhoneAreaOrCityCode'
+        ],
+        'PhoneCountryCode' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PhoneCountryCode'
+        ],
+        'PhoneCountryPrefix' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PhoneCountryPrefix'
+        ],
+        'PhoneLocalNumber' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PhoneLocalNumber'
+        ],
+        'PostalCode' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PostalCode'
         ],
         'ReferenceID' => [
             'type' => 'string',
@@ -237,14 +191,32 @@ class AddressType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ReferenceID'
         ],
-        'AddressAttribute' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AddressAttributeType',
-            'repeatable' => true,
+        'StateOrProvince' => [
+            'type' => 'string',
+            'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'AddressAttribute'
+            'elementName' => 'StateOrProvince'
+        ],
+        'Street' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Street'
+        ],
+        'Street1' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Street1'
+        ],
+        'Street2' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Street2'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -261,7 +233,7 @@ class AddressType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

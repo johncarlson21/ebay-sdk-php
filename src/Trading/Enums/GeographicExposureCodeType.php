@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class GeographicExposureCodeType
+use MyCLabs\Enum\Enum;
+
+class GeographicExposureCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_LOCAL_ONLY = 'LocalOnly';
-    const C_LOCAL_OPTIONAL = 'LocalOptional';
-    const C_NATIONAL = 'National';
+    private const CustomCode = 'CustomCode';
+    private const LocalOnly = 'LocalOnly';
+    private const LocalOptional = 'LocalOptional';
+    private const National = 'National';
+
 }

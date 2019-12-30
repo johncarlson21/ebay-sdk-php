@@ -12,11 +12,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $CategoryVersion
- * @property \DateTime $UpdateTime
  * @property \DTS\eBaySDK\Trading\Types\CategoryFeatureType[] $Category
- * @property \DTS\eBaySDK\Trading\Types\SiteDefaultsType $SiteDefaults
+ * @property string $CategoryVersion
  * @property \DTS\eBaySDK\Trading\Types\FeatureDefinitionsType $FeatureDefinitions
+ * @property \DTS\eBaySDK\Trading\Types\SiteDefaultsType $SiteDefaults
+ * @property \DateTime $UpdateTime
  */
 class GetCategoryFeaturesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -24,23 +24,23 @@ class GetCategoryFeaturesResponseType extends \DTS\eBaySDK\Trading\Types\Abstrac
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'Category' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\CategoryFeatureType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'Category'
+        ],
         'CategoryVersion' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CategoryVersion'
         ],
-        'UpdateTime' => [
-            'type' => 'DateTime',
+        'FeatureDefinitions' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\FeatureDefinitionsType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'UpdateTime'
-        ],
-        'Category' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\CategoryFeatureType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'Category'
+            'elementName' => 'FeatureDefinitions'
         ],
         'SiteDefaults' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SiteDefaultsType',
@@ -48,14 +48,14 @@ class GetCategoryFeaturesResponseType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'attribute' => false,
             'elementName' => 'SiteDefaults'
         ],
-        'FeatureDefinitions' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\FeatureDefinitionsType',
+        'UpdateTime' => [
+            'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'FeatureDefinitions'
+            'elementName' => 'UpdateTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class GetCategoryFeaturesResponseType extends \DTS\eBaySDK\Trading\Types\Abstrac
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

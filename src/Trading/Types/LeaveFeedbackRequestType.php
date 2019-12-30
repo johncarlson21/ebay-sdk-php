@@ -12,15 +12,15 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
  * @property string $CommentText
  * @property \DTS\eBaySDK\Trading\Enums\CommentTypeCodeType $CommentType
- * @property string $TransactionID
- * @property string $TargetUser
- * @property \DTS\eBaySDK\Trading\Types\ItemRatingDetailArrayType $SellerItemRatingDetailArray
- * @property string $OrderLineItemID
  * @property \DTS\eBaySDK\Trading\Enums\ItemArrivedWithinEDDCodeType $ItemArrivedWithinEDDType
  * @property boolean $ItemDeliveredWithinEDD
+ * @property string $ItemID
+ * @property string $OrderLineItemID
+ * @property \DTS\eBaySDK\Trading\Types\ItemRatingDetailArrayType $SellerItemRatingDetailArray
+ * @property string $TargetUser
+ * @property string $TransactionID
  */
 class LeaveFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -28,12 +28,6 @@ class LeaveFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
-        ],
         'CommentText' => [
             'type' => 'string',
             'repeatable' => false,
@@ -46,30 +40,6 @@ class LeaveFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
             'attribute' => false,
             'elementName' => 'CommentType'
         ],
-        'TransactionID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TransactionID'
-        ],
-        'TargetUser' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TargetUser'
-        ],
-        'SellerItemRatingDetailArray' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemRatingDetailArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellerItemRatingDetailArray'
-        ],
-        'OrderLineItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'OrderLineItemID'
-        ],
         'ItemArrivedWithinEDDType' => [
             'type' => 'string',
             'repeatable' => false,
@@ -81,9 +51,39 @@ class LeaveFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemDeliveredWithinEDD'
+        ],
+        'ItemID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
+        ],
+        'OrderLineItemID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'OrderLineItemID'
+        ],
+        'SellerItemRatingDetailArray' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemRatingDetailArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SellerItemRatingDetailArray'
+        ],
+        'TargetUser' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TargetUser'
+        ],
+        'TransactionID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TransactionID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -100,7 +100,7 @@ class LeaveFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'LeaveFeedbackRequest';
         }

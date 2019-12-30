@@ -12,9 +12,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $EIASToken
- * @property \DTS\eBaySDK\Trading\Enums\SiteCodeType $SiteID
- * @property boolean $Active
  */
 class SubscriptionType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -22,26 +19,9 @@ class SubscriptionType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'EIASToken' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'EIASToken'
-        ],
-        'SiteID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SiteID'
-        ],
-        'Active' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Active'
-        ]
-    ];
 
+    ];
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +38,7 @@ class SubscriptionType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

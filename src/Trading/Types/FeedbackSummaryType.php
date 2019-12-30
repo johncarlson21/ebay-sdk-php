@@ -13,17 +13,17 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Types\FeedbackPeriodArrayType $BidRetractionFeedbackPeriodArray
+ * @property \DTS\eBaySDK\Trading\Types\BuyerRoleMetricsType $BuyerRoleMetrics
  * @property \DTS\eBaySDK\Trading\Types\FeedbackPeriodArrayType $NegativeFeedbackPeriodArray
+ * @property integer $NeutralCommentCountFromSuspendedUsers
  * @property \DTS\eBaySDK\Trading\Types\FeedbackPeriodArrayType $NeutralFeedbackPeriodArray
  * @property \DTS\eBaySDK\Trading\Types\FeedbackPeriodArrayType $PositiveFeedbackPeriodArray
- * @property \DTS\eBaySDK\Trading\Types\FeedbackPeriodArrayType $TotalFeedbackPeriodArray
- * @property integer $NeutralCommentCountFromSuspendedUsers
- * @property integer $UniqueNegativeFeedbackCount
- * @property integer $UniquePositiveFeedbackCount
- * @property integer $UniqueNeutralFeedbackCount
  * @property \DTS\eBaySDK\Trading\Types\SellerRatingSummaryArrayType $SellerRatingSummaryArray
  * @property \DTS\eBaySDK\Trading\Types\SellerRoleMetricsType $SellerRoleMetrics
- * @property \DTS\eBaySDK\Trading\Types\BuyerRoleMetricsType $BuyerRoleMetrics
+ * @property \DTS\eBaySDK\Trading\Types\FeedbackPeriodArrayType $TotalFeedbackPeriodArray
+ * @property integer $UniqueNegativeFeedbackCount
+ * @property integer $UniqueNeutralFeedbackCount
+ * @property integer $UniquePositiveFeedbackCount
  */
 class FeedbackSummaryType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -37,11 +37,23 @@ class FeedbackSummaryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'BidRetractionFeedbackPeriodArray'
         ],
+        'BuyerRoleMetrics' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\BuyerRoleMetricsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BuyerRoleMetrics'
+        ],
         'NegativeFeedbackPeriodArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FeedbackPeriodArrayType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NegativeFeedbackPeriodArray'
+        ],
+        'NeutralCommentCountFromSuspendedUsers' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'NeutralCommentCountFromSuspendedUsers'
         ],
         'NeutralFeedbackPeriodArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FeedbackPeriodArrayType',
@@ -55,36 +67,6 @@ class FeedbackSummaryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PositiveFeedbackPeriodArray'
         ],
-        'TotalFeedbackPeriodArray' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\FeedbackPeriodArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TotalFeedbackPeriodArray'
-        ],
-        'NeutralCommentCountFromSuspendedUsers' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'NeutralCommentCountFromSuspendedUsers'
-        ],
-        'UniqueNegativeFeedbackCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UniqueNegativeFeedbackCount'
-        ],
-        'UniquePositiveFeedbackCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UniquePositiveFeedbackCount'
-        ],
-        'UniqueNeutralFeedbackCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UniqueNeutralFeedbackCount'
-        ],
         'SellerRatingSummaryArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerRatingSummaryArrayType',
             'repeatable' => false,
@@ -97,14 +79,32 @@ class FeedbackSummaryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SellerRoleMetrics'
         ],
-        'BuyerRoleMetrics' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\BuyerRoleMetricsType',
+        'TotalFeedbackPeriodArray' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\FeedbackPeriodArrayType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'BuyerRoleMetrics'
+            'elementName' => 'TotalFeedbackPeriodArray'
+        ],
+        'UniqueNegativeFeedbackCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UniqueNegativeFeedbackCount'
+        ],
+        'UniqueNeutralFeedbackCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UniqueNeutralFeedbackCount'
+        ],
+        'UniquePositiveFeedbackCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UniquePositiveFeedbackCount'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -121,7 +121,7 @@ class FeedbackSummaryType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

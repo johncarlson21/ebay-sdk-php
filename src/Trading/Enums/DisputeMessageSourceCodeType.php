@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class DisputeMessageSourceCodeType
+use MyCLabs\Enum\Enum;
+
+class DisputeMessageSourceCodeType extends Enum 
 {
-    const C_BUYER = 'Buyer';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_E_BAY = 'eBay';
-    const C_SELLER = 'Seller';
+    private const Buyer = 'Buyer';
+    private const CustomCode = 'CustomCode';
+    private const eBay = 'eBay';
+    private const Seller = 'Seller';
+
 }

@@ -48,7 +48,7 @@ class GetSellingManagerItemAutomationRuleResponseType extends \DTS\eBaySDK\Tradi
             'elementName' => 'Fees'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class GetSellingManagerItemAutomationRuleResponseType extends \DTS\eBaySDK\Tradi
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

@@ -13,9 +13,9 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $ItemID
- * @property string $TransactionID
- * @property string $SKU
  * @property string $OrderLineItemID
+ * @property string $SKU
+ * @property string $TransactionID
  */
 class ItemTransactionIDType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -29,11 +29,11 @@ class ItemTransactionIDType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
-        'TransactionID' => [
+        'OrderLineItemID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'TransactionID'
+            'elementName' => 'OrderLineItemID'
         ],
         'SKU' => [
             'type' => 'string',
@@ -41,14 +41,14 @@ class ItemTransactionIDType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SKU'
         ],
-        'OrderLineItemID' => [
+        'TransactionID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'OrderLineItemID'
+            'elementName' => 'TransactionID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class ItemTransactionIDType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

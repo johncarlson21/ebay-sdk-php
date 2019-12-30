@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $DeliveryURLName
  * @property string $DeliveryURL
+ * @property string $DeliveryURLName
  * @property \DTS\eBaySDK\Trading\Enums\EnableCodeType $Status
  */
 class DeliveryURLDetailType extends \DTS\eBaySDK\Types\BaseType
@@ -22,17 +22,17 @@ class DeliveryURLDetailType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'DeliveryURLName' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DeliveryURLName'
-        ],
         'DeliveryURL' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DeliveryURL'
+        ],
+        'DeliveryURLName' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DeliveryURLName'
         ],
         'Status' => [
             'type' => 'string',
@@ -41,7 +41,7 @@ class DeliveryURLDetailType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'Status'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class DeliveryURLDetailType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

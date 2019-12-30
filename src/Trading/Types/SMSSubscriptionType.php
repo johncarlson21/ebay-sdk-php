@@ -12,11 +12,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $SMSPhone
- * @property \DTS\eBaySDK\Trading\Enums\SMSSubscriptionUserStatusCodeType $UserStatus
  * @property \DTS\eBaySDK\Trading\Enums\WirelessCarrierIDCodeType $CarrierID
  * @property \DTS\eBaySDK\Trading\Enums\SMSSubscriptionErrorCodeCodeType $ErrorCode
  * @property string $ItemToUnsubscribe
+ * @property string $SMSPhone
+ * @property \DTS\eBaySDK\Trading\Enums\SMSSubscriptionUserStatusCodeType $UserStatus
  */
 class SMSSubscriptionType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -24,18 +24,6 @@ class SMSSubscriptionType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'SMSPhone' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SMSPhone'
-        ],
-        'UserStatus' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UserStatus'
-        ],
         'CarrierID' => [
             'type' => 'string',
             'repeatable' => false,
@@ -53,9 +41,21 @@ class SMSSubscriptionType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemToUnsubscribe'
+        ],
+        'SMSPhone' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SMSPhone'
+        ],
+        'UserStatus' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UserStatus'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -72,7 +72,7 @@ class SMSSubscriptionType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

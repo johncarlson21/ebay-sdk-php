@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class FeedbackResponseCodeType
+use MyCLabs\Enum\Enum;
+
+class FeedbackResponseCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FOLLOW_UP = 'FollowUp';
-    const C_REPLY = 'Reply';
+    private const CustomCode = 'CustomCode';
+    private const FollowUp = 'FollowUp';
+    private const Reply = 'Reply';
+
 }

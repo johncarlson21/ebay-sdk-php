@@ -10,8 +10,11 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class TaxIdentifierAttributeCodeType
+use MyCLabs\Enum\Enum;
+
+class TaxIdentifierAttributeCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_ISSUING_COUNTRY = 'IssuingCountry';
+    private const CustomCode = 'CustomCode';
+    private const IssuingCountry = 'IssuingCountry';
+
 }

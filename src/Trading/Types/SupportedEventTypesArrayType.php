@@ -12,7 +12,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\NotificationEventTypeCodeType[] $EventType
  */
 class SupportedEventTypesArrayType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -20,14 +19,9 @@ class SupportedEventTypesArrayType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'EventType' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'EventType'
-        ]
-    ];
 
+    ];
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -44,7 +38,7 @@ class SupportedEventTypesArrayType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

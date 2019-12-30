@@ -10,14 +10,17 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SellerPaymentMethodCodeType
+use MyCLabs\Enum\Enum;
+
+class SellerPaymentMethodCodeType extends Enum 
 {
-    const C_CREDIT_CARD = 'CreditCard';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DIRECT_DEBIT = 'DirectDebit';
-    const C_DIRECT_DEBIT_PENDING_SIGNATURE_MANDATE = 'DirectDebitPendingSignatureMandate';
-    const C_DIRECT_DEBIT_PENDING_VERIFICATION = 'DirectDebitPendingVerification';
-    const C_E_BAY_DIRECT_PAY = 'eBayDirectPay';
-    const C_NOTHING_ON_FILE = 'NothingOnFile';
-    const C_PAY_PAL = 'PayPal';
+    private const CreditCard = 'CreditCard';
+    private const CustomCode = 'CustomCode';
+    private const DirectDebit = 'DirectDebit';
+    private const DirectDebitPendingSignatureMandate = 'DirectDebitPendingSignatureMandate';
+    private const DirectDebitPendingVerification = 'DirectDebitPendingVerification';
+    private const eBayDirectPay = 'eBayDirectPay';
+    private const NothingOnFile = 'NothingOnFile';
+    private const PayPal = 'PayPal';
+
 }

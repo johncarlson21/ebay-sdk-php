@@ -10,18 +10,17 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class OrderStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class OrderStatusCodeType extends Enum 
 {
-    const C_ACTIVE = 'Active';
-    const C_ALL = 'All';
-    const C_AUTHENTICATED = 'Authenticated';
-    const C_CANCELLED = 'Cancelled';
-    const C_CANCEL_PENDING = 'CancelPending';
-    const C_COMPLETED = 'Completed';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DEFAULT = 'Default';
-    const C_INACTIVE = 'Inactive';
-    const C_INVALID = 'Invalid';
-    const C_IN_PROCESS = 'InProcess';
-    const C_SHIPPED = 'Shipped';
+    private const Active = 'Active';
+    private const All = 'All';
+    private const Cancelled = 'Cancelled';
+    private const CancelPending = 'CancelPending';
+    private const Completed = 'Completed';
+    private const CustomCode = 'CustomCode';
+    private const Inactive = 'Inactive';
+    private const InProcess = 'InProcess';
+
 }

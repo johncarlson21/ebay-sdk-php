@@ -10,9 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class GiftIconCodeType
+use MyCLabs\Enum\Enum;
+
+class GiftIconCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DISABLED = 'Disabled';
-    const C_ENABLED = 'Enabled';
+
 }

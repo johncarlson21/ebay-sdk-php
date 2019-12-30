@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $PictureName
- * @property integer $PictureSystemVersion
- * @property \DTS\eBaySDK\Trading\Enums\PictureSetCodeType $PictureSet
- * @property \DTS\eBaySDK\Trading\Types\Base64BinaryType $PictureData
- * @property \DTS\eBaySDK\Trading\Enums\PictureUploadPolicyCodeType $PictureUploadPolicy
- * @property string[] $ExternalPictureURL
  * @property integer $ExtensionInDays
+ * @property string[] $ExternalPictureURL
+ * @property \DTS\eBaySDK\Trading\Types\Base64BinaryType $PictureData
+ * @property string $PictureName
+ * @property \DTS\eBaySDK\Trading\Enums\PictureSetCodeType $PictureSet
+ * @property integer $PictureSystemVersion
+ * @property \DTS\eBaySDK\Trading\Enums\PictureUploadPolicyCodeType $PictureUploadPolicy
  */
 class UploadSiteHostedPicturesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -26,35 +26,11 @@ class UploadSiteHostedPicturesRequestType extends \DTS\eBaySDK\Trading\Types\Abs
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'PictureName' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PictureName'
-        ],
-        'PictureSystemVersion' => [
+        'ExtensionInDays' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'PictureSystemVersion'
-        ],
-        'PictureSet' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PictureSet'
-        ],
-        'PictureData' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\Base64BinaryType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PictureData'
-        ],
-        'PictureUploadPolicy' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PictureUploadPolicy'
+            'elementName' => 'ExtensionInDays'
         ],
         'ExternalPictureURL' => [
             'type' => 'string',
@@ -62,14 +38,38 @@ class UploadSiteHostedPicturesRequestType extends \DTS\eBaySDK\Trading\Types\Abs
             'attribute' => false,
             'elementName' => 'ExternalPictureURL'
         ],
-        'ExtensionInDays' => [
+        'PictureData' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\Base64BinaryType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PictureData'
+        ],
+        'PictureName' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PictureName'
+        ],
+        'PictureSet' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PictureSet'
+        ],
+        'PictureSystemVersion' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ExtensionInDays'
+            'elementName' => 'PictureSystemVersion'
+        ],
+        'PictureUploadPolicy' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PictureUploadPolicy'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class UploadSiteHostedPicturesRequestType extends \DTS\eBaySDK\Trading\Types\Abs
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'UploadSiteHostedPicturesRequest';
         }

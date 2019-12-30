@@ -10,13 +10,16 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SellingManagerInventoryPropertyTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class SellingManagerInventoryPropertyTypeCodeType extends Enum 
 {
-    const C_ACTIVE = 'Active';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_IN_ACTIVE = 'InActive';
-    const C_LOW_STOCK = 'LowStock';
-    const C_PRODUCTS_OUT_OF_STOCK = 'ProductsOutOfStock';
-    const C_WITHOUT_LISTINGS = 'WithoutListings';
-    const C_WITH_LISTINGS = 'WithListings';
+    private const Active = 'Active';
+    private const CustomCode = 'CustomCode';
+    private const InActive = 'InActive';
+    private const LowStock = 'LowStock';
+    private const ProductsOutOfStock = 'ProductsOutOfStock';
+    private const WithListings = 'WithListings';
+    private const WithoutListings = 'WithoutListings';
+
 }

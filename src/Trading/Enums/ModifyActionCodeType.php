@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class ModifyActionCodeType
+use MyCLabs\Enum\Enum;
+
+class ModifyActionCodeType extends Enum 
 {
-    const C_ADD = 'Add';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DELETE = 'Delete';
-    const C_UPDATE = 'Update';
+    private const Add = 'Add';
+    private const CustomCode = 'CustomCode';
+    private const Delete = 'Delete';
+    private const Update = 'Update';
+
 }

@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\MarkUpMarkDownEventTypeCodeType $Type
- * @property \DateTime $Time
  * @property string $Reason
+ * @property \DateTime $Time
+ * @property \DTS\eBaySDK\Trading\Enums\MarkUpMarkDownEventTypeCodeType $Type
  */
 class MarkUpMarkDownEventType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -22,11 +22,11 @@ class MarkUpMarkDownEventType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Type' => [
+        'Reason' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Type'
+            'elementName' => 'Reason'
         ],
         'Time' => [
             'type' => 'DateTime',
@@ -34,14 +34,14 @@ class MarkUpMarkDownEventType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Time'
         ],
-        'Reason' => [
+        'Type' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Reason'
+            'elementName' => 'Type'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class MarkUpMarkDownEventType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

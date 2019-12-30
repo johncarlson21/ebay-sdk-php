@@ -12,14 +12,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $RecipientUserID
- * @property string $VerifyEligibilityOnly
+ * @property string $Comments
+ * @property string $ItemID
+ * @property \DTS\eBaySDK\Trading\Enums\SecondChanceOfferDurationCodeType $ListingDuration
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $NegotiatedPrice
  * @property string $RecipientPostalCode
  * @property \DTS\eBaySDK\Trading\Enums\RecipientRelationCodeType $RecipientRelationType
- * @property \DTS\eBaySDK\Trading\Types\AmountType $NegotiatedPrice
- * @property \DTS\eBaySDK\Trading\Enums\SecondChanceOfferDurationCodeType $ListingDuration
- * @property string $ItemID
- * @property string $Comments
+ * @property string $RecipientUserID
+ * @property string $VerifyEligibilityOnly
  */
 class AddTransactionConfirmationItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -27,17 +27,29 @@ class AddTransactionConfirmationItemRequestType extends \DTS\eBaySDK\Trading\Typ
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'RecipientUserID' => [
+        'Comments' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'RecipientUserID'
+            'elementName' => 'Comments'
         ],
-        'VerifyEligibilityOnly' => [
+        'ItemID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'VerifyEligibilityOnly'
+            'elementName' => 'ItemID'
+        ],
+        'ListingDuration' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ListingDuration'
+        ],
+        'NegotiatedPrice' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'NegotiatedPrice'
         ],
         'RecipientPostalCode' => [
             'type' => 'string',
@@ -51,32 +63,20 @@ class AddTransactionConfirmationItemRequestType extends \DTS\eBaySDK\Trading\Typ
             'attribute' => false,
             'elementName' => 'RecipientRelationType'
         ],
-        'NegotiatedPrice' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'NegotiatedPrice'
-        ],
-        'ListingDuration' => [
+        'RecipientUserID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ListingDuration'
+            'elementName' => 'RecipientUserID'
         ],
-        'ItemID' => [
+        'VerifyEligibilityOnly' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ItemID'
-        ],
-        'Comments' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Comments'
+            'elementName' => 'VerifyEligibilityOnly'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -93,7 +93,7 @@ class AddTransactionConfirmationItemRequestType extends \DTS\eBaySDK\Trading\Typ
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'AddTransactionConfirmationItemRequest';
         }

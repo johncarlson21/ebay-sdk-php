@@ -10,11 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class PaymentMethodSearchCodeType
+use MyCLabs\Enum\Enum;
+
+class PaymentMethodSearchCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_PAISA_PAY = 'PaisaPay';
-    const C_PAISA_PAY_ESCROWEMI = 'PaisaPayEscrowEMI';
-    const C_PAY_PAL = 'PayPal';
-    const C_PAY_PAL_OR_PAISA_PAY = 'PayPalOrPaisaPay';
+
 }

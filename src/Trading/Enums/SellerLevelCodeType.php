@@ -10,13 +10,16 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SellerLevelCodeType
+use MyCLabs\Enum\Enum;
+
+class SellerLevelCodeType extends Enum 
 {
-    const C_BRONZE = 'Bronze';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_GOLD = 'Gold';
-    const C_NONE = 'None';
-    const C_PLATINUM = 'Platinum';
-    const C_SILVER = 'Silver';
-    const C_TITANIUM = 'Titanium';
+    private const Bronze = 'Bronze';
+    private const CustomCode = 'CustomCode';
+    private const Gold = 'Gold';
+    private const None = 'None';
+    private const Platinum = 'Platinum';
+    private const Silver = 'Silver';
+    private const Titanium = 'Titanium';
+
 }

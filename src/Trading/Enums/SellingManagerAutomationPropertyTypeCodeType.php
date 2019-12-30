@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SellingManagerAutomationPropertyTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class SellingManagerAutomationPropertyTypeCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_ITEM_LIST_FAILED_AUTOMATION_RULES = 'ItemListFailedAutomationRules';
-    const C_ITEM_LIST_FAILED_SECOND_CHANCE_OFFER_AUTO_RULES = 'ItemListFailedSecondChanceOfferAutoRules';
-    const C_ITEM_RELIST_FAILED_AUTOMATION_RULES = 'ItemRelistFailedAutomationRules';
+    private const CustomCode = 'CustomCode';
+    private const ItemListFailedAutomationRules = 'ItemListFailedAutomationRules';
+    private const ItemListFailedSecondChanceOfferAutoRules = 'ItemListFailedSecondChanceOfferAutoRules';
+    private const ItemRelistFailedAutomationRules = 'ItemRelistFailedAutomationRules';
+
 }

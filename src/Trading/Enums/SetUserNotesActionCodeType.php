@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SetUserNotesActionCodeType
+use MyCLabs\Enum\Enum;
+
+class SetUserNotesActionCodeType extends Enum 
 {
-    const C_ADD_OR_UPDATE = 'AddOrUpdate';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DELETE = 'Delete';
+    private const AddOrUpdate = 'AddOrUpdate';
+    private const CustomCode = 'CustomCode';
+    private const Delete = 'Delete';
+
 }

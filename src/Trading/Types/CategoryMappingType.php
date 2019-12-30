@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $oldID
  * @property string $id
+ * @property string $oldID
  */
 class CategoryMappingType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -21,20 +21,20 @@ class CategoryMappingType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'oldID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => true,
-            'attributeName' => 'oldID'
-        ],
         'id' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'id'
+        ],
+        'oldID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => true,
+            'attributeName' => 'oldID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class CategoryMappingType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

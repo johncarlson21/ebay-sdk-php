@@ -14,13 +14,13 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property \DTS\eBaySDK\Trading\Enums\BoldTitleCodeType $BoldTitle
  * @property \DTS\eBaySDK\Trading\Enums\BorderCodeType $Border
- * @property \DTS\eBaySDK\Trading\Enums\HighlightCodeType $Highlight
- * @property \DTS\eBaySDK\Trading\Enums\GiftIconCodeType $GiftIcon
- * @property \DTS\eBaySDK\Trading\Enums\HomePageFeaturedCodeType $HomePageFeatured
+ * @property string $DetailVersion
  * @property \DTS\eBaySDK\Trading\Enums\FeaturedFirstCodeType $FeaturedFirst
  * @property \DTS\eBaySDK\Trading\Enums\FeaturedPlusCodeType $FeaturedPlus
+ * @property \DTS\eBaySDK\Trading\Enums\GiftIconCodeType $GiftIcon
+ * @property \DTS\eBaySDK\Trading\Enums\HighlightCodeType $Highlight
+ * @property \DTS\eBaySDK\Trading\Enums\HomePageFeaturedCodeType $HomePageFeatured
  * @property \DTS\eBaySDK\Trading\Enums\ProPackCodeType $ProPack
- * @property string $DetailVersion
  * @property \DateTime $UpdateTime
  */
 class ListingFeatureDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -41,23 +41,11 @@ class ListingFeatureDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Border'
         ],
-        'Highlight' => [
+        'DetailVersion' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Highlight'
-        ],
-        'GiftIcon' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'GiftIcon'
-        ],
-        'HomePageFeatured' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'HomePageFeatured'
+            'elementName' => 'DetailVersion'
         ],
         'FeaturedFirst' => [
             'type' => 'string',
@@ -71,17 +59,29 @@ class ListingFeatureDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'FeaturedPlus'
         ],
+        'GiftIcon' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'GiftIcon'
+        ],
+        'Highlight' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Highlight'
+        ],
+        'HomePageFeatured' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'HomePageFeatured'
+        ],
         'ProPack' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ProPack'
-        ],
-        'DetailVersion' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DetailVersion'
         ],
         'UpdateTime' => [
             'type' => 'DateTime',
@@ -90,7 +90,7 @@ class ListingFeatureDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'UpdateTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -107,7 +107,7 @@ class ListingFeatureDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class QuantityAvailableHintCodeType
+use MyCLabs\Enum\Enum;
+
+class QuantityAvailableHintCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_LIMITED = 'Limited';
-    const C_MORE_THAN = 'MoreThan';
+    private const CustomCode = 'CustomCode';
+    private const Limited = 'Limited';
+    private const MoreThan = 'MoreThan';
+
 }

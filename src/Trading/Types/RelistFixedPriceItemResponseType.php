@@ -12,16 +12,16 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
- * @property string $SKU
- * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
- * @property \DateTime $StartTime
- * @property \DateTime $EndTime
- * @property string $CategoryID
  * @property string $Category2ID
+ * @property string $CategoryID
  * @property \DTS\eBaySDK\Trading\Enums\DiscountReasonCodeType[] $DiscountReason
- * @property \DTS\eBaySDK\Trading\Types\ProductSuggestionsType $ProductSuggestions
+ * @property \DateTime $EndTime
+ * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
+ * @property string $ItemID
  * @property \DTS\eBaySDK\Trading\Types\ListingRecommendationsType $ListingRecommendations
+ * @property \DTS\eBaySDK\Trading\Types\ProductSuggestionsType $ProductSuggestions
+ * @property string $SKU
+ * @property \DateTime $StartTime
  */
 class RelistFixedPriceItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -29,35 +29,11 @@ class RelistFixedPriceItemResponseType extends \DTS\eBaySDK\Trading\Types\Abstra
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
+        'Category2ID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ItemID'
-        ],
-        'SKU' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SKU'
-        ],
-        'Fees' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\FeesType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Fees'
-        ],
-        'StartTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'StartTime'
-        ],
-        'EndTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'EndTime'
+            'elementName' => 'Category2ID'
         ],
         'CategoryID' => [
             'type' => 'string',
@@ -65,17 +41,35 @@ class RelistFixedPriceItemResponseType extends \DTS\eBaySDK\Trading\Types\Abstra
             'attribute' => false,
             'elementName' => 'CategoryID'
         ],
-        'Category2ID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Category2ID'
-        ],
         'DiscountReason' => [
             'type' => 'string',
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'DiscountReason'
+        ],
+        'EndTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'EndTime'
+        ],
+        'Fees' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\FeesType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Fees'
+        ],
+        'ItemID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
+        ],
+        'ListingRecommendations' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ListingRecommendationsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ListingRecommendations'
         ],
         'ProductSuggestions' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ProductSuggestionsType',
@@ -83,14 +77,20 @@ class RelistFixedPriceItemResponseType extends \DTS\eBaySDK\Trading\Types\Abstra
             'attribute' => false,
             'elementName' => 'ProductSuggestions'
         ],
-        'ListingRecommendations' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ListingRecommendationsType',
+        'SKU' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ListingRecommendations'
+            'elementName' => 'SKU'
+        ],
+        'StartTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'StartTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -107,7 +107,7 @@ class RelistFixedPriceItemResponseType extends \DTS\eBaySDK\Trading\Types\Abstra
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

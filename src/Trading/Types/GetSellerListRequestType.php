@@ -12,20 +12,19 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $UserID
- * @property \DTS\eBaySDK\Trading\Types\UserIDArrayType $MotorsDealerUsers
+ * @property boolean $AdminEndedItemsOnly
+ * @property integer $CategoryID
  * @property \DateTime $EndTimeFrom
  * @property \DateTime $EndTimeTo
+ * @property \DTS\eBaySDK\Trading\Enums\GranularityLevelCodeType $GranularityLevel
+ * @property boolean $IncludeVariations
+ * @property boolean $IncludeWatchCount
+ * @property \DTS\eBaySDK\Trading\Types\UserIDArrayType $MotorsDealerUsers
+ * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
+ * @property \DTS\eBaySDK\Trading\Types\SKUArrayType $SKUArray
  * @property integer $Sort
  * @property \DateTime $StartTimeFrom
  * @property \DateTime $StartTimeTo
- * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
- * @property \DTS\eBaySDK\Trading\Enums\GranularityLevelCodeType $GranularityLevel
- * @property \DTS\eBaySDK\Trading\Types\SKUArrayType $SKUArray
- * @property boolean $IncludeWatchCount
- * @property boolean $AdminEndedItemsOnly
- * @property integer $CategoryID
- * @property boolean $IncludeVariations
  */
 class GetSellerListRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -33,17 +32,17 @@ class GetSellerListRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'UserID' => [
-            'type' => 'string',
+        'AdminEndedItemsOnly' => [
+            'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'UserID'
+            'elementName' => 'AdminEndedItemsOnly'
         ],
-        'MotorsDealerUsers' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\UserIDArrayType',
+        'CategoryID' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'MotorsDealerUsers'
+            'elementName' => 'CategoryID'
         ],
         'EndTimeFrom' => [
             'type' => 'DateTime',
@@ -56,6 +55,42 @@ class GetSellerListRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EndTimeTo'
+        ],
+        'GranularityLevel' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'GranularityLevel'
+        ],
+        'IncludeVariations' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeVariations'
+        ],
+        'IncludeWatchCount' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeWatchCount'
+        ],
+        'MotorsDealerUsers' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\UserIDArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MotorsDealerUsers'
+        ],
+        'Pagination' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Pagination'
+        ],
+        'SKUArray' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SKUArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SKUArray'
         ],
         'Sort' => [
             'type' => 'integer',
@@ -74,51 +109,9 @@ class GetSellerListRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'StartTimeTo'
-        ],
-        'Pagination' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Pagination'
-        ],
-        'GranularityLevel' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'GranularityLevel'
-        ],
-        'SKUArray' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SKUArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SKUArray'
-        ],
-        'IncludeWatchCount' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeWatchCount'
-        ],
-        'AdminEndedItemsOnly' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AdminEndedItemsOnly'
-        ],
-        'CategoryID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CategoryID'
-        ],
-        'IncludeVariations' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeVariations'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -135,7 +128,7 @@ class GetSellerListRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetSellerListRequest';
         }

@@ -10,12 +10,15 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class PromotionalSaleStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class PromotionalSaleStatusCodeType extends Enum 
 {
-    const C_ACTIVE = 'Active';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DELETED = 'Deleted';
-    const C_INACTIVE = 'Inactive';
-    const C_PROCESSING = 'Processing';
-    const C_SCHEDULED = 'Scheduled';
+    private const Active = 'Active';
+    private const CustomCode = 'CustomCode';
+    private const Deleted = 'Deleted';
+    private const Inactive = 'Inactive';
+    private const Processing = 'Processing';
+    private const Scheduled = 'Scheduled';
+
 }

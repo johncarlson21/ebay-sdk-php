@@ -14,7 +14,6 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property boolean $ResponseEnabled
  * @property string $ResponseURL
- * @property \DateTime $UserResponseDate
  */
 class MyMessagesResponseDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,15 +32,9 @@ class MyMessagesResponseDetailsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ResponseURL'
-        ],
-        'UserResponseDate' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UserResponseDate'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +51,7 @@ class MyMessagesResponseDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

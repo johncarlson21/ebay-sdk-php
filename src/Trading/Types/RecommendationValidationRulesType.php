@@ -12,18 +12,19 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\ValueTypeCodeType $ValueType
- * @property integer $MinValues
- * @property integer $MaxValues
- * @property \DTS\eBaySDK\Trading\Enums\SelectionModeCodeType $SelectionMode
  * @property \DTS\eBaySDK\Trading\Enums\AspectUsageCodeType $AspectUsage
- * @property integer $MaxValueLength
- * @property \DTS\eBaySDK\Trading\Enums\ProductRequiredCodeType $ProductRequired
  * @property integer $Confidence
+ * @property integer $MaxValueLength
+ * @property integer $MaxValues
+ * @property integer $MinValues
+ * @property \DTS\eBaySDK\Trading\Enums\ProductRequiredCodeType $ProductRequired
  * @property \DTS\eBaySDK\Trading\Types\NameValueRelationshipType[] $Relationship
+ * @property \DTS\eBaySDK\Trading\Enums\SelectionModeCodeType $SelectionMode
+ * @property \DTS\eBaySDK\Trading\Enums\UsageConstraintCodeType $UsageConstraint
+ * @property \DTS\eBaySDK\Trading\Enums\ValueFormatCodeType $ValueFormat
+ * @property \DTS\eBaySDK\Trading\Enums\ValueTypeCodeType $ValueType
  * @property \DTS\eBaySDK\Trading\Enums\VariationPictureRuleCodeType $VariationPicture
  * @property \DTS\eBaySDK\Trading\Enums\VariationSpecificsRuleCodeType $VariationSpecifics
- * @property \DTS\eBaySDK\Trading\Enums\ValueFormatCodeType $ValueFormat
  */
 class RecommendationValidationRulesType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -31,47 +32,11 @@ class RecommendationValidationRulesType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ValueType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ValueType'
-        ],
-        'MinValues' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MinValues'
-        ],
-        'MaxValues' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MaxValues'
-        ],
-        'SelectionMode' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SelectionMode'
-        ],
         'AspectUsage' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AspectUsage'
-        ],
-        'MaxValueLength' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MaxValueLength'
-        ],
-        'ProductRequired' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ProductRequired'
         ],
         'Confidence' => [
             'type' => 'integer',
@@ -79,11 +44,59 @@ class RecommendationValidationRulesType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Confidence'
         ],
+        'MaxValueLength' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MaxValueLength'
+        ],
+        'MaxValues' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MaxValues'
+        ],
+        'MinValues' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MinValues'
+        ],
+        'ProductRequired' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ProductRequired'
+        ],
         'Relationship' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NameValueRelationshipType',
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Relationship'
+        ],
+        'SelectionMode' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SelectionMode'
+        ],
+        'UsageConstraint' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'UsageConstraint'
+        ],
+        'ValueFormat' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ValueFormat'
+        ],
+        'ValueType' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ValueType'
         ],
         'VariationPicture' => [
             'type' => 'string',
@@ -96,15 +109,9 @@ class RecommendationValidationRulesType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VariationSpecifics'
-        ],
-        'ValueFormat' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ValueFormat'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -121,7 +128,7 @@ class RecommendationValidationRulesType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

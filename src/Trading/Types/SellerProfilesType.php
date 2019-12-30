@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\SellerShippingProfileType $SellerShippingProfile
- * @property \DTS\eBaySDK\Trading\Types\SellerReturnProfileType $SellerReturnProfile
  * @property \DTS\eBaySDK\Trading\Types\SellerPaymentProfileType $SellerPaymentProfile
+ * @property \DTS\eBaySDK\Trading\Types\SellerReturnProfileType $SellerReturnProfile
+ * @property \DTS\eBaySDK\Trading\Types\SellerShippingProfileType $SellerShippingProfile
  */
 class SellerProfilesType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -22,11 +22,11 @@ class SellerProfilesType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'SellerShippingProfile' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellerShippingProfileType',
+        'SellerPaymentProfile' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SellerPaymentProfileType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'SellerShippingProfile'
+            'elementName' => 'SellerPaymentProfile'
         ],
         'SellerReturnProfile' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerReturnProfileType',
@@ -34,14 +34,14 @@ class SellerProfilesType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SellerReturnProfile'
         ],
-        'SellerPaymentProfile' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellerPaymentProfileType',
+        'SellerShippingProfile' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\SellerShippingProfileType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'SellerPaymentProfile'
+            'elementName' => 'SellerShippingProfile'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class SellerProfilesType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

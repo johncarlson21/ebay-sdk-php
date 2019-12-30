@@ -10,17 +10,20 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class NotificationEventStateCodeType
+use MyCLabs\Enum\Enum;
+
+class NotificationEventStateCodeType extends Enum 
 {
-    const C_CANCELED = 'Canceled';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DELIVERED = 'Delivered';
-    const C_FAILED = 'Failed';
-    const C_FAILED_PENDING = 'FailedPending';
-    const C_MARKED_DOWN = 'MarkedDown';
-    const C_MARKED_DOWN_PENDING = 'MarkedDownPending';
-    const C_NEW = 'New';
-    const C_PENDING = 'Pending';
-    const C_REJECTED = 'Rejected';
-    const C_UNDELIVERABLE = 'Undeliverable';
+    private const Canceled = 'Canceled';
+    private const CustomCode = 'CustomCode';
+    private const Delivered = 'Delivered';
+    private const Failed = 'Failed';
+    private const FailedPending = 'FailedPending';
+    private const MarkedDown = 'MarkedDown';
+    private const MarkedDownPending = 'MarkedDownPending';
+    private const New = 'New';
+    private const Pending = 'Pending';
+    private const Rejected = 'Rejected';
+    private const Undeliverable = 'Undeliverable';
+
 }

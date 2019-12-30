@@ -14,11 +14,11 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property string $FeedbackID
  * @property string $ItemID
- * @property string $TransactionID
- * @property string $TargetUserID
- * @property \DTS\eBaySDK\Trading\Enums\FeedbackResponseCodeType $ResponseType
- * @property string $ResponseText
  * @property string $OrderLineItemID
+ * @property string $ResponseText
+ * @property \DTS\eBaySDK\Trading\Enums\FeedbackResponseCodeType $ResponseType
+ * @property string $TargetUserID
+ * @property string $TransactionID
  */
 class RespondToFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -38,23 +38,11 @@ class RespondToFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRe
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
-        'TransactionID' => [
+        'OrderLineItemID' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'TransactionID'
-        ],
-        'TargetUserID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TargetUserID'
-        ],
-        'ResponseType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ResponseType'
+            'elementName' => 'OrderLineItemID'
         ],
         'ResponseText' => [
             'type' => 'string',
@@ -62,14 +50,26 @@ class RespondToFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRe
             'attribute' => false,
             'elementName' => 'ResponseText'
         ],
-        'OrderLineItemID' => [
+        'ResponseType' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'OrderLineItemID'
+            'elementName' => 'ResponseType'
+        ],
+        'TargetUserID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TargetUserID'
+        ],
+        'TransactionID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TransactionID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class RespondToFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRe
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'RespondToFeedbackRequest';
         }

@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class DescriptionTemplateCodeType
+use MyCLabs\Enum\Enum;
+
+class DescriptionTemplateCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_LAYOUT = 'Layout';
-    const C_THEME = 'Theme';
+    private const CustomCode = 'CustomCode';
+    private const Layout = 'Layout';
+    private const Theme = 'Theme';
+
 }

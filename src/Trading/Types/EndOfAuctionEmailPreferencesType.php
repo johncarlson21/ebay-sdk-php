@@ -12,12 +12,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $TemplateText
- * @property string $LogoURL
- * @property \DTS\eBaySDK\Trading\Enums\EndOfAuctionLogoTypeCodeType $LogoType
  * @property boolean $EmailCustomized
- * @property boolean $TextCustomized
  * @property boolean $LogoCustomized
+ * @property \DTS\eBaySDK\Trading\Enums\EndOfAuctionLogoTypeCodeType $LogoType
+ * @property string $LogoURL
+ * @property string $TemplateText
+ * @property boolean $TextCustomized
  */
 class EndOfAuctionEmailPreferencesType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -25,17 +25,17 @@ class EndOfAuctionEmailPreferencesType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'TemplateText' => [
-            'type' => 'string',
+        'EmailCustomized' => [
+            'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'TemplateText'
+            'elementName' => 'EmailCustomized'
         ],
-        'LogoURL' => [
-            'type' => 'string',
+        'LogoCustomized' => [
+            'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'LogoURL'
+            'elementName' => 'LogoCustomized'
         ],
         'LogoType' => [
             'type' => 'string',
@@ -43,26 +43,26 @@ class EndOfAuctionEmailPreferencesType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'LogoType'
         ],
-        'EmailCustomized' => [
-            'type' => 'boolean',
+        'LogoURL' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'EmailCustomized'
+            'elementName' => 'LogoURL'
+        ],
+        'TemplateText' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TemplateText'
         ],
         'TextCustomized' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TextCustomized'
-        ],
-        'LogoCustomized' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'LogoCustomized'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -79,7 +79,7 @@ class EndOfAuctionEmailPreferencesType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

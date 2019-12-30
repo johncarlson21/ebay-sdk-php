@@ -10,12 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SellingManagerAlertTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class SellingManagerAlertTypeCodeType extends Enum 
 {
-    const C_AUTOMATION = 'Automation';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_GENERAL = 'General';
-    const C_INVENTORY = 'Inventory';
-    const C_PAISA_PAY = 'PaisaPay';
-    const C_SOLD = 'Sold';
+    private const Automation = 'Automation';
+    private const CustomCode = 'CustomCode';
+    private const General = 'General';
+    private const Inventory = 'Inventory';
+    private const Sold = 'Sold';
+
 }

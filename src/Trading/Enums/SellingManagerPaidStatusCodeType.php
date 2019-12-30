@@ -10,12 +10,15 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SellingManagerPaidStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class SellingManagerPaidStatusCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_PAID = 'Paid';
-    const C_PARTIALLY_PAID = 'PartiallyPaid';
-    const C_PENDING = 'Pending';
-    const C_REFUNDED = 'Refunded';
-    const C_UNPAID = 'Unpaid';
+    private const CustomCode = 'CustomCode';
+    private const Paid = 'Paid';
+    private const PartiallyPaid = 'PartiallyPaid';
+    private const Pending = 'Pending';
+    private const Refunded = 'Refunded';
+    private const Unpaid = 'Unpaid';
+
 }

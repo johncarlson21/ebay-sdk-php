@@ -10,10 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class INEscrowWorkflowTimelineCodeType
+use MyCLabs\Enum\Enum;
+
+class INEscrowWorkflowTimelineCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DEFAULT = 'Default';
-    const C_WORKFLOWA = 'WorkflowA';
-    const C_WORKFLOWB = 'WorkflowB';
+
 }

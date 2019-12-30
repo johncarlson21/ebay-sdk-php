@@ -12,12 +12,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\StoreThemeArrayType $BasicThemeArray
  * @property \DTS\eBaySDK\Trading\Types\StoreThemeArrayType $AdvancedThemeArray
+ * @property \DTS\eBaySDK\Trading\Types\StoreThemeArrayType $BasicThemeArray
  * @property \DTS\eBaySDK\Trading\Types\StoreLogoArrayType $LogoArray
- * @property \DTS\eBaySDK\Trading\Types\StoreSubscriptionArrayType $SubscriptionArray
  * @property integer $MaxCategories
  * @property integer $MaxCategoryLevels
+ * @property \DTS\eBaySDK\Trading\Types\StoreSubscriptionArrayType $SubscriptionArray
  */
 class GetStoreOptionsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -25,29 +25,23 @@ class GetStoreOptionsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'BasicThemeArray' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\StoreThemeArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BasicThemeArray'
-        ],
         'AdvancedThemeArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreThemeArrayType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AdvancedThemeArray'
         ],
+        'BasicThemeArray' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\StoreThemeArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BasicThemeArray'
+        ],
         'LogoArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreLogoArrayType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LogoArray'
-        ],
-        'SubscriptionArray' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\StoreSubscriptionArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SubscriptionArray'
         ],
         'MaxCategories' => [
             'type' => 'integer',
@@ -60,9 +54,15 @@ class GetStoreOptionsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MaxCategoryLevels'
+        ],
+        'SubscriptionArray' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\StoreSubscriptionArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SubscriptionArray'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -79,7 +79,7 @@ class GetStoreOptionsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

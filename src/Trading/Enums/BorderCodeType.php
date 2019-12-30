@@ -10,9 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class BorderCodeType
+use MyCLabs\Enum\Enum;
+
+class BorderCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DISABLED = 'Disabled';
-    const C_ENABLED = 'Enabled';
+
 }

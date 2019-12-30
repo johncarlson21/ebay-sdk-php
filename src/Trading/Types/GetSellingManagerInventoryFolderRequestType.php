@@ -13,8 +13,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property integer $FolderID
- * @property integer $MaxDepth
  * @property boolean $FullRecursion
+ * @property integer $MaxDepth
  */
 class GetSellingManagerInventoryFolderRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -28,20 +28,20 @@ class GetSellingManagerInventoryFolderRequestType extends \DTS\eBaySDK\Trading\T
             'attribute' => false,
             'elementName' => 'FolderID'
         ],
-        'MaxDepth' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MaxDepth'
-        ],
         'FullRecursion' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FullRecursion'
+        ],
+        'MaxDepth' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MaxDepth'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class GetSellingManagerInventoryFolderRequestType extends \DTS\eBaySDK\Trading\T
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetSellingManagerInventoryFolderRequest';
         }

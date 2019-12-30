@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $RightsOwnerID
  * @property \DTS\eBaySDK\Trading\Types\VeROReportItemsType $ReportItems
+ * @property string $RightsOwnerID
  */
 class VeROReportItemsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -21,20 +21,20 @@ class VeROReportItemsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'RightsOwnerID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'RightsOwnerID'
-        ],
         'ReportItems' => [
             'type' => 'DTS\eBaySDK\Trading\Types\VeROReportItemsType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReportItems'
+        ],
+        'RightsOwnerID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'RightsOwnerID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class VeROReportItemsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'VeROReportItemsRequest';
         }

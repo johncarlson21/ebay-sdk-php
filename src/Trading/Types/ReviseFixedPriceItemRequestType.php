@@ -12,9 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
  * @property string[] $DeletedField
- * @property boolean $VerifyOnly
+ * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
  */
 class ReviseFixedPriceItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -22,26 +21,20 @@ class ReviseFixedPriceItemRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Item' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Item'
-        ],
         'DeletedField' => [
             'type' => 'string',
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'DeletedField'
         ],
-        'VerifyOnly' => [
-            'type' => 'boolean',
+        'Item' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'VerifyOnly'
+            'elementName' => 'Item'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +51,7 @@ class ReviseFixedPriceItemRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'ReviseFixedPriceItemRequest';
         }

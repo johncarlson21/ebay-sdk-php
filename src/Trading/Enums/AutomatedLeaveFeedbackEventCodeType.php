@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class AutomatedLeaveFeedbackEventCodeType
+use MyCLabs\Enum\Enum;
+
+class AutomatedLeaveFeedbackEventCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_NONE = 'None';
-    const C_PAYMENT_RECEIVED = 'PaymentReceived';
-    const C_POSITIVE_FEEDBACK_RECEIVED = 'PositiveFeedbackReceived';
+    private const CustomCode = 'CustomCode';
+    private const None = 'None';
+    private const PaymentReceived = 'PaymentReceived';
+    private const PositiveFeedbackReceived = 'PositiveFeedbackReceived';
+
 }

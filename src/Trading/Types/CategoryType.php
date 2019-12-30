@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $BestOfferEnabled
  * @property boolean $AutoPayEnabled
  * @property boolean $B2BVATEnabled
+ * @property boolean $BestOfferEnabled
  * @property string $CategoryID
  * @property integer $CategoryLevel
  * @property string $CategoryName
@@ -22,10 +22,10 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property string[] $CategoryParentName
  * @property boolean $Expired
  * @property boolean $LeafCategory
- * @property boolean $Virtual
+ * @property boolean $LSD
  * @property boolean $ORPA
  * @property boolean $ORRA
- * @property boolean $LSD
+ * @property boolean $Virtual
  */
 class CategoryType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,12 +33,6 @@ class CategoryType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'BestOfferEnabled' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BestOfferEnabled'
-        ],
         'AutoPayEnabled' => [
             'type' => 'boolean',
             'repeatable' => false,
@@ -50,6 +44,12 @@ class CategoryType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'B2BVATEnabled'
+        ],
+        'BestOfferEnabled' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'BestOfferEnabled'
         ],
         'CategoryID' => [
             'type' => 'string',
@@ -93,11 +93,11 @@ class CategoryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'LeafCategory'
         ],
-        'Virtual' => [
+        'LSD' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Virtual'
+            'elementName' => 'LSD'
         ],
         'ORPA' => [
             'type' => 'boolean',
@@ -111,14 +111,14 @@ class CategoryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ORRA'
         ],
-        'LSD' => [
+        'Virtual' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'LSD'
+            'elementName' => 'Virtual'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -135,7 +135,7 @@ class CategoryType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

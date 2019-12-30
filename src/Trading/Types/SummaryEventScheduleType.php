@@ -13,8 +13,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Enums\NotificationEventTypeCodeType $EventType
- * @property \DTS\eBaySDK\Trading\Enums\SummaryWindowPeriodCodeType $SummaryPeriod
  * @property \DTS\eBaySDK\Trading\Enums\SummaryFrequencyCodeType $Frequency
+ * @property \DTS\eBaySDK\Trading\Enums\SummaryWindowPeriodCodeType $SummaryPeriod
  */
 class SummaryEventScheduleType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -28,20 +28,20 @@ class SummaryEventScheduleType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'EventType'
         ],
-        'SummaryPeriod' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SummaryPeriod'
-        ],
         'Frequency' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Frequency'
+        ],
+        'SummaryPeriod' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'SummaryPeriod'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class SummaryEventScheduleType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

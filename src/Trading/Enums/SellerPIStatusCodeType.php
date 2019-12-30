@@ -10,10 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SellerPIStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class SellerPIStatusCodeType extends Enum 
 {
-    const C_ACCEPTEDUA = 'AcceptedUA';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_MUST_ACCEPTUA = 'MustAcceptUA';
-    const C_PI_ENABLED = 'PIEnabled';
+
 }

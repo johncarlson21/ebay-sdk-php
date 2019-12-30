@@ -10,9 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class CalculatedShippingChargeOptionCodeType
+use MyCLabs\Enum\Enum;
+
+class CalculatedShippingChargeOptionCodeType extends Enum 
 {
-    const C_CHARGE_EACH_ITEM = 'ChargeEachItem';
-    const C_CHARGE_ENTIRE_ORDER = 'ChargeEntireOrder';
-    const C_CUSTOM_CODE = 'CustomCode';
+
 }

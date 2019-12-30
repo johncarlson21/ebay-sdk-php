@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SellingManagerEmailSentStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class SellingManagerEmailSentStatusCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FAILED = 'Failed';
-    const C_PENDING = 'Pending';
-    const C_SUCCESSFUL = 'Successful';
+    private const CustomCode = 'CustomCode';
+    private const Failed = 'Failed';
+    private const Pending = 'Pending';
+    private const Successful = 'Successful';
+
 }

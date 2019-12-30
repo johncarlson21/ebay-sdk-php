@@ -10,8 +10,11 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class MeasurementSystemCodeType
+use MyCLabs\Enum\Enum;
+
+class MeasurementSystemCodeType extends Enum 
 {
-    const C_ENGLISH = 'English';
-    const C_METRIC = 'Metric';
+    private const English = 'English';
+    private const Metric = 'Metric';
+
 }

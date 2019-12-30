@@ -10,9 +10,9 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class PromotionMethodCodeType
+use MyCLabs\Enum\Enum;
+
+class PromotionMethodCodeType extends Enum 
 {
-    const C_CROSS_SELL = 'CrossSell';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_UP_SELL = 'UpSell';
+
 }

@@ -10,47 +10,50 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class SummaryFrequencyCodeType
+use MyCLabs\Enum\Enum;
+
+class SummaryFrequencyCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_EVERY31_DAYS = 'Every31Days';
-    const C_EVERY60_DAYS = 'Every60Days';
-    const C_EVERY_FRIDAY = 'EveryFriday';
-    const C_EVERY_MONDAY = 'EveryMonday';
-    const C_EVERY_SATURDAY = 'EverySaturday';
-    const C_EVERY_SUNDAY = 'EverySunday';
-    const C_EVERY_THURSDAY = 'EveryThursday';
-    const C_EVERY_TUESDAY = 'EveryTuesday';
-    const C_EVERY_WEDNESDAY = 'EveryWednesday';
-    const C_MONTHLY_ON10TH = 'MonthlyOn10th';
-    const C_MONTHLY_ON11TH = 'MonthlyOn11th';
-    const C_MONTHLY_ON12TH = 'MonthlyOn12th';
-    const C_MONTHLY_ON13TH = 'MonthlyOn13th';
-    const C_MONTHLY_ON14TH = 'MonthlyOn14th';
-    const C_MONTHLY_ON15TH = 'MonthlyOn15th';
-    const C_MONTHLY_ON16TH = 'MonthlyOn16th';
-    const C_MONTHLY_ON17TH = 'MonthlyOn17th';
-    const C_MONTHLY_ON18TH = 'MonthlyOn18th';
-    const C_MONTHLY_ON19TH = 'MonthlyOn19th';
-    const C_MONTHLY_ON1ST = 'MonthlyOn1st';
-    const C_MONTHLY_ON20TH = 'MonthlyOn20th';
-    const C_MONTHLY_ON21ST = 'MonthlyOn21st';
-    const C_MONTHLY_ON22ND = 'MonthlyOn22nd';
-    const C_MONTHLY_ON23RD = 'MonthlyOn23rd';
-    const C_MONTHLY_ON24TH = 'MonthlyOn24th';
-    const C_MONTHLY_ON25TH = 'MonthlyOn25th';
-    const C_MONTHLY_ON26TH = 'MonthlyOn26th';
-    const C_MONTHLY_ON27TH = 'MonthlyOn27th';
-    const C_MONTHLY_ON28TH = 'MonthlyOn28th';
-    const C_MONTHLY_ON29TH = 'MonthlyOn29th';
-    const C_MONTHLY_ON2ND = 'MonthlyOn2nd';
-    const C_MONTHLY_ON30TH = 'MonthlyOn30th';
-    const C_MONTHLY_ON31ST = 'MonthlyOn31st';
-    const C_MONTHLY_ON3RD = 'MonthlyOn3rd';
-    const C_MONTHLY_ON4TH = 'MonthlyOn4th';
-    const C_MONTHLY_ON5TH = 'MonthlyOn5th';
-    const C_MONTHLY_ON6TH = 'MonthlyOn6th';
-    const C_MONTHLY_ON7TH = 'MonthlyOn7th';
-    const C_MONTHLY_ON8TH = 'MonthlyOn8th';
-    const C_MONTHLY_ON9TH = 'MonthlyOn9th';
+    private const CustomCode = 'CustomCode';
+    private const Every31Days = 'Every31Days';
+    private const Every60Days = 'Every60Days';
+    private const EveryFriday = 'EveryFriday';
+    private const EveryMonday = 'EveryMonday';
+    private const EverySaturday = 'EverySaturday';
+    private const EverySunday = 'EverySunday';
+    private const EveryThursday = 'EveryThursday';
+    private const EveryTuesday = 'EveryTuesday';
+    private const EveryWednesday = 'EveryWednesday';
+    private const MonthlyOn10th = 'MonthlyOn10th';
+    private const MonthlyOn11th = 'MonthlyOn11th';
+    private const MonthlyOn12th = 'MonthlyOn12th';
+    private const MonthlyOn13th = 'MonthlyOn13th';
+    private const MonthlyOn14th = 'MonthlyOn14th';
+    private const MonthlyOn15th = 'MonthlyOn15th';
+    private const MonthlyOn16th = 'MonthlyOn16th';
+    private const MonthlyOn17th = 'MonthlyOn17th';
+    private const MonthlyOn18th = 'MonthlyOn18th';
+    private const MonthlyOn19th = 'MonthlyOn19th';
+    private const MonthlyOn1st = 'MonthlyOn1st';
+    private const MonthlyOn20th = 'MonthlyOn20th';
+    private const MonthlyOn21st = 'MonthlyOn21st';
+    private const MonthlyOn22nd = 'MonthlyOn22nd';
+    private const MonthlyOn23rd = 'MonthlyOn23rd';
+    private const MonthlyOn24th = 'MonthlyOn24th';
+    private const MonthlyOn25th = 'MonthlyOn25th';
+    private const MonthlyOn26th = 'MonthlyOn26th';
+    private const MonthlyOn27th = 'MonthlyOn27th';
+    private const MonthlyOn28th = 'MonthlyOn28th';
+    private const MonthlyOn29th = 'MonthlyOn29th';
+    private const MonthlyOn2nd = 'MonthlyOn2nd';
+    private const MonthlyOn30th = 'MonthlyOn30th';
+    private const MonthlyOn31st = 'MonthlyOn31st';
+    private const MonthlyOn3rd = 'MonthlyOn3rd';
+    private const MonthlyOn4th = 'MonthlyOn4th';
+    private const MonthlyOn5th = 'MonthlyOn5th';
+    private const MonthlyOn6th = 'MonthlyOn6th';
+    private const MonthlyOn7th = 'MonthlyOn7th';
+    private const MonthlyOn8th = 'MonthlyOn8th';
+    private const MonthlyOn9th = 'MonthlyOn9th';
+
 }

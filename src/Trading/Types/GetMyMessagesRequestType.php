@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\MyMessagesMessageIDArrayType $MessageIDs
- * @property integer $FolderID
- * @property \DateTime $StartTime
  * @property \DateTime $EndTime
  * @property \DTS\eBaySDK\Trading\Types\MyMessagesExternalMessageIDArrayType $ExternalMessageIDs
- * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
+ * @property integer $FolderID
  * @property boolean $IncludeHighPriorityMessageOnly
+ * @property \DTS\eBaySDK\Trading\Types\MyMessagesMessageIDArrayType $MessageIDs
+ * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
+ * @property \DateTime $StartTime
  */
 class GetMyMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -26,24 +26,6 @@ class GetMyMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'MessageIDs' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesMessageIDArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MessageIDs'
-        ],
-        'FolderID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FolderID'
-        ],
-        'StartTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'StartTime'
-        ],
         'EndTime' => [
             'type' => 'DateTime',
             'repeatable' => false,
@@ -56,20 +38,38 @@ class GetMyMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
             'attribute' => false,
             'elementName' => 'ExternalMessageIDs'
         ],
-        'Pagination' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
+        'FolderID' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Pagination'
+            'elementName' => 'FolderID'
         ],
         'IncludeHighPriorityMessageOnly' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'IncludeHighPriorityMessageOnly'
+        ],
+        'MessageIDs' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesMessageIDArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MessageIDs'
+        ],
+        'Pagination' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Pagination'
+        ],
+        'StartTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'StartTime'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -86,7 +86,7 @@ class GetMyMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetMyMessagesRequest';
         }

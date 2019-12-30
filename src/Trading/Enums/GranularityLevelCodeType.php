@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class GranularityLevelCodeType
+use MyCLabs\Enum\Enum;
+
+class GranularityLevelCodeType extends Enum 
 {
-    const C_COARSE = 'Coarse';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FINE = 'Fine';
-    const C_MEDIUM = 'Medium';
+    private const Coarse = 'Coarse';
+    private const CustomCode = 'CustomCode';
+    private const Fine = 'Fine';
+    private const Medium = 'Medium';
+
 }

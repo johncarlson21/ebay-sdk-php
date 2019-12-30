@@ -12,20 +12,18 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingInsuranceCost
- * @property string $ShippingService
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingServiceCost
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingServiceAdditionalCost
- * @property integer $ShippingServicePriority
  * @property boolean $ExpeditedService
- * @property integer $ShippingTimeMin
- * @property integer $ShippingTimeMax
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingSurcharge
  * @property boolean $FreeShipping
- * @property boolean $LocalPickup
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ImportCharge
+ * @property boolean $LocalPickup
  * @property \DTS\eBaySDK\Trading\Types\ShippingPackageInfoType[] $ShippingPackageInfo
+ * @property string $ShippingService
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingServiceAdditionalCost
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingServiceCost
  * @property \DateTime $ShippingServiceCutOffTime
+ * @property integer $ShippingServicePriority
+ * @property integer $ShippingTimeMax
+ * @property integer $ShippingTimeMin
  */
 class ShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,59 +31,11 @@ class ShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ShippingInsuranceCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingInsuranceCost'
-        ],
-        'ShippingService' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingService'
-        ],
-        'ShippingServiceCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingServiceCost'
-        ],
-        'ShippingServiceAdditionalCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingServiceAdditionalCost'
-        ],
-        'ShippingServicePriority' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingServicePriority'
-        ],
         'ExpeditedService' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ExpeditedService'
-        ],
-        'ShippingTimeMin' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingTimeMin'
-        ],
-        'ShippingTimeMax' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingTimeMax'
-        ],
-        'ShippingSurcharge' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingSurcharge'
         ],
         'FreeShipping' => [
             'type' => 'boolean',
@@ -93,17 +43,17 @@ class ShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'FreeShipping'
         ],
-        'LocalPickup' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'LocalPickup'
-        ],
         'ImportCharge' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ImportCharge'
+        ],
+        'LocalPickup' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'LocalPickup'
         ],
         'ShippingPackageInfo' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ShippingPackageInfoType',
@@ -111,14 +61,50 @@ class ShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingPackageInfo'
         ],
+        'ShippingService' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingService'
+        ],
+        'ShippingServiceAdditionalCost' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingServiceAdditionalCost'
+        ],
+        'ShippingServiceCost' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingServiceCost'
+        ],
         'ShippingServiceCutOffTime' => [
             'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceCutOffTime'
+        ],
+        'ShippingServicePriority' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingServicePriority'
+        ],
+        'ShippingTimeMax' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingTimeMax'
+        ],
+        'ShippingTimeMin' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingTimeMin'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -135,7 +121,7 @@ class ShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

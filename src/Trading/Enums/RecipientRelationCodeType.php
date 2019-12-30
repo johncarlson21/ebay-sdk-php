@@ -10,11 +10,14 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class RecipientRelationCodeType
+use MyCLabs\Enum\Enum;
+
+class RecipientRelationCodeType extends Enum 
 {
-    const C_1 = '1';
-    const C_2 = '2';
-    const C_3 = '3';
-    const C_4 = '4';
-    const C_CUSTOM_CODE = 'CustomCode';
+    private const RecipientRelation1 = '1';
+    private const RecipientRelation2 = '2';
+    private const RecipientRelation3 = '3';
+    private const RecipientRelation4 = '4';
+    private const CustomCode = 'CustomCode';
+
 }

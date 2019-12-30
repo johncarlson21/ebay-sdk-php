@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $MediaURL
  * @property string $MediaName
+ * @property string $MediaURL
  */
 class MessageMediaType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -21,20 +21,20 @@ class MessageMediaType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'MediaURL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MediaURL'
-        ],
         'MediaName' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MediaName'
+        ],
+        'MediaURL' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MediaURL'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class MessageMediaType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

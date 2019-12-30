@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\ValueTypeCodeType $Type
- * @property string $ID
  * @property \DTS\eBaySDK\Trading\Types\TaxIdentifierAttributeType[] $Attribute
+ * @property string $ID
+ * @property \DTS\eBaySDK\Trading\Enums\ValueTypeCodeType $Type
  */
 class TaxIdentifierType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -22,11 +22,11 @@ class TaxIdentifierType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Type' => [
-            'type' => 'string',
-            'repeatable' => false,
+        'Attribute' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\TaxIdentifierAttributeType',
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'Type'
+            'elementName' => 'Attribute'
         ],
         'ID' => [
             'type' => 'string',
@@ -34,14 +34,14 @@ class TaxIdentifierType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ID'
         ],
-        'Attribute' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\TaxIdentifierAttributeType',
-            'repeatable' => true,
+        'Type' => [
+            'type' => 'string',
+            'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Attribute'
+            'elementName' => 'Type'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -58,7 +58,7 @@ class TaxIdentifierType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

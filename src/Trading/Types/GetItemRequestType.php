@@ -12,15 +12,15 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
- * @property boolean $IncludeWatchCount
+ * @property boolean $IncludeItemCompatibilityList
  * @property boolean $IncludeItemSpecifics
  * @property boolean $IncludeTaxTable
+ * @property boolean $IncludeWatchCount
+ * @property string $ItemID
  * @property string $SKU
+ * @property string $TransactionID
  * @property string $VariationSKU
  * @property \DTS\eBaySDK\Trading\Types\NameValueListArrayType $VariationSpecifics
- * @property string $TransactionID
- * @property boolean $IncludeItemCompatibilityList
  */
 class GetItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -28,17 +28,11 @@ class GetItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
-        ],
-        'IncludeWatchCount' => [
+        'IncludeItemCompatibilityList' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'IncludeWatchCount'
+            'elementName' => 'IncludeItemCompatibilityList'
         ],
         'IncludeItemSpecifics' => [
             'type' => 'boolean',
@@ -52,11 +46,29 @@ class GetItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
             'attribute' => false,
             'elementName' => 'IncludeTaxTable'
         ],
+        'IncludeWatchCount' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeWatchCount'
+        ],
+        'ItemID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
+        ],
         'SKU' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SKU'
+        ],
+        'TransactionID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TransactionID'
         ],
         'VariationSKU' => [
             'type' => 'string',
@@ -69,21 +81,9 @@ class GetItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VariationSpecifics'
-        ],
-        'TransactionID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TransactionID'
-        ],
-        'IncludeItemCompatibilityList' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeItemCompatibilityList'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -100,7 +100,7 @@ class GetItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetItemRequest';
         }

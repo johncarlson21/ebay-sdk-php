@@ -13,8 +13,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property boolean $CategoryStructureOnly
- * @property integer $RootCategoryID
  * @property integer $LevelLimit
+ * @property integer $RootCategoryID
  * @property string $UserID
  */
 class GetStoreRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -29,17 +29,17 @@ class GetStoreRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
             'attribute' => false,
             'elementName' => 'CategoryStructureOnly'
         ],
-        'RootCategoryID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'RootCategoryID'
-        ],
         'LevelLimit' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LevelLimit'
+        ],
+        'RootCategoryID' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'RootCategoryID'
         ],
         'UserID' => [
             'type' => 'string',
@@ -48,7 +48,7 @@ class GetStoreRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
             'elementName' => 'UserID'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class GetStoreRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
             self::$requestXmlRootElementNames[__CLASS__] = 'GetStoreRequest';
         }

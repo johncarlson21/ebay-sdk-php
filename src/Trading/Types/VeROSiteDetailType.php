@@ -12,8 +12,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\SiteCodeType $Site
  * @property \DTS\eBaySDK\Trading\Types\ReasonCodeDetailType[] $ReasonCodeDetail
+ * @property \DTS\eBaySDK\Trading\Enums\SiteCodeType $Site
  */
 class VeROSiteDetailType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -21,20 +21,20 @@ class VeROSiteDetailType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Site' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Site'
-        ],
         'ReasonCodeDetail' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ReasonCodeDetailType',
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ReasonCodeDetail'
+        ],
+        'Site' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Site'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -51,7 +51,7 @@ class VeROSiteDetailType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

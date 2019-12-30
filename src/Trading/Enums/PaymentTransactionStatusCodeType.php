@@ -10,10 +10,13 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class PaymentTransactionStatusCodeType
+use MyCLabs\Enum\Enum;
+
+class PaymentTransactionStatusCodeType extends Enum 
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_FAILED = 'Failed';
-    const C_PENDING = 'Pending';
-    const C_SUCCEEDED = 'Succeeded';
+    private const CustomCode = 'CustomCode';
+    private const Failed = 'Failed';
+    private const Pending = 'Pending';
+    private const Succeeded = 'Succeeded';
+
 }

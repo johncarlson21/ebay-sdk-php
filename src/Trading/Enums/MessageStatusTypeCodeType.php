@@ -10,9 +10,12 @@
 
 namespace DTS\eBaySDK\Trading\Enums;
 
-class MessageStatusTypeCodeType
+use MyCLabs\Enum\Enum;
+
+class MessageStatusTypeCodeType extends Enum 
 {
-    const C_ANSWERED = 'Answered';
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_UNANSWERED = 'Unanswered';
+    private const Answered = 'Answered';
+    private const CustomCode = 'CustomCode';
+    private const Unanswered = 'Unanswered';
+
 }

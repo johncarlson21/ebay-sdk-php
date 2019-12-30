@@ -12,16 +12,16 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $PositiveFeedbackLeftCount
- * @property integer $NegativeFeedbackLeftCount
- * @property integer $NeutralFeedbackLeftCount
- * @property double $FeedbackLeftPercent
- * @property integer $RepeatBuyerCount
- * @property double $RepeatBuyerPercent
- * @property integer $UniqueBuyerCount
- * @property double $TransactionPercent
  * @property integer $CrossBorderTransactionCount
  * @property double $CrossBorderTransactionPercent
+ * @property double $FeedbackLeftPercent
+ * @property integer $NegativeFeedbackLeftCount
+ * @property integer $NeutralFeedbackLeftCount
+ * @property integer $PositiveFeedbackLeftCount
+ * @property integer $RepeatBuyerCount
+ * @property double $RepeatBuyerPercent
+ * @property double $TransactionPercent
+ * @property integer $UniqueBuyerCount
  */
 class SellerRoleMetricsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -29,11 +29,23 @@ class SellerRoleMetricsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'PositiveFeedbackLeftCount' => [
+        'CrossBorderTransactionCount' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'PositiveFeedbackLeftCount'
+            'elementName' => 'CrossBorderTransactionCount'
+        ],
+        'CrossBorderTransactionPercent' => [
+            'type' => 'double',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CrossBorderTransactionPercent'
+        ],
+        'FeedbackLeftPercent' => [
+            'type' => 'double',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'FeedbackLeftPercent'
         ],
         'NegativeFeedbackLeftCount' => [
             'type' => 'integer',
@@ -47,11 +59,11 @@ class SellerRoleMetricsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'NeutralFeedbackLeftCount'
         ],
-        'FeedbackLeftPercent' => [
-            'type' => 'double',
+        'PositiveFeedbackLeftCount' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'FeedbackLeftPercent'
+            'elementName' => 'PositiveFeedbackLeftCount'
         ],
         'RepeatBuyerCount' => [
             'type' => 'integer',
@@ -65,32 +77,20 @@ class SellerRoleMetricsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'RepeatBuyerPercent'
         ],
-        'UniqueBuyerCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UniqueBuyerCount'
-        ],
         'TransactionPercent' => [
             'type' => 'double',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TransactionPercent'
         ],
-        'CrossBorderTransactionCount' => [
+        'UniqueBuyerCount' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'CrossBorderTransactionCount'
-        ],
-        'CrossBorderTransactionPercent' => [
-            'type' => 'double',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CrossBorderTransactionPercent'
+            'elementName' => 'UniqueBuyerCount'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -107,7 +107,7 @@ class SellerRoleMetricsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }

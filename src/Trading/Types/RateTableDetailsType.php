@@ -13,8 +13,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $DomesticRateTable
- * @property string $InternationalRateTable
  * @property string $DomesticRateTableId
+ * @property string $InternationalRateTable
  * @property string $InternationalRateTableId
  */
 class RateTableDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -29,17 +29,17 @@ class RateTableDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DomesticRateTable'
         ],
-        'InternationalRateTable' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'InternationalRateTable'
-        ],
         'DomesticRateTableId' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DomesticRateTableId'
+        ],
+        'InternationalRateTable' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'InternationalRateTable'
         ],
         'InternationalRateTableId' => [
             'type' => 'string',
@@ -48,7 +48,7 @@ class RateTableDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'InternationalRateTableId'
         ]
     ];
-
+    
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
@@ -65,7 +65,7 @@ class RateTableDetailsType extends \DTS\eBaySDK\Types\BaseType
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
-
+        
         $this->setValues(__CLASS__, $childValues);
     }
 }
